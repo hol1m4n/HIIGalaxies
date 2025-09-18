@@ -1,3 +1,6 @@
+
+### Importing required libraries...
+
 import re
 import os
 import numpy as np
@@ -16,11 +19,15 @@ from math import pi
 import gc
 from matplotlib.ticker import ScalarFormatter
 
+### Defining global variables
+
 global home
 global name
 global hdr_params
 global hdr_titles
 global cat_line
+
+### Names of the varibles given by STARLIGHT output
 
 hdr_params = ["[arq_obs]","[arq_base]","[arq_masks]","[arq_config]","[N_base]","[N_YAV_components = # of components with extra extinction!]",
               "[i_FitPowerLaw (1/0 = Yes/No)]","[alpha_PowerLaw]","[red_law_option]","[q_norm = A(l_norm)/A(V)]", ## Some input info
@@ -49,6 +56,9 @@ hdr_titles = ['## OUTPUT of StarlightChains_v05.for    [Cid@UFSC - 10/May/2008] 
               "## Synthesis Results - Best model ##"]
 
 cat_line = '#' *67
+
+
+### Fuctions defined for string management and reading data ...
 
 
 def get_first_value(line: str):
@@ -84,6 +94,9 @@ def parse_before_brackets(line: str):
     # dividir en tokens por espacios
     tokens = before.split()
     return tokens
+
+
+### Header for the First Table creation ...
 
 
 def header_firstTABLE(name):
@@ -160,6 +173,8 @@ def header_firstTABLE(name):
     return HDR
 
 
+### Reading of STARLIGHT Spectral Synthesis Fit from .out file ...
+
 def read_starlight_ssp_txt(path):
     # 1) Cargar archivo y ubicar la cabecera "# j ..."
     with open(path, 'r', encoding='utf-8', errors='ignore') as f:
@@ -229,6 +244,9 @@ def read_starlight_ssp_txt(path):
 
 
     return df
+
+
+### Reading of STARLIGHT Best Spectrum Fit from .out file ...
 
 
 def read_starlight_best_model(path):
@@ -322,7 +340,7 @@ def read_starlight_best_model(path):
 
 
 
-
+### Creation of STARLIGHT .fits file from .out file (original output)...
 
 
 def FITS_conversion(id,
@@ -360,6 +378,9 @@ def FITS_conversion(id,
         HDU.writeto(final_name, overwrite=True)
         print(f'Fits file saved in {final_name}')
 
+
+
+### Modeleded spectra vs observed plot from .fits file...
 
 
 
@@ -433,6 +454,10 @@ def spectra(id,
     FITS.close()
     return fig
 
+
+### Light Fraction - Mass Fraction vs Population Age from .fits file...
+
+
 def stellar_pop(id,
     home = os.path.expanduser("~") + '/DataHII/HIIGs/Starlight/',Z_w = False ):
     name = ''
@@ -497,6 +522,9 @@ def stellar_pop(id,
 
     FITS.close()
     return fig
+
+
+### Saving plots as .png files from the functions of spectra and population synthesis...
 
 def fig_saver(id,spec = True,pop = True):
     name = ''
