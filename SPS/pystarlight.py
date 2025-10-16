@@ -344,7 +344,7 @@ def read_starlight_best_model(path):
 
 
 def FITS_conversion(id,
-    home = os.path.expanduser("~") + '/DataHII/HIIGs/Starlight/'):
+    home = os.path.expanduser("~") + '/gdrive/DataHII/HIIGs/STARLIGHT/'):
     name = ''
     name = home + id
     
@@ -385,7 +385,7 @@ def FITS_conversion(id,
 
 
 def spectra(id,
-    home = os.path.expanduser("~") + '/DataHII/HIIGs/Starlight/'):
+    home = os.path.expanduser("~") + '/gdrive/DataHII/HIIGs/STARLIGHT/'):
     name = ''
     name = home + id
 
@@ -459,7 +459,7 @@ def spectra(id,
 
 
 def stellar_pop(id,
-    home = os.path.expanduser("~") + '/DataHII/HIIGs/Starlight/',Z_w = False ):
+    home = os.path.expanduser("~") + '/gdrive/DataHII/HIIGs/STARLIGHT/',Z_w = False ):
     name = ''
     name = home + id
 
@@ -529,7 +529,7 @@ def stellar_pop(id,
 def fig_saver(id,spec = True,pop = True):
     name = ''
     name = id
-    home = os.path.expanduser("~") + '/DataHII/HIIGs/Starlight/'
+    home = os.path.expanduser("~") + '/gdrive/DataHII/HIIGs/STARLIGHT/'
     if spec:
         outfile = 'specPLT'+ name.replace('.fits', '') + ".png"
         fig = spectra(name)     # spectra debe devolver un fig
