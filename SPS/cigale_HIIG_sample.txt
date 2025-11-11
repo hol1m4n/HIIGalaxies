@@ -1,0 +1,1 @@
+# id redshift galex.FUV galex.FUV_err galex.NUV galex.NUV_err sdss.up sdss.up_err sdss.gp sdss.gp_err sdss.rp sdss.rp_err sdss.ip sdss.ip_err sdss.zp sdss.zp_err WISE1 WISE1_err WISE2 WISE2_err WISE3 WISE3_err WISE4 WISE4_err
