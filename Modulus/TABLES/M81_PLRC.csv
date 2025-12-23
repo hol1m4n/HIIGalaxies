@@ -1,0 +1,16 @@
+RefCode,Citation,Band,mu_0,e_R,e_S,e_T,Category,Ncef,Zcorr,zeroP,Rank,Year,Date,Comments,Author,ADS_date,JD
+2000ApJ...529..745F,Ferrarese et al.2000,W(VI),27.8,0.08,,,1,30,False,LMC,1,2000,2024,They calculate gamma.,Valencia et al.2024,2000-02-00,2451575.5
+2001ApJ...548..564W,Willick & Batra 2001,W(VI),27.66,0.09,,,1,25,False,LMC,1,2001,2024,They do not apply metallicity correction.,Valencia et al.2024,2001-02-00,2451941.5
+2001ApJ...549..721M,Macri et al.2001,H,27.91,0.08,,,1,6,True,LMC,1,2001,2024,They use the H band.,Valencia et al.2024,2001-03-00,2451969.5
+2001ApJ...553...47F,Freedman et al.2001,W(VI),27.75,0.08,,,1,17,False,LMC,1,2001,2024,No specific comments on the publication.,Valencia et al.2024,2001-05-00,2452030.5
+2001ApJ...553...47F,Freedman et al.2001,W(VI),27.8,0.08,,,1,17,True,LMC,1,2001,2024,They apply metallicity correction.,Valencia et al.2024,2001-05-00,2452030.5
+2002A&A...389...19P,"Paturel, G. et al.2002",W(VI),27.66,0.08,,,1,92,False,GC,1,2002,2024,They use data from Paurel et al. 2002 but with HIPPARCOS calibration.,Valencia et al.2024,2002-07-00,2452456.5
+2003A&A...411..361K,"Kanbur, S. M. et al.2003",W(VI),27.79,0.09,,,1,17,False,LMC,1,2003,2024,Calculate metallicity correction but do not add error.,Valencia et al.2024,2003-12-00,2452974.5
+2003A&A...411..361K,"Kanbur, S. M. et al.2003",W(VI),27.85,0.1,,,1,17,False,GC,1,2003,2024,Calculate metallicity correction but do not add error.,Valencia et al.2024,2003-12-00,2452974.5
+2004ApJ...608...42S,Sakai et al.2004,BVRI,27.75,0.08,,,1,-1,False,LMC,1,2004,2024,Calculate gamma from TRGB.,Valencia et al.2024,2004-06-00,2453157.5
+2006ApJS..165..108S,Saha et al.2006,VI,27.8,0.09,0.08,0.1204159457879229,2,24,True,LMC,1,2006,2024,They delve into the HST CTE correction.,Valencia et al.2024,2006-07-00,2453917.5
+2009AJ....137.4707M,McCommas et al.2009,W(VI),27.78,0.05,0.14,0.148660687473185,2,12,False,N4258,1,2009,2024,"Final value of the publication, they remove an outlier.",Valencia et al.2024,2009-06-00,2454983.5
+2011ApJ...743..176G,Gerke et al.2011,W(VI),27.74,0.05,,,1,81,False,LMC,1,2011,2024,OGLE-II + N4258 LMC RPL with fixed metallicity gradient value.,Valencia et al.2024,2011-12-00,2455896.5
+2011ApJ...743..176G,Gerke et al.2011,W(VI),27.8,0.14,,,3,81,True,LMC,1,2011,2024,OGLE-II LMC RPL with fixed metallicity gradient value.,Valencia et al.2024,2011-12-00,2455896.5
+2011ApJ...743..176G,Gerke et al.2011,W(VI),27.8,0.16,,,3,81,False,LMC,1,2011,2024,"OGLE-II+N4258 LMC RPL with [O/H] function, sigma_rand = +0.11,-0.16.",Valencia et al.2024,2011-12-00,2455896.5
+2011ApJ...743..176G,Gerke et al.2011,W(VI),27.81,0.15,,,3,81,False,LMC,1,2011,2024,"OGLE-II LMC RPL, using [O/H] function",Valencia et al.2024,2011-12-00,2455896.5

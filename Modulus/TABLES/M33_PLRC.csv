@@ -1,0 +1,15 @@
+RefCode,Citation,Band,mu_0,e_R,e_S,e_T,Category,Ncef,Zcorr,zeroP,Rank,Year,Date,Comments,Author,ADS_date,JD
+2000ApJ...529..745F,Ferrarese et al.2000,VI,24.64,0.09,,,1,10,False,LMC,1,2000,2024,They calculate gamma.,Valencia et al.2024,2000-02-00,2451575.5
+2001ApJ...548..564W,Willick & Batra 2001,W(VI),24.47,0.13,,,1,12,False,LMC,1,2001,2024,They do not apply correction for metallicity.,Valencia et al.2024,2001-02-00,2451941.5
+2001ApJ...553...47F,Freedman et al.2001,W(VI),24.56,0.1,,,1,11,False,LMC,1,2001,2024,There are no specific comments on the publication.,Valencia et al.2024,2001-05-00,2452030.5
+2001ApJ...553...47F,Freedman et al.2001,W(VI),24.62,0.1,,,1,11,True,LMC,1,2001,2024,Correction for metallicity and same uncertainty as without correction. The systematic errors are only when analyzing H0.,Valencia et al.2024,2001-05-00,2452030.5
+2002A&A...389...19P,"Paturel, G. et al.2002",W(VI),24.7,0.13,,,1,22,False,GC,1,2002,2024,They do not apply correction for metallicity.,Valencia et al.2024,2002-07-00,2452456.5
+2002ApJ...565..959L,Lee et al.2002,W(VI),24.52,0.14,0.13,0.191049731745428,2,21,False,LMC,1,2002,2024,They use data from Paturel et al. 2002 but with HIPPARCOS calibration.,Valencia et al.2024,2002-02-00,2452306.5
+2004ApJ...608...42S,Sakai et al.2004,BVRI,24.47,0.11,,,1,-1,False,LMC,1,2004,2024,They apply the metallicity correction from Freedman et al. 2001.,Valencia et al.2024,2004-06-00,2453157.5
+2006ApJS..165..108S,Saha et al.2006,W(VI),24.64,0.06,0.08,0.1,2,10,True,LMC,1,2006,2024,They calculate gamma from TRGB.,Valencia et al.2024,2006-07-00,2453917.5
+2009MNRAS.396.1287S,Sowcroft et al.2009,W(BVI_C),24.37,0.02,,,1,98,False,LMC,3,2009,2024,They delve into the HST CTE correction.,Valencia et al.2024,2009-07-00,2455013.5
+2009MNRAS.396.1287S,Sowcroft et al.2009,W(BVI_C),24.54,0.03,,,1,28,False,LMC,3,2009,2024,Internal region of the galaxy.,Valencia et al.2024,2009-07-00,2455013.5
+2011ApJS..193...26P,Pellerin & Macri 2011,W(VI),24.76,0.02,,,1,564,False,LMC,3,2011,2024,Photometry of all galaxies and all Cepheids.,Valencia et al.2024,2011-04-00,2455652.5
+2011ApJS..193...26P,Pellerin & Macri 2011,W(VI),24.77,0.04,,,1,564,False,LMC,3,2011,2024,External region of the galaxy.,Valencia et al.2024,2011-04-00,2455652.5
+2013ApJ...773...69G,Gieren et al.2013,JK,24.62,0.03,0.04,0.05,2,26,True,LMC,2,2013,2024,There are no specific comments on the publication.,Valencia et al.2024,2013-08-00,2456505.5
+2023ApJ...951..118B,Breuval et al.2023,gri,24.622,0.0094,0.028,0.0295357410606201,2,150,True,LMC,1,2023,2024,"They apply a filter to Cepheids and add the effect of blending to e_S. Publication with more recent and accurate data for all systematic effects, e_R considers photometric error and RPL of M33, e_S considers correction for galaxy geometry, RPL of LMC, correction for metallicity, correction for CRNL (count-rate nonlinearity) for bright stars near the WFC3-IR instrument.Numero de cefeidas similar a 150.",Valencia et al.2024,2023-07-00,2460126.5

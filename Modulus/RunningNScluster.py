@@ -168,11 +168,11 @@ def nestedsampling_error(modulus,error,steps=10000, Name='', group = ''):
 if os.path.exists('sm_r.csv'):
     DF = pd.read_csv('sm_r.csv')
 else:
-    S = fits.open('modulus_tracker.fits')
+    S = fits.open('modulus_tracker_TABLES.fits')
     sm_r = []
     sm_r =['Galaxia','N_dat','mu_w','sigma_w','sigma_br','sigma_C','sigma_cl+','sigma_cl-','sigma_L','sigma_Lcorr']
 
-    for i in range(1,64):
+    for i in range(1,len(S)):
 
         gal_host = i
 
@@ -217,11 +217,11 @@ else:
 if os.path.exists('cm_r.csv'):
     DF = pd.read_csv('cm_r.csv')
 else:
-    S = fits.open('modulus_tracker.fits')
+    S = fits.open('modulus_tracker_TABLES.fits')
     cm_r = []
     cm_r =['Galaxia','N_dat','mu_w','sigma_w','sigma_br','sigma_C','sigma_cl+','sigma_cl-','sigma_L','sigma_Lcorr']
 
-    for i in range(1,64):
+    for i in range(1,len(S)):
 
         gal_host = i
 
@@ -265,11 +265,11 @@ else:
 if os.path.exists('sm_t.csv'):
     DF = pd.read_csv('sm_t.csv')
 else:
-    S = fits.open('modulus_tracker.fits')
+    S = fits.open('modulus_tracker_TABLES.fits')
     sm_t = []
     sm_t =['Galaxia','N_dat','mu_w','sigma_w','sigma_br','sigma_C','sigma_cl+','sigma_cl-','sigma_L','sigma_Lcorr']
 
-    for i in range(1,64):
+    for i in range(1,len(S)):
 
         gal_host = i
 
@@ -314,11 +314,11 @@ else:
 if os.path.exists('cm_t.csv'):
     DF = pd.read_csv('cm_t.csv')
 else:
-    S = fits.open('modulus_tracker.fits')
+    S = fits.open('modulus_tracker_TABLES.fits')
     cm_t = []
     cm_t =['Galaxia','N_dat','mu_w','sigma_w','sigma_br','sigma_C','sigma_cl+','sigma_cl-','sigma_L','sigma_Lcorr']
 
-    for i in range(1,64):
+    for i in range(1,len(S)):
 
         gal_host = i
 
@@ -360,11 +360,11 @@ else:
 if os.path.exists('t_r.csv'):
     DF = pd.read_csv('t_r.csv')
 else:
-    S = fits.open('modulus_tracker.fits')
+    S = fits.open('modulus_tracker_TABLES.fits')
     t_r = []
     t_r =['Galaxia','N_dat','mu_w','sigma_w','sigma_br','sigma_C','sigma_cl+','sigma_cl-','sigma_L','sigma_Lcorr']
 
-    for i in range(1,64):
+    for i in range(1,len(S)):
 
         gal_host = i
 

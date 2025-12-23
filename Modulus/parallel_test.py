@@ -1,0 +1,222 @@
+import re
+import os
+import numpy as np
+from astropy.io import ascii
+from astropy.io import fits
+from astropy.table import Table
+import matplotlib
+import matplotlib.pyplot as plt
+import pandas as pd
+from io import StringIO
+from matplotlib.ticker import AutoMinorLocator
+from astropy.constants import L_sun
+from matplotlib import gridspec
+import astropy.units as u
+from math import pi
+import gc
+from matplotlib.ticker import ScalarFormatter
+import matplotlib.colors as mcolors
+import matplotlib.patheffects as pe
+from astropy.table import Column
+from scipy.stats import bootstrap
+
+#from __future__ import annotations
+#import os
+import json
+from astropy.cosmology import FlatwCDM
+
+import pymultinest
+import corner
+from getdist import plots, MCSamples
+import scipy.optimize as op
+from scipy import stats
+
+from mpi4py import MPI
+rank = MPI.COMM_WORLD.Get_rank()
+
+
+def weighted_average(modulus,error):
+    modulus,error = np.array(modulus),np.array(error)
+    err_sq_inv = 1 / ((error)**2)
+    num = np.sum(err_sq_inv * modulus)
+    dem = np.sum(err_sq_inv)
+
+    return num/dem
+
+def weighted_error(error):
+    error = np.array(error)
+    err_sq_inv = 1 / ((error)**2)
+    dem = np.sum(err_sq_inv)
+
+    return 1 / np.sqrt(dem)
+
+def bootstrap_error2(modulus,error,N=200000,group = '',Galaxy=''):
+
+    PATH = f'BR/{group}/{Galaxy}.txt'
+
+    if os.path.exists(PATH) == True:
+        bootstrap_statistics = np.loadtxt(PATH)
+        print(f'Reading bootstrap for {Galaxy}\n')
+    if os.path.exists(PATH) == False:
+        print(f'Running bootstrap for {Galaxy}\n')
+        modulus,error = np.array(modulus),np.array(error)
+        size = len(modulus)
+
+        n_bootstraps = N  # Number of bootstrap iterations
+        bootstrap_statistics = []
+
+        for i in range(n_bootstraps):
+            # Create a resample with replacement, same size as original data
+            bootstrap_sample = np.random.choice(size, size=size, replace=True)
+
+            modulus_sample = modulus[bootstrap_sample]
+            error_sample = error[bootstrap_sample]
+
+            sample_mean = weighted_average(modulus_sample,error_sample)
+            bootstrap_statistics.append(sample_mean)
+
+        bootstrap_statistics = np.array(bootstrap_statistics)
+
+        np.savetxt(fname = PATH, X = bootstrap_statistics)
+
+    N_dist = len(bootstrap_statistics)
+
+    br_mean = np.mean(bootstrap_statistics)
+
+    quad_br = (bootstrap_statistics-br_mean)**2
+    
+    lower_bound = np.percentile(bootstrap_statistics, 15.87)
+    upper_bound = np.percentile(bootstrap_statistics, 84.13)
+
+    return [np.sqrt(((1)/(N_dist-1)) * np.sum(quad_br)),
+           [br_mean - lower_bound, upper_bound - br_mean],
+            bootstrap_statistics]
+
+    
+def cochran_error(modulus,error):
+    Mu_i,Er_i = np.array(modulus),np.array(error)
+    n = len(Mu_i)
+    w_i = 1 / ((Er_i)**2)
+
+    Mu_w = weighted_average(Mu_i,Er_i)
+    w_mean = np.mean(w_i)
+
+    s1 = n / ((n-1) * (np.sum(w_i))**2)
+    s2 = (w_i * Mu_i  - (w_mean * Mu_w))**2
+    s3 = (w_i - w_mean) * ((w_i*Mu_i) - (w_mean*Mu_w)) 
+    s4 = (w_i - w_mean)**2
+
+    return np.sqrt(s1 * (np.sum(s2) - (2 * Mu_w * np.sum(s3)) +    (Mu_w**2 * np.sum(s4)) ) )
+
+def nestedsampling_error(modulus,error,steps=10000, Name='', group = ''):
+
+    def prior_transform(x):
+        mu = 20 * x + 20
+        return mu
+    
+    def lnlike(theta, m, merr):
+        mu_pi = theta
+        R = (mu_pi - m)
+        W = 1.0/(merr**2)
+        xsq = np.sum(R**2 * W)
+        L = -0.5*xsq
+        return L
+    
+    def loglike_for_mnest(theta):
+        return lnlike(theta, modulus, error)
+    
+    outdir = os.path.join('NS', group)
+    os.makedirs(outdir, exist_ok=True)
+    prefix = os.path.join(outdir, Name)
+
+    n_dims = 1
+    
+    result = pymultinest.solve(
+        LogLikelihood=loglike_for_mnest,
+        Prior=prior_transform,
+        n_dims=n_dims,
+        outputfiles_basename=prefix,
+        evidence_tolerance=0.5,
+        n_live_points=steps,
+        multimodal=True,
+        verbose=False,
+    )
+    '''
+
+    result = pymultinest.solve(
+        LogLikelihood=loglike_for_mnest,
+        Prior=prior_transform,
+        n_dims=n_dims,
+        outputfiles_basename=prefix,
+        evidence_tolerance=0.5,
+        n_live_points=steps,
+        multimodal=True,
+        verbose=(rank == 0),
+        init_MPI=False,
+    )
+    '''
+    
+    samples = result["samples"] 
+    T_sample = samples.T
+
+    logL = np.array([loglike_for_mnest(s) for s in samples])
+    chi2_map = -2.0*np.max(logL)
+
+    N = len(modulus)
+    k = n_dims        
+    nu = N - k
+    chi2_red = chi2_map / nu
+
+    sigma2_corr = T_sample.std() * chi2_red
+
+    return [T_sample.std(),sigma2_corr]
+
+
+
+S = fits.open('modulus_tracker.fits')
+t_r = []
+t_r =['Galaxia','N_dat','mu_w','sigma_w','sigma_br','sigma_C','sigma_cl+','sigma_cl-','sigma_L','sigma_Lcorr']
+
+for i in range(1,8): #for i in range(1,len(S)):
+
+    gal_host = i
+
+    T = Table.read(S[gal_host])
+
+    if (S[gal_host].header['METHOD'] == 'TRGB') and (len(T)>0):
+        G1_m = np.array(T['mu_0'])
+        G1_e = np.array(T['e_R'])
+        Galaxia = S[gal_host].header['EXTNAME']
+        N_dat = len(T)
+
+        if N_dat == 0:
+            print(f"No data for {Galaxia}")
+        if N_dat == 1:
+            mu_w = weighted_average(G1_m,G1_e)
+            sigma_w = weighted_error(G1_e)
+            t_r.append([Galaxia,N_dat,mu_w,sigma_w,'--','--','--','--','--','--'])        
+        if N_dat > 1:
+            mu_w = weighted_average(G1_m,G1_e)
+            sigma_w = weighted_error(G1_e)
+            sigma_br,sigma_cl,Br_stats = bootstrap_error2(modulus = G1_m,error = G1_e,N=200000,group='t_r',Galaxy=Galaxia)
+            sigma_br = sigma_br 
+            sigma_cl[0] = sigma_cl[0]
+            sigma_cl[1] = sigma_cl[1]
+            sigma_C = cochran_error(G1_m,G1_e)
+            sigma_L, sigma_Lcorr = nestedsampling_error(G1_m,G1_e,Name=Galaxia,group = 't_r')
+            t_r.append([Galaxia,N_dat,mu_w,sigma_w,sigma_br,sigma_C,sigma_cl[0],sigma_cl[1],sigma_L,sigma_Lcorr])
+
+S.close()
+
+
+
+
+
+
+
+
+
+
+
+
+
