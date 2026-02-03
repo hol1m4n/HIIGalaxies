@@ -1,0 +1,19 @@
+No.,(m-M),err(m-M),Distance,Method,Reference,Notes,SN Name,Redshift,H0,LMCModulus
+1,30.37,0.1,11.9,Cepheids,2001ApJ...548..564W,LMC W01,,,,
+2,30.38,0.06,11.9,Cepheids,2001ApJ...553...47F,"15, VI, KEY PROJECT",,,,
+3,30.39,0.07,12.0,Cepheids,2003A&A...411..361K,cte LMC K03,,,,
+4,30.4,0.07,12.0,Cepheids,2003A&A...411..361K,cte U99,,,,
+5,30.43,0.07,12.2,Cepheids,2003A&A...411..361K,cte LMC STS02,,,,
+6,30.44,0.06,12.2,Cepheids,2002A&A...389...19P,MW HIPP,,,,
+7,30.46,0.06,12.4,Cepheids,2001ApJ...553...47F,"15, VI, +Z, KEY PROJECT",,,,
+8,30.46,0.18,12.4,Cepheids,2002A&A...389...19P,MW P02,,,,
+9,30.49,0.07,12.5,Cepheids,2003A&A...411..361K,cte MW FSG03,,,,
+10,30.52,0.07,12.7,Cepheids,2003A&A...411..361K,cte MF91,,,,
+11,30.53,0.11,12.8,Cepheids,2002A&A...383..398P,"53, VI",,,,
+12,30.53,0.11,12.8,Cepheids,2002A&A...389...19P,MW GFG,,,,
+13,30.54,0.07,12.8,Cepheids,2003A&A...411..361K,cte MW GFG98,,,,
+15,30.57,0.08,13.0,Cepheids,2000ApJ...529..745F,HST KP Calibrated,,,,
+16,30.62,0.07,13.3,Cepheids,2003A&A...411..361K,cte MW STS03,,,,
+17,30.65,0.06,13.5,Cepheids,2006ApJS..165..108S,LMC ZP,,,,18.54
+18,30.65,,13.5,Cepheids,2008A&ARv..15..289T,,,,,18.54
+19,31.38,,18.9,Cepheids,2006A&A...452..423P,"20, VI",,,,

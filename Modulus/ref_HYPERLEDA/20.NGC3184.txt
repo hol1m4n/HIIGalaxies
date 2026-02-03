@@ -1,0 +1,31 @@
+# Query Description
+# Type of request:                 Extract data from a table
+# Name of the selected table:      a007
+# Description of the table:        Distances
+# Object:                          NGC3184
+# Display the fields:              $objname,$L,$j2000,$field[modulus],$field[distance],modc,$link[method,method],$link[iref,iref],$link[bibref,bibcode],$link[calib,calib_bibcode],pgc,dataset,bibcode,"calib_bibcode",calibsys
+# Description of each column
+# $objname: ------------ Name of object
+# $j2000: -------------- J2000 coordinates
+# $field[modulus]: ----- Distance modulus
+# $field[distance]: ---- Linear distance (Mpc)
+# modc: ---------------- Distance modulus corrected to standard system
+# $link[method,method]:  Distance determination method
+# $link[iref,iref]: ---- Code of Bib.Ref.
+# $link[bibref,bibcode]:  Bibliographic Reference
+# $link[calib,calib_bibcode]:  Calibration relation
+# pgc: ----------------- PGC number
+# dataset: ------------- <NA>
+# bibcode: ------------- <NA>
+# calib_bibcode: ------- <NA>
+# calibsys: ------------ Calibration system
+#--------,------,-------,---------,------,--------,--------,----------,------,--------,----,--------------------,----------------,---------------------,--------------------------,---,-------,-------,---------------,--------
+$objname,$j2000,modulus,e_modulus,flimit,fquality,distance,e_distance,flimit,fquality,modc,$link[method,method],$link[iref,iref],$link[bibref,bibcode],$link[calib,calib_bibcode],pgc,dataset,bibcode,"calib_bibcode",calibsys
+#--------,------,-------,---------,------,--------,--------,----------,------,--------,----,--------------------,----------------,---------------------,--------------------------,---,-------,-------,---------------,--------
+NGC3184,J101816.9+412528,30.326,0.0535282,,,11.6200004865833,0.289998174140639,,,30.3260307312012,EPM       ,    51831,Bose+2014              ,EPM:Dessart+2005               ,30087,51831,2014ApJ...782...98B,2005A&A...439..671D,
+NGC3184,J101816.9+412528,29.7396,0.0816801,,,8.87000082607843,0.340001075150008,,,29.7396183013916,EPM       ,    51831,Bose+2014              ,EPM:Hamuy+2001                 ,30087,51831,2014ApJ...782...98B,2001ApJ...558..615H,
+#-- end of data table ----------------------------------------------------------
+# 2 lines were successfully retrieved
+#-------------------------------------------------------------------------------
+# Pleinpot version: 8.18.10
+# Date: 2026-02-03T22:52:19

@@ -1,0 +1,24 @@
+No.,(m-M),err(m-M),Distance,Method,Reference,Notes,SN Name,Redshift,H0,LMCModulus
+1,32.04,0.03,25.6,Cepheids,2013MNRAS.434.2866F,"V, I, NIR (W), 69, Syst. +/- 0.32 mag",,,,
+2,32.07,0.05,26.0,Cepheids,2016ApJ...826...56R,"63, VI(W)",,,,18.49
+3,32.12,0.08,26.5,Cepheids,2009ApJ...699..539R,,,,,
+4,32.13,0.07,26.7,Cepheids,2011ApJ...730..119R,SNIa calibrated,,,,
+5,32.15,0.03,26.9,Cepheids,2006ApJ...642L..29N,STR 04 LMC non-linear,,,,
+6,32.17,0.03,27.2,Cepheids,2006ApJ...642L..29N,STR04 LMC linear,,,,
+7,32.18,0.03,27.3,Cepheids,2006ApJ...642L..29N,KN04 LMC non-linear,,,,
+8,32.19,0.03,27.4,Cepheids,2006ApJ...642L..29N,KN04 LMC linear,,,,
+9,32.19,0.03,27.5,Cepheids,2006ApJ...642L..29N,TR02 LMC linear,,,,
+10,32.2,0.03,27.5,Cepheids,2006ApJ...642L..29N,KN06 LMC linear,,,,
+11,32.21,0.03,27.7,Cepheids,2006ApJ...642L..29N,KN06 LMC non-linear,,,,
+12,32.22,0.05,27.8,Cepheids,2005ApJ...627..579R,"70, VI",,,,
+13,32.22,0.03,27.8,Cepheids,2006ApJ...642L..29N,TR02 LMC non-linear,,,,
+14,32.23,0.04,28.0,Cepheids,2006ApJ...642L..29N,NK04 GAL,,,,
+15,32.36,0.04,29.7,Cepheids,2006ApJ...642L..29N,STR04 GAL,,,,
+16,32.37,0.03,29.8,Cepheids,2006ApJS..165..108S,LMC ZP,,,,18.54
+17,32.37,,29.8,Cepheids,2008A&ARv..15..289T,,,,,18.54
+28,32.19,0.04,27.4,TRGB,2017ApJ...836...74J,"I, LMC zero point",,,,
+29,32.24,0.04,28.0,TRGB,2017ApJ...836...74J,"QT, LMC zero poQTnt",,,,
+30,32.24,0.04,28.1,TRGB,2017ApJ...836...74J,"I, NGC 4258 + LMC zero point",,,,
+31,32.25,0.04,28.2,TRGB,2017ApJ...836...74J,"I, NGC 4258 zero point",,,,
+32,32.25,0.04,28.2,TRGB,2017ApJ...836...74J,"QT, NGC 4258 + LMC zero poQTnt",,,,
+33,32.26,0.04,28.3,TRGB,2017ApJ...836...74J,"QT, NGC 4258 zero poQTnt",,,,

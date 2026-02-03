@@ -1,0 +1,17 @@
+# The object name (NGC1073) was resolved at position  by leda
+# A cone search within 1.00 arcmin of this position matched no record in the table a007
+#-------------------------------------------------------------------------------
+# Query Description
+# Type of request:                 Extract data from a table
+# Name of the selected table:      a007
+# Description of the table:        Distances
+# Object:                          NGC1073
+# Display the fields:              $objname,$L,$j2000,$field[modulus],$field[distance],modc,$link[method,method],$link[iref,iref],$link[bibref,bibcode],$link[calib,calib_bibcode],pgc,dataset,bibcode,"calib_bibcode",calibsys
+# Query Help
+# Search the object specifier "NGC1073".
+# It is resolved by HyperLeda as NGC1073
+# No record was found in the table a007.
+# The complete request returns no record.
+#-------------------------------------------------------------------------------
+# Pleinpot version: 8.18.10
+# Date: 2026-02-03T22:46:05

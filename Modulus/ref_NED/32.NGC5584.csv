@@ -1,0 +1,11 @@
+No.,(m-M),err(m-M),Distance,Method,Reference,Notes,SN Name,Redshift,H0,LMCModulus
+1,31.71,0.04,22.0,Cepheids,2013MNRAS.434.2866F,"V, I, NIR (W), 78, Syst. +/- 0.32 mag",,,,
+2,31.72,0.07,22.1,Cepheids,2011ApJ...730..119R,SNIa calibrated,,,,
+3,31.79,0.05,22.8,Cepheids,2016ApJ...826...56R,"83, VI(W)",,,,18.49
+11,31.74,0.06,22.3,TRGB,2017ApJ...836...74J,"I, LMC zero point",,,,
+12,31.74,0.05,22.3,TRGB,2017ApJ...836...74J,"QT, LMC zero poQTnt",,,,
+13,31.75,0.05,22.4,TRGB,2017ApJ...836...74J,"QT, NGC 4258 + LMC zero poQTnt",,,,
+14,31.76,0.05,22.5,TRGB,2017ApJ...836...74J,"QT, NGC 4258 zero poQTnt",,,,
+15,31.76,0.04,22.5,TRGB,2015ApJ...807..133J,I,,,,
+16,31.78,0.06,22.7,TRGB,2017ApJ...836...74J,"I, NGC 4258 + LMC zero point",,,,
+17,31.8,0.06,22.9,TRGB,2017ApJ...836...74J,"I, NGC 4258 zero point",,,,
