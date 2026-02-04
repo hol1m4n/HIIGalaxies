@@ -1,0 +1,41 @@
+# Query Description
+# Type of request:                 Extract data from a table
+# Name of the selected table:      a007
+# Description of the table:        Distances
+# Object:                          NGC5204
+# Display the fields:              $objname,$L,$j2000,$field[modulus],$field[distance],modc,$link[method,method],$link[iref,iref],$link[bibref,bibcode],$link[calib,calib_bibcode],pgc,dataset,bibcode,"calib_bibcode",calibsys
+# Description of each column
+# $objname: ------------ Name of object
+# $j2000: -------------- J2000 coordinates
+# $field[modulus]: ----- Distance modulus
+# $field[distance]: ---- Linear distance (Mpc)
+# modc: ---------------- Distance modulus corrected to standard system
+# $link[method,method]:  Distance determination method
+# $link[iref,iref]: ---- Code of Bib.Ref.
+# $link[bibref,bibcode]:  Bibliographic Reference
+# $link[calib,calib_bibcode]:  Calibration relation
+# pgc: ----------------- PGC number
+# dataset: ------------- <NA>
+# bibcode: ------------- <NA>
+# calib_bibcode: ------- <NA>
+# calibsys: ------------ Calibration system
+#--------,------,-------,---------,------,--------,--------,----------,------,--------,----,--------------------,----------------,---------------------,--------------------------,---,-------,-------,---------------,--------
+$objname,$j2000,modulus,e_modulus,flimit,fquality,distance,e_distance,flimit,fquality,modc,$link[method,method],$link[iref,iref],$link[bibref,bibcode],$link[calib,calib_bibcode],pgc,dataset,bibcode,"calib_bibcode",calibsys
+#--------,------,-------,---------,------,--------,--------,----------,------,--------,----,--------------------,----------------,---------------------,--------------------------,---,-------,-------,---------------,--------
+NGC5204,J132936.6+582514,28.06,,,,4.09260559075384,,,,28.0356242060661,BS3B      ,    51506,Drozdovsky+2000        ,BS:Karachentsev+1994:3B        ,47368,51506,2000A&AS..142..425D,,Karachentsev+1994
+NGC5204,J132936.6+582514,28.26,,,,4.48745437232686,,,,28.2600002288818,BS3B      ,    51702,Karachentsev+1994      ,                               ,47368,51702,1994BSAO...38....5K,,
+NGC5204,J132936.6+582514,28.67,,,,5.42000909444642,,,,28.6700000762939,BS3R      ,    51702,Karachentsev+1994      ,                               ,47368,51702,1994BSAO...38....5K,,
+NGC5204,J132936.6+582514,28.73,0.45,,,5.57185631472751,1.28302691317502,,,28.6796021626571,TF        ,    51984,Sorce+2014             ,TF:Sorce+2014:MC[3.6]          ,47368,51984,2014MNRAS.444..527S,2014MNRAS.444..527S,
+NGC5204,J132936.6+582514,28.7,0.54,,,5.49541066936978,1.55152546731715,,,28.6537665495481,TF        ,    51984,Sorce+2014             ,TF:Sorce+2014:M[3.6]           ,47368,51984,2014MNRAS.444..527S,2014MNRAS.444..527S,
+NGC5204,J132936.6+582514,28.34,0.27,,,4.65586126239379,0.616438833758006,,,28.3611087325216,TRGB      ,    51458,Karachentsev+2003      ,TRGB:I=-4.05                   ,47368,51458,2003A&A...398..467K,,I=-4.05
+NGC5204,J132936.6+582514,28.3,0.19,,,4.57088029018521,0.417964058570833,,,28.3025466678867,TRGB      ,    51763,Makarov+2013           ,TRGB:Rizzi+2007                ,47368,51763,2013AstBu..68..125M,2007ApJ...661..815R,Rizzi+2007
+NGC5204,J132936.6+582514,28.31,0.235,,,4.5919789990052,0.524835041735515,,,28.3125468967685,TRGB      ,    52052,Jacobs,+2009           ,TRGB:Rizzi+2007                ,47368,52052,2009AJ....138..332J,2007ApJ...661..815R,
+NGC5204,J132936.6+582514,28.31,0.235,,p,4.5919789990052,0.524835041735515,,p,28.3125468967685,TRGB      ,    51764,Jacobs+2009            ,TRGB:Rizzi+2007                ,47368,51764,2009AJ....138..332J,2007ApJ...661..815R,Rizzi+2007
+NGC5204,J132936.6+582514,28.3373,,,c,4.6500005357765,,,c,28.3583735945821,TRGB      ,    51160,Karachentsev+2004      ,TRGB:I=-4.05                   ,47368,51160,2004AJ....127.2031K,,
+NGC5204,J132936.6+582514,28.08,,,c,4.13047487477879,,,c,28.0799999237061,TRGB      ,    51600,Tully+2008             ,TRGB:unknown                   ,47368,51600,2008ApJ...676..184T,,Freedman+2001
+NGC5204,J132936.6+582514,28.34,,,c,4.65586126239379,,,c,28.3400001525879,TRGB      ,    52014,Tammann+2008           ,                               ,47368,52014,2008A&ARv..15..289T,,
+#-- end of data table ----------------------------------------------------------
+# 12 lines were successfully retrieved
+#-------------------------------------------------------------------------------
+# Pleinpot version: 8.18.10
+# Date: 2026-02-04T01:32:58

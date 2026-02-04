@@ -1,0 +1,35 @@
+# Query Description
+# Type of request:                 Extract data from a table
+# Name of the selected table:      a007
+# Description of the table:        Distances
+# Object:                          NGC5584
+# Display the fields:              $objname,$L,$j2000,$field[modulus],$field[distance],modc,$link[method,method],$link[iref,iref],$link[bibref,bibcode],$link[calib,calib_bibcode],pgc,dataset,bibcode,"calib_bibcode",calibsys
+# Description of each column
+# $objname: ------------ Name of object
+# $j2000: -------------- J2000 coordinates
+# $field[modulus]: ----- Distance modulus
+# $field[distance]: ---- Linear distance (Mpc)
+# modc: ---------------- Distance modulus corrected to standard system
+# $link[method,method]:  Distance determination method
+# $link[iref,iref]: ---- Code of Bib.Ref.
+# $link[bibref,bibcode]:  Bibliographic Reference
+# $link[calib,calib_bibcode]:  Calibration relation
+# pgc: ----------------- PGC number
+# dataset: ------------- <NA>
+# bibcode: ------------- <NA>
+# calib_bibcode: ------- <NA>
+# calibsys: ------------ Calibration system
+#--------,------,-------,---------,------,--------,--------,----------,------,--------,----,--------------------,----------------,---------------------,--------------------------,---,-------,-------,---------------,--------
+$objname,$j2000,modulus,e_modulus,flimit,fquality,distance,e_distance,flimit,fquality,modc,$link[method,method],$link[iref,iref],$link[bibref,bibcode],$link[calib,calib_bibcode],pgc,dataset,bibcode,"calib_bibcode",calibsys
+#--------,------,-------,---------,------,--------,--------,----------,------,--------,----,--------------------,----------------,---------------------,--------------------------,---,-------,-------,---------------,--------
+NGC5584,J142223.8-002315,31.34,0.37,,,18.5353175366123,3.44329122997608,,,31.3400001525879,SNIa      ,    51920,Amanullah+2010         ,SNIa:Guy+2007                  ,51344,51920,2010ApJ...716..712A,2007A&A...466...11G,
+NGC5584,J142223.8-002315,32.264,0.038,,,28.3661233958179,0.500742036503038,,,31.9792785031921,SNIa      ,    51915,Silverman+2012         ,SNIa:Jha+2007:RV=1.7           ,51344,51915,2012MNRAS.425.1789S,2007ApJ...659..122J,
+NGC5584,J142223.8-002315,32.23,0.051,,,27.9254325254693,0.663612326020804,,,32.3275598674765,SNIa      ,    51915,Silverman+2012         ,SNIa:Jha+2007:RV=3.1           ,51344,51915,2012MNRAS.425.1789S,2007ApJ...659..122J,
+NGC5584,J142223.8-002315,31.29,0.45,,,18.1134085630959,4.17096015458242,,,31.2396035359481,TF        ,    51984,Sorce+2014             ,TF:Sorce+2014:MC[3.6]          ,51344,51984,2014MNRAS.444..527S,2014MNRAS.444..527S,
+NGC5584,J142223.8-002315,31.28,0.54,,,18.030183109954,5.09048185086649,,,31.2337664732541,TF        ,    51984,Sorce+2014             ,TF:Sorce+2014:M[3.6]           ,51344,51984,2014MNRAS.444..527S,2014MNRAS.444..527S,
+NGC5584,J142223.8-002315,31.76,0.1265,,,22.4905484289511,1.34910189643693,,,31.762547659708,TRGB      ,    52086,Jang,+2015             ,TRGB:Rizzi+2007                ,51344,52086,2015ApJ...807..133J,2007ApJ...661..815R,
+#-- end of data table ----------------------------------------------------------
+# 6 lines were successfully retrieved
+#-------------------------------------------------------------------------------
+# Pleinpot version: 8.18.10
+# Date: 2026-02-04T01:34:10

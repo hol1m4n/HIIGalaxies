@@ -1,0 +1,39 @@
+# Query Description
+# Type of request:                 Extract data from a table
+# Name of the selected table:      a007
+# Description of the table:        Distances
+# Object:                          UGC09128
+# Display the fields:              $objname,$L,$j2000,$field[modulus],$field[distance],modc,$link[method,method],$link[iref,iref],$link[bibref,bibcode],$link[calib,calib_bibcode],pgc,dataset,bibcode,"calib_bibcode",calibsys
+# Description of each column
+# $objname: ------------ Name of object
+# $j2000: -------------- J2000 coordinates
+# $field[modulus]: ----- Distance modulus
+# $field[distance]: ---- Linear distance (Mpc)
+# modc: ---------------- Distance modulus corrected to standard system
+# $link[method,method]:  Distance determination method
+# $link[iref,iref]: ---- Code of Bib.Ref.
+# $link[bibref,bibcode]:  Bibliographic Reference
+# $link[calib,calib_bibcode]:  Calibration relation
+# pgc: ----------------- PGC number
+# dataset: ------------- <NA>
+# bibcode: ------------- <NA>
+# calib_bibcode: ------- <NA>
+# calibsys: ------------ Calibration system
+#--------,------,-------,---------,------,--------,--------,----------,------,--------,----,--------------------,----------------,---------------------,--------------------------,---,-------,-------,---------------,--------
+$objname,$j2000,modulus,e_modulus,flimit,fquality,distance,e_distance,flimit,fquality,modc,$link[method,method],$link[iref,iref],$link[bibref,bibcode],$link[calib,calib_bibcode],pgc,dataset,bibcode,"calib_bibcode",calibsys
+#--------,------,-------,---------,------,--------,--------,----------,------,--------,----,--------------------,----------------,---------------------,--------------------------,---,-------,-------,---------------,--------
+UGC09128,J141556.5+230320,26.717,0.07,,,2.20495540733698,0.072237118751989,,,26.7786271904894,TRGB      ,    51280,Dalcanton+2009         ,TRGB:Girardi+2008              ,50961,51280,2009ApJS..183...67D,2008PASP..120..583G,Girardi+2008
+UGC09128,J141556.5+230320,26.75,0.05,,,2.23872113856834,0.0521457093110067,,,26.7711085799337,TRGB      ,    51372,Tully+2006             ,TRGB:I=-4.05                   ,50961,51372,2006AJ....132..729T,,I=-4.05
+UGC09128,J141556.5+230320,26.73,,,,2.2181959521868,,,,26.7389937617373,TRGB      ,    52289,Tikhonov2018           ,TRGB:Lee+1993                  ,50961,52289,2018AstBu..73...22T,1993ApJ...417..553L,
+UGC09128,J141556.5+230320,26.79,0.07,,,2.28034303342915,0.0747069124178066,,,26.7925483463535,TRGB      ,    51763,Makarov+2013           ,TRGB:Rizzi+2007                ,50961,51763,2013AstBu..68..125M,2007ApJ...661..815R,Rizzi+2007
+UGC09128,J141556.5+230320,26.81,0.04,,,2.30144125138595,0.0427859166608999,,,26.8125468967685,TRGB      ,    52052,Jacobs,+2009           ,TRGB:Rizzi+2007                ,50961,52052,2009AJ....138..332J,2007ApJ...661..815R,
+UGC09128,J141556.5+230320,27,0.2,,,2.51188643150958,0.242343239517655,,,27,TRGB      ,    51427,Aparicio+2000          ,                               ,50961,51427,2000AJ....119..177A,,
+UGC09128,J141556.5+230320,26.81,0.04,,p,2.30144125138595,0.0427859166608999,,p,26.8125468967685,TRGB      ,    51764,Jacobs+2009            ,TRGB:Rizzi+2007                ,50961,51764,2009AJ....138..332J,2007ApJ...661..815R,Rizzi+2007
+UGC09128,J141556.5+230320,26.78,,,c,2.26986556964231,,,c,26.7800006866455,TRGB      ,    51600,Tully+2008             ,TRGB:unknown                   ,50961,51600,2008ApJ...676..184T,,Freedman+2001
+UGC09128,J141556.5+230320,26.87,,,c,2.36592061186957,,,c,26.8700008392334,TRGB      ,    52014,Tammann+2008           ,                               ,50961,52014,2008A&ARv..15..289T,,
+UGC09128,J141556.5+230320,26.9897,,,c,2.50000031548023,,,c,26.9897003173828,TRGB      ,    51160,Karachentsev+2004      ,                               ,50961,51160,2004AJ....127.2031K,,
+#-- end of data table ----------------------------------------------------------
+# 10 lines were successfully retrieved
+#-------------------------------------------------------------------------------
+# Pleinpot version: 8.18.10
+# Date: 2026-02-04T01:33:23
