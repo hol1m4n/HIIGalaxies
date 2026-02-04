@@ -1,0 +1,37 @@
+C.D.S.  -  SIMBAD4 rel 1.8  -  2026.02.04CET22:23:02
+
+NGC3370
+-------
+
+Object NGC 3370  ---  GiG  ---  OID=@1748546   (@@36353,1)  ---  coobox=13071
+
+Coordinates(ICRS,ep=J2000,eq=2000): 10 47 04.0734572856  +17 16 25.315359780 (Opt ) C [3.7556 2.2429 90] 2020yCat.1350....0G
+
+Identifiers (22):
+   [DC78] UGC 5887                      GLEAM J104704+171634                 NVSS J104704+171630                
+   Gaia DR3 3982744687073129600         2MASX J10470403+1716253              IRAS F10443+1732                   
+   IRAS 10444+1732                      LEDA 32207                           MCG+03-28-008                      
+   NGC 3370                             UGC 5887                             UZC J104704.0+171625               
+   Z 95-19                              Z 1044.4+1732                        [CHM2007] HDC 632 J104704.03+1716253
+   [CHM2007] LDC 778 J104704.03+1716253  [M98c] 104423.2+173216               PSCz Q10444+1732                   
+   [BEC2010] HRS 17                     HIPASS J1047+17                      SDSS J104704.05+171625.0           
+   SDSS J104704.04+171625.0                                                                                     
+
+Measures (distance:13  ):
+distance  | distance Q unit|  err-        err+     | method |     reference     |
+distance  |   28.6     Mpc |  -7.1        +7.1     |T-F     |2022MNRAS.511.6160K|
+distance  |   26.2     Mpc |  -5.2        +5.2     |kin     |2018ApJ...861...49H|
+distance  |   30.06    Mpc |  -2.84       +2.84    |T-F     |2020ApJ...902..145K|
+distance  |   27.29    Mpc |  -2.01       +2.01    |Cep     |2010ApJ...715..277B|
+distance  |   29.7852  Mpc |                       |redshift|2019A&A...631A..38L|
+distance  |   26.18    Mpc |                       |        |2016AJ....152...50T|
+distance  |   22.1     Mpc |                       |        |2008MNRAS.389.1924F|
+distance  |   20.9     Mpc |  -1.20       +1.20    |T-F     |2011PASP..123.1011A|
+distance  |   24.8     Mpc |                       |T-F     |2014MNRAS.444..527S|
+distance  |   26.18    Mpc |  -0.06       +0.06    |        |2013AJ....146...86T|
+distance  |   27.7     Mpc |                       |redshift|2011MNRAS.413..813C|
+distance  |   23       Mpc |  -4          +4       |T-F     |2008ApJ...676..184T|
+distance  |   18.84    Mpc |                       |redshift|2007ApJ...655..790C|
+
+================================================================================
+

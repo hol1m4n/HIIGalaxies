@@ -1,0 +1,41 @@
+C.D.S.  -  SIMBAD4 rel 1.8  -  2026.02.04CET22:22:42
+
+M96
+---
+
+Object M 96  ---  GiP  ---  OID=@1749772   (@@105022,2)  ---  coobox=13102
+
+Coordinates(ICRS,ep=J2000,eq=2000): 10 46 45.744  +11 49 11.78 (IR  ) C [~ ~ ] 2006AJ....131.1163S
+
+Identifiers (25):
+   EQ 1044+120                          IRAS 10441+1205                      IRAS F10441+1205                   
+   LEDA 32192                           M 96                                 MCG+02-28-006                      
+   NGC 3368                             TC 532                               UGC 5882                           
+   Z 66-13                              [FS90] Leo 19                        [N93] 50                           
+   [VDD93] 122                          2MASX J10464574+1149117              JCMTSE J104645.8+114914            
+   JCMTSF J104645.8+114914              UZC J104645.9+114926                 Z 1044.1+1205                      
+   [CHM2007] HDC 626 J104645.74+1149117  [CHM2007] LDC 778 J104645.74+1149117  [M98c] 104406.9+120505             
+   PSCz Q10441+1205                     HIPASS J1046+11                      ALFALFA 5-321                      
+   SDSS J104645.67+114911.8                                                                                     
+
+Measures (distance:16  ):
+distance  | distance Q unit|  err-        err+     | method |     reference     |
+distance  |   11.0     Mpc |  -2.3        +2.3     |T-F     |2022MNRAS.511.6160K|
+distance  |    9.9     Mpc |  -1.0        +1.0     |kin     |2018ApJ...861...49H|
+distance  |   10.09    Mpc |  -1.04       +1.04    |T-F     |2020ApJ...902..145K|
+distance  |   10.52    Mpc |                       |T-F     |2011ApJS..192....6L|
+distance  |    9.73    Mpc |  -0.72       +0.72    |Cep     |2010ApJ...715..277B|
+distance  |   10.38    Mpc |  -1.29       +1.29    |Cep     |2010ApJ...715..277B|
+distance  |   10.42    Mpc |                       |redshift|2018MNRAS.479.4136K|
+distance  |   10.42    Mpc |                       |Cep     |2017AJ....153....6K|
+distance  |   10.67    Mpc |                       |        |2016AJ....152...50T|
+distance  |   11.5     Mpc |                       |T-F     |2014MNRAS.444..527S|
+distance  |   10.52    Mpc |  -0.08       +0.08    |        |2013AJ....146...86T|
+distance  |   10.1     Mpc |                       |redshift|2011MNRAS.413..813C|
+distance  |   10.47    Mpc |                       |Cep     |2008ApJ...676..184T|
+distance  |   12       Mpc |  -2          +2       |T-F     |2008ApJ...676..184T|
+distance  |   14       Mpc |                       |        |2007ApJS..173..185G|
+distance  |   10.42    Mpc |                       |redshift|2007ApJ...655..790C|
+
+================================================================================
+

@@ -1,0 +1,44 @@
+C.D.S.  -  SIMBAD4 rel 1.8  -  2026.02.04CET22:01:51
+
+NGC0925
+-------
+
+Object NGC 925  ---  H2G  ---  OID=@1581461   (@@127079,10)  ---  coobox=12248
+
+Coordinates(ICRS,ep=J2000,eq=2000): 02 27 16.913  +33 34 43.97 (IR  ) C [~ ~ ] 2006AJ....131.1163S
+
+Identifiers (22):
+   IRAS F02242+3321                     IRAS 02243+3321                      K73 105                            
+   KUG 0224+333                         LEDA 9332                            MCG+05-06-045                      
+   NGC 925                              QDOT B0224203+332106                 TC 650                             
+   UGC 1913                             UZC J022717.0+333443                 Z 504-85                           
+   [BTW2003] J0227+3334                 [VDD93] 16                           2MASX J02271691+3334439            
+   RX J0227.4+3334                      Z 0224.3+3321                        [CHM2007] HDC 155 J022716.91+3334439
+   [CHM2007] LDC 160 J022716.91+3334439  [M98c] 022416.8+332115               PSCz Q02243+3321                   
+   [TT2009] 3                                                                                                   
+
+Measures (distance:20  ):
+distance  | distance Q unit|  err-        err+     | method |     reference     |
+distance  |    6.79    Mpc |  -1.97       +1.97    |T-F     |2022MNRAS.511.6160K|
+distance  |    9.1     Mpc |  -0.9        +0.9     |kin     |2018ApJ...861...49H|
+distance  |    7.31    Mpc |  -0.79       +0.79    |T-F     |2020ApJ...902..145K|
+distance  |    9.16    Mpc |                       |T-F     |2011ApJS..192....6L|
+distance  |    8.95    Mpc |  -0.45       +0.45    |Cep     |2010ApJ...715..277B|
+distance  |    9.08    Mpc |  -0.42       +0.42    |Cep     |2010ApJ...715..277B|
+distance  |    9.120   Mpc |  +0.170      +0.170   |Ceph    |2010ApJS..190..233M|
+distance  |    9.55    Mpc |                       |redshift|2018MNRAS.479.4136K|
+distance  |    9.2045  Mpc |                       |redshift|2019A&A...631A..38L|
+distance  |    9.55    Mpc |                       |T-RDB   |2017AJ....153....6K|
+distance  |    8.67    Mpc |                       |        |2016AJ....152...50T|
+distance  |    6.5     Mpc |                       |T-F     |2014MNRAS.444..527S|
+distance  |    8.91    Mpc |  -0.07       +0.07    |        |2013AJ....146...86T|
+distance  |    9.1     Mpc |                       |redshift|2011MNRAS.413..813C|
+distance  |    9.16    Mpc |                       |Cep     |2008ApJ...676..184T|
+distance  |    7       Mpc |  -1          +1       |T-F     |2008ApJ...676..184T|
+distance  |    9.3     Mpc |                       |        |2007ApJS..173..185G|
+distance  |    9.10    Mpc |                       |redshift|2007ApJ...655..790C|
+distance  |   10.1     Mpc |                       |        |2007AJ....133..791S|
+distance  |    9.2     Mpc |                       |        |2005A&A...436..443V|
+
+================================================================================
+

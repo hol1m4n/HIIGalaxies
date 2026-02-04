@@ -1,0 +1,43 @@
+C.D.S.  -  SIMBAD4 rel 1.8  -  2026.02.04CET22:28:52
+
+NGC4725
+-------
+
+Object NGC 4725  ---  Sy2  ---  OID=@1988831   (@@108957,12)  ---  coobox=13538
+
+Coordinates(ICRS,ep=J2000,eq=2000): 12 50 26.5716367992  +25 30 02.733090588 (Opt ) A [0.3479 0.3165 90] 2020yCat.1350....0G
+
+Identifiers (31):
+   Gaia DR3 3958073639009608704         ADBS J125029+2530                    IRAS 12480+2547                    
+   KUG 1247+257B                        LEDA 43451                           MCG+04-30-022                      
+   NGC 4725                             TC 250                               UGC 7989                           
+   Z 129-27                             Z 1248.0+2546                        [DFO95] 87                         
+   [DSB94] 29                           [VDD93] 172                          2MASX J12502661+2530027            
+   1RXS J125027.2+253007                CAIRNS J125026.60+253005.8           RX J1250.4+2530                    
+   UZC J125026.5+253001                 [CHM2007] HDC 706 J125026.61+2530027  [CHM2007] LDC 867 J125026.61+2530027
+   [M98c] 124759.9+254620               [VV2003c] J125026.6+253006           [VV2006c] J125026.6+253006         
+   [RS2000] 196                         PSCz Q12480+2547                     [BEC2010] HRS 263                  
+   [VV2010c] J125026.6+253006           2XMM J125026.6+253003                SDSS J125026.57+253002.7           
+   Gaia DR2 3958073639009608704                                                                                 
+
+Measures (distance:16  ):
+distance  | distance Q unit|  err-        err+     | method |     reference     |
+distance  |   13.6     Mpc |  -2.9        +2.9     |T-F     |2022MNRAS.511.6160K|
+distance  |   11.9     Mpc |  -1.2        +1.2     |kin     |2018ApJ...861...49H|
+distance  |   12.42    Mpc |  -1.29       +1.29    |T-F     |2020ApJ...902..145K|
+distance  |   12.25    Mpc |  -1.13       +1.13    |Cep     |2010ApJ...715..277B|
+distance  |   12.42    Mpc |  -1.14       +1.14    |Cep     |2010ApJ...715..277B|
+distance  |   11.910   Mpc |  +0.330      +0.330   |Ceph    |2010ApJS..190..233M|
+distance  |   12.0781  Mpc |                       |redshift|2019A&A...631A..38L|
+distance  |   12.88    Mpc |                       |        |2016AJ....152...50T|
+distance  |   14.3     Mpc |                       |T-F     |2014MNRAS.444..527S|
+distance  |   12.59    Mpc |  -0.08       +0.08    |        |2013AJ....146...86T|
+distance  |   12.9     Mpc |                       |redshift|2011MNRAS.413..813C|
+distance  |   17.40    Mpc |                       |redshift|2010ApJ...725.2270P|
+distance  |   12       Mpc |  -2          +2       |T-F     |2008ApJ...676..184T|
+distance  |   12.76    Mpc |                       |Cep     |2008ApJ...676..184T|
+distance  |   15.07    Mpc |                       |redshift|2007ApJ...655..790C|
+distance  |   17.1     Mpc |                       |        |2007AJ....133..791S|
+
+================================================================================
+

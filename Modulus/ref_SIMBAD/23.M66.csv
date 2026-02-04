@@ -1,0 +1,55 @@
+C.D.S.  -  SIMBAD4 rel 1.8  -  2026.02.04CET22:26:10
+
+M66
+---
+
+Object M 66  ---  AGN  ---  OID=@1805061   (@@117168,4)  ---  coobox=13160
+
+Coordinates(ICRS,ep=J2000,eq=2000): 11 20 15.0  +12 59 29 (Rad ) C [670 670 0] 1997A&AS..122..235L
+
+Identifiers (56):
+   [DC78] UGC 6346                      NAIC 1117+133                        GLEAM J112015+125926               
+   AAVSO 1115+13B                       ADBS J112020+1259                    APG 16                             
+   APG 317A                             Ark 288                              IRAS F11176+1315                   
+   IRAS 11176+1315                      LEDA 34695                           M 66                               
+   MCG+02-29-019                        MITG J1120+1259                      MRC 1117+132                       
+   NGC 3627                             TC 162                               UGC 6346                           
+   VV 308                               VV 308a                              Z 67-57                            
+   [LBH86] 1117+132                     2MASX J11201502+1259286              1RXS J112016.7+125917              
+   CAIRNS J112015.02+125929.5           RGB J1120.3+1259                     RX J1120.2+1259                    
+   RX J1120.3+1259                      UZC J112015.1+125928                 Z 1117.6+1316                      
+   [CHM2007] HDC 626 J112015.02+1259286  [CHM2007] LDC 778 J112015.02+1259286  [M98c] 111737.9+131608             
+   [VV2000c] J112014.9+125927           [VV2003c] J112014.9+125927           [VV2006c] J112014.9+125927         
+   [VV98c] J112014.9+125927             [ZEH2003] RX J1120.2+1259 1          [RS2000] 157                       
+   PSCz Q11176+1315                     HIPASS J1120+13a                     [VV2010c] J112014.9+125927         
+   SDSS J112014.98+125929.4             WB 1117+1316                         NVSS J112015+125902                
+   Cul 1117+132                         GB6 B1117+1315                       MITG J112015+1259                  
+   JCMTSE J112014.8+125932              87GB 111738.3+131603                 JCMTSF J112014.8+125932            
+   BWE 1117+1316                        RGB J1120+129                        [CAB95] IRAS F11176+1315           
+   [NKB95] N3627                        NAICGB 1117+132                                                         
+
+Measures (distance:20  ):
+distance  | distance Q unit|  err-        err+     | method |     reference     |
+distance  |    9.20    Mpc |  -1.78       +1.78    |T-F     |2022MNRAS.511.6160K|
+distance  |   11.12    Mpc |  -0.655      +0.655   |        |2025ApJ...978...77B|
+distance  |    9.4     Mpc |  -1.0        +1.0     |kin     |2018ApJ...861...49H|
+distance  |    7.59    Mpc |  -0.58       +0.58    |T-F     |2020ApJ...902..145K|
+distance  |   10.05    Mpc |                       |T-F     |2011ApJS..192....6L|
+distance  |   10.62    Mpc |  -1.12       +1.12    |Cep     |2010ApJ...715..277B|
+distance  |   10.09    Mpc |  -1.07       +1.07    |Cep     |2010ApJ...715..277B|
+distance  |   10.72    Mpc |  -0.89       +0.89    |Cep     |2010ApJ...715..277B|
+distance  |    9.380   Mpc |  +0.350      +0.350   |Ceph    |2010ApJS..190..233M|
+distance  |    8.32    Mpc |                       |redshift|2018MNRAS.479.4136K|
+distance  |   11.4815  Mpc |                       |redshift|2019A&A...631A..38L|
+distance  |    8.32    Mpc |                       |T-RDB   |2017AJ....153....6K|
+distance  |    8.99    Mpc |                       |        |2016AJ....152...50T|
+distance  |    8.0     Mpc |                       |T-F     |2014MNRAS.444..527S|
+distance  |    9.04    Mpc |  -0.07       +0.07    |        |2013AJ....146...86T|
+distance  |   10.3     Mpc |                       |redshift|2011MNRAS.413..813C|
+distance  |    8       Mpc |  -1          +1       |T-F     |2008ApJ...676..184T|
+distance  |   10.05    Mpc |                       |Cep     |2008ApJ...676..184T|
+distance  |    9.1     Mpc |                       |        |2007ApJS..173..185G|
+distance  |    7.34    Mpc |                       |redshift|2007ApJ...655..790C|
+
+================================================================================
+

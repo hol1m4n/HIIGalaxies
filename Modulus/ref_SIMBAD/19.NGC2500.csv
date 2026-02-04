@@ -1,0 +1,30 @@
+C.D.S.  -  SIMBAD4 rel 1.8  -  2026.02.04CET22:22:02
+
+NGC2500
+-------
+
+Object NGC 2500  ---  GiG  ---  OID=@468325   (@@1250,0)  ---  coobox=3970
+
+Coordinates(ICRS,ep=J2000,eq=2000): 08 01 53.1717201720  +50 44 13.602483780 (Opt ) A [0.2514 0.2535 90] 2020yCat.1350....0G
+
+Identifiers (22):
+   SDSS J080153.17+504413.5             Gaia DR3 935770569465725696          2MASXI J0801533+504415             
+   87GB 075802.0+505251                 IRAS 07581+5052                      IRAS F07581+5052                   
+   K73 224                              LEDA 22525                           MCG+09-13-110                      
+   NGC 2500                             TC 699                               UGC 4165                           
+   Z 262-62                             LCSB L330                            2MASX J08015322+5044135            
+   Z 0758.2+5054                        [CHM2007] LDC 558 J080153.22+5044135  [CHM2007] HDC 471 J080153.22+5044135
+   UZC J080153.1+504415                 PSCz Q07581+5052                     SDSS J080153.16+504413.5           
+   Gaia DR2 935770569465725696                                                                                  
+
+Measures (distance:6  ):
+distance  | distance Q unit|  err-        err+     | method |     reference     |
+distance  |    7.60    Mpc |                       |T-F     |2011ApJS..192....6L|
+distance  |   15.0     Mpc |                       |T-F     |2011PASP..123.1011A|
+distance  |    9.9     Mpc |                       |        |2007ApJS..173..185G|
+distance  |    9.18    Mpc |                       |redshift|2007ApJ...655..790C|
+distance  |   10.1     Mpc |                       |        |2005A&A...436..443V|
+distance  |   11.0     Mpc |                       |        |2000ApJ...529..786M|
+
+================================================================================
+

@@ -1,0 +1,36 @@
+C.D.S.  -  SIMBAD4 rel 1.8  -  2026.02.04CET22:05:57
+
+NGC3319
+-------
+
+Object NGC 3319  ---  SyG  ---  OID=@1723887   (@@35840,9)  ---  coobox=12547
+
+Coordinates(ICRS,ep=J2000,eq=2000): 10 39 09.533  +41 41 12.74 (IR  ) C [~ ~ ] 2006AJ....131.1163S
+
+Identifiers (19):
+   2MFGC 8284                           IRAS 10361+4156                      K73 428                            
+   KUG 1036+419                         LEDA 31671                           MCG+07-22-036                      
+   NGC 3319                             TC 723                               UGC 5789                           
+   Z 212-33                             [VDD93] 116                          SDSS J103909.46+414112.0           
+   2MASX J10390953+4141127              Z 1036.2+4157                        [CHM2007] LDC 743 J103909.53+4141127
+   [M98c] 103615.2+415656               UZC J103909.5+414114                 2XMM J103909.4+414112              
+   SDSS J103909.45+414112.0                                                                                     
+
+Measures (distance:13  ):
+distance  | distance Q unit|  err-        err+     | method |     reference     |
+distance  |   10.9     Mpc |  -3.8        +3.8     |T-F     |2022MNRAS.511.6160K|
+distance  |   13.805   Mpc |  -0.580      +0.580   |        |2025ApJ...978...77B|
+distance  |   13.00    Mpc |  -1.87       +1.87    |T-F     |2020ApJ...902..145K|
+distance  |   13.80    Mpc |  -1.21       +1.21    |Cep     |2010ApJ...715..277B|
+distance  |   13.37    Mpc |  -0.92       +0.92    |Cep     |2010ApJ...715..277B|
+distance  |   13.06    Mpc |                       |        |2016AJ....152...50T|
+distance  |   13.1     Mpc |                       |T-F     |2014MNRAS.444..527S|
+distance  |   13.00    Mpc |  -0.09       +0.09    |        |2013AJ....146...86T|
+distance  |   13.30    Mpc |                       |Cep     |2008ApJ...676..184T|
+distance  |   15       Mpc |  -3          +2       |T-F     |2008ApJ...676..184T|
+distance  |   15       Mpc |                       |        |2007ApJS..173..185G|
+distance  |   11.31    Mpc |                       |redshift|2007ApJ...655..790C|
+distance  |   14.2     Mpc |                       |        |2005A&A...436..443V|
+
+================================================================================
+

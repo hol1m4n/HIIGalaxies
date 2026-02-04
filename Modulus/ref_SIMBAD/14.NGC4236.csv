@@ -1,0 +1,37 @@
+C.D.S.  -  SIMBAD4 rel 1.8  -  2026.02.04CET22:08:36
+
+NGC4236
+-------
+
+Object NGC 4236  ---  GiG  ---  OID=@447665   (@@5646,5)  ---  coobox=1788
+
+Coordinates(ICRS,ep=J2000,eq=2000): 12 16 42.118  +69 27 45.25 (IR  ) C [~ ~ ] 2006AJ....131.1163S
+
+Identifiers (16):
+   IRAS 12143+6945                      IRAS 12140+6947                      K73 523                            
+   LEDA 39346                           MCG+12-12-004                        NGC 4236                           
+   SPB 174                              UGC 7306                             Z 335-8                            
+   [VDD93] 151                          2MASX J12164211+6927452              Z 1214.4+6945                      
+   [CHM2007] LDC 842 J121642.11+6927452  [M98c] 121421.8+694436               UZC J121642.1+692746               
+   PSCz P12140+6947                                                                                             
+
+Measures (distance:15  ):
+distance  | distance Q unit|  err-        err+     | method |     reference     |
+distance  |    5.04    Mpc |  -1.76       +1.76    |T-F     |2022MNRAS.511.6160K|
+distance  |    5.13    Mpc |  -0.58       +0.58    |T-F     |2020ApJ...902..145K|
+distance  |    4.45    Mpc |                       |T-F     |2011ApJS..192....6L|
+distance  |    4.450   Mpc |  +0.450      +0.450   |TRGB    |2010ApJS..190..233M|
+distance  |    4.41    Mpc |                       |redshift|2018MNRAS.479.4136K|
+distance  |    4.4056  Mpc |                       |redshift|2019A&A...631A..38L|
+distance  |    4.41    Mpc |                       |T-RDB   |2017AJ....153....6K|
+distance  |    4.41    Mpc |                       |        |2016AJ....152...50T|
+distance  |    4.41    Mpc |  -0.10       +0.10    |        |2013AJ....146...86T|
+distance  |    4.88    Mpc |                       |T-RGB   |2008ApJ...676..184T|
+distance  |    4.4     Mpc |  -0.7        +0.7     |T-F     |2008ApJ...676..184T|
+distance  |    4.4     Mpc |                       |        |2007ApJS..173..185G|
+distance  |    4.11    Mpc |                       |redshift|2007ApJ...655..790C|
+distance  |    3.5     Mpc |                       |        |2007AJ....133..791S|
+distance  |    4.0     Mpc |                       |        |2005A&A...436..443V|
+
+================================================================================
+

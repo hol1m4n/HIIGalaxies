@@ -1,0 +1,45 @@
+C.D.S.  -  SIMBAD4 rel 1.8  -  2026.02.04CET22:12:25
+
+NGC4395
+-------
+
+Object NGC 4395  ---  Sy2  ---  OID=@1927927   (@@99164,9)  ---  coobox=13456
+
+Coordinates(ICRS,ep=J2000,eq=2000): 12 25 48.8633109888  +33 32 48.700168152 (Opt ) A [0.1314 0.0735 90] 2020yCat.1350....0G
+
+Identifiers (45):
+   MaNGA 1-405438                       MaNGA 12483-9102                     WISE J122548.88+333248.8           
+   Gaia DR3 4016037658643693696         [HSN2016] J186.45+33.54              [KRL2007b] 115                     
+   BTS 135                              INTREF 495                           KUG 1223+338                       
+   LEDA 40596                           LJHY 102                             MCG+06-27-053                      
+   NGC 4395                             UGC 7524                             Z 187-42                           
+   [CC2002] NGC 4395 99                 [KVB99] 18                           [KVC2005] 11                       
+   [LLJ2000] NGC 4395 X1                [MI94] Sm 77                         [VDD93] 158                        
+   2MASX J12254892+3332482              UZC J122549.0+333251                 SWIFT J1202.5+3332                 
+   CAIRNS J122548.92+333248.4           Z 1223.4+3349                        [CHM2007] HDC 706 J122548.92+3332482
+   [CHM2007] LDC 867 J122548.92+3332482  [M98c] 122320.9+334922               [VV2000c] J122548.9+333248         
+   [VV2003c] J122548.9+333248           [VV2006c] J122548.9+333248           [VV98c] J122548.9+333249           
+   [MFH99] A                            PBC J1225.7+3331                     SWIFT J1225.8+3330                 
+   [VV2010c] J122548.9+333248           2XMM J122548.8+333249                SDSS J122548.86+333248.7           
+   [KOV2009] 14                         [RGG2013] 21                         SWIFT J1225.7+3331                 
+   Gaia DR2 4016037658643693696         QSO J1225+3332                       NSAID v0 89394                     
+
+Measures (distance:14  ):
+distance  | distance Q unit|  err-        err+     | method |     reference     |
+distance  |    4.0     Mpc |  -0.4        +0.4     |kin     |2018ApJ...861...49H|
+distance  |    4.61    Mpc |                       |T-F     |2011ApJS..192....6L|
+distance  |    4.76    Mpc |                       |redshift|2018MNRAS.479.4136K|
+distance  |    4.75    Mpc |  -0.12       +0.12    |T-RGB   |2020ApJ...905..104K|
+distance  |    4.76    Mpc |                       |        |2016AJ....152...50T|
+distance  |    4.7     Mpc |  -0.24       +0.24    |T-F     |2011PASP..123.1011A|
+distance  |    4.74    Mpc |  -0.24       +0.24    |T-RGB   |2016ApJ...816L..14L|
+distance  |    4.76    Mpc |  -0.10       +0.10    |        |2013AJ....146...86T|
+distance  |    4.1     Mpc |                       |        |2011ApJ...739...57K|
+distance  |    4.33    Mpc |                       |redshift|2010ApJ...725.2270P|
+distance  |    4.63    Mpc |                       |T-RGB   |2008ApJ...676..184T|
+distance  |    3.9     Mpc |  -0.7        +0.6     |T-F     |2008ApJ...676..184T|
+distance  |    4.2     Mpc |                       |        |2007ApJS..173..185G|
+distance  |    4.11    Mpc |                       |redshift|2007ApJ...655..790C|
+
+================================================================================
+

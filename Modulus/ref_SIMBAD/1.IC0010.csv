@@ -1,0 +1,30 @@
+C.D.S.  -  SIMBAD4 rel 1.8  -  2026.02.04CET21:56:02
+
+IC0010
+------
+
+Object IC 10  ---  rG  ---  OID=@131436   (@@124769,4)  ---  coobox=2124
+
+Coordinates(ICRS,ep=J2000,eq=2000): 00 20 17.33520  +59 18 13.6480 (NIR ) C [~ ~ ] 2006AJ....131.1163S
+
+Identifiers (24):
+   IC 10                                LBN 119.04-03.37                     LBN 591                            
+   LEDA 1305                            MCG+10-01-001                        PP 5                               
+   RX J002021+59177                     TC 6                                 UGC 192                            
+   WB89 329                             ZOAG G118.97-03.31                   [MI94] Im 2                        
+   2MASX J00201733+5918136              RGB J0020.3+5918                     RX J0020.4+5916                    
+   [M98c] 001741.5+590052               TGSSADR J002028.9+591651             GB6 B0017+5901                     
+   WB 0017+5901                         87GB 001739.2+590105                 WN B0017.7+5900                    
+   BWE 0017+5901                        F3R 3603                             [NKB95] I0010                      
+
+Measures (distance:6  ):
+distance  | distance Q unit|  err-        err+     | method |     reference     |
+distance  |    0.66    Mpc |                       |T-F     |2011ApJS..192....6L|
+distance  |    0.7943  Mpc |                       |redshift|2019A&A...631A..38L|
+distance  |    0.74    Mpc |                       |        |2016AJ....152...50T|
+distance  |    0.74    Mpc |  -0.06       +0.06    |        |2013AJ....146...86T|
+distance  |    0.78    Mpc |  -0.05       +0.05    |T-RGB   |2009AstL...35..748T|
+distance  |    0.66    Mpc |                       |Cep     |2008ApJ...676..184T|
+
+================================================================================
+

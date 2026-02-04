@@ -1,0 +1,38 @@
+C.D.S.  -  SIMBAD4 rel 1.8  -  2026.02.04CET22:30:01
+
+NGC5204
+-------
+
+Object NGC 5204  ---  LSB  ---  OID=@501750   (@@145273,0)  ---  coobox=1849
+
+Coordinates(ICRS,ep=J2000,eq=2000): 13 29 36.508  +58 25 07.43 (IR  ) C [~ ~ ] 2006AJ....131.1163S
+
+Identifiers (26):
+   2MASXI J1329362+582506               2E 3067                              IRAS 13277+5840                    
+   IRAS F13277+5840                     LEDA 47368                           MCG+10-19-078                      
+   NGC 5204                             RX J132937+58250                     SPB 219                            
+   TC 826                               UGC 8490                             Z 294-39                           
+   [MI94] Sm 90                         [VDD93] 186                          LCSB L578                          
+   2MASX J13293650+5825074              [CHM2007] LDC 842 J132936.50+5825074  1RXS J132938.2+582507              
+   2E 1327.7+5840                       RX J1329.6+5825                      RX J132938.6+582503                
+   Z 1327.7+5840                        [M98c] 132743.8+584032               [ZEH2003] RX J1329.6+5825 1        
+   UZC J132936.5+582509                 PSCz Q13277+5840                                                        
+
+Measures (distance:13  ):
+distance  | distance Q unit|  err-        err+     | method |     reference     |
+distance  |    4.45    Mpc |  -1.88       +1.88    |T-F     |2022MNRAS.511.6160K|
+distance  |    6.17    Mpc |  -0.94       +0.94    |T-F     |2020ApJ...902..145K|
+distance  |    4.65    Mpc |                       |T-F     |2011ApJS..192....6L|
+distance  |    4.59    Mpc |                       |redshift|2018MNRAS.479.4136K|
+distance  |    4.59    Mpc |                       |T-RDB   |2017AJ....153....6K|
+distance  |    4.88    Mpc |                       |        |2016AJ....152...50T|
+distance  |    3.2     Mpc |  -0.16       +0.16    |T-F     |2011PASP..123.1011A|
+distance  |    5.5     Mpc |                       |T-F     |2014MNRAS.444..527S|
+distance  |    4.65    Mpc |  -0.53       +0.53    |T-RGB   |2016ApJ...816L..14L|
+distance  |    4.76    Mpc |  -0.09       +0.09    |        |2013AJ....146...86T|
+distance  |    4.65    Mpc |  -0.47       +0.47    |T-RGB   |2009AJ....138..392S|
+distance  |    4.13    Mpc |                       |T-RGB   |2008ApJ...676..184T|
+distance  |    4.41    Mpc |                       |redshift|2007ApJ...655..790C|
+
+================================================================================
+

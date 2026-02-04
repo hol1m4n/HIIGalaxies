@@ -1,0 +1,39 @@
+C.D.S.  -  SIMBAD4 rel 1.8  -  2026.02.04CET22:05:37
+
+NGC3198
+-------
+
+Object NGC 3198  ---  EmG  ---  OID=@594658   (@@145269,0)  ---  coobox=3921
+
+Coordinates(ICRS,ep=J2000,eq=2000): 10 19 54.990  +45 32 58.88 (IR  ) C [~ ~ ] 2006AJ....131.1163S
+
+Identifiers (17):
+   IRAS F10168+4547                     IRAS 10168+4548                      LEDA 30197                         
+   MCG+08-19-020                        NGC 3198                             QDOT B1016512+454800               
+   TC 718                               UGC 5572                             Z 240-30                           
+   [VDD93] 110                          2MASX J10195499+4532588              Z 1016.9+4549                      
+   [CHM2007] LDC 743 J101954.99+4532588  [M98c] 101651.8+454814               UZC J101954.9+453300               
+   PSCz Q10168+4548                     SDSS J101954.92+453259.1                                                
+
+Measures (distance:17  ):
+distance  | distance Q unit|  err-        err+     | method |     reference     |
+distance  |   11.0     Mpc |  -3.3        +3.3     |T-F     |2022MNRAS.511.6160K|
+distance  |   12.36    Mpc |  -0.78       +0.78    |T-F     |2020ApJ...902..145K|
+distance  |   13.80    Mpc |  -0.76       +0.76    |Cep     |2010ApJ...715..277B|
+distance  |   14.19    Mpc |  -0.78       +0.78    |Cep     |2010ApJ...715..277B|
+distance  |   13.680   Mpc |  +0.500      +0.500   |Ceph    |2010ApJS..190..233M|
+distance  |   13.9959  Mpc |                       |redshift|2019A&A...631A..38L|
+distance  |   13.24    Mpc |                       |        |2016AJ....152...50T|
+distance  |   12.9     Mpc |                       |T-F     |2014MNRAS.444..527S|
+distance  |   13.80    Mpc |  -1.40       +1.40    |Cep     |2016ApJ...816L..14L|
+distance  |   13.37    Mpc |  -0.09       +0.09    |        |2013AJ....146...86T|
+distance  |   14.5     Mpc |                       |redshift|2011MNRAS.413..813C|
+distance  |   14.45    Mpc |  -1.45       +1.45    |Cep     |2009AJ....138..392S|
+distance  |   12       Mpc |  -2          +1       |T-F     |2008ApJ...676..184T|
+distance  |   13.80    Mpc |                       |Cep     |2008ApJ...676..184T|
+distance  |   17       Mpc |                       |        |2007ApJS..173..185G|
+distance  |   10.92    Mpc |                       |redshift|2007ApJ...655..790C|
+distance  |   13.8     Mpc |                       |        |2001ApJ...553...47F|
+
+================================================================================
+

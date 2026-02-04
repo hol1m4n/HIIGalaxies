@@ -1,0 +1,36 @@
+C.D.S.  -  SIMBAD4 rel 1.8  -  2026.02.04CET21:58:04
+
+IC2574
+------
+
+Object IC 2574  ---  AG?  ---  OID=@449599   (@@133973,9)  ---  coobox=3196
+
+Coordinates(ICRS,ep=J2000,eq=2000): 10 28 23.6148831408  +68 24 43.440012756 (Opt ) A [0.2336 0.2410 90] 2020yCat.1350....0G
+
+Identifiers (24):
+   Gaia DR3 1073019277357042048         1E 1025.0+6843                       DDO 81                             
+   HIJASS J1029+68                      IC 2574                              IRAS 10251+6843                    
+   LEDA 30819                           MCG+12-10-038                        NAME Coddington's Nebula           
+   SPB 140                              TC 720                               UGC 5666                           
+   Z 333-31                             ZW VII 330                           [B93] 26                           
+   [MI94] Sm 50                         [VDD93] 112                          2MASX J10282348+6824437            
+   CGPG 1024.8+6840                     Z 1024.8+6840                        [M98c] 102441.3+684018             
+   UZC J102822.1+682500                 PSCz Q10251+6843                     Gaia DR2 1073019277357042048       
+
+Measures (distance:12  ):
+distance  | distance Q unit|  err-        err+     | method |     reference     |
+distance  |    3.81    Mpc |                       |T-F     |2011ApJS..192....6L|
+distance  |    4.020   Mpc |  +0.410      +0.410   |TRGB    |2010ApJS..190..233M|
+distance  |    3.93    Mpc |                       |redshift|2018MNRAS.479.4136K|
+distance  |    3.9995  Mpc |                       |redshift|2019A&A...631A..38L|
+distance  |    3.93    Mpc |                       |T-RDB   |2017AJ....153....6K|
+distance  |    3.89    Mpc |                       |        |2016AJ....152...50T|
+distance  |    3.91    Mpc |  -0.20       +0.20    |T-RGB   |2016ApJ...816L..14L|
+distance  |    3.89    Mpc |  -0.08       +0.08    |        |2013AJ....146...86T|
+distance  |    4.02    Mpc |  -0.4        +0.4     |T-RGB   |2009AJ....138..392S|
+distance  |    4.09    Mpc |                       |T-RGB   |2008ApJ...676..184T|
+distance  |    3.7     Mpc |  -0.6        +0.6     |T-F     |2008ApJ...676..184T|
+distance  |    4.0     Mpc |                       |        |2007ApJS..173..185G|
+
+================================================================================
+

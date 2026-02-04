@@ -1,0 +1,35 @@
+C.D.S.  -  SIMBAD4 rel 1.8  -  2026.02.04CET22:03:28
+
+NGC2541
+-------
+
+Object NGC 2541  ---  GiG  ---  OID=@492917   (@@1257,15)  ---  coobox=3974
+
+Coordinates(ICRS,ep=J2000,eq=2000): 08 14 40.1160678912  +49 03 42.021679932 (Opt ) A [1.0467 0.7504 90] 2020yCat.1350....0G
+
+Identifiers (17):
+   Gaia DR3 931602423960439936          IRAS F08109+4912                     IRAS 08110+4912                    
+   LEDA 23110                           MCG+08-15-054                        NGC 2541                           
+   UGC 4284                             Z 0811.0+4913                        Z 236-37                           
+   2MASX J08144007+4903411              [CHM2007] HDC 471 J081440.07+4903411  [CHM2007] LDC 558 J081440.07+4903411
+   [M98c] 081101.9+491253               UZC J081440.0+490342                 PSCz Q08110+4912                   
+   SDSS J081440.12+490342.1             Gaia DR2 931602423960439936                                             
+
+Measures (distance:13  ):
+distance  | distance Q unit|  err-        err+     | method |     reference     |
+distance  |    9.55    Mpc |  -3.91       +3.91    |T-F     |2022MNRAS.511.6160K|
+distance  |   12.4     Mpc |  -2.472      +2.472   |        |2025ApJ...978...77B|
+distance  |   13.49    Mpc |  -1.70       +1.70    |T-F     |2020ApJ...902..145K|
+distance  |   11.91    Mpc |  -0.99       +0.99    |Cep     |2010ApJ...715..277B|
+distance  |   12.13    Mpc |  -1.00       +1.00    |Cep     |2010ApJ...715..277B|
+distance  |   11.86    Mpc |                       |        |2016AJ....152...50T|
+distance  |   14.5     Mpc |                       |T-F     |2014MNRAS.444..527S|
+distance  |   11.53    Mpc |  -0.09       +0.09    |        |2013AJ....146...86T|
+distance  |   11.22    Mpc |                       |Cep     |2008ApJ...676..184T|
+distance  |   12       Mpc |  -2          +2       |T-F     |2008ApJ...676..184T|
+distance  |   10       Mpc |                       |        |2007ApJS..173..185G|
+distance  |    9.70    Mpc |                       |redshift|2007ApJ...655..790C|
+distance  |   11.2     Mpc |                       |        |2001ApJ...553...47F|
+
+================================================================================
+

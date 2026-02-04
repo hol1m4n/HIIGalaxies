@@ -1,0 +1,23 @@
+C.D.S.  -  SIMBAD4 rel 1.8  -  2026.02.04CET22:01:33
+
+MRK116
+------
+
+Object Mrk 116  ---  AGN  ---  OID=@508385   (@@145375,0)  ---  coobox=3514
+
+Coordinates(ICRS,ep=J2000,eq=2000): 09 34 02.1  +55 14 25 (Opt ) D [~ ~ ] 2003A&A...412...45P
+
+Identifiers (13):
+   [HSN2016] J143.50+55.24              AGC 190351                           HS 0930+5527                       
+   KUG 0930+554                         LEDA 27182                           Mrk 116                            
+   SBSG 0930+554                        UGCA 166                             ZW I 18                            
+   [MI94] Im 58                         CGPG 0930.5+5527                     SDSS J093401.92+551427.9           
+   [M98c] 093030.3+552746                                                                                       
+
+Measures (distance:2  ):
+distance  | distance Q unit|  err-        err+     | method |     reference     |
+distance  |   13       Mpc |                       |        |2007ApJS..173..185G|
+distance  |   15.6     Mpc |                       |        |2000ApJ...529..786M|
+
+================================================================================
+

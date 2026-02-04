@@ -1,0 +1,29 @@
+C.D.S.  -  SIMBAD4 rel 1.8  -  2026.02.04CET22:22:25
+
+NGC3184
+-------
+
+Object NGC 3180  ---  GiG  ---  OID=@1684128   (@@138109,8)  ---  coobox=12369
+
+Coordinates(ICRS,ep=J2000,eq=2000): 10 18 16.985  +41 25 27.77 (IR  ) C [~ ~ ] 2006AJ....131.1163S
+
+Identifiers (18):
+   IRAS 10152+4140                      KUG 1015+416                         LEDA 30087                         
+   MCG+07-21-037                        NGC 3180                             NGC 3184                           
+   QDOT B1015126+414055                 TC 136                               UGC 5557                           
+   Z 211-38                             [H92] 21                             2MASX J10181698+4125277            
+   Z 1015.3+4140                        [CHM2007] LDC 743 J101816.98+4125277  [M98c] 101517.7+414028             
+   UZC J101817.0+412527                 PSCz Q10152+4140                     SDSS J101816.90+412527.5           
+
+Measures (distance:7  ):
+distance  | distance Q unit|  err-        err+     | method |     reference     |
+distance  |   11.12    Mpc |  -0.655      +0.655   |        |2025ApJ...978...77B|
+distance  |   11.100   Mpc |  +1.900      +1.900   |SN      |2010ApJS..190..233M|
+distance  |   11.6413  Mpc |                       |redshift|2019A&A...631A..38L|
+distance  |   11.3     Mpc |                       |redshift|2011MNRAS.413..813C|
+distance  |    8.89    Mpc |                       |redshift|2007ApJ...655..790C|
+distance  |    8.6     Mpc |                       |        |2007AJ....133..791S|
+distance  |    8.7     Mpc |                       |        |2004ApJ...602..231C|
+
+================================================================================
+

@@ -1,0 +1,40 @@
+C.D.S.  -  SIMBAD4 rel 1.8  -  2026.02.04CET22:00:33
+
+M33
+---
+
+Object M 33  ---  GiG  ---  OID=@1522778   (@@145059,0)  ---  coobox=12053
+
+Coordinates(ICRS,ep=J2000,eq=2000): 01 33 50.8965749232  +30 39 36.630403128 (Opt ) A [0.2833 0.2380 90] 2020yCat.1350....0G
+
+Identifiers (22):
+   1AXG J013351+3039                    2E 409                               2E 0131.0+3024                     
+   HIJASS J0133+30                      LEDA 5818                            M 33                               
+   MCG+05-04-069                        NAME Triangulum Galaxy               NAME Triangulum Pinwheel           
+   NGC 598                              RBS 214                              RX J013351+30399                   
+   TC 906                               UGC 1117                             Z 0131.0+3024                      
+   Z 502-110                            2MASX J01335090+3039357              1ES 0131+30.3                      
+   1RXS J013350.9+303932                [CHM2007] LDC 160 J013350.90+3039357  [M98c] 013101.7+302415             
+   UZC J013351.1+303922                                                                                         
+
+Measures (distance:16  ):
+distance  | distance Q unit|  err-        err+     | method |     reference     |
+distance  |  840       kpc | -11         +11       |Cep     |2023ApJ...951..118B|
+distance  |    0.8     Mpc |  -0.1        +0.1     |kin     |2018ApJ...861...49H|
+distance  |    0.75    Mpc |  -0.08       +0.08    |T-F     |2020ApJ...902..145K|
+distance  |    0.84    Mpc |                       |T-F     |2011ApJS..192....6L|
+distance  |  851.14    kpc | -39.15      +39.15    |Cep     |2010ApJ...715..277B|
+distance  |  820.35    kpc | -86.79      +86.79    |Cep     |2010ApJ...715..277B|
+distance  |  765.60    kpc | -45.78      +45.78    |Cep     |2010ApJ...715..277B|
+distance  |    0.93    Mpc |                       |redshift|2018MNRAS.479.4136K|
+distance  |    0.93    Mpc |                       |T-RDB   |2017AJ....153....6K|
+distance  |    0.91    Mpc |                       |        |2016AJ....152...50T|
+distance  |    0.91    Mpc |  -0.05       +0.05    |        |2013AJ....146...86T|
+distance  |  820       kpc | -19         +20       |T-RGB   |2012ApJ...758...11C|
+distance  |    0.9     Mpc |  -0.2        +0.1     |T-F     |2008ApJ...676..184T|
+distance  |    0.88    Mpc |                       |Cep     |2008ApJ...676..184T|
+distance  |    0.84    Mpc |                       |        |2007ApJS..173..185G|
+distance  |    4.11    Mpc |                       |redshift|2007ApJ...655..790C|
+
+================================================================================
+

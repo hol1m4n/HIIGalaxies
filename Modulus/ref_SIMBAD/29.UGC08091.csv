@@ -1,0 +1,32 @@
+C.D.S.  -  SIMBAD4 rel 1.8  -  2026.02.04CET22:29:31
+
+UGC08091
+--------
+
+Object Z 71-87  ---  H2G  ---  OID=@2049892   (@@145053,0)  ---  coobox=13926
+
+Coordinates(ICRS,ep=J2000,eq=2000): 12 58 40.1930636208  +14 13 00.739589628 (Opt ) A [0.1136 0.0765 90] 2020yCat.1350....0G
+
+Identifiers (21):
+   Gaia DR3 3930256952604738176         Anon 1256+14                         DDO 155                            
+   ESDO 646-07                          GRDG +14 74                          GRDG 8                             
+   LEDA 44491                           MCG+02-33-041                        SPB 203                            
+   TC 257                               UGC 8091                             VV 558                             
+   Z 71-87                              [M98c] 125610.0+142913               [MI94] Im 121                      
+   ALFALFA 1-449                        UZC J125840.3+141302                 Z 1256.2+1429                      
+   SDSSCGB 1386.1                       SDSS J125840.19+141300.7             Gaia DR2 3930256952604738176       
+
+Measures (distance:9  ):
+distance  | distance Q unit|  err-        err+     | method |     reference     |
+distance  |    2.1     Mpc |  -0.2        +0.2     |kin     |2018ApJ...861...49H|
+distance  |    2.08    Mpc |                       |T-F     |2011ApJS..192....6L|
+distance  |    2.19    Mpc |                       |redshift|2018MNRAS.479.4136K|
+distance  |    2.19    Mpc |                       |T-RDB   |2017AJ....153....6K|
+distance  |    2.18    Mpc |                       |        |2016AJ....152...50T|
+distance  |    2.18    Mpc |  -0.06       +0.06    |        |2013AJ....146...86T|
+distance  |    2.22    Mpc |                       |Cep     |2008ApJ...676..184T|
+distance  |   16.6     Mpc |                       |        |2007AJ....133.2569G|
+distance  |    2.10    Mpc |  -0.34       +0.34    |T-RGB   |2007AJ....133..504K|
+
+================================================================================
+
