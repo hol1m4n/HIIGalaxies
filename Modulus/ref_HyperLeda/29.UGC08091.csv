@@ -1,0 +1,38 @@
+# Query Description
+# Type of request:                 Extract data from a table
+# Name of the selected table:      a007
+# Description of the table:        Distances
+# Object:                          UGC08091
+# Display the fields:              $objname,$L,$j2000,$field[modulus],$field[distance],modc,$link[method,method],$link[iref,iref],$link[bibref,bibcode],$link[calib,calib_bibcode],pgc,dataset,bibcode,"calib_bibcode",calibsys
+# Description of each column
+# $objname: ------------ Name of object
+# $j2000: -------------- J2000 coordinates
+# $field[modulus]: ----- Distance modulus
+# $field[distance]: ---- Linear distance (Mpc)
+# modc: ---------------- Distance modulus corrected to standard system
+# $link[method,method]:  Distance determination method
+# $link[iref,iref]: ---- Code of Bib.Ref.
+# $link[bibref,bibcode]:  Bibliographic Reference
+# $link[calib,calib_bibcode]:  Calibration relation
+# pgc: ----------------- PGC number
+# dataset: ------------- <NA>
+# bibcode: ------------- <NA>
+# calib_bibcode: ------- <NA>
+# calibsys: ------------ Calibration system
+#--------,------,-------,---------,------,--------,--------,----------,------,--------,----,--------------------,----------------,---------------------,--------------------------,---,-------,-------,---------------,--------
+$objname,$j2000,modulus,e_modulus,flimit,fquality,distance,e_distance,flimit,fquality,modc,$link[method_method],$link[iref_iref],$link[bibref_bibcode],$link[calib_calib_bibcode],pgc,dataset,bibcode,"calib_bibcode",calibsys
+#--------,------,-------,---------,------,--------,--------,----------,------,--------,----,--------------------,----------------,---------------------,--------------------------,---,-------,-------,---------------,--------
+UGC08091,J125840.2+141303,26.75,0.35,,,2.23872113856834,0.391547315394941,,,26.75,Cepheids  ,    51417,Tolstoy+1995           ,                               ,44491,51417,1995AJ....109..579T,,
+UGC08091,J125840.2+141303,26.588,0.02,,,2.07778146968572,0.0192259172970508,,,26.6496274804064,TRGB      ,    51280,Dalcanton+2009         ,TRGB:Girardi+2008              ,44491,51280,2009ApJS..183...67D,2008PASP..120..583G,Girardi+2008
+UGC08091,J125840.2+141303,26.64,0.05,,,2.12813844781126,0.049569947306662,,,26.6611079695821,TRGB      ,    51372,Tully+2006             ,TRGB:I=-4.05                   ,44491,51372,2006AJ....132..729T,,I=-4.05
+UGC08091,J125840.2+141303,26.65,,,,2.13796171391941,,,,26.6589938380312,TRGB      ,    52289,Tikhonov2018           ,TRGB:Lee+1993                  ,44491,52289,2018AstBu..73...22T,1993ApJ...417..553L,
+UGC08091,J125840.2+141303,26.7,0.105,,,2.1877623926123,0.108386578197694,,,26.7025481937656,TRGB      ,    52052,Jacobs;+2009           ,TRGB:Rizzi+2007                ,44491,52052,2009AJ....138..332J,2007ApJ...661..815R,
+UGC08091,J125840.2+141303,26.7,0.15,,,2.1877623926123,0.156466834526073,,,26.7000007629395,TRGB      ,    51418,Dohm-Palmer+1998       ,                               ,44491,51418,1998AJ....116.1227D,,
+UGC08091,J125840.2+141303,26.7,0.105001,,p,2.1877623926123,0.10838859505893,,p,26.7025481937656,TRGB      ,    51764,Jacobs+2009            ,TRGB:Rizzi+2007                ,44491,51764,2009AJ....138..332J,2007ApJ...661..815R,Rizzi+2007
+UGC08091,J125840.2+141303,26.6111,,,c,2.09999898919952,,,c,26.6110954284668,TRGB      ,    51160,Karachentsev+2004      ,                               ,44491,51160,2004AJ....127.2031K,,
+UGC08091,J125840.2+141303,26.63,,,c,2.11836031654178,,,c,26.6299991607666,TRGB      ,    52014,Tammann+2008           ,                               ,44491,52014,2008A&ARv..15..289T,,
+#-- end of data table ----------------------------------------------------------
+# 9 lines were successfully retrieved
+#-------------------------------------------------------------------------------
+# Pleinpot version: 8.18.10
+# Date: 2026-02-04T01:32:27

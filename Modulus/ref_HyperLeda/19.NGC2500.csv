@@ -1,0 +1,20 @@
+# The object name (NGC2500) was resolved at position  by leda
+# A cone search within 1.00 arcmin of this position matched no record in the table a007
+#-------------------------------------------------------------------------------
+# Query Description
+# Type of request:                 Extract data from a table
+# Name of the selected table:      a007
+# Description of the table:        Distances
+# Object:                          NGC2500
+# Display the fields:              $objname,$L,$j2000,$field[modulus],$field[distance],modc,$link[method,method],$link[iref,iref],$link[bibref,bibcode],$link[calib,calib_bibcode],pgc,dataset,bibcode,"calib_bibcode",calibsys
+# Query Help
+# Search the object specifier "NGC2500".
+# It is resolved by HyperLeda as NGC2500
+# No record was found in the table a007.
+# The complete request returns no record.
+#-------------------------------------------------------------------------------
+#--------,------,-------,---------,------,--------,--------,----------,------,--------,----,--------------------,----------------,---------------------,--------------------------,---,-------,-------,---------------,--------
+$objname,$j2000,modulus,e_modulus,flimit,fquality,distance,e_distance,flimit,fquality,modc,$link[method_method],$link[iref_iref],$link[bibref_bibcode],$link[calib_calib_bibcode],pgc,dataset,bibcode,"calib_bibcode",calibsys
+#--------,------,-------,---------,------,--------,--------,----------,------,--------,----,--------------------,----------------,---------------------,--------------------------,---,-------,-------,---------------,--------
+# Pleinpot version: 8.18.10
+# Date: 2026-02-03T22:49:40

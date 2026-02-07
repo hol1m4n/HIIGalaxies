@@ -1,20 +1,20 @@
-C.D.S.  -  SIMBAD4 rel 1.8  -  2026.02.04CET22:30:48
-
-ugc09128
---------
-
-Object Z 133-19  ---  AG?  ---  OID=@2251865   (@@47033,10)  ---  coobox=13792
-
-Coordinates(ICRS,ep=J2000,eq=2000): 14 15 57.0834  +23 03 29.871 (Opt ) C [~ ~ ] 2020MNRAS.494.1784A
-
-Identifiers (13):
-   ADBS J141556+2303                    DDO 187                              LEDA 50961                         
-   MCG+04-34-009                        SPB 247                              TC 307                             
-   UGC 9128                             Z 133-19                             [MI94] Im 143                      
-   Z 1413.6+2317                        [M98c] 141338.1+231707               UZC J141556.6+230320               
-   [RS2000] 214                                                                                                 
-
-Measures (distance:9  ):
+#C.D.S.  -  SIMBAD4 rel 1.8  -  2026.02.04CET22:30:48
+#
+#ugc09128
+#--------
+#
+#Object Z 133-19  ---  AG?  ---  OID=@2251865   (@@47033,10)  ---  coobox=13792
+#
+#Coordinates(ICRS,ep=J2000,eq=2000): 14 15 57.0834  +23 03 29.871 (Opt ) C [~ ~ ] 2020MNRAS.494.1784A
+#
+#Identifiers (13):
+#   ADBS J141556+2303                    DDO 187                              LEDA 50961                         
+#   MCG+04-34-009                        SPB 247                              TC 307                             
+#   UGC 9128                             Z 133-19                             [MI94] Im 143                      
+#   Z 1413.6+2317                        [M98c] 141338.1+231707               UZC J141556.6+230320               
+#   [RS2000] 214                                                                                                 
+#
+#Measures (distance:9  ):
 distance  | distance Q unit|  err-        err+     | method |     reference     |
 distance  |    2.2     Mpc |  -0.2        +0.2     |kin     |2018ApJ...861...49H|
 distance  |    2.21    Mpc |                       |T-F     |2011ApJS..192....6L|
@@ -25,6 +25,6 @@ distance  |    2.27    Mpc |  -0.08       +0.08    |        |2013AJ....146...86T
 distance  |    2.27    Mpc |                       |T-RGB   |2008ApJ...676..184T|
 distance  |    2.28    Mpc |  -0.23       +0.23    |T-RGB   |2007AJ....133..504K|
 distance  |    2.5     Mpc |                       |        |2004AJ....127.2031K|
-
-================================================================================
+#
+#================================================================================
 

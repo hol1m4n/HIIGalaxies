@@ -1,23 +1,23 @@
-C.D.S.  -  SIMBAD4 rel 1.8  -  2026.02.04CET22:01:14
-
-M101
-----
-
-Object M 101  ---  GiP  ---  OID=@529086   (@@145025,0)  ---  coobox=1814
-
-Coordinates(ICRS,ep=J2000,eq=2000): 14 03 12.583  +54 20 55.50 (IR  ) C [~ ~ ] 2006AJ....131.1163S
-
-Identifiers (24):
-   APG 26                               IRAS F14012+5434                     IRAS 14013+5435                    
-   K73 610                              LEDA 50063                           M 101                              
-   MCG+09-23-028                        NAME Pinwheel                        NGC 5457                           
-   SPB 243                              TC 302                               UGC 8981                           
-   VV 344a                              VV 456                               VV 344                             
-   Z 272-21                             2MASX J14031258+5420555              Z 1401.5+5435                      
-   [CHM2007] HDC 853 J140312.58+5420555  [CHM2007] LDC 842 J140312.58+5420555  [M98c] 140126.6+543525             
-   UZC J140312.5+542056                 PSCz Q14013+5435                     SDSS J140312.52+542056.2           
-
-Measures (distance:12  ):
+#C.D.S.  -  SIMBAD4 rel 1.8  -  2026.02.04CET22:01:14
+#
+#M101
+#----
+#
+#Object M 101  ---  GiP  ---  OID=@529086   (@@145025,0)  ---  coobox=1814
+#
+#Coordinates(ICRS,ep=J2000,eq=2000): 14 03 12.583  +54 20 55.50 (IR  ) C [~ ~ ] 2006AJ....131.1163S
+#
+#Identifiers (24):
+#   APG 26                               IRAS F14012+5434                     IRAS 14013+5435                    
+#   K73 610                              LEDA 50063                           M 101                              
+#   MCG+09-23-028                        NAME Pinwheel                        NGC 5457                           
+#   SPB 243                              TC 302                               UGC 8981                           
+#   VV 344a                              VV 456                               VV 344                             
+#   Z 272-21                             2MASX J14031258+5420555              Z 1401.5+5435                      
+#   [CHM2007] HDC 853 J140312.58+5420555  [CHM2007] LDC 842 J140312.58+5420555  [M98c] 140126.6+543525             
+#   UZC J140312.5+542056                 PSCz Q14013+5435                     SDSS J140312.52+542056.2           
+#
+#Measures (distance:12  ):
 distance  | distance Q unit|  err-        err+     | method |     reference     |
 distance  |    6.70    Mpc |                       |T-F     |2011ApJS..192....6L|
 distance  |    6.98    Mpc |  -0.58       +0.58    |Cep     |2010ApJ...715..277B|
@@ -31,6 +31,6 @@ distance  |    7.5     Mpc |                       |        |2007ApJS..173..185G
 distance  |    4.94    Mpc |                       |redshift|2007ApJ...655..790C|
 distance  |    6.7     Mpc |                       |        |2005A&A...436..443V|
 distance  |    5.4     Mpc |                       |        |2004ApJ...602..231C|
-
-================================================================================
+#
+#================================================================================
 

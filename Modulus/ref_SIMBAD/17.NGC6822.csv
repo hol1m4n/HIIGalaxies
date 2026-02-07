@@ -1,20 +1,20 @@
-C.D.S.  -  SIMBAD4 rel 1.8  -  2026.02.04CET22:12:49
-
-NGC6822
--------
-
-Object NGC 6822  ---  G  ---  OID=@2576378   (@@145045,0)  ---  coobox=19224
-
-Coordinates(ICRS,ep=J2000,eq=2000): 19 44 56.199  -14 47 51.29 (IR  ) C [~ ~ ] 2006AJ....131.1163S
-
-Identifiers (15):
-   HIPASS J1944-14                      DDO 209                              [CWA2006] NGC 6822 11              
-   IC 4895                              IRAS 19421-1455                      LEDA 63616                         
-   MCG-02-50-006                        NGC 6822                             TC 374                             
-   [IBK96] 6                            [MI94] Im 153                        2MASX J19445619-1447512            
-   [M98c] 194208.1-145529               PSCz P19421-1455                     NAME Barnard's Galaxy              
-
-Measures (distance:11  ):
+#C.D.S.  -  SIMBAD4 rel 1.8  -  2026.02.04CET22:12:49
+#
+#NGC6822
+#-------
+#
+#Object NGC 6822  ---  G  ---  OID=@2576378   (@@145045,0)  ---  coobox=19224
+#
+#Coordinates(ICRS,ep=J2000,eq=2000): 19 44 56.199  -14 47 51.29 (IR  ) C [~ ~ ] 2006AJ....131.1163S
+#
+#Identifiers (15):
+#   HIPASS J1944-14                      DDO 209                              [CWA2006] NGC 6822 11              
+#   IC 4895                              IRAS 19421-1455                      LEDA 63616                         
+#   MCG-02-50-006                        NGC 6822                             TC 374                             
+#   [IBK96] 6                            [MI94] Im 153                        2MASX J19445619-1447512            
+#   [M98c] 194208.1-145529               PSCz P19421-1455                     NAME Barnard's Galaxy              
+#
+#Measures (distance:11  ):
 distance  | distance Q unit|  err-        err+     | method |     reference     |
 distance  |    0.48    Mpc |                       |        |2024ApJ...966...25R|
 distance  |    0.50    Mpc |                       |T-F     |2011ApJS..192....6L|
@@ -27,6 +27,6 @@ distance  |    0.48    Mpc |                       |        |2016AJ....152...50T
 distance  |    0.48    Mpc |  -0.06       +0.06    |        |2013AJ....146...86T|
 distance  |    0.49    Mpc |                       |Cep     |2008ApJ...676..184T|
 distance  |    0.6     Mpc |                       |        |2007AJ....133..791S|
-
-================================================================================
+#
+#================================================================================
 

@@ -1,28 +1,28 @@
-C.D.S.  -  SIMBAD4 rel 1.8  -  2026.02.04CET22:21:40
-
-NGC1073
--------
-
-Object NGC 1073  ---  EmG  ---  OID=@1397145   (@@28864,6)  ---  coobox=11939
-
-Coordinates(ICRS,ep=J2000,eq=2000): 02 43 40.598  +01 22 33.13 (IR  ) C [~ ~ ] 2006AJ....131.1163S
-
-Identifiers (21):
-   1E 0241.0+0108                       IRAS 02411+0109                      IRAS 02410+0109                    
-   IRAS F02410+0109                     ISOSS J02437+0123                    LEDA 10329                         
-   MCG+00-08-001                        NGC 1073                             UGC 2210                           
-   Z 389-2                              [K2005] 5                            [SLK2004] 337                      
-   2MASX J02434059+0122331              UZC J024340.6+012234                 Z 0241.1+0110                      
-   [CHM2007] HDC 163 J024340.59+0122331  [CHM2007] LDC 174 J024340.59+0122331  [M98c] 024105.6+010955             
-   PSCz Q02411+0109                     HIPASS J0243+01                      SINGG HIPASS J0243+01              
-
-Measures (distance:5  ):
+#C.D.S.  -  SIMBAD4 rel 1.8  -  2026.02.04CET22:21:40
+#
+#NGC1073
+#-------
+#
+#Object NGC 1073  ---  EmG  ---  OID=@1397145   (@@28864,6)  ---  coobox=11939
+#
+#Coordinates(ICRS,ep=J2000,eq=2000): 02 43 40.598  +01 22 33.13 (IR  ) C [~ ~ ] 2006AJ....131.1163S
+#
+#Identifiers (21):
+#   1E 0241.0+0108                       IRAS 02411+0109                      IRAS 02410+0109                    
+#   IRAS F02410+0109                     ISOSS J02437+0123                    LEDA 10329                         
+#   MCG+00-08-001                        NGC 1073                             UGC 2210                           
+#   Z 389-2                              [K2005] 5                            [SLK2004] 337                      
+#   2MASX J02434059+0122331              UZC J024340.6+012234                 Z 0241.1+0110                      
+#   [CHM2007] HDC 163 J024340.59+0122331  [CHM2007] LDC 174 J024340.59+0122331  [M98c] 024105.6+010955             
+#   PSCz Q02411+0109                     HIPASS J0243+01                      SINGG HIPASS J0243+01              
+#
+#Measures (distance:5  ):
 distance  | distance Q unit|  err-        err+     | method |     reference     |
 distance  |   14.7     Mpc |  -4.3        +4.3     |kin     |2018ApJ...861...49H|
 distance  |   17.2     Mpc |                       |redshift|2011MNRAS.413..813C|
 distance  |   15.2     Mpc |                       |        |2007ApJ...659.1176M|
 distance  |   16.46    Mpc |                       |redshift|2007ApJ...655..790C|
 distance  |   17.1     Mpc |                       |redshift|2006ApJS..165..307M|
-
-================================================================================
+#
+#================================================================================
 

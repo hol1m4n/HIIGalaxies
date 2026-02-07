@@ -1,0 +1,34 @@
+# Query Description
+# Type of request:                 Extract data from a table
+# Name of the selected table:      a007
+# Description of the table:        Distances
+# Object:                          MRK116
+# Display the fields:              $objname,$L,$j2000,$field[modulus],$field[distance],modc,$link[method,method],$link[iref,iref],$link[bibref,bibcode],$link[calib,calib_bibcode],pgc,dataset,bibcode,"calib_bibcode",calibsys
+# Description of each column
+# $objname: ------------ Name of object
+# $j2000: -------------- J2000 coordinates
+# $field[modulus]: ----- Distance modulus
+# $field[distance]: ---- Linear distance (Mpc)
+# modc: ---------------- Distance modulus corrected to standard system
+# $link[method,method]:  Distance determination method
+# $link[iref,iref]: ---- Code of Bib.Ref.
+# $link[bibref,bibcode]:  Bibliographic Reference
+# $link[calib,calib_bibcode]:  Calibration relation
+# pgc: ----------------- PGC number
+# dataset: ------------- <NA>
+# bibcode: ------------- <NA>
+# calib_bibcode: ------- <NA>
+# calibsys: ------------ Calibration system
+#--------,------,-------,---------,------,--------,--------,----------,------,--------,----,--------------------,----------------,---------------------,--------------------------,---,-------,-------,---------------,--------
+$objname,$j2000,modulus,e_modulus,flimit,fquality,distance,e_distance,flimit,fquality,modc,$link[method_method],$link[iref_iref],$link[bibref_bibcode],$link[calib_calib_bibcode],pgc,dataset,bibcode,"calib_bibcode",calibsys
+#--------,------,-------,---------,------,--------,--------,----------,------,--------,----,--------------------,----------------,---------------------,--------------------------,---,-------,-------,---------------,--------
+UGCA166,J093402.1+551426,31.2,0.3,,,17.378014393199,2.57460875648982,,,31.2000007629395,Cepheids  ,    51650,Fiorentino+2010        ,                               ,3167220,51650,2010ApJ...711..808F,,
+UGCA166,J093402.1+551426,31.4,0.3,,,19.054603832247,2.82300087731236,,,31.3999996185303,Cepheids  ,    51650,Fiorentino+2010        ,                               ,3167220,51650,2010ApJ...711..808F,,
+UGCA166,J093402.1+551426,31.42,0.26,,,19.2309179647734,2.44612612988571,,,31.4200000762939,Cepheids  ,    51649,Aloisi+2007            ,                               ,3167220,51649,2007ApJ...667L.151A,,
+UGCA166,J093402.1+551426,31.3,0.17,,,18.1970021926438,1.48185448173415,,,31.2999992370605,TRGB      ,    51649,Aloisi+2007            ,                               ,3167220,51649,2007ApJ...667L.151A,,
+UGCA166,J093402.1+551426,30.32,,,c,11.5877719330214,,,c,30.3199996948242,TRGB      ,    52014,Tammann+2008           ,                               ,3167220,52014,2008A&ARv..15..289T,,
+#-- end of data table ----------------------------------------------------------
+# 5 lines were successfully retrieved
+#-------------------------------------------------------------------------------
+# Pleinpot version: 8.18.10
+# Date: 2026-02-03T22:30:12

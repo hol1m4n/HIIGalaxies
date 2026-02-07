@@ -1,21 +1,21 @@
-C.D.S.  -  SIMBAD4 rel 1.8  -  2026.02.04CET22:02:29
-
-NGC2366
--------
-
-Object NGC 2366  ---  H2G  ---  OID=@369112   (@@145054,0)  ---  coobox=3251
-
-Coordinates(ICRS,ep=J2000,eq=2000): 07 28 52.4529  +69 12 38.859 (Opt ) C [~ ~ ] 2020MNRAS.494.1784A
-
-Identifiers (17):
-   DDO 42                               IRAS 07233+6917                      IRAS F07234+6917                   
-   KPG 133b                             LEDA 21102                           MCG+12-07-040                      
-   NGC 2366                             SPB 82                               TC 87                              
-   UGC 3851                             Z 330-38                             [MI94] Im 39                       
-   [VDD93] 63                           Z 0723.6+6918                        [M98c] 072336.5+691900             
-   UZC J072853.7+691254                 PSCz Q07233+6917                                                        
-
-Measures (distance:9  ):
+#C.D.S.  -  SIMBAD4 rel 1.8  -  2026.02.04CET22:02:29
+#
+#NGC2366
+#-------
+#
+#Object NGC 2366  ---  H2G  ---  OID=@369112   (@@145054,0)  ---  coobox=3251
+#
+#Coordinates(ICRS,ep=J2000,eq=2000): 07 28 52.4529  +69 12 38.859 (Opt ) C [~ ~ ] 2020MNRAS.494.1784A
+#
+#Identifiers (17):
+#   DDO 42                               IRAS 07233+6917                      IRAS F07234+6917                   
+#   KPG 133b                             LEDA 21102                           MCG+12-07-040                      
+#   NGC 2366                             SPB 82                               TC 87                              
+#   UGC 3851                             Z 330-38                             [MI94] Im 39                       
+#   [VDD93] 63                           Z 0723.6+6918                        [M98c] 072336.5+691900             
+#   UZC J072853.7+691254                 PSCz Q07233+6917                                                        
+#
+#Measures (distance:9  ):
 distance  | distance Q unit|  err-        err+     | method |     reference     |
 distance  |    3.21    Mpc |                       |T-F     |2011ApJS..192....6L|
 distance  |    3.28    Mpc |                       |redshift|2018MNRAS.479.4136K|
@@ -26,6 +26,6 @@ distance  |    3.19    Mpc |  -0.32       +0.32    |T-RGB   |2009AJ....138..392S
 distance  |    3.7     Mpc |  -0.6        +0.6     |T-F     |2008ApJ...676..184T|
 distance  |    3.31    Mpc |                       |Cep     |2008ApJ...676..184T|
 distance  |    3.4     Mpc |                       |        |2007ApJS..173..185G|
-
-================================================================================
+#
+#================================================================================
 

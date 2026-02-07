@@ -1,27 +1,27 @@
-C.D.S.  -  SIMBAD4 rel 1.8  -  2026.02.04CET22:28:21
-
-NGC4536
--------
-
-Object NGC 4536  ---  H2G  ---  OID=@1964758   (@@133015,6)  ---  coobox=14012
-
-Coordinates(ICRS,ep=J2000,eq=2000): 12 34 27.12887  +02 11 16.3680 (NIR ) C [~ ~ ] 2006AJ....131.1163S
-
-Identifiers (35):
-   TGSSADR J123427.3+021118             GLEAM J123427+021114                 TXS 1231+024                       
-   PMN J1234+0211                       NVSS J123427+021118                  MITG J123427+0210                  
-   GB6 B1231+0228                       IRAS 12318+0227                      IRAS F12319+0227                   
-   LEDA 41823                           MCG+00-32-023                        NGC 4536                           
-   TC 229                               UGC 7732                             VCC 1562                           
-   Z 1232.0+0228                        Z 14-68                              2MASX J12342712+0211163            
-   NVSS B123153+022750                  JCMTSE J123427.0+021121              WALLABY J123427+021108             
-   1E 1231.9+0228                       UZC J123427.2+021117                 [CHM2007] HDC 720 J123427.12+0211163
-   [CHM2007] LDC 904 J123427.12+0211163  [M98c] 123153.5+022750               PSCz Q12318+0227                   
-   [BEC2010] HRS 205                    2dFGRS TGN388Z200                    SDSS J123427.02+021117.3           
-   FIRST J123427.0+021117               [DC78] UGC 7732                      [NKB95] N4536                      
-   SDSS J123427.05+021117.3             EVCC 2169                                                               
-
-Measures (distance:17  ):
+#C.D.S.  -  SIMBAD4 rel 1.8  -  2026.02.04CET22:28:21
+#
+#NGC4536
+#-------
+#
+#Object NGC 4536  ---  H2G  ---  OID=@1964758   (@@133015,6)  ---  coobox=14012
+#
+#Coordinates(ICRS,ep=J2000,eq=2000): 12 34 27.12887  +02 11 16.3680 (NIR ) C [~ ~ ] 2006AJ....131.1163S
+#
+#Identifiers (35):
+#   TGSSADR J123427.3+021118             GLEAM J123427+021114                 TXS 1231+024                       
+#   PMN J1234+0211                       NVSS J123427+021118                  MITG J123427+0210                  
+#   GB6 B1231+0228                       IRAS 12318+0227                      IRAS F12319+0227                   
+#   LEDA 41823                           MCG+00-32-023                        NGC 4536                           
+#   TC 229                               UGC 7732                             VCC 1562                           
+#   Z 1232.0+0228                        Z 14-68                              2MASX J12342712+0211163            
+#   NVSS B123153+022750                  JCMTSE J123427.0+021121              WALLABY J123427+021108             
+#   1E 1231.9+0228                       UZC J123427.2+021117                 [CHM2007] HDC 720 J123427.12+0211163
+#   [CHM2007] LDC 904 J123427.12+0211163  [M98c] 123153.5+022750               PSCz Q12318+0227                   
+#   [BEC2010] HRS 205                    2dFGRS TGN388Z200                    SDSS J123427.02+021117.3           
+#   FIRST J123427.0+021117               [DC78] UGC 7732                      [NKB95] N4536                      
+#   SDSS J123427.05+021117.3             EVCC 2169                                                               
+#
+#Measures (distance:17  ):
 distance  | distance Q unit|  err-        err+     | method |     reference     |
 distance  |   13.1     Mpc |  -2.6        +2.6     |T-F     |2022MNRAS.511.6160K|
 distance  |   14.4     Mpc |  -1.5        +1.5     |kin     |2018ApJ...861...49H|
@@ -40,6 +40,6 @@ distance  |   14.93    Mpc |                       |Cep     |2008ApJ...676..184T
 distance  |   15       Mpc |                       |        |2007ApJS..173..185G|
 distance  |   19.82    Mpc |                       |redshift|2007ApJ...655..790C|
 distance  |   19.46    Mpc |                       |redshift|2007ApJ...655..790C|
-
-================================================================================
+#
+#================================================================================
 

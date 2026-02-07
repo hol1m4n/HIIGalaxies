@@ -1,22 +1,22 @@
-C.D.S.  -  SIMBAD4 rel 1.8  -  2026.02.04CET21:50:30
-
-LMC
----
-
-Object NAME LMC  ---  G  ---  OID=@3133169   (@@144903,0)  ---  coobox=22793
-
-Coordinates(ICRS,ep=J2000,eq=2000): 05 23 34.6  -69 45 22 (Opt ) D [~ ~ ] 2003A&A...412...45P
-
-Identifiers (21):
-   Anon 0524-69                         ESO 56-115                           ESO-LV 56-1150                     
-   GLXY G279.0-34.4+262                 IRAS 05240-6948                      LEDA 17223                         
-   NAME LMC                             4FGL J0519.9-6845e                   [M98c] 052400.0-694800             
-   [MI94] Sm 29                         2FGL J0526.6-6825e                   NAME Large Magellanic Cloud        
-   NAME Nubecula Major                  1FHL J0526.6-6825                    2EG J0532-6914                     
-   3EG J0533-6916                       EGR J0537-6946                       1FGL J0538.9-6914                  
-   3FGL J0526.6-6825e                   2FHL J0526.6-6825e                   1FLE J0536-6856                    
-
-Measures (distance:8  ):
+#C.D.S.  -  SIMBAD4 rel 1.8  -  2026.02.04CET21:50:30
+#
+#LMC
+#---
+#
+#Object NAME LMC  ---  G  ---  OID=@3133169   (@@144903,0)  ---  coobox=22793
+#
+#Coordinates(ICRS,ep=J2000,eq=2000): 05 23 34.6  -69 45 22 (Opt ) D [~ ~ ] 2003A&A...412...45P
+#
+#Identifiers (21):
+#   Anon 0524-69                         ESO 56-115                           ESO-LV 56-1150                     
+#   GLXY G279.0-34.4+262                 IRAS 05240-6948                      LEDA 17223                         
+#   NAME LMC                             4FGL J0519.9-6845e                   [M98c] 052400.0-694800             
+#   [MI94] Sm 29                         2FGL J0526.6-6825e                   NAME Large Magellanic Cloud        
+#   NAME Nubecula Major                  1FHL J0526.6-6825                    2EG J0532-6914                     
+#   3EG J0533-6916                       EGR J0537-6946                       1FGL J0538.9-6914                  
+#   3FGL J0526.6-6825e                   2FHL J0526.6-6825e                   1FLE J0536-6856                    
+#
+#Measures (distance:8  ):
 distance  | distance Q unit|  err-        err+     | method |     reference     |
 distance  |    0.05    Mpc |                       |T-F     |2011ApJS..192....6L|
 distance  |   50.12    kpc |                       |Cep     |2010ApJ...715..277B|
@@ -26,6 +26,6 @@ distance  |    0.05    Mpc |                       |        |2016AJ....152...50T
 distance  |    0.05    Mpc |  -0.06       +0.06    |        |2013AJ....146...86T|
 distance  |    0.05    Mpc |                       |Cep     |2008ApJ...676..184T|
 distance  |   50       kpc |                       |        |1999PASP..111..775F|
-
-================================================================================
+#
+#================================================================================
 
