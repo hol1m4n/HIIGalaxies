@@ -1,2 +1,15 @@
+####################################################
+#  1       IIIII  CCCCC   00000   00000   1   00000  
+# 111       III  CC    C 00   00 00   00 111 00   00 
+#  11       III  CC      00   00 00   00  11 00   00 
+#  11 ...   III  CC    C 00   00 00   00  11 00   00 
+# 111 ...  IIIII  CCCCC   00000   00000  111  00000  
+####################################################
+#        PPPPPP  LL      RRRRRR   CCCCC  
+#        PP   PP LL      RR   RR CC    C 
+#        PPPPPP  LL      RRRRRR  CC      
+#        PP      LL      RR  RR  CC    C 
+#        PP      LLLLLLL RR   RR  CCCCC  
+####################################################
 RefCode,Citation,Band,mu_0,e_R,e_S,e_T,Category,Ncef,Zcorr,zeroP,Rank,Year,Date,Comments,Author,ADS_date,JD
 2000ApJ...529..745F,Ferrarese et al.2000,W(VI),24.1,0.19,,,1,4,False,LMC,1,2000,2024,There are no specific comments on the publication.,Valencia et al.2024,2000-02-00,2451575.5

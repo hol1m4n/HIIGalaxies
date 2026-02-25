@@ -1,0 +1,17 @@
+####################################################
+#  2222   333333       MM    MM   666     666   
+# 222222     3333      MMM  MMM  66      66     
+#     222   3333       MM MM MM 666666  666666  
+#  2222       333 ...  MM    MM 66   66 66   66 
+# 2222222 333333  ...  MM    MM  66666   66666  
+####################################################
+#        PPPPPP  LL      RRRRRR   CCCCC  
+#        PP   PP LL      RR   RR CC    C 
+#        PPPPPP  LL      RRRRRR  CC      
+#        PP      LL      RR  RR  CC    C 
+#        PP      LLLLLLL RR   RR  CCCCC  
+####################################################
+RefCode,Citation,Band,mu_0,e_R,e_S,e_T,Category,Ncef,Zcorr,zeroP,Rank,Year,Date,Comments,Author,ADS_date,JD
+2003A&A...411..361K,"Kanbur, S. M. et al.2003",W(VI),30.127,0.084,,,1,25,False,LMC,1,2003,2026,There are no specific comments on the publication.,Quintero-Salazar et al.2024,2003-12-00,2452974.5
+2003A&A...411..361K,"Kanbur, S. M. et al.2003",W(VI),30.206,0.083,,,1,25,False,GC,1,2003,2026,There are no specific comments on the publication.,Quintero-Salazar et al.2024,2003-12-00,2452974.5
+2006ApJS..165..108S,Saha et al.2006,W(VI),30.5,0.09,0.08,0.0854400374531753,2,22,True,LMC,1,2006,2026,They delve into the HST CTE correction.,Quintero-Salazar et al.2024,2006-07-00,2453917.5

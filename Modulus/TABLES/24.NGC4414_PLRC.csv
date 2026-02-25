@@ -1,0 +1,17 @@
+####################################################
+#  2222       44        NN   NN   GGGG   CCCCC      44       44    1      44   
+# 222222     444        NNN  NN  GG  GG CC    C    444      444   111    444   
+#     222  44  4        NN N NN GG      CC       44  4    44  4    11  44  4   
+#  2222   44444444 ...  NN  NNN GG   GG CC    C 44444444 44444444  11 44444444 
+# 2222222    444   ...  NN   NN  GGGGGG  CCCCC     444      444   111    444   
+####################################################
+#        PPPPPP  LL      RRRRRR   CCCCC  
+#        PP   PP LL      RR   RR CC    C 
+#        PPPPPP  LL      RRRRRR  CC      
+#        PP      LL      RR  RR  CC    C 
+#        PP      LLLLLLL RR   RR  CCCCC  
+####################################################
+RefCode,Citation,Band,mu_0,e_R,e_S,e_T,Category,Ncef,Zcorr,zeroP,Rank,Year,Date,Comments,Author,ADS_date,JD
+2003A&A...411..361K,"Kanbur, S. M. et al.2003",W(VI),31.099,0.044,,,1,8,False,LMC,1,2003,2026,There are no specific comments on the publication.,Quintero-Salazar et al.2024,2003-12-00,2452974.5
+2003A&A...411..361K,"Kanbur, S. M. et al.2003",W(VI),31.204,0.052,,,1,8,False,GC,1,2003,2026,There are no specific comments on the publication.,Quintero-Salazar et al.2024,2003-12-00,2452974.5
+2006ApJS..165..108S,Saha et al.2006,W(VI),31.65,0.17,0.08,0.0854400374531753,2,10,True,LMC,1,2006,2026,They delve into the HST CTE correction.,Quintero-Salazar et al.2024,2006-07-00,2453917.5

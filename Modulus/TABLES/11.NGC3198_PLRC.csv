@@ -1,3 +1,17 @@
+####################################################
+#  1   1       NN   NN   GGGG   CCCCC  333333   1           88888  
+# 111 111      NNN  NN  GG  GG CC    C    3333 111  99999  88   88 
+#  11  11      NN N NN GG      CC        3333   11 99   99  88888  
+#  11  11 ...  NN  NNN GG   GG CC    C     333  11  999999 88   88 
+# 111 111 ...  NN   NN  GGGGGG  CCCCC  333333  111     99   88888  
+#                                                    999           
+####################################################
+#        PPPPPP  LL      RRRRRR   CCCCC  
+#        PP   PP LL      RR   RR CC    C 
+#        PPPPPP  LL      RRRRRR  CC      
+#        PP      LL      RR  RR  CC    C 
+#        PP      LLLLLLL RR   RR  CCCCC  
+####################################################
 RefCode,Citation,Band,mu_0,e_R,e_S,e_T,Category,Ncef,Zcorr,zeroP,Rank,Year,Date,Comments,Author,ADS_date,JD
 2000ApJ...529..745F,Ferrarese et al.2000,W(VI),30.8,0.06,,,1,58,False,LMC,1,2000,2024,They calculate gamma.,Valencia et al.2024,2000-02-00,2451575.5
 2001ApJ...548..564W,Willick & Batra 2001,W(VI),30.71,0.06,,,1,52,False,LMC,1,2001,2024,They do not apply metallicity correction.,Valencia et al.2024,2001-02-00,2451941.5

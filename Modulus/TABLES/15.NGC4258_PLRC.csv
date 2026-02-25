@@ -1,3 +1,16 @@
+####################################################
+#  1  555555       NN   NN   GGGG   CCCCC      44    2222   555555   88888  
+# 111 55           NNN  NN  GG  GG CC    C    444   222222  55      88   88 
+#  11 555555       NN N NN GG      CC       44  4       222 555555   88888  
+#  11    5555 ...  NN  NNN GG   GG CC    C 44444444  2222      5555 88   88 
+# 111 555555  ...  NN   NN  GGGGGG  CCCCC     444   2222222 555555   88888  
+####################################################
+#        PPPPPP  LL      RRRRRR   CCCCC  
+#        PP   PP LL      RR   RR CC    C 
+#        PPPPPP  LL      RRRRRR  CC      
+#        PP      LL      RR  RR  CC    C 
+#        PP      LLLLLLL RR   RR  CCCCC  
+####################################################
 RefCode,Citation,Band,mu_0,e_R,e_S,e_T,Category,Ncef,Zcorr,zeroP,Rank,Year,Date,Comments,Author,ADS_date,JD
 2001ApJ...548..564W,Willick & Batra 2001,W(VI),29.49,0.12,,,1,15,False,LMC,1,2001,2024,No metallicity correction applied.,Valencia et al.2024,2001-02-00,2451941.5
 2001ApJ...553...47F,Freedman et al.2001,W(VI),29.44,0.07,,,1,15,False,LMC,1,2001,2024,There are no specific comments on the publication.,Valencia et al.2024,2001-05-00,2452030.5

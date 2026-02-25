@@ -1,0 +1,17 @@
+####################################################
+#  2222    2222        NN   NN   GGGG   CCCCC  333333  333333  7777777  00000  
+# 222222  222222       NNN  NN  GG  GG CC    C    3333    3333     777 00   00 
+#     222     222      NN N NN GG      CC        3333    3333     777  00   00 
+#  2222    2222   ...  NN  NNN GG   GG CC    C     333     333   777   00   00 
+# 2222222 2222222 ...  NN   NN  GGGGGG  CCCCC  333333  333333   777     00000  
+####################################################
+#        PPPPPP  LL      RRRRRR   CCCCC  
+#        PP   PP LL      RR   RR CC    C 
+#        PPPPPP  LL      RRRRRR  CC      
+#        PP      LL      RR  RR  CC    C 
+#        PP      LLLLLLL RR   RR  CCCCC  
+####################################################
+RefCode,Citation,Band,mu_0,e_R,e_S,e_T,Category,Ncef,Zcorr,zeroP,Rank,Year,Date,Comments,Author,ADS_date,JD
+2006ApJS..165..108S,Saha et al.2006,W(VI),32.37,0.03,0.08,0.0854400374531753,2,64,True,LMC,1,2006,2026,They delve into the HST CTE correction.,Quintero-Salazar et al.2024,2006-07-00,2453917.5
+2013MNRAS.434.2866F,Fiorentino et al.2013,F160W,32.04,0.03,,,1,-1,True,LMC,1,2013,2026,,Quintero-Salazar et al.2026,2013-10-00,2456566.5
+2016ApJ...826...56R,Riess et al.2016,VIHK,32.07,0.05,,,1,-1,True,N4258,1,2016,2026,"The values do not appear in the article,they are online.",Quintero-Salazar et al.2026,2016-07-00,2457570.5

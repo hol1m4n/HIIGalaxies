@@ -1,3 +1,17 @@
+####################################################
+#              NN   NN   GGGG   CCCCC   2222       44    00000  333333  
+#  99999       NNN  NN  GG  GG CC    C 222222     444   00   00    3333 
+# 99   99      NN N NN GG      CC          222  44  4   00   00   3333  
+#  999999 ...  NN  NNN GG   GG CC    C  2222   44444444 00   00     333 
+#     99  ...  NN   NN  GGGGGG  CCCCC  2222222    444    00000  333333  
+#   999                                                                
+####################################################
+#        PPPPPP  LL      RRRRRR   CCCCC  
+#        PP   PP LL      RR   RR CC    C 
+#        PPPPPP  LL      RRRRRR  CC      
+#        PP      LL      RR  RR  CC    C 
+#        PP      LLLLLLL RR   RR  CCCCC  
+####################################################
 RefCode,Citation,Band,mu_0,e_R,e_S,e_T,Category,Ncef,Zcorr,zeroP,Rank,Year,Date,Comments,Author,ADS_date,JD
 2001ApJ...553...47F,Freedman et al.2001,W(VI),27.48,0.1,,,1,10,False,LMC,1,2001,2024,There are no specific comments on the publication.,Valencia et al.2024,2001-05-00,2452030.5
 2001ApJ...553...47F,Freedman et al.2001,W(VI),27.54,0.1,,,1,10,True,LMC,1,2001,2024,Metallicity correction applied but error is the same as without correction.,Valencia et al.2024,2001-05-00,2452030.5

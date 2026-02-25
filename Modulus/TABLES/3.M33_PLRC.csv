@@ -1,3 +1,16 @@
+####################################################
+# 333333       MM    MM 333333  333333  
+#    3333      MMM  MMM    3333    3333 
+#   3333       MM MM MM   3333    3333  
+#     333 ...  MM    MM     333     333 
+# 333333  ...  MM    MM 333333  333333  
+####################################################
+#        PPPPPP  LL      RRRRRR   CCCCC  
+#        PP   PP LL      RR   RR CC    C 
+#        PPPPPP  LL      RRRRRR  CC      
+#        PP      LL      RR  RR  CC    C 
+#        PP      LLLLLLL RR   RR  CCCCC  
+####################################################
 RefCode,Citation,Band,mu_0,e_R,e_S,e_T,Category,Ncef,Zcorr,zeroP,Rank,Year,Date,Comments,Author,ADS_date,JD
 2000ApJ...529..745F,Ferrarese et al.2000,VI,24.64,0.09,,,1,10,False,LMC,1,2000,2024,They calculate gamma.,Valencia et al.2024,2000-02-00,2451575.5
 2001ApJ...548..564W,Willick & Batra 2001,W(VI),24.47,0.13,,,1,12,False,LMC,1,2001,2024,They do not apply correction for metallicity.,Valencia et al.2024,2001-02-00,2451941.5
