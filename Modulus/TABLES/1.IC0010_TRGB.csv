@@ -1,3 +1,16 @@
+####################################################
+#  1      IIIII  CCCCC   00000   00000   1   00000  
+# 111      III  CC    C 00   00 00   00 111 00   00 
+#  11      III  CC      00   00 00   00  11 00   00 
+#  11 ...  III  CC    C 00   00 00   00  11 00   00 
+# 111 ... IIIII  CCCCC   00000   00000  111  00000  
+####################################################
+#        TTTTTTT RRRRRR    GGGG  BBBBB   
+#          TTT   RR   RR  GG  GG BB   B  
+#          TTT   RRRRRR  GG      BBBBBB  
+#          TTT   RR  RR  GG   GG BB   BB 
+#          TTT   RR   RR  GGGGGG BBBBBB  
+####################################################
 RefCode,Citation,Band,mu_0,e_R,Rank,Year,Date,Comments,Author,ADS_date,JD
 2000ApJ...529..745F,Ferrarese et al.2000,I (BVI),24.17,0.39,1,2000,2024,There are no specific comments on the publication.,Valencia et al.2024,2000-02-00,2451575.5
 2007ApJ...662..272V,Vacca et al.2007,F814W(HK),24.48,0.08,2,2007,2024,E(B-V)=0.95+/-0.15.,Valencia et al.2024,2007-06-00,2454252.5

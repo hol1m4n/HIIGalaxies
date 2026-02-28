@@ -1,5 +1,20 @@
+####################################################
+# 333333   1      UU   UU   GGGG   CCCCC   00000           1   2222    88888  
+#    3333 111     UU   UU  GG  GG CC    C 00   00  99999  111 222222  88   88 
+#   3333   11     UU   UU GG      CC      00   00 99   99  11     222  88888  
+#     333  11 ... UU   UU GG   GG CC    C 00   00  999999  11  2222   88   88 
+# 333333  111 ...  UUUUU   GGGGGG  CCCCC   00000      99  111 2222222  88888  
+#                                                   999                       
+####################################################
+#        TTTTTTT RRRRRR    GGGG  BBBBB   
+#          TTT   RR   RR  GG  GG BB   B  
+#          TTT   RRRRRR  GG      BBBBBB  
+#          TTT   RR  RR  GG   GG BB   BB 
+#          TTT   RR   RR  GGGGGG BBBBBB  
+####################################################
 RefCode,Citation,Band,mu_0,e_R,Rank,Year,Date,Comments,Author,ADS_date,JD
 2006AJ....132..729T,Tully et al.2006,I(VI),26.75,0.05,1,2006,2026,"Only random error, does not contain M-TRGB_I error.",Quintero-Salazar et al.2024,2006-08-00,2453948.5
 2009AJ....138..332J,Jacobs et al.2009,F814W(F606W F814W),26.8,0.04,1,2009,2026,"mu_0 does not appear in the publication table because it is truncated, but it is online.",Quintero-Salazar et al.2024,2009-08-00,2455044.5
 2009ApJS..183...67D,Dalcanton et al.2009,F814W(F606W F814W),26.72,0.06,1,2009,2026,There are no specific comments on the publication.,Quintero-Salazar et al.2024,2009-07-00,2455013.5
 2012A&A...540A..49M,"McCall, M. L. et al.2012",I(VI),26.68,0.1,2,2012,2026,"It is unclear whether these observations are from Spain, Mexico, Chile, or Hawaii. Donde esta en la publicacion? Raro",Quintero-Salazar et al.2024,2012-04-00,2456018.5
+2013AJ....146...86T,Tully et al.2013,F814W(F606W F814W),26.78,0.08,1,2013,2026,"Survey of 8,000 galaxies.",Quintero-Salazar et al.2024,2013-10-00,2456566.5

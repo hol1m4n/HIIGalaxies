@@ -1,3 +1,16 @@
+####################################################
+#     44       MM    MM  88888   1  
+#    444       MMM  MMM 88   88 111 
+#  44  4       MM MM MM  88888   11 
+# 44444444 ... MM    MM 88   88  11 
+#    444   ... MM    MM  88888  111 
+####################################################
+#        TTTTTTT RRRRRR    GGGG  BBBBB   
+#          TTT   RR   RR  GG  GG BB   B  
+#          TTT   RRRRRR  GG      BBBBBB  
+#          TTT   RR  RR  GG   GG BB   BB 
+#          TTT   RR   RR  GGGGGG BBBBBB  
+####################################################
 RefCode,Citation,Band,mu_0,e_R,Rank,Year,Date,Comments,Author,ADS_date,JD
 2004ApJ...608...42S,Sakai et al.2004,I(VIR),28.03,0.12,1,2004,2024,There are no specific comments on the publication.,Valencia et al.2024,2004-06-00,2453157.5
 2005A&A...431..127T,"Tikhonov, N. A. et al.2005",I(VI),27.93,0.04,1,2005,2024,There are no specific comments on the publication.,Valencia et al.2024,2005-02-00,2453402.5

@@ -1,3 +1,16 @@
+####################################################
+# 333333      MM    MM 333333  333333  
+#    3333     MMM  MMM    3333    3333 
+#   3333      MM MM MM   3333    3333  
+#     333 ... MM    MM     333     333 
+# 333333  ... MM    MM 333333  333333  
+####################################################
+#        TTTTTTT RRRRRR    GGGG  BBBBB   
+#          TTT   RR   RR  GG  GG BB   B  
+#          TTT   RRRRRR  GG      BBBBBB  
+#          TTT   RR  RR  GG   GG BB   BB 
+#          TTT   RR   RR  GGGGGG BBBBBB  
+####################################################
 RefCode,Citation,Band,mu_0,e_R,Rank,Year,Date,Comments,Author,ADS_date,JD
 2000ApJ...529..745F,Ferrarese et al.2000,I(BVI),24.93,0.18,1,2000,2024,There are no specific comments on the publication.,Valencia et al.2024,2000-02-00,2451575.5
 2002AJ....123..244K,Kim et al.2002,I(BVI),24.81,0.04,1,2002,2024,They use bolometric correction equations and M-TRGB_bol to calculate mu_0.,Valencia et al.2024,2002-01-00,2452275.5

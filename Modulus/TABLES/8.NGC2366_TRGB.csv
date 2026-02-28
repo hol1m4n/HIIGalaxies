@@ -1,3 +1,16 @@
+####################################################
+#  88888      NN   NN   GGGG   CCCCC   2222   333333    666     666   
+# 88   88     NNN  NN  GG  GG CC    C 222222     3333  66      66     
+#  88888      NN N NN GG      CC          222   3333  666666  666666  
+# 88   88 ... NN  NNN GG   GG CC    C  2222       333 66   66 66   66 
+#  88888  ... NN   NN  GGGGGG  CCCCC  2222222 333333   66666   66666  
+####################################################
+#        TTTTTTT RRRRRR    GGGG  BBBBB   
+#          TTT   RR   RR  GG  GG BB   B  
+#          TTT   RRRRRR  GG      BBBBBB  
+#          TTT   RR  RR  GG   GG BB   BB 
+#          TTT   RR   RR  GGGGGG BBBBBB  
+####################################################
 RefCode,Citation,Band,mu_0,e_R,Rank,Year,Date,Comments,Author,ADS_date,JD
 2002A&A...383..125K,"Karachentsev, I. D. et al.2002",I(VI),27.52,0.28,1,2002,2024,There are no specific comments on the publication.,Valencia et al.2024,2002-01-00,2452275.5
 2005ApJ...627..739T,Thuan & Izotov 2005,I(VI),27.67,0.1,1,2005,2024,There are no specific comments on the publication.,Valencia et al.2024,2005-07-00,2453552.5

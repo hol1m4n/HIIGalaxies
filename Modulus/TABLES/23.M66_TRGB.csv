@@ -1,3 +1,16 @@
+####################################################
+#  2222   333333       MM    MM   666     666   
+# 222222     3333      MMM  MMM  66      66     
+#     222   3333       MM MM MM 666666  666666  
+#  2222       333 ...  MM    MM 66   66 66   66 
+# 2222222 333333  ...  MM    MM  66666   66666  
+####################################################
+#        TTTTTTT RRRRRR    GGGG  BBBBB   
+#          TTT   RR   RR  GG  GG BB   B  
+#          TTT   RRRRRR  GG      BBBBBB  
+#          TTT   RR  RR  GG   GG BB   BB 
+#          TTT   RR   RR  GGGGGG BBBBBB  
+####################################################
 RefCode,Citation,Band,mu_0,e_R,Rank,Year,Date,Comments,Author,ADS_date,JD
 2017ApJ...836...74J,Jang & Lee 2017,F814W(F555W F814W),30.18,0.038,1,2017,2026,Calibrator with LMC+N4258.,Quintero-Salazar et al.2026,2017-02-00,2457785.5
 2018ApJS..235...23S,Sabbi et al.2018,I(VI),30.14,0.54,1,2018,2026,They mention that their calculations are conservative.,Quintero-Salazar et al.2026,2018-03-00,2458178.5

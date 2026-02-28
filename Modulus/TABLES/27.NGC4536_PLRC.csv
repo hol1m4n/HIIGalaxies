@@ -17,3 +17,10 @@ RefCode,Citation,Band,mu_0,e_R,e_S,e_T,Category,Ncef,Zcorr,zeroP,Rank,Year,Date,
 2006ApJS..165..108S,Saha et al.2006,W(VI),31.24,0.09,0.08,0.0854400374531753,2,27,True,LMC,1,2006,2026,They delve into the HST CTE correction.,Quintero-Salazar et al.2024,2006-07-00,2453917.5
 2013MNRAS.434.2866F,Fiorentino et al.2013,F160W,30.92,0.05,,,1,-1,True,LMC,1,2013,2026,,Quintero-Salazar et al.2026,2013-10-00,2456566.5
 2016ApJ...826...56R,Riess et al.2016,VIHK,30.91,0.05,,,1,-1,True,N4258,1,2016,2026,"The values do not appear in the article,they are online.",Quintero-Salazar et al.2026,2016-07-00,2457570.5
+2002A&A...389...19P,"Paturel, G. et al.2002",W(VI),30.79,0.07,,,1,153,False,GC,1,2002,2026,They use data from Paturel et al. 2002 but with HIPPARCOS calibration.,Quintero-Salazar et al.2024,2002-07-00,2452456.5
+2001ApJ...553...47F,Freedman et al.2001,W(VI),30.80,0.04,,,1,35,False,LMC,1,2001,2026,There are no specific comments on the publication.,Quintero-Salazar et al.2024,2001-05-00,2452030.5
+2001ApJ...553...47F,Freedman et al.2001,W(VI),30.87,0.04,,,1,35,True,LMC,1,2001,2026,There are no specific comments on the publication.,Quintero-Salazar et al.2024,2001-05-00,2452030.5
+2001ApJ...549..721M,Macri et al.2001,H,31.47,0.15,,,1,2,True,LMC,1,2001,2026,There are no specific comments on the publication.,Quintero-Salazar et al.2024,2001-03-00,2451969.5
+2001ApJ...548..564W,Willick & Batra 2001,W(VI),30.77,0.07,,,1,39,False,LMC,1,2001,2026,They do not apply a metallicity correction.,Quintero-Salazar et al.2024,2001-02-00,2451941.5
+2000ApJ...529..745F,Ferrarese et al.2000,W(VI),30.95,0.07,,,1,-1,False,LMC,1,2000,2026,They calculate gamma.,Quintero-Salazar et al.2024,2000-02-00,2451575.5
+

@@ -1,3 +1,16 @@
+####################################################
+#  1      44       NN   NN   GGGG   CCCCC      44    2222   333333    666   
+# 111    444       NNN  NN  GG  GG CC    C    444   222222     3333  66     
+#  11  44  4       NN N NN GG      CC       44  4       222   3333  666666  
+#  11 44444444 ... NN  NNN GG   GG CC    C 44444444  2222       333 66   66 
+# 111    444   ... NN   NN  GGGGGG  CCCCC     444   2222222 333333   66666  
+####################################################
+#        TTTTTTT RRRRRR    GGGG  BBBBB   
+#          TTT   RR   RR  GG  GG BB   B  
+#          TTT   RRRRRR  GG      BBBBBB  
+#          TTT   RR  RR  GG   GG BB   BB 
+#          TTT   RR   RR  GGGGGG BBBBBB  
+####################################################
 RefCode,Citation,Band,mu_0,e_R,Rank,Year,Date,Comments,Author,ADS_date,JD
 2002A&A...383..125K,"Karachentsev, I. D. et al.2002",I(VI),28.24,0.22,1,2002,2024,There are no specific comments on the publication.,Valencia et al.2024,2002-01-00,2452275.5
 2009AJ....138..332J,Jacobs et al.2009,F814W(F606W F814W),28.46,0.45,1,2009,2024,Values for mu_0 and sigma_ran do not appear in the publication due to truncated table.,Valencia et al.2024,2009-08-00,2455044.5

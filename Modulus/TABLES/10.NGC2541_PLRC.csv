@@ -19,3 +19,4 @@ RefCode,Citation,Band,mu_0,e_R,e_S,e_T,Category,Ncef,Zcorr,zeroP,Rank,Year,Date,
 2003A&A...411..361K,"Kanbur, S. M. et al.2003",W(VI),30.35,0.07,,,1,29,False,LMC,1,2003,2024,"Metallicity correction calculated, but no error added.",Valencia et al.2024,2003-12-00,2452974.5
 2003A&A...411..361K,"Kanbur, S. M. et al.2003",W(VI),30.43,0.07,,,1,29,False,GC,1,2003,2024,They calculate metallicity correction but do not add error.,Valencia et al.2024,2003-12-00,2452974.5
 2006ApJS..165..108S,Saha et al.2006,W(VI),30.5,0.06,0.08,0.1,2,26,True,LMC,1,2006,2024,They delve into the HST CTE correction.,Valencia et al.2024,2006-07-00,2453917.5
+2000ApJ...529..745F,Ferrarese et al.2000,W(VI),30.47,0.08,,,1,-1,False,LMC,1,2000,2026,They calculate gamma.,Quintero-Salazar et al.2024,2000-02-00,2451575.5

@@ -1,3 +1,17 @@
+####################################################
+#  1    666       NN   NN   GGGG   CCCCC      44   333333          555555  
+# 111  66         NNN  NN  GG  GG CC    C    444      3333  99999  55      
+#  11 666666      NN N NN GG      CC       44  4     3333  99   99 555555  
+#  11 66   66 ... NN  NNN GG   GG CC    C 44444444     333  999999    5555 
+# 111  66666  ... NN   NN  GGGGGG  CCCCC     444   333333      99  555555  
+#                                                            999           
+####################################################
+#        TTTTTTT RRRRRR    GGGG  BBBBB   
+#          TTT   RR   RR  GG  GG BB   B  
+#          TTT   RRRRRR  GG      BBBBBB  
+#          TTT   RR  RR  GG   GG BB   BB 
+#          TTT   RR   RR  GGGGGG BBBBBB  
+####################################################
 RefCode,Citation,Band,mu_0,e_R,Rank,Year,Date,Comments,Author,ADS_date,JD
 2009AJ....138..332J,Jacobs et al.2009,F814W(F606W F814W),28.42,0.02,1,2009,2024,Values for mu_0 and sigma_ran do not appear in the publication due to truncated table.,Valencia et al.2024,2009-08-00,2455044.5
 2013AJ....146...86T,Tully et al.2013,F814W(F606W F814W),28.39,0.1,1,2013,2024,There are no specific comments on the publication.,Valencia et al.2024,2013-10-00,2456566.5
