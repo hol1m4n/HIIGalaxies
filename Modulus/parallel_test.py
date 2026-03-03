@@ -1,3 +1,15 @@
+from __future__ import annotations
+import os
+import json
+from astropy.cosmology import FlatwCDM
+
+
+import os, sys
+print(sys.executable)
+print(os.environ.get("LD_LIBRARY_PATH","<empty>"))
+import pymultinest
+print("OK")
+
 import re
 import os
 import numpy as np
@@ -20,19 +32,19 @@ import matplotlib.patheffects as pe
 from astropy.table import Column
 from scipy.stats import bootstrap
 
-#from __future__ import annotations
-#import os
-import json
-from astropy.cosmology import FlatwCDM
+
 
 import pymultinest
 import corner
 from getdist import plots, MCSamples
 import scipy.optimize as op
 from scipy import stats
+from scipy.stats import norm
+from astropy.time import Time
+import matplotlib.dates as mdates
 
-from mpi4py import MPI
-rank = MPI.COMM_WORLD.Get_rank()
+
+###### Funciones
 
 
 def weighted_average(modulus,error):
@@ -108,6 +120,7 @@ def cochran_error(modulus,error):
 
     return np.sqrt(s1 * (np.sum(s2) - (2 * Mu_w * np.sum(s3)) +    (Mu_w**2 * np.sum(s4)) ) )
 
+
 def nestedsampling_error(modulus,error,steps=10000, Name='', group = ''):
 
     def prior_transform(x):
@@ -130,7 +143,6 @@ def nestedsampling_error(modulus,error,steps=10000, Name='', group = ''):
     prefix = os.path.join(outdir, Name)
 
     n_dims = 1
-    
     result = pymultinest.solve(
         LogLikelihood=loglike_for_mnest,
         Prior=prior_transform,
@@ -141,29 +153,22 @@ def nestedsampling_error(modulus,error,steps=10000, Name='', group = ''):
         multimodal=True,
         verbose=False,
     )
-    '''
 
-    result = pymultinest.solve(
-        LogLikelihood=loglike_for_mnest,
-        Prior=prior_transform,
-        n_dims=n_dims,
-        outputfiles_basename=prefix,
-        evidence_tolerance=0.5,
-        n_live_points=steps,
-        multimodal=True,
-        verbose=(rank == 0),
-        init_MPI=False,
-    )
-    '''
-    
     samples = result["samples"] 
     T_sample = samples.T
 
+
+    # calcula loglike para cada muestra
     logL = np.array([loglike_for_mnest(s) for s in samples])
+
+    # punto MAP (aprox): el de mayor logL
+    #theta_map = samples[np.argmax(logL)]
+
+    # chi^2 en MAP
     chi2_map = -2.0*np.max(logL)
 
-    N = len(modulus)
-    k = n_dims        
+    N = len(modulus)   # número de datos
+    k = n_dims         # parámetros del modelo
     nu = N - k
     chi2_red = chi2_map / nu
 
@@ -173,50 +178,237 @@ def nestedsampling_error(modulus,error,steps=10000, Name='', group = ''):
 
 
 
-S = fits.open('modulus_tracker.fits')
-t_r = []
-t_r =['Galaxia','N_dat','mu_w','sigma_w','sigma_br','sigma_C','sigma_cl+','sigma_cl-','sigma_L','sigma_Lcorr']
+if os.path.exists('sm_r.csv'):
+    DF = pd.read_csv('sm_r.csv')
+else:
+    S = fits.open('modulus_tracker_TABLES.fits')
+    sm_r = []
+    sm_r =['Galaxia','N_dat','mu_w','sigma_w','sigma_br','sigma_C','sigma_cl+','sigma_cl-','sigma_L','sigma_Lcorr']
 
-for i in range(1,8): #for i in range(1,len(S)):
+    for i in range(1,len(S)):
 
-    gal_host = i
+        gal_host = i
 
-    T = Table.read(S[gal_host])
+        T = Table.read(S[gal_host])
 
-    if (S[gal_host].header['METHOD'] == 'TRGB') and (len(T)>0):
-        G1_m = np.array(T['mu_0'])
-        G1_e = np.array(T['e_R'])
-        Galaxia = S[gal_host].header['EXTNAME']
-        N_dat = len(T)
+        if (S[gal_host].header['METHOD'] == 'CEPHEIDS') and (len(T)>0):
 
-        if N_dat == 0:
-            print(f"No data for {Galaxia}")
-        if N_dat == 1:
-            mu_w = weighted_average(G1_m,G1_e)
-            sigma_w = weighted_error(G1_e)
-            t_r.append([Galaxia,N_dat,mu_w,sigma_w,'--','--','--','--','--','--'])        
-        if N_dat > 1:
-            mu_w = weighted_average(G1_m,G1_e)
-            sigma_w = weighted_error(G1_e)
-            sigma_br,sigma_cl,Br_stats = bootstrap_error2(modulus = G1_m,error = G1_e,N=200000,group='t_r',Galaxy=Galaxia)
-            sigma_br = sigma_br 
-            sigma_cl[0] = sigma_cl[0]
-            sigma_cl[1] = sigma_cl[1]
-            sigma_C = cochran_error(G1_m,G1_e)
-            sigma_L, sigma_Lcorr = nestedsampling_error(G1_m,G1_e,Name=Galaxia,group = 't_r')
-            t_r.append([Galaxia,N_dat,mu_w,sigma_w,sigma_br,sigma_C,sigma_cl[0],sigma_cl[1],sigma_L,sigma_Lcorr])
+            T = T[(T['Zcorr']==False) & (T['e_R']>= 0)]
 
-S.close()
+            G1_m = np.array(T['mu_0'])
+            G1_e = np.array(T['e_R'])
+            Galaxia = S[gal_host].header['EXTNAME']
+            N_dat = len(T)
+            
+            
+            if N_dat == 0:
+                print(f"No data for {Galaxia}")
+            if N_dat == 1:
+                #print(N_dat)
+                mu_w = weighted_average(G1_m,G1_e)
+                sigma_w = weighted_error(G1_e)
+                sm_r.append([Galaxia,N_dat,mu_w,sigma_w,'--','--','--','--','--','--'])        
+            if N_dat > 1:
+                #print(N_dat)
+                mu_w = weighted_average(G1_m,G1_e)
+                sigma_w = weighted_error(G1_e)
+                sigma_br,sigma_cl,Br_stats = bootstrap_error2(modulus = G1_m,error = G1_e,N=200000,group='sm_r',Galaxy=Galaxia)
+                sigma_br = sigma_br 
+                sigma_cl[0] = sigma_cl[0]
+                sigma_cl[1] = sigma_cl[1]
+                sigma_C = cochran_error(G1_m,G1_e)
+                sigma_L, sigma_Lcorr = nestedsampling_error(G1_m,G1_e,Name=Galaxia,group = 'sm_r')
+                sm_r.append([Galaxia,N_dat,mu_w,sigma_w,sigma_br,sigma_C,sigma_cl[0],sigma_cl[1],sigma_L,sigma_Lcorr])
 
+    S.close()
 
-
-
-
-
-
-
-
-
-
+    DF = pd.DataFrame(data = sm_r[10:],columns = sm_r[0:10])
+    DF.to_csv('sm_r.csv')
 
 
+if os.path.exists('cm_r.csv'):
+    DF = pd.read_csv('cm_r.csv')
+else:
+    S = fits.open('modulus_tracker_TABLES.fits')
+    cm_r = []
+    cm_r =['Galaxia','N_dat','mu_w','sigma_w','sigma_br','sigma_C','sigma_cl+','sigma_cl-','sigma_L','sigma_Lcorr']
+
+    for i in range(1,len(S)):
+
+        gal_host = i
+
+        T = Table.read(S[gal_host])
+
+        if (S[gal_host].header['METHOD'] == 'CEPHEIDS') and (len(T)>0):
+
+            T = T[(T['Zcorr']==True) & (T['e_R']>= 0)]
+
+            G1_m = np.array(T['mu_0'])
+            G1_e = np.array(T['e_R'])
+            Galaxia = S[gal_host].header['EXTNAME']
+            N_dat = len(T)
+            
+            
+            if N_dat == 0:
+                print(f"No data for {Galaxia}")
+            if N_dat == 1:
+                #print(N_dat)
+                mu_w = weighted_average(G1_m,G1_e)
+                sigma_w = weighted_error(G1_e)
+                cm_r.append([Galaxia,N_dat,mu_w,sigma_w,'--','--','--','--','--','--'])        
+            if N_dat > 1:
+                #print(N_dat)
+                mu_w = weighted_average(G1_m,G1_e)
+                sigma_w = weighted_error(G1_e)
+                sigma_br,sigma_cl,Br_stats = bootstrap_error2(modulus = G1_m,error = G1_e,N=200000,group='cm_r',Galaxy=Galaxia)
+                sigma_br = sigma_br 
+                sigma_cl[0] = sigma_cl[0]
+                sigma_cl[1] = sigma_cl[1]
+                sigma_C = cochran_error(G1_m,G1_e)
+                sigma_L, sigma_Lcorr = nestedsampling_error(G1_m,G1_e,Name=Galaxia,group = 'cm_r')
+                cm_r.append([Galaxia,N_dat,mu_w,sigma_w,sigma_br,sigma_C,sigma_cl[0],sigma_cl[1],sigma_L,sigma_Lcorr])
+
+    S.close()
+
+    DF = pd.DataFrame(data = cm_r[10:],columns = cm_r[0:10])
+    DF.to_csv('cm_r.csv')
+
+
+if os.path.exists('sm_t.csv'):
+    DF = pd.read_csv('sm_t.csv')
+else:
+    S = fits.open('modulus_tracker_TABLES.fits')
+    sm_t = []
+    sm_t =['Galaxia','N_dat','mu_w','sigma_w','sigma_br','sigma_C','sigma_cl+','sigma_cl-','sigma_L','sigma_Lcorr']
+
+    for i in range(1,len(S)):
+
+        gal_host = i
+
+        T = Table.read(S[gal_host])
+
+        if (S[gal_host].header['METHOD'] == 'CEPHEIDS') and (len(T)>0):
+
+            T = T[(T['Zcorr']==False)  &  (T['e_T']>= 0)]
+
+            G1_m = np.array(T['mu_0'])
+            G1_e = np.array(T['e_T'])
+            Galaxia = S[gal_host].header['EXTNAME']
+            N_dat = len(T)
+            
+            
+            if N_dat == 0:
+                print(f"No data for {Galaxia}")
+            if N_dat == 1:
+                #print(N_dat)
+                mu_w = weighted_average(G1_m,G1_e)
+                sigma_w = weighted_error(G1_e)
+                sm_t.append([Galaxia,N_dat,mu_w,sigma_w,'--','--','--','--','--','--'])        
+            if N_dat > 1:
+                #print(N_dat)
+                mu_w = weighted_average(G1_m,G1_e)
+                sigma_w = weighted_error(G1_e)
+                sigma_br,sigma_cl,Br_stats = bootstrap_error2(modulus = G1_m,error = G1_e,N=200000,group='sm_t',Galaxy=Galaxia)
+                sigma_br = sigma_br 
+                sigma_cl[0] = sigma_cl[0]
+                sigma_cl[1] = sigma_cl[1]
+                sigma_C = cochran_error(G1_m,G1_e)
+                sigma_L, sigma_Lcorr = nestedsampling_error(G1_m,G1_e,Name=Galaxia,group = 'sm_t')
+                sm_t.append([Galaxia,N_dat,mu_w,sigma_w,sigma_br,sigma_C,sigma_cl[0],sigma_cl[1],sigma_L,sigma_Lcorr])
+
+    S.close()
+
+    DF = pd.DataFrame(data = sm_t[10:],columns = sm_t[0:10])
+    DF.to_csv('sm_t.csv')
+
+
+if os.path.exists('cm_t.csv'):
+    DF = pd.read_csv('cm_t.csv')
+else:
+    S = fits.open('modulus_tracker_TABLES.fits')
+    cm_t = []
+    cm_t =['Galaxia','N_dat','mu_w','sigma_w','sigma_br','sigma_C','sigma_cl+','sigma_cl-','sigma_L','sigma_Lcorr']
+
+    for i in range(1,len(S)):
+
+        gal_host = i
+
+        T = Table.read(S[gal_host])
+
+        if (S[gal_host].header['METHOD'] == 'CEPHEIDS') and (len(T)>0):
+
+            T = T[(T['Zcorr']==True)  &  (T['e_T']>= 0)]
+
+            G1_m = np.array(T['mu_0'])
+            G1_e = np.array(T['e_T'])
+            Galaxia = S[gal_host].header['EXTNAME']
+            N_dat = len(T)
+            
+            
+            if N_dat == 0:
+                print(f"No data for {Galaxia}")
+            if N_dat == 1:
+                mu_w = weighted_average(G1_m,G1_e)
+                sigma_w = weighted_error(G1_e)
+                cm_t.append([Galaxia,N_dat,mu_w,sigma_w,'--','--','--','--','--','--'])        
+            if N_dat > 1:
+                mu_w = weighted_average(G1_m,G1_e)
+                sigma_w = weighted_error(G1_e)
+                sigma_br,sigma_cl,Br_stats = bootstrap_error2(modulus = G1_m,error = G1_e,N=200000,group='cm_t',Galaxy=Galaxia)
+                sigma_br = sigma_br 
+                sigma_cl[0] = sigma_cl[0]
+                sigma_cl[1] = sigma_cl[1]
+                sigma_C = cochran_error(G1_m,G1_e)
+                sigma_L, sigma_Lcorr = nestedsampling_error(G1_m,G1_e,Name=Galaxia,group = 'cm_t')
+                cm_t.append([Galaxia,N_dat,mu_w,sigma_w,sigma_br,sigma_C,sigma_cl[0],sigma_cl[1],sigma_L,sigma_Lcorr])
+
+    S.close()
+
+    DF = pd.DataFrame(data = cm_t[10:],columns = cm_t[0:10])
+    DF.to_csv('cm_t.csv')
+
+
+if os.path.exists('t_r.csv'):
+    DF = pd.read_csv('t_r.csv')
+else:
+    S = fits.open('modulus_tracker_TABLES.fits')
+    t_r = []
+    t_r =['Galaxia','N_dat','mu_w','sigma_w','sigma_br','sigma_C','sigma_cl+','sigma_cl-','sigma_L','sigma_Lcorr']
+
+    for i in range(1,len(S)):
+
+        gal_host = i
+
+        T = Table.read(S[gal_host])
+
+        if (S[gal_host].header['METHOD'] == 'TRGB') and (len(T)>0):
+            G1_m = np.array(T['mu_0'])
+            G1_e = np.array(T['e_R'])
+            Galaxia = S[gal_host].header['EXTNAME']
+            N_dat = len(T)
+
+            if N_dat == 0:
+                print(f"No data for {Galaxia}")
+            if N_dat == 1:
+                mu_w = weighted_average(G1_m,G1_e)
+                sigma_w = weighted_error(G1_e)
+                t_r.append([Galaxia,N_dat,mu_w,sigma_w,'--','--','--','--','--','--'])
+                print("\n")
+                print(f"Done for {Galaxia}\n")       
+            if N_dat > 1:
+                mu_w = weighted_average(G1_m,G1_e)
+                sigma_w = weighted_error(G1_e)
+                sigma_br,sigma_cl,Br_stats = bootstrap_error2(modulus = G1_m,error = G1_e,N=200000,group='t_r',Galaxy=Galaxia)
+                sigma_br = sigma_br 
+                sigma_cl[0] = sigma_cl[0]
+                sigma_cl[1] = sigma_cl[1]
+                sigma_C = cochran_error(G1_m,G1_e)
+                sigma_L, sigma_Lcorr = nestedsampling_error(G1_m,G1_e,Name=Galaxia,group = 't_r')
+                t_r.append([Galaxia,N_dat,mu_w,sigma_w,sigma_br,sigma_C,sigma_cl[0],sigma_cl[1],sigma_L,sigma_Lcorr])
+                print("\n")
+                print(f"Done for {Galaxia}\n")
+
+    S.close()
+
+    DF = pd.DataFrame(data = t_r[10:],columns = t_r[0:10])
+    DF.to_csv('t_r.csv')
