@@ -1,16 +1,3 @@
-####################################################
-#  1  555555       NN   NN   GGGG   CCCCC      44    2222   555555   88888  
-# 111 55           NNN  NN  GG  GG CC    C    444   222222  55      88   88 
-#  11 555555       NN N NN GG      CC       44  4       222 555555   88888  
-#  11    5555 ...  NN  NNN GG   GG CC    C 44444444  2222      5555 88   88 
-# 111 555555  ...  NN   NN  GGGGGG  CCCCC     444   2222222 555555   88888  
-####################################################
-#        PPPPPP  LL      RRRRRR   CCCCC  
-#        PP   PP LL      RR   RR CC    C 
-#        PPPPPP  LL      RRRRRR  CC      
-#        PP      LL      RR  RR  CC    C 
-#        PP      LLLLLLL RR   RR  CCCCC  
-####################################################
 RefCode,Citation,Band,mu_0,e_R,e_S,e_T,Category,Ncef,Zcorr,zeroP,Rank,Year,Date,Comments,Author,ADS_date,JD
 2001ApJ...548..564W,Willick & Batra 2001,W(VI),29.49,0.12,,,1,15,False,LMC,1,2001,2024,No metallicity correction applied.,Valencia et al.2024,2001-02-00,2451941.5
 2001ApJ...553...47F,Freedman et al.2001,W(VI),29.44,0.07,,,1,15,False,LMC,1,2001,2024,There are no specific comments on the publication.,Valencia et al.2024,2001-05-00,2452030.5
@@ -25,6 +12,11 @@ RefCode,Citation,Band,mu_0,e_R,e_S,e_T,Category,Ncef,Zcorr,zeroP,Rank,Year,Date,
 2001ApJ...553..562N,Newman et al.2001,W(VI),29.53,0.07,,,1,15,False,LMC,1,2001,2024,ALLFRAME (all).,Valencia et al.2024,2001-06-00,2452061.5
 2001ApJ...553..562N,Newman et al.2001,W(VI),29.65,0.09,,,1,15,False,LMC,1,2001,2024,ALLFRAME (chip3).,Valencia et al.2024,2001-06-00,2452061.5
 2002A&A...389...19P,"Paturel, G. et al.2002",W(VI),29.45,0.07,,,1,65,False,GC,1,2002,2024,Use data from Paturel et al. 2002 but with HIPPARCOS calibration.,Valencia et al.2024,2002-07-00,2452456.5
+2002ApJ...566..833C,Caputo et al. 2002,W(VI),29.42,0.09,0.08,0.12041594578792295,3,-1,False,LMC,1,2002,2026,Empirical LMC No corrected & Wesenheit-PL.,Quintero-Salazar et al.2024,2002-02-00,2452306.5
+2002ApJ...566..833C,Caputo et al. 2002,W(VI),29.47,0.14,,,3,-1,True,LMC,1,2002,2026,Theoretical LMC No corrected & Wesenheit-PL.,Quintero-Salazar et al.2024,2002-02-00,2452306.5
+2002ApJ...566..833C,Caputo et al. 2002,W(VI),29.49,0.14,,,3,-1,True,LMC,1,2002,2026,Empirical LMC No corrected & Wesenheit-PL.,Quintero-Salazar et al.2024,2002-02-00,2452306.5
+2002ApJ...566..833C,Caputo et al. 2002,W(VI),29.51,0.14,,,3,-1,False,GC,1,2002,2026,Empirical GC No corrected & Wesenheit-PL. I Guess...,Quintero-Salazar et al.2024,2002-02-00,2452306.5
+2002ApJ...566..833C,Caputo et al. 2002,W(VI),29.64,0.09,0.1,0.13453624047073712,3,-1,False,LMC,1,2002,2026,Theoretical LMC No corrected & Wesenheit-PL.,Quintero-Salazar et al.2024,2002-02-00,2452306.5
 2003A&A...411..361K,"Kanbur, S. M. et al.2003",W(VI),29.37,0.06,,,1,15,False,LMC,1,2003,2024,There are no specific comments on the publication.,Valencia et al.2024,2003-12-00,2452974.5
 2003A&A...411..361K,"Kanbur, S. M. et al.2003",W(VI),29.4,0.06,,,1,15,False,GC,1,2003,2024,There are no specific comments on the publication.,Valencia et al.2024,2003-12-00,2452974.5
 2004MNRAS.349.1130N,Ngow & Kanbur 2004,W(VI),29.49,0.06,,,1,15,False,GC,1,2004,2024,There are no specific comments on the publication.,Valencia et al.2024,2004-04-00,2453096.5
@@ -32,13 +24,17 @@ RefCode,Citation,Band,mu_0,e_R,e_S,e_T,Category,Ncef,Zcorr,zeroP,Rank,Year,Date,
 2006ApJ...652.1133M,Macri et al.2006,W(VI),29.12,0.04,,,5,69,False,LMC,1,2006,2024,Internal field.,Valencia et al.2024,2006-12-00,2454070.5
 2006ApJ...652.1133M,Macri et al.2006,W(VI),29.27,0.04,,,5,38,False,LMC,1,2006,2024,External field but using the methodology of Freedman et al. 2001.,Valencia et al.2024,2006-12-00,2454070.5
 2006ApJ...652.1133M,Macri et al.2006,W(VI),29.28,0.05,,,5,20,False,LMC,1,2006,2024,"mu_0 relative to NGC4258, external field, sigma_ran is relative to NGC4258 and they calculate gamma.",Valencia et al.2024,2006-12-00,2454070.5
-2006ApJS..165..108S,Saha et al.2006,W(VI),29.63,0.05,0.08,0.094339811320566,2,14,True,LMC,1,2006,2024,"Data from Macri et al. 2006, apply metallicity correction but it is not clear how they do it.",Valencia et al.2024,2006-07-00,2453917.5
+2006ApJS..165..108S,Saha et al.2006,W(VI),29.63,0.05,0.08,0.09433981132056604,2,14,True,LMC,1,2006,2024,"Data from Macri et al. 2006, apply metallicity correction but it is not clear how they do it.",Valencia et al.2024,2006-07-00,2453917.5
 2007AJ....133.1810B,Benedict et al.2007,W(VI),29.28,0.08,,,1,85,True,LMC,1,2007,2024,There are no specific comments on the publication.,Valencia et al.2024,2007-04-00,2454191.5
-2007ApJ...671.1640A,Aloisi et al.2007,W(VI),29.28,0.1,0.16,0.188679622641132,2,-1,True,LMC,1,2007,2024,[O/H]=8.93 use data from Macri et al. 2006 and apply metallicity correction based on theoretical models.,Valencia et al.2024,2007-12-00,2454435.5
+2007ApJ...671.1640A,Aloisi et al.2007,W(VI),29.28,0.1,0.16,0.18867962264113208,2,-1,True,LMC,1,2007,2024,[O/H]=8.93 use data from Macri et al. 2006 and apply metallicity correction based on theoretical models.,Valencia et al.2024,2007-12-00,2454435.5
 2007MNRAS.379..723V,van Leeuwen et al.2007,W(VI),29.22,0.03,,,1,69,True,GC,1,2007,2024,There are no specific comments on the publication.,Valencia et al.2024,2007-08-00,2454313.5
 2008ApJ...684..102B,Bono et al.2008,W(VI),29.12,0.23,,,3,-1,True,TM,1,2008,2024,"[O/H]=8.53, use data from Macri et al. 2006 and apply metallicity correction based on theoretical models.",Valencia et al.2024,2008-09-00,2454710.5
 2008ApJ...684..102B,Bono et al.2008,W(VI),29.35,0.12,,,3,-1,True,TM,1,2008,2024,"Use angular diameter of galactic Cepheids, data from Macri et al. 2026.",Valencia et al.2024,2008-09-00,2454710.5
-2008MNRAS.390.1762D,Di Benedetto 2008,W(VI),29.28,0.03,0.03,0.0424264068711928,2,-1,False,GC,1,2008,2024,Detailed article from 2008MNRAS.390.1762D but the errors are different from the previous one.,Valencia et al.2024,2008-11-00,2454771.5
+2008MNRAS.390.1762D,Di Benedetto 2008,W(VI),29.28,0.03,0.03,0.042426406871192854,2,-1,False,GC,1,2008,2024,Detailed article from 2008MNRAS.390.1762D but the errors are different from the previous one.,Valencia et al.2024,2008-11-00,2454771.5
+2010ApJ...715..277B,Bono et al. 2010,BV(W),29.15,0.21,,,1,-1,True,GC,1,2010,2026,"As in NED: GClstr LGG 290 BCG 1 of 1, BV(W), inner",Quintero-Salazar et al.2024,2010-05-00,2455317.5
+2010ApJ...715..277B,Bono et al. 2010,VI(W),29.18,0.21,,,1,-1,True,GC,1,2010,2026,"As in NED: GClstr LGG 290 BCG 1 of 1, VI(W), inner",Quintero-Salazar et al.2024,2010-05-00,2455317.5
+2010ApJ...715..277B,Bono et al. 2010,VI(W),29.4,0.13,,,1,-1,True,GC,1,2010,2026,"As in NED: GClstr LGG 290 BCG 1 of 1, VI(W), outer",Quintero-Salazar et al.2024,2010-05-00,2455317.5
+2010ApJ...715..277B,Bono et al. 2010,BV(W),29.49,0.21,,,1,-1,True,GC,1,2010,2026,"As in NED: GClstr LGG 290 BCG 1 of 1, BV(W), outer",Quintero-Salazar et al.2024,2010-05-00,2455317.5
 2013MNRAS.430..546D,Di Benedetto 2013,W(VI),29.28,0.05,,,3,31,True,LMC,1,2013,2024,"Use parallax, data from Riess et al. 2011, H0 review article.",Valencia et al.2024,2013-03-00,2456352.5
 2013MNRAS.434.2866F,Fiorentino et al.2013,F160W,29.345,0.004,,,1,-1,True,LMC,1,2013,2024,,Valencia et al.2024,2013-10-00,2456566.5
 2014MNRAS.440.1138E,Efstathiou 2014,W(VI),29.24,0.08,,,1,120,True,GC,3,2014,2024,,Valencia et al.2024,2014-05-00,2456778.5

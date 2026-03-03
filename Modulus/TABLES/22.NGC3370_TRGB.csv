@@ -1,15 +1,2 @@
-####################################################
-#  2222    2222       NN   NN   GGGG   CCCCC  333333  333333  7777777  00000  
-# 222222  222222      NNN  NN  GG  GG CC    C    3333    3333     777 00   00 
-#     222     222     NN N NN GG      CC        3333    3333     777  00   00 
-#  2222    2222   ... NN  NNN GG   GG CC    C     333     333   777   00   00 
-# 2222222 2222222 ... NN   NN  GGGGGG  CCCCC  333333  333333   777     00000  
-####################################################
-#        TTTTTTT RRRRRR    GGGG  BBBBB   
-#          TTT   RR   RR  GG  GG BB   B  
-#          TTT   RRRRRR  GG      BBBBBB  
-#          TTT   RR  RR  GG   GG BB   BB 
-#          TTT   RR   RR  GGGGGG BBBBBB  
-####################################################
 RefCode,Citation,Band,mu_0,e_R,Rank,Year,Date,Comments,Author,ADS_date,JD
 2017ApJ...836...74J,Jang & Lee 2017,F814W(F555W F814W),31.751,0.049,1,2017,2026,Calibrator with LMC+N4258.,Quintero-Salazar et al.2026,2017-02-00,2457785.5

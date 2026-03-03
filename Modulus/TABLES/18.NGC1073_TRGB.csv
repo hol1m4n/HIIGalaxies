@@ -1,15 +1,2 @@
-####################################################
-#  1   88888      NN   NN   GGGG   CCCCC   1   00000  7777777 333333  
-# 111 88   88     NNN  NN  GG  GG CC    C 111 00   00     777    3333 
-#  11  88888      NN N NN GG      CC       11 00   00    777    3333  
-#  11 88   88 ... NN  NNN GG   GG CC    C  11 00   00   777       333 
-# 111  88888  ... NN   NN  GGGGGG  CCCCC  111  00000   777    333333  
-####################################################
-#        TTTTTTT RRRRRR    GGGG  BBBBB   
-#          TTT   RR   RR  GG  GG BB   B  
-#          TTT   RRRRRR  GG      BBBBBB  
-#          TTT   RR  RR  GG   GG BB   BB 
-#          TTT   RR   RR  GGGGGG BBBBBB  
-####################################################
 RefCode,Citation,Band,mu_0,e_R,Rank,Year,Date,Comments,Author,ADS_date,JD
-2021AstBu..76..255T,Tikhonov & Galazutdinova 2021,,F606W(V)F814W(I),30.26,0.13,1,2021,2026,There are no specific comments on the publication.,Quintero-Salazar et al.2024,2021-07-00,2459396.5
+Tikhonov & Galazutdinova 2021,,F606W(V)F814W(I),30.26,0.13,1,2021,2026,There are no specific comments on the publication.,Quintero-Salazar et al.2024,2021-07-00,2459396.5

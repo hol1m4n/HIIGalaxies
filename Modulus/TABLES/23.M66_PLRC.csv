@@ -1,24 +1,14 @@
-####################################################
-#  2222   333333       MM    MM   666     666   
-# 222222     3333      MMM  MMM  66      66     
-#     222   3333       MM MM MM 666666  666666  
-#  2222       333 ...  MM    MM 66   66 66   66 
-# 2222222 333333  ...  MM    MM  66666   66666  
-####################################################
-#        PPPPPP  LL      RRRRRR   CCCCC  
-#        PP   PP LL      RR   RR CC    C 
-#        PPPPPP  LL      RRRRRR  CC      
-#        PP      LL      RR  RR  CC    C 
-#        PP      LLLLLLL RR   RR  CCCCC  
-####################################################
 RefCode,Citation,Band,mu_0,e_R,e_S,e_T,Category,Ncef,Zcorr,zeroP,Rank,Year,Date,Comments,Author,ADS_date,JD
-2003A&A...411..361K,"Kanbur, S. M. et al.2003",W(VI),30.127,0.084,,,1,25,False,LMC,1,2003,2026,There are no specific comments on the publication.,Quintero-Salazar et al.2024,2003-12-00,2452974.5
-2003A&A...411..361K,"Kanbur, S. M. et al.2003",W(VI),30.206,0.083,,,1,25,False,GC,1,2003,2026,There are no specific comments on the publication.,Quintero-Salazar et al.2024,2003-12-00,2452974.5
-2006ApJS..165..108S,Saha et al.2006,W(VI),30.5,0.09,0.08,0.0854400374531753,2,22,True,LMC,1,2006,2026,They delve into the HST CTE correction.,Quintero-Salazar et al.2024,2006-07-00,2453917.5
-2002A&A...389...19P,"Paturel, G. et al.2002",W(VI),29.77,0.07,,,1,369,False,GC,1,2002,2026,They use data from Paturel et al. 2002 but with HIPPARCOS calibration.,Quintero-Salazar et al.2024,2002-07-00,2452456.5
+2000ApJ...529..723G,Gibson et al. 2000,VBI,30.06,0.17,0.16,0.23345235059857505,2,36,False,LMC,1,2000,2026,"ALLFRAME + TRIAL.They apply metallicity correction but just for Ho, not modulus",Quintero-Salazar et al.2024,2000-02-00,2451575.5
+2000ApJ...529..723G,Gibson et al. 2000,VBI,30.15,0.08,0.16,0.17888543819998318,2,36,False,LMC,1,2000,2026,"ALLFRAME + Key Project.They apply metallicity correction but just for Ho, not modulus",Quintero-Salazar et al.2024,2000-02-00,2451575.5
+2000ApJ...529..745F,Ferrarese et al.2000,W(VI),30.06,0.17,,,1,-1,False,LMC,1,2000,2026,They calculate gamma.,Quintero-Salazar et al.2024,2000-02-00,2451575.5
+2001ApJ...548..564W,Willick & Batra 2001,W(VI),29.7,0.07,,,1,36,False,LMC,1,2001,2026,They do not apply a metallicity correction.,Quintero-Salazar et al.2024,2001-02-00,2451941.5
 2001ApJ...553...47F,Freedman et al.2001,W(VI),29.86,0.08,,,1,16,False,LMC,1,2001,2026,There are no specific comments on the publication.,Quintero-Salazar et al.2024,2001-05-00,2452030.5
 2001ApJ...553...47F,Freedman et al.2001,W(VI),30.01,0.08,,,1,16,True,LMC,1,2001,2026,There are no specific comments on the publication.,Quintero-Salazar et al.2024,2001-05-00,2452030.5
-2001ApJ...548..564W,Willick & Batra 2001,W(VI),29.70,0.07,,,1,36,False,LMC,1,2001,2026,They do not apply a metallicity correction.,Quintero-Salazar et al.2024,2001-02-00,2451941.5
-2000ApJ...529..745F,Ferrarese et al.2000,W(VI),30.06,0.17,,,1,-1,False,LMC,1,2000,2026,They calculate gamma.,Quintero-Salazar et al.2024,2000-02-00,2451575.5
-
-
+2002A&A...389...19P,"Paturel, G. et al.2002",W(VI),29.77,0.07,,,1,369,False,GC,1,2002,2026,They use data from Paturel et al. 2002 but with HIPPARCOS calibration.,Quintero-Salazar et al.2024,2002-07-00,2452456.5
+2002AJ....123..207D,Dolphin & Kennicutt 2002,F555WF814W,29.97,0.09,,,2,28,False,LMC,1,2002,2026,U99 + PSF,Quintero-Salazar et al.2024,2002-01-00,2452275.5
+2002AJ....123..207D,Dolphin & Kennicutt 2002,F555WF814W,30.03,0.11,,,2,28,False,LMC,1,2002,2026,U99 + PSF,Quintero-Salazar et al.2024,2002-01-00,2452275.5
+2002AJ....123..207D,Dolphin & Kennicutt 2002,F555WF814W,30.09,0.1,,,2,28,False,LMC,1,2002,2026,U99 + PSF,Quintero-Salazar et al.2024,2002-01-00,2452275.5
+2003A&A...411..361K,"Kanbur, S. M. et al.2003",W(VI),30.127,0.084,,,1,25,False,LMC,1,2003,2026,There are no specific comments on the publication.,Quintero-Salazar et al.2024,2003-12-00,2452974.5
+2003A&A...411..361K,"Kanbur, S. M. et al.2003",W(VI),30.206,0.083,,,1,25,False,GC,1,2003,2026,There are no specific comments on the publication.,Quintero-Salazar et al.2024,2003-12-00,2452974.5
+2006ApJS..165..108S,Saha et al.2006,W(VI),30.5,0.09,0.08,0.12041594578792295,2,22,True,LMC,1,2006,2026,They delve into the HST CTE correction.,Quintero-Salazar et al.2024,2006-07-00,2453917.5

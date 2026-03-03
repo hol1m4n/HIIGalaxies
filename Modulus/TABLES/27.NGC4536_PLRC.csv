@@ -1,26 +1,30 @@
-####################################################
-#  2222   7777777      NN   NN   GGGG   CCCCC      44   555555  333333    666   
-# 222222      777      NNN  NN  GG  GG CC    C    444   55         3333  66     
-#     222    777       NN N NN GG      CC       44  4   555555    3333  666666  
-#  2222     777   ...  NN  NNN GG   GG CC    C 44444444    5555     333 66   66 
-# 2222222  777    ...  NN   NN  GGGGGG  CCCCC     444   555555  333333   66666  
-####################################################
-#        PPPPPP  LL      RRRRRR   CCCCC  
-#        PP   PP LL      RR   RR CC    C 
-#        PPPPPP  LL      RRRRRR  CC      
-#        PP      LL      RR  RR  CC    C 
-#        PP      LLLLLLL RR   RR  CCCCC  
-####################################################
 RefCode,Citation,Band,mu_0,e_R,e_S,e_T,Category,Ncef,Zcorr,zeroP,Rank,Year,Date,Comments,Author,ADS_date,JD
+2000ApJ...529..723G,Gibson et al. 2000,VBI,30.76,0.12,0.16,0.2,2,39,False,LMC,1,2000,2026,"ALLFRAME + Key Project.They apply metallicity correction but just for Ho, not modulus",Quintero-Salazar et al.2024,2000-02-00,2451575.5
+2000ApJ...529..723G,Gibson et al. 2000,VBI,30.95,0.07,0.16,0.1746424919657298,2,39,False,LMC,1,2000,2026,"ALLFRAME + TRIAL.They apply metallicity correction but just for Ho, not modulus",Quintero-Salazar et al.2024,2000-02-00,2451575.5
+2000ApJ...529..745F,Ferrarese et al.2000,W(VI),30.95,0.07,,,1,-1,False,LMC,1,2000,2026,They calculate gamma.,Quintero-Salazar et al.2024,2000-02-00,2451575.5
+2000ApJ...530L...5G,Gibson et al. 2000,VI(PC),30.851,0.097,,,1,6,False,LMC,1,2000,2026,Blending analysis carried out.,Quintero-Salazar et al.2026,2000-02-00,2451575.5
+2000ApJ...530L...5G,Gibson et al. 2000,VI(WF),30.886,0.046,,,1,21,False,LMC,1,2000,2026,Blending analysis carried out.,Quintero-Salazar et al.2026,2000-02-00,2451575.5
+2001ApJ...548..564W,Willick & Batra 2001,W(VI),30.77,0.07,,,1,39,False,LMC,1,2001,2026,They do not apply a metallicity correction.,Quintero-Salazar et al.2024,2001-02-00,2451941.5
+2001ApJ...549..721M,Macri et al.2001,H,31.47,0.15,,,1,2,True,LMC,1,2001,2026,There are no specific comments on the publication.,Quintero-Salazar et al.2024,2001-03-00,2451969.5
+2001ApJ...553...47F,Freedman et al.2001,W(VI),30.8,0.04,,,1,35,False,LMC,1,2001,2026,There are no specific comments on the publication.,Quintero-Salazar et al.2024,2001-05-00,2452030.5
+2001ApJ...553...47F,Freedman et al.2001,W(VI),30.87,0.04,,,1,35,True,LMC,1,2001,2026,There are no specific comments on the publication.,Quintero-Salazar et al.2024,2001-05-00,2452030.5
+2002A&A...389...19P,"Paturel, G. et al.2002",W(VI),30.79,0.07,,,1,153,False,GC,1,2002,2026,They use data from Paturel et al. 2002 but with HIPPARCOS calibration.,Quintero-Salazar et al.2024,2002-07-00,2452456.5
 2003A&A...411..361K,"Kanbur, S. M. et al.2003",W(VI),30.826,0.102,,,1,31,False,LMC,1,2003,2026,There are no specific comments on the publication.,Quintero-Salazar et al.2024,2003-12-00,2452974.5
 2003A&A...411..361K,"Kanbur, S. M. et al.2003",W(VI),30.929,0.102,,,1,31,False,GC,1,2003,2026,There are no specific comments on the publication.,Quintero-Salazar et al.2024,2003-12-00,2452974.5
-2006ApJS..165..108S,Saha et al.2006,W(VI),31.24,0.09,0.08,0.0854400374531753,2,27,True,LMC,1,2006,2026,They delve into the HST CTE correction.,Quintero-Salazar et al.2024,2006-07-00,2453917.5
+2005ApJ...627..579R,Riess et al. 2005,F555W F814W,30.78,0.07,,,1,-1,False,LMC,1,2005,2026,They use photometric data of an external publication.,Quintero-Salazar et al.2026,2005-07-00,2453552.5
+2005ApJ...627..579R,Riess et al. 2005,F555W F814W,30.86,0.05,,,1,-1,True,LMC,1,2005,2026,They use photometric data of an external publication.,Quintero-Salazar et al.2026,2005-07-00,2453552.5
+2006ApJ...642L..29N,Ngeow & Kanbur 2006,F555W F814W,30.77,0.044,,,1,35,True,LMC,1,2006,2026,As in NED: STR 04 LMC non-linear,Quintero-Salazar et al.2026,2006-05-00,2453856.5
+2006ApJ...642L..29N,Ngeow & Kanbur 2006,F555W F814W,30.784,0.043,,,1,35,True,LMC,1,2006,2026,As in NED: STR04 LMC linear,Quintero-Salazar et al.2026,2006-05-00,2453856.5
+2006ApJ...642L..29N,Ngeow & Kanbur 2006,F555W F814W,30.794,0.043,,,1,35,True,LMC,1,2006,2026,As in NED: KN04 LMC non-linear,Quintero-Salazar et al.2026,2006-05-00,2453856.5
+2006ApJ...642L..29N,Ngeow & Kanbur 2006,F555W F814W,30.803,0.043,,,1,35,True,LMC,1,2006,2026,As in NED: KN04 LMC linear,Quintero-Salazar et al.2026,2006-05-00,2453856.5
+2006ApJ...642L..29N,Ngeow & Kanbur 2006,F555W F814W,30.808,0.043,,,1,35,True,LMC,1,2006,2026,As in NED: KN06 LMC linear,Quintero-Salazar et al.2026,2006-05-00,2453856.5
+2006ApJ...642L..29N,Ngeow & Kanbur 2006,F555W F814W,30.81,0.043,,,1,35,True,LMC,1,2006,2026,As in NED: TR02 LMC linear,Quintero-Salazar et al.2026,2006-05-00,2453856.5
+2006ApJ...642L..29N,Ngeow & Kanbur 2006,F555W F814W,30.819,0.042,,,1,35,True,LMC,1,2006,2026,As in NED: KN06 LMC non-linear,Quintero-Salazar et al.2026,2006-05-00,2453856.5
+2006ApJ...642L..29N,Ngeow & Kanbur 2006,F555W F814W,30.834,0.043,,,1,35,True,LMC,1,2006,2026,As in NED: TR02 LMC non-linear,Quintero-Salazar et al.2026,2006-05-00,2453856.5
+2006ApJ...642L..29N,Ngeow & Kanbur 2006,F555W F814W,30.902,0.039,,,1,35,True,GC,1,2006,2026,As in NED: NK04 GAL,Quintero-Salazar et al.2026,2006-05-00,2453856.5
+2006ApJ...642L..29N,Ngeow & Kanbur 2006,F555W F814W,30.943,0.039,,,1,35,True,GC,1,2006,2026,As in NED: STR04 GAL,Quintero-Salazar et al.2026,2006-05-00,2453856.5
+2006ApJS..165..108S,Saha et al.2006,W(VI),31.24,0.09,0.08,0.12041594578792295,2,27,True,LMC,1,2006,2026,They delve into the HST CTE correction.,Quintero-Salazar et al.2024,2006-07-00,2453917.5
+2009ApJ...699..539R,Riess et al. 2009,F160W,30.43,0.09,,,1,15,True,N4258,1,2009,2026,There are no comments by now.,Quintero-Salazar et al.2026,2009-07-00,2455013.5
+2011ApJ...730..119R,Riess et al. 2011,UBVR,30.91,0.07,,,1,49,True,N4258+LMC+GC,1,2011,2026,Check out about the calibration.,Quintero-Salazar et al.2026,2011-04-00,2455652.5
 2013MNRAS.434.2866F,Fiorentino et al.2013,F160W,30.92,0.05,,,1,-1,True,LMC,1,2013,2026,,Quintero-Salazar et al.2026,2013-10-00,2456566.5
 2016ApJ...826...56R,Riess et al.2016,VIHK,30.91,0.05,,,1,-1,True,N4258,1,2016,2026,"The values do not appear in the article,they are online.",Quintero-Salazar et al.2026,2016-07-00,2457570.5
-2002A&A...389...19P,"Paturel, G. et al.2002",W(VI),30.79,0.07,,,1,153,False,GC,1,2002,2026,They use data from Paturel et al. 2002 but with HIPPARCOS calibration.,Quintero-Salazar et al.2024,2002-07-00,2452456.5
-2001ApJ...553...47F,Freedman et al.2001,W(VI),30.80,0.04,,,1,35,False,LMC,1,2001,2026,There are no specific comments on the publication.,Quintero-Salazar et al.2024,2001-05-00,2452030.5
-2001ApJ...553...47F,Freedman et al.2001,W(VI),30.87,0.04,,,1,35,True,LMC,1,2001,2026,There are no specific comments on the publication.,Quintero-Salazar et al.2024,2001-05-00,2452030.5
-2001ApJ...549..721M,Macri et al.2001,H,31.47,0.15,,,1,2,True,LMC,1,2001,2026,There are no specific comments on the publication.,Quintero-Salazar et al.2024,2001-03-00,2451969.5
-2001ApJ...548..564W,Willick & Batra 2001,W(VI),30.77,0.07,,,1,39,False,LMC,1,2001,2026,They do not apply a metallicity correction.,Quintero-Salazar et al.2024,2001-02-00,2451941.5
-2000ApJ...529..745F,Ferrarese et al.2000,W(VI),30.95,0.07,,,1,-1,False,LMC,1,2000,2026,They calculate gamma.,Quintero-Salazar et al.2024,2000-02-00,2451575.5
-

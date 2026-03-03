@@ -1,17 +1,3 @@
-####################################################
-# 7777777      NN   NN   GGGG   CCCCC   00000           2222   555555  
-#     777      NNN  NN  GG  GG CC    C 00   00  99999  222222  55      
-#    777       NN N NN GG      CC      00   00 99   99     222 555555  
-#   777   ...  NN  NNN GG   GG CC    C 00   00  999999  2222      5555 
-#  777    ...  NN   NN  GGGGGG  CCCCC   00000      99  2222222 555555  
-#                                                999                   
-####################################################
-#        PPPPPP  LL      RRRRRR   CCCCC  
-#        PP   PP LL      RR   RR CC    C 
-#        PPPPPP  LL      RRRRRR  CC      
-#        PP      LL      RR  RR  CC    C 
-#        PP      LLLLLLL RR   RR  CCCCC  
-####################################################
 RefCode,Citation,Band,mu_0,e_R,e_S,e_T,Category,Ncef,Zcorr,zeroP,Rank,Year,Date,Comments,Author,ADS_date,JD
 2000ApJ...529..745F,Ferrarese et al.2000,W(VI),29.84,0.08,,,1,80,False,LMC,1,2000,2024,They calculate gamma.,Valencia et al.2024,2000-02-00,2451575.5
 2001ApJ...548..564W,Willick & Batra 2001,W(VI),29.78,0.05,,,1,79,False,LMC,1,2001,2024,No metallicity correction applied.,Valencia et al.2024,2001-02-00,2451941.5
@@ -21,4 +7,4 @@ RefCode,Citation,Band,mu_0,e_R,e_S,e_T,Category,Ncef,Zcorr,zeroP,Rank,Year,Date,
 2002A&A...389...19P,"Paturel, G. et al.2002",W(VI),29.77,0.07,,,1,238,False,GC,1,2002,2024,Use data from Paturel et al. 2002 but with HIPPARCOS calibration.,Valencia et al.2024,2002-07-00,2452456.5
 2003A&A...411..361K,"Kanbur, S. M. et al.2003",W(VI),29.72,0.06,,,1,29,False,LMC,1,2003,2024,Calculate metallicity correction separately but do not add error.,Valencia et al.2024,2003-12-00,2452974.5
 2003A&A...411..361K,"Kanbur, S. M. et al.2003",W(VI),29.77,0.06,,,1,29,False,GC,1,2003,2024,They calculate the metallicity correction separately but do not add error.,Valencia et al.2024,2003-12-00,2452974.5
-2006ApJS..165..108S,Saha et al.2006,W(VI),29.84,0.04,0.08,0.0894427190999915,2,65,True,LMC,1,2006,2024,They delve into the HST CTE correction.,Valencia et al.2024,2006-07-00,2453917.5
+2006ApJS..165..108S,Saha et al.2006,W(VI),29.84,0.04,0.08,0.08944271909999159,2,65,True,LMC,1,2006,2024,They delve into the HST CTE correction.,Valencia et al.2024,2006-07-00,2453917.5

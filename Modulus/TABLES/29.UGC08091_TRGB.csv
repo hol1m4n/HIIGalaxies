@@ -1,17 +1,3 @@
-####################################################
-#  2222               UU   UU   GGGG   CCCCC   00000   88888   00000           1  
-# 222222   99999      UU   UU  GG  GG CC    C 00   00 88   88 00   00  99999  111 
-#     222 99   99     UU   UU GG      CC      00   00  88888  00   00 99   99  11 
-#  2222    999999 ... UU   UU GG   GG CC    C 00   00 88   88 00   00  999999  11 
-# 2222222     99  ...  UUUUU   GGGGGG  CCCCC   00000   88888   00000      99  111 
-#           999                                                         999   
-####################################################
-#        TTTTTTT RRRRRR    GGGG  BBBBB   
-#          TTT   RR   RR  GG  GG BB   B  
-#          TTT   RRRRRR  GG      BBBBBB  
-#          TTT   RR  RR  GG   GG BB   BB 
-#          TTT   RR   RR  GGGGGG BBBBBB  
-####################################################
 RefCode,Citation,Band,mu_0,e_R,Rank,Year,Date,Comments,Author,ADS_date,JD
 2006AJ....132..729T,Tully et al.2006,I(VI),26.64,0.05,1,2006,2026,"Only random error, does not contain M-TRGB_I error.",Quintero-Salazar et al.2024,2006-08-00,2453948.5
 2009AJ....138..332J,Jacobs et al.2009,F814W(F606W F814W),26.69,0.12,1,2009,2026,"mu_0 does not appear in the publication table because it is truncated, but it is online.",Quintero-Salazar et al.2024,2009-08-00,2455044.5

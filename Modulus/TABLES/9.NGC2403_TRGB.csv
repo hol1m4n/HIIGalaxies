@@ -1,17 +1,3 @@
-####################################################
-#             NN   NN   GGGG   CCCCC   2222       44    00000  333333  
-#  99999      NNN  NN  GG  GG CC    C 222222     444   00   00    3333 
-# 99   99     NN N NN GG      CC          222  44  4   00   00   3333  
-#  999999 ... NN  NNN GG   GG CC    C  2222   44444444 00   00     333 
-#     99  ... NN   NN  GGGGGG  CCCCC  2222222    444    00000  333333  
-#   999                                                                
-####################################################
-#        TTTTTTT RRRRRR    GGGG  BBBBB   
-#          TTT   RR   RR  GG  GG BB   B  
-#          TTT   RRRRRR  GG      BBBBBB  
-#          TTT   RR  RR  GG   GG BB   BB 
-#          TTT   RR   RR  GGGGGG BBBBBB  
-####################################################
 RefCode,Citation,Band,mu_0,e_R,Rank,Year,Date,Comments,Author,ADS_date,JD
 2003AJ....125.3046D,Davidge 2003,I(VI),27.51,0.24,2,2003,2024,Datos de Freedman and Madore 1988.,Valencia et al.2024,2003-06-00,2452791.5
 2009AJ....138..332J,Jacobs et al.2009,F814W(F606W F814W),27.5,0.05,1,2009,2024,"Valor de mu_0, sigma_ran no aparecen en la publicacion por tabla truncada.",Valencia et al.2024,2009-08-00,2455044.5

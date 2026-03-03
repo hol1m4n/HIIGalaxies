@@ -1,17 +1,5 @@
-####################################################
-#  2222       IIIII  CCCCC   2222   555555  7777777     44   
-# 222222       III  CC    C 222222  55          777    444   
-#     222      III  CC          222 555555     777   44  4   
-#  2222   ...  III  CC    C  2222      5555   777   44444444 
-# 2222222 ... IIIII  CCCCC  2222222 555555   777       444   
-####################################################
-#        TTTTTTT RRRRRR    GGGG  BBBBB   
-#          TTT   RR   RR  GG  GG BB   B  
-#          TTT   RRRRRR  GG      BBBBBB  
-#          TTT   RR  RR  GG   GG BB   BB 
-#          TTT   RR   RR  GGGGGG BBBBBB  
-####################################################
 RefCode,Citation,Band,mu_0,e_R,Rank,Year,Date,Comments,Author,ADS_date,JD
+2003A&A...398..479K,Karachentsev et al. 2003,W(VI),28.02,0.22,1,2003,2026,There are no specific comments on the publication.,Quintero-Salazar et al.2024,2003-02-00,2452671.5
 2009AJ....138..332J,Jacobs et al.2009,F814W(F606W F814W),27.96,0.03,1,2009,2024,"mu_0 does not appear in the publication table because it is truncated, but it is online.",Valencia et al.2024,2009-08-00,2455044.5
 2009ApJS..183...67D,Dalcanton et al.2009,F814W(F606W F814W),27.89,0.03,1,2009,2024,There are no specific comments on the publication.,Valencia et al.2024,2009-07-00,2455013.5
 2009ApJS..183...67D,Dalcanton et al.2009,F814W(F606W F814W),27.89,0.03,1,2009,2024,There are no specific comments on the publication.,Valencia et al.2024,2009-07-00,2455013.5

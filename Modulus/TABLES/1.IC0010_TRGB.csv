@@ -1,18 +1,6 @@
-####################################################
-#  1      IIIII  CCCCC   00000   00000   1   00000  
-# 111      III  CC    C 00   00 00   00 111 00   00 
-#  11      III  CC      00   00 00   00  11 00   00 
-#  11 ...  III  CC    C 00   00 00   00  11 00   00 
-# 111 ... IIIII  CCCCC   00000   00000  111  00000  
-####################################################
-#        TTTTTTT RRRRRR    GGGG  BBBBB   
-#          TTT   RR   RR  GG  GG BB   B  
-#          TTT   RRRRRR  GG      BBBBBB  
-#          TTT   RR  RR  GG   GG BB   BB 
-#          TTT   RR   RR  GGGGGG BBBBBB  
-####################################################
 RefCode,Citation,Band,mu_0,e_R,Rank,Year,Date,Comments,Author,ADS_date,JD
 2000ApJ...529..745F,Ferrarese et al.2000,I (BVI),24.17,0.39,1,2000,2024,There are no specific comments on the publication.,Valencia et al.2024,2000-02-00,2451575.5
+2001ApJ...559..225H,Hunter et al. 2001,UVIHa,24.95,0.2,1,2001,2026,Check out commentary later.,Quintero-Salazar et al.2024,2001-09-00,2452153.5
 2007ApJ...662..272V,Vacca et al.2007,F814W(HK),24.48,0.08,2,2007,2024,E(B-V)=0.95+/-0.15.,Valencia et al.2024,2007-06-00,2454252.5
 2008ApJ...688L..69S,Sanna et al.2008,F814W(F555W F606W),24.51,0.8,1,2008,2024,There are no specific comments on the publication.,Valencia et al.2024,2008-12-00,2454801.5
 2009ApJ...703..816K,Kim et al.2009,J(JHK),24.15,0.06,2,2009,2024,Region 2.,Valencia et al.2024,2009-09-00,2455075.5
@@ -24,5 +12,6 @@ RefCode,Citation,Band,mu_0,e_R,Rank,Year,Date,Comments,Author,ADS_date,JD
 2009ApJ...703..816K,Kim et al.2009,K(JHK),24.3,0.03,2,2009,2024,Region 2.,Valencia et al.2024,2009-09-00,2455075.5
 2009ApJ...703..816K,Kim et al.2009,H(JHK),24.35,0.05,2,2009,2024,Region 3.,Valencia et al.2024,2009-09-00,2455075.5
 2009ApJ...703..816K,Kim et al.2009,H(JHK),24.38,0.04,2,2009,2024,Region 1.,Valencia et al.2024,2009-09-00,2455075.5
-2017ApJ...834...78M,McQuinn et al.2017,F814W(F555W F814W),24.43,0.03,1,2017,2024,"No specific publication on distance, they use TRGB for CM diagram analysis.",Valencia et al.2024,2017-01-00,2457754.5
+2009AstL...35..748T,Tikhonov & Galazutdinova 2009,VI,24.47,0.11,3,2009,2026,Russian observatory.,Quintero-Salazar et al.2024,2009-11-00,2455136.5
 2017ApJ...834...78M,Gerbrandt et al.2017,UKIRT/WFCAM,24.03,0.5,1,2015,2026,"No specific publication on distance, they use TRGB for CM diagram analysis.",Quintero-Salazar et al.2024,2015-11-00,2457327.5
+2017ApJ...834...78M,McQuinn et al.2017,F814W(F555W F814W),24.43,0.03,1,2017,2024,"No specific publication on distance, they use TRGB for CM diagram analysis.",Valencia et al.2024,2017-01-00,2457754.5

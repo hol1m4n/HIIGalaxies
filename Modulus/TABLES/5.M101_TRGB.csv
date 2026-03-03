@@ -1,16 +1,3 @@
-####################################################
-# 555555      MM    MM  1   00000   1  
-# 55          MMM  MMM 111 00   00 111 
-# 555555      MM MM MM  11 00   00  11 
-#    5555 ... MM    MM  11 00   00  11 
-# 555555  ... MM    MM 111  00000  111 
-####################################################
-#        TTTTTTT RRRRRR    GGGG  BBBBB   
-#          TTT   RR   RR  GG  GG BB   B  
-#          TTT   RRRRRR  GG      BBBBBB  
-#          TTT   RR  RR  GG   GG BB   BB 
-#          TTT   RR   RR  GGGGGG BBBBBB  
-####################################################
 RefCode,Citation,Band,mu_0,e_R,Rank,Year,Date,Comments,Author,ADS_date,JD
 2004ApJ...608...42S,Sakai et al.2004,I(VIR),29.42,0.11,1,2004,2024,There are no specific comments on the publication.,Valencia et al.2024,2004-06-00,2453157.5
 2007ApJ...661..815R,Rizzi et al.2007,I(BVI),29.34,0.09,1,2007,2024,M-TRGB_I is presented for each galaxy appearing in the publication.,Valencia et al.2024,2007-06-00,2454252.5

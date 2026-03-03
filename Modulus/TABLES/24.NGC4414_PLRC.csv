@@ -1,24 +1,10 @@
-####################################################
-#  2222       44        NN   NN   GGGG   CCCCC      44       44    1      44   
-# 222222     444        NNN  NN  GG  GG CC    C    444      444   111    444   
-#     222  44  4        NN N NN GG      CC       44  4    44  4    11  44  4   
-#  2222   44444444 ...  NN  NNN GG   GG CC    C 44444444 44444444  11 44444444 
-# 2222222    444   ...  NN   NN  GGGGGG  CCCCC     444      444   111    444   
-####################################################
-#        PPPPPP  LL      RRRRRR   CCCCC  
-#        PP   PP LL      RR   RR CC    C 
-#        PPPPPP  LL      RRRRRR  CC      
-#        PP      LL      RR  RR  CC    C 
-#        PP      LLLLLLL RR   RR  CCCCC  
-####################################################
 RefCode,Citation,Band,mu_0,e_R,e_S,e_T,Category,Ncef,Zcorr,zeroP,Rank,Year,Date,Comments,Author,ADS_date,JD
+2000ApJ...529..723G,Gibson et al. 2000,VBI,30.41,0.1,0.16,0.18867962264113208,2,-1,False,LMC,1,2000,2026,"ALLFRAME + TRIAL.They apply metallicity correction but just for Ho, not modulus",Quintero-Salazar et al.2024,2000-02-00,2451575.5
+2000ApJ...529..745F,Ferrarese et al.2000,W(VI),31.41,0.1,,,1,-1,False,LMC,1,2000,2026,They calculate gamma.,Quintero-Salazar et al.2024,2000-02-00,2451575.5
+2001ApJ...548..564W,Willick & Batra 2001,W(VI),31.17,0.13,,,1,11,False,LMC,1,2001,2026,They do not apply a metallicity correction.,Quintero-Salazar et al.2024,2001-02-00,2451941.5
+2001ApJ...553...47F,Freedman et al.2001,W(VI),31.1,0.05,,,1,8,False,LMC,1,2001,2026,There are no specific comments on the publication.,Quintero-Salazar et al.2024,2001-05-00,2452030.5
+2001ApJ...553...47F,Freedman et al.2001,W(VI),31.24,0.05,,,1,8,True,LMC,1,2001,2026,There are no specific comments on the publication.,Quintero-Salazar et al.2024,2001-05-00,2452030.5
+2002A&A...389...19P,"Paturel, G. et al.2002",W(VI),31.27,0.05,,,1,18,False,GC,1,2002,2026,They use data from Paturel et al. 2002 but with HIPPARCOS calibration.,Quintero-Salazar et al.2024,2002-07-00,2452456.5
 2003A&A...411..361K,"Kanbur, S. M. et al.2003",W(VI),31.099,0.044,,,1,8,False,LMC,1,2003,2026,There are no specific comments on the publication.,Quintero-Salazar et al.2024,2003-12-00,2452974.5
 2003A&A...411..361K,"Kanbur, S. M. et al.2003",W(VI),31.204,0.052,,,1,8,False,GC,1,2003,2026,There are no specific comments on the publication.,Quintero-Salazar et al.2024,2003-12-00,2452974.5
-2006ApJS..165..108S,Saha et al.2006,W(VI),31.65,0.17,0.08,0.0854400374531753,2,10,True,LMC,1,2006,2026,They delve into the HST CTE correction.,Quintero-Salazar et al.2024,2006-07-00,2453917.5
-2002A&A...389...19P,"Paturel, G. et al.2002",W(VI),31.27,0.05,,,1,18,False,GC,1,2002,2026,They use data from Paturel et al. 2002 but with HIPPARCOS calibration.,Quintero-Salazar et al.2024,2002-07-00,2452456.5
-2001ApJ...553...47F,Freedman et al.2001,W(VI),31.10,0.05,,,1,8,False,LMC,1,2001,2026,There are no specific comments on the publication.,Quintero-Salazar et al.2024,2001-05-00,2452030.5
-2001ApJ...553...47F,Freedman et al.2001,W(VI),31.24,0.05,,,1,8,True,LMC,1,2001,2026,There are no specific comments on the publication.,Quintero-Salazar et al.2024,2001-05-00,2452030.5
-2001ApJ...548..564W,Willick & Batra 2001,W(VI),31.17,0.13,,,1,11,False,LMC,1,2001,2026,They do not apply a metallicity correction.,Quintero-Salazar et al.2024,2001-02-00,2451941.5
-2000ApJ...529..745F,Ferrarese et al.2000,W(VI),31.41,0.10,,,1,-1,False,LMC,1,2000,2026,They calculate gamma.,Quintero-Salazar et al.2024,2000-02-00,2451575.5
-
-
+2006ApJS..165..108S,Saha et al.2006,W(VI),31.65,0.17,0.08,0.18788294228055938,2,10,True,LMC,1,2006,2026,They delve into the HST CTE correction.,Quintero-Salazar et al.2024,2006-07-00,2453917.5

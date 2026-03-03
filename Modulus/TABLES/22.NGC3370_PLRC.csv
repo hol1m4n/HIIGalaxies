@@ -1,17 +1,18 @@
-####################################################
-#  2222    2222        NN   NN   GGGG   CCCCC  333333  333333  7777777  00000  
-# 222222  222222       NNN  NN  GG  GG CC    C    3333    3333     777 00   00 
-#     222     222      NN N NN GG      CC        3333    3333     777  00   00 
-#  2222    2222   ...  NN  NNN GG   GG CC    C     333     333   777   00   00 
-# 2222222 2222222 ...  NN   NN  GGGGGG  CCCCC  333333  333333   777     00000  
-####################################################
-#        PPPPPP  LL      RRRRRR   CCCCC  
-#        PP   PP LL      RR   RR CC    C 
-#        PPPPPP  LL      RRRRRR  CC      
-#        PP      LL      RR  RR  CC    C 
-#        PP      LLLLLLL RR   RR  CCCCC  
-####################################################
 RefCode,Citation,Band,mu_0,e_R,e_S,e_T,Category,Ncef,Zcorr,zeroP,Rank,Year,Date,Comments,Author,ADS_date,JD
-2006ApJS..165..108S,Saha et al.2006,W(VI),32.37,0.03,0.08,0.0854400374531753,2,64,True,LMC,1,2006,2026,They delve into the HST CTE correction.,Quintero-Salazar et al.2024,2006-07-00,2453917.5
+2005ApJ...627..579R,Riess et al. 2005,F555W F814W,32.22,0.05,,,1,64,False,LMC,1,2005,2026,There are no comments by now.,Quintero-Salazar et al.2026,2005-07-00,2453552.5
+2005ApJ...627..579R,Riess et al. 2005,F555W F814W,32.29,0.03,,,1,64,True,LMC,1,2005,2026,There are no comments by now.,Quintero-Salazar et al.2026,2005-07-00,2453552.5
+2006ApJ...642L..29N,Ngeow & Kanbur 2006,F555W F814W,32.149,0.033,,,1,64,True,LMC,1,2006,2026,As in NED: STR 04 LMC non-linear,Quintero-Salazar et al.2026,2006-05-00,2453856.5
+2006ApJ...642L..29N,Ngeow & Kanbur 2006,F555W F814W,32.171,0.034,,,1,64,True,LMC,1,2006,2026,As in NED: STR04 LMC linear,Quintero-Salazar et al.2026,2006-05-00,2453856.5
+2006ApJ...642L..29N,Ngeow & Kanbur 2006,F555W F814W,32.18,0.034,,,1,64,True,LMC,1,2006,2026,As in NED: KN04 LMC non-linear,Quintero-Salazar et al.2026,2006-05-00,2453856.5
+2006ApJ...642L..29N,Ngeow & Kanbur 2006,F555W F814W,32.189,0.033,,,1,64,True,LMC,1,2006,2026,As in NED: KN04 LMC linear,Quintero-Salazar et al.2026,2006-05-00,2453856.5
+2006ApJ...642L..29N,Ngeow & Kanbur 2006,F555W F814W,32.193,0.033,,,1,64,True,LMC,1,2006,2026,As in NED: TR02 LMC linear,Quintero-Salazar et al.2026,2006-05-00,2453856.5
+2006ApJ...642L..29N,Ngeow & Kanbur 2006,F555W F814W,32.195,0.034,,,1,64,True,LMC,1,2006,2026,As in NED: KN06 LMC linear,Quintero-Salazar et al.2026,2006-05-00,2453856.5
+2006ApJ...642L..29N,Ngeow & Kanbur 2006,F555W F814W,32.213,0.034,,,1,64,True,LMC,1,2006,2026,As in NED: KN06 LMC non-linear,Quintero-Salazar et al.2026,2006-05-00,2453856.5
+2006ApJ...642L..29N,Ngeow & Kanbur 2006,F555W F814W,32.222,0.034,,,1,64,True,LMC,1,2006,2026,As in NED: TR02 LMC non-linear,Quintero-Salazar et al.2026,2006-05-00,2453856.5
+2006ApJ...642L..29N,Ngeow & Kanbur 2006,F555W F814W,32.324,0.035,,,1,64,True,GC,1,2006,2026,As in NED: NK04 GAL,Quintero-Salazar et al.2026,2006-05-00,2453856.5
+2006ApJ...642L..29N,Ngeow & Kanbur 2006,F555W F814W,32.363,0.035,,,1,64,True,GC,1,2006,2026,As in NED: STR04 GAL,Quintero-Salazar et al.2026,2006-05-00,2453856.5
+2006ApJS..165..108S,Saha et al.2006,W(VI),32.37,0.03,0.08,0.08544003745317531,2,64,True,LMC,1,2006,2026,They delve into the HST CTE correction.,Quintero-Salazar et al.2024,2006-07-00,2453917.5
+2009ApJ...699..539R,Riess et al. 2009,F160W,32.12,0.08,,,1,26,True,N4258,1,2009,2026,There are no comments by now.,Quintero-Salazar et al.2026,2009-07-00,2455013.5
+2011ApJ...730..119R,Riess et al. 2011,UBVRI,32.13,0.07,,,1,86,True,N4258+LMC+GC,1,2011,2026,Check out about the calibration.,Quintero-Salazar et al.2026,2011-04-00,2455652.5
 2013MNRAS.434.2866F,Fiorentino et al.2013,F160W,32.04,0.03,,,1,-1,True,LMC,1,2013,2026,,Quintero-Salazar et al.2026,2013-10-00,2456566.5
 2016ApJ...826...56R,Riess et al.2016,VIHK,32.07,0.05,,,1,-1,True,N4258,1,2016,2026,"The values do not appear in the article,they are online.",Quintero-Salazar et al.2026,2016-07-00,2457570.5
