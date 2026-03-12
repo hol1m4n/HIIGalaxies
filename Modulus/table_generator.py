@@ -394,7 +394,7 @@ else:
                 sigma_w = weighted_error(G1_e)
                 t_r.append([Galaxia,N_dat,mu_w,sigma_w,'--','--','--','--','--','--'])
                 print("\n")
-                print(f"Done for {Galaxia}\n")       
+                print(f"Done for {Galaxia}, {N_dat}\n")      
             if N_dat > 1:
                 mu_w = weighted_average(G1_m,G1_e)
                 sigma_w = weighted_error(G1_e)
@@ -406,7 +406,7 @@ else:
                 sigma_L, sigma_Lcorr = nestedsampling_error(G1_m,G1_e,Name=Galaxia,group = 't_r')
                 t_r.append([Galaxia,N_dat,mu_w,sigma_w,sigma_br,sigma_C,sigma_cl[0],sigma_cl[1],sigma_L,sigma_Lcorr])
                 print("\n")
-                print(f"Done for {Galaxia}\n")
+                print(f"Done for {Galaxia} , {N_dat}\n")
 
     S.close()
 
