@@ -182,6 +182,7 @@ for n in range(len(SDSS_df_Dbox)):
 
     PREdwn_listDR17.append(pre_link)
 
+'''
 
 def list_checker_forDR7(obj_link):
     plate_key,mjd_key,fiber_key = obj_link[70:74],obj_link[64:69],obj_link[75:78]
@@ -215,6 +216,11 @@ def list_checker_forDR17(obj_link):
     return rta
 
 dwn_listDR17 = Parallel(n_jobs=-1)(delayed(list_checker_forDR17)(i) for i in PREdwn_listDR17)
+'''
+
+dwn_listDR17 = PREdwn_listDR17
+dwn_listDR7  = PREdwn_listDR7
+
 
 
 dwn_listDR7 = [item for item in dwn_listDR7 if item != 'Not Found']
@@ -227,10 +233,13 @@ else:
     os.mkdir(storage_dir+fits_folder)
 
 def dr7_downloader(LINK,storage_dir,fits_folder):
-    print(f"Downloading {LINK[-25:]} ...")
-    direc = storage_dir + fits_folder + LINK[-25:]
-    DOWNLOAD = urllib.request.urlretrieve(LINK, direc)
-    return f"Downloading {LINK[-25:]} ..."
+    if os.path.exists(storage_dir + fits_folder + LINK[-25:]):
+        print(f"{LINK[-25:]} on folder.")
+    else:
+        print(f"Downloading {LINK[-25:]} ...")
+        direc = storage_dir + fits_folder + LINK[-25:]
+        DOWNLOAD = urllib.request.urlretrieve(LINK, direc)
+        return f"Downloading {LINK[-25:]} ..."
 
 tmp = Parallel(n_jobs=-1)(delayed(dr7_downloader)(i,storage_dir,fits_folder) for i in dwn_listDR7)
 
@@ -245,9 +254,12 @@ else:
     os.mkdir(storage_dir+fits_folder)
 
 def dr17_downloader(LINK,storage_dir,fits_folder):
-    print(f"Downloading {LINK[-25:]} ...")
-    direc = storage_dir + fits_folder + LINK[-25:]
-    DOWNLOAD = urllib.request.urlretrieve(LINK, direc)
-    return f"Downloading {LINK[-25:]} ..."
+    if os.path.exists(storage_dir + fits_folder + LINK[-25:]):
+        print(f"{LINK[-25:]} on folder.")
+    else:
+        print(f"Downloading {LINK[-25:]} ...")
+        direc = storage_dir + fits_folder + LINK[-25:]
+        DOWNLOAD = urllib.request.urlretrieve(LINK, direc)
+        return f"Downloading {LINK[-25:]} ..."
 
 tmp = Parallel(n_jobs=-1)(delayed(dr17_downloader)(i,storage_dir,fits_folder) for i in dwn_listDR17)
