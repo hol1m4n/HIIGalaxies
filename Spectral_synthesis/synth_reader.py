@@ -769,7 +769,8 @@ def spec_pop_STAR_mod(id,
     ax3.set_xticks(edades)
     ax3.tick_params(axis='x', colors='red',width=1.5,length=5)
     ax3.set_xticklabels([str(round(e,2)) for e in edades], rotation=90, fontsize=7,color='blue')
-    ax3.set_ylabel(r'$x_{j}$ [%] $L_{\lambda}$=4020$\AA$',  fontsize=15)
+    tmp_lnorm = [r'$x_{j}$ [%] $L_{\lambda}$=',r'$\AA$',str(int(FITS[1].header['L_NORM']))]
+    ax3.set_ylabel(f'{tmp_lnorm[0]}{tmp_lnorm[2]}{tmp_lnorm[1]}',  fontsize=15)
     ax3.legend(loc='upper right', fontsize=12,ncol = int(len(metal_library)/2))
     ax3.grid(True, which="both", ls=":", color = 'gray', linewidth = 0.2)
 
@@ -1114,7 +1115,8 @@ def spec_pop_FADO_mod(id,
     ax3.set_xticks(edades)
     ax3.tick_params(axis='x', colors='red',width=1.5,length=5)
     ax3.set_xticklabels([str(round(e,2)) for e in edades], rotation=90, fontsize=7,color='blue')
-    ax3.set_ylabel(r'$x_{j}$ [%] $L_{\lambda}$=4020$\AA$',  fontsize=15)
+    tmp_lnorm = [r'$x_{j}$ [%] $L_{\lambda}$=',r'$\AA$',str(int(spec_header['LAMBDA_0']))]
+    ax3.set_ylabel(f'{tmp_lnorm[0]}{tmp_lnorm[2]}{tmp_lnorm[1]}',  fontsize=15)
     ax3.legend(loc='upper right', fontsize=12,ncol = int(len(metal_library)/2))
     ax3.grid(True, which="both", ls=":", color = 'gray', linewidth = 0.2)
 
@@ -1228,10 +1230,39 @@ def spec_pop_FADO_mod(id,
 
 
 
+def FADO_merit_reader(id,
+    home = os.path.expanduser("~") + '/gdrive/DataHII/HIIGs/FADO/'):
+    name = ''
+    name = home + id
+    if os.path.exists(name) != True:
+        raise FileNotFoundError('File is not in folder. Try relocating the file or changing the name')
+    
+    _1D = name
+    spec_1D = fits.open(_1D)
+    spec_hdu = spec_1D[0]
+    spec_header = spec_hdu.header
+    spec_data = spec_hdu.data
+    no_false = spec_data[0]!=0.0
+    Lambda = np.linspace(spec_header['OLSYNINI'],
+                         spec_header['OLSYNFIN'],
+                         len(spec_data[0][no_false]))
+    obs_flux = spec_data[0][no_false]
+    syn_flux = spec_data[3][no_false]
+    fado_mask = spec_data[2][no_false]
+    fado_mask = (fado_mask == 5)
+    aux = np.invert(fado_mask)
+    Lambda[aux] = np.nan
+    obs_flux[aux] = np.nan
+    Lambda = np.linspace(spec_header['OLSYNINI'],
+                        spec_header['OLSYNFIN'],
+                        len(spec_data[0][no_false]))
+    obs_flux = spec_data[0][no_false]
+    syn_flux = spec_data[3][no_false]
+    Adev = abs(obs_flux-syn_flux) / obs_flux
+    Adev = (np.sum(Adev) / len(obs_flux)) * 100
+    spec_1D.close()
 
-
-
-
+    return [spec_header['CHI2_RED'],Adev]
 
 
 
