@@ -713,7 +713,18 @@ def spec_pop_STAR_mod(id,
         hspace=0.12   # <-- espacio solo aquí
     )
 
+    metal_conversion = [
+        (POPS_TABLE['Z_j']==0.0001),
+        (POPS_TABLE['Z_j']==0.0004),
+        (POPS_TABLE['Z_j']==0.004),
+        (POPS_TABLE['Z_j']==0.008),
+        (POPS_TABLE['Z_j']==0.02),
+        (POPS_TABLE['Z_j']==0.05)
+    ]
 
+    solar_equival = [0.005,0.02,0.2,0.4,1.0,2.5]
+
+    POPS_TABLE['sun_met'] = np.select(metal_conversion, solar_equival, default=0.0)
 
 
 
@@ -721,7 +732,7 @@ def spec_pop_STAR_mod(id,
     edades = np.log10(np.unique(POPS_TABLE['age_j']))
     AGES_axis = [str(round(e,2)) for e in edades]
 
-    metal_library = np.unique(POPS_TABLE['Z_j'])
+    metal_library = np.unique(POPS_TABLE['sun_met'])
     metallicities = {}
     for i in range(len(metal_library)):
         metallicities[f"{str(metal_library[i])}"] = np.zeros(len(edades))
@@ -731,7 +742,7 @@ def spec_pop_STAR_mod(id,
     for i in range(len(edades)):
         age_selection = POPS_TABLE[np.log10(POPS_TABLE['age_j']) == edades[i]]
         for x in metal_library:
-            tmp = age_selection[age_selection['Z_j']==x]['x_j'].item()
+            tmp = age_selection[age_selection['sun_met']==x]['x_j'].item()
             metallicities[f"{str(x)}"][i] = tmp
             del tmp
         del age_selection
@@ -758,7 +769,7 @@ def spec_pop_STAR_mod(id,
         #color = cmap(norm(float(boolean)))
         ax3.bar(edades, 
                 weight_count, 
-                width,label=fr"$Z = {boolean}$", #width,label=fr"${boolean}\,Z_{{\odot}}$", 
+                width,label=fr"${boolean}\,Z_{{\odot}}$", #width,label=fr"${boolean}\,Z_{{\odot}}$", 
                 bottom=bottom,#, color=color
                 alpha = 0.6,
                 edgecolor = 'k')
@@ -780,7 +791,7 @@ def spec_pop_STAR_mod(id,
     edades = np.log10(np.unique(POPS_TABLE['age_j']))
     AGES_axis = [str(round(e,2)) for e in edades]
 
-    metal_library = np.unique(POPS_TABLE['Z_j'])
+    metal_library = np.unique(POPS_TABLE['sun_met'])
     metallicities = {}
     for i in range(len(metal_library)):
         metallicities[f"{str(metal_library[i])}"] = np.zeros(len(edades))
@@ -791,7 +802,7 @@ def spec_pop_STAR_mod(id,
     for i in range(len(edades)):
         age_selection = POPS_TABLE[np.log10(POPS_TABLE['age_j']) == edades[i]]
         for x in metal_library:
-            tmp = age_selection[age_selection['Z_j']==x]['Mcor_j'].item()
+            tmp = age_selection[age_selection['sun_met']==x]['Mcor_j'].item()
             metallicities[f"{str(x)}"][i] = tmp
             del tmp
         del age_selection
@@ -844,15 +855,15 @@ def spec_pop_STAR_mod(id,
 
     mean_logt_L = np.sum(x_j_L_norm * np.log10(POPS_TABLE['age_j']))
     mean_logt_M = np.sum(mu_j_M_norm * np.log10(POPS_TABLE['age_j']))
-    mean_Z_L = np.sum(x_j_L_norm * POPS_TABLE['Z_j'])
-    mean_Z_M = np.sum(mu_j_M_norm * POPS_TABLE['Z_j'])
+    mean_Z_L = np.sum(x_j_L_norm * POPS_TABLE['sun_met'])
+    mean_Z_M = np.sum(mu_j_M_norm * POPS_TABLE['sun_met'])
 
 
 
 
-    titulo_starlight = r'$\mathbfit{STATS \, BEST \, FIT}$'
+    titulo_starlight  = r'======>  $\mathbfit{STATS \, BEST \, FIT}$'
     chi2 = r'$\mathbfit{\chi^2 / \nu}$ = %.4f' % FITS[1].header['CHI2NL_']
-    adev = r'$\mathbfit{Adev}$ = %.4f' % FITS[1].header['ADEV']
+    adev = r'$\,,\,\mathbfit{Adev}$ = %.4f' % FITS[1].header['ADEV']
     red_law = r'$\mathbfit{Reddening}$ $\mathbfit{law}$ = '+ str(FITS[1].header['RED_LAW'])
     base_src = r'$\mathbfit{BASE}$ = '+ str(FITS[1].header['ARQ_BAS'])
     n_base = r'$\mathbfit{N}$ $\mathbfit{Base}$ = %.0f' % FITS[1].header['N_BASE']
@@ -865,8 +876,7 @@ def spec_pop_STAR_mod(id,
     mean_Z_M = r'$\,,\, \mathbfit{\langle Z \rangle_M}$ = %.4f' % mean_Z_M
 
     ltext = [titulo_starlight,
-             chi2, 
-             adev,
+             chi2+adev, 
              red_law,
              base_src,
              n_base,
@@ -1063,10 +1073,23 @@ def spec_pop_FADO_mod(id,
     POPS_TABLE = Table([light_frac,mass_frac,age,log_age,Zs_metal],
                     names = ('x_j','Mcor_j','age_j','logage_j','Z_j'))
     
+    metal_conversion = [
+        (POPS_TABLE['Z_j']==0.0001),
+        (POPS_TABLE['Z_j']==0.0004),
+        (POPS_TABLE['Z_j']==0.004),
+        (POPS_TABLE['Z_j']==0.008),
+        (POPS_TABLE['Z_j']==0.02),
+        (POPS_TABLE['Z_j']==0.05)
+    ]
+
+    solar_equival = [0.005,0.02,0.2,0.4,1.0,2.5]
+
+    POPS_TABLE['sun_met'] = np.select(metal_conversion, solar_equival, default=0.0)
+    
     edades = np.log10(np.unique(POPS_TABLE['age_j']))
     AGES_axis = [str(round(e,2)) for e in edades]
 
-    metal_library = np.unique(POPS_TABLE['Z_j'])
+    metal_library = np.unique(POPS_TABLE['sun_met'])
     metallicities = {}
     for i in range(len(metal_library)):
         metallicities[f"{str(metal_library[i])}"] = np.zeros(len(edades))
@@ -1076,7 +1099,7 @@ def spec_pop_FADO_mod(id,
     for i in range(len(edades)):
         age_selection = POPS_TABLE[np.log10(POPS_TABLE['age_j']) == edades[i]]
         for x in metal_library:
-            tmp = age_selection[age_selection['Z_j']==x]['x_j'].item()
+            tmp = age_selection[age_selection['sun_met']==x]['x_j'].item()
             metallicities[f"{str(x)}"][i] = tmp
             del tmp
         del age_selection
@@ -1104,7 +1127,7 @@ def spec_pop_FADO_mod(id,
         #color = cmap(norm(float(boolean)))
         ax3.bar(edades, 
                 weight_count, 
-                width,label=fr"$Z = {boolean}$", #width,label=fr"${boolean}\,Z_{{\odot}}$", 
+                width,label=fr"${boolean}\,Z_{{\odot}}$", #width,label=fr"${boolean}\,Z_{{\odot}}$", 
                 bottom=bottom,#, color=color
                 alpha = 0.6,
                 edgecolor = 'k')
@@ -1129,7 +1152,7 @@ def spec_pop_FADO_mod(id,
     edades = np.log10(np.unique(POPS_TABLE['age_j']))
     AGES_axis = [str(round(e,2)) for e in edades]
 
-    metal_library = np.unique(POPS_TABLE['Z_j'])
+    metal_library = np.unique(POPS_TABLE['sun_met'])
     metallicities = {}
     for i in range(len(metal_library)):
         metallicities[f"{str(metal_library[i])}"] = np.zeros(len(edades))
@@ -1140,7 +1163,7 @@ def spec_pop_FADO_mod(id,
     for i in range(len(edades)):
         age_selection = POPS_TABLE[np.log10(POPS_TABLE['age_j']) == edades[i]]
         for x in metal_library:
-            tmp = age_selection[age_selection['Z_j']==x]['Mcor_j'].item()
+            tmp = age_selection[age_selection['sun_met']==x]['Mcor_j'].item()
             metallicities[f"{str(x)}"][i] = tmp
             del tmp
         del age_selection
@@ -1189,12 +1212,12 @@ def spec_pop_FADO_mod(id,
 
     mean_logt_L = np.sum(x_j_L_norm * np.log10(POPS_TABLE['age_j']))
     mean_logt_M = np.sum(mu_j_M_norm * np.log10(POPS_TABLE['age_j']))
-    mean_Z_L = np.sum(x_j_L_norm * POPS_TABLE['Z_j'])
-    mean_Z_M = np.sum(mu_j_M_norm * POPS_TABLE['Z_j'])
+    mean_Z_L = np.sum(x_j_L_norm * POPS_TABLE['sun_met'])
+    mean_Z_M = np.sum(mu_j_M_norm * POPS_TABLE['sun_met'])
 
-    titulo_fado = r'$\mathbfit{STATS \, BEST \, FIT}$'
+    titulo_fado = r'======>  $\mathbfit{STATS \, BEST \, FIT}$'
     chi2 = r'$\mathbfit{\chi^2 / \nu}$ = %.4f' % spec_header['CHI2_RED']
-    adev = r'$\mathbfit{Adev}$ = %.4f' % Adev
+    adev = r'$\,,\,\mathbfit{Adev}$ = %.4f' % Adev
     red_law = r'$\mathbfit{Reddening}$ $\mathbfit{law}$ = '+ spec_header['R_LAWOPT'][0:21]
     base_src = r'$\mathbfit{BASE}$ = '+ spec_header['ARQ_BASE']
     n_base = r'$\mathbfit{N}$ $\mathbfit{Base}$ = %.0f'% spec_header['NUM_BASE']
@@ -1207,8 +1230,7 @@ def spec_pop_FADO_mod(id,
     mean_Z_M = r'$\,,\,\mathbfit{\langle Z \rangle_M}$ = %.4f' % mean_Z_M
 
     ltext = [titulo_fado,
-             chi2, 
-             adev,
+             chi2+adev,
              red_law,
              base_src,
              n_base,
@@ -1230,7 +1252,7 @@ def spec_pop_FADO_mod(id,
 
 
 
-def FADO_merit_reader(id,
+def FADO_results_reader(id,
     home = os.path.expanduser("~") + '/gdrive/DataHII/HIIGs/FADO/'):
     name = ''
     name = home + id
@@ -1262,7 +1284,49 @@ def FADO_merit_reader(id,
     Adev = (np.sum(Adev) / len(obs_flux)) * 100
     spec_1D.close()
 
-    return [spec_header['CHI2_RED'],Adev]
+    _DE = name.replace('_1D','_DE')
+    PV_1D = fits.open(_DE)
+    PV_hdu = PV_1D[0]
+    PV_header = PV_hdu.header
+    PV_data = PV_hdu.data
+    N_base = int(PV_header['NUM_BASE'])
+    light_frac = PV_data[0][0:N_base] * 100
+    mass_frac = PV_data[4][0:N_base] / 100
+    age = PV_data[37][0:N_base]
+    log_age = PV_data[38][0:N_base]
+    Zs_metal = PV_data[39][0:N_base] #Metallicities
+
+
+    POPS_TABLE = Table([light_frac,mass_frac,age,log_age,Zs_metal],
+                names = ('x_j','Mcor_j','age_j','logage_j','Z_j'))
+    
+    metal_conversion = [
+        (POPS_TABLE['Z_j']==0.0001),
+        (POPS_TABLE['Z_j']==0.0004),
+        (POPS_TABLE['Z_j']==0.004),
+        (POPS_TABLE['Z_j']==0.008),
+        (POPS_TABLE['Z_j']==0.02),
+        (POPS_TABLE['Z_j']==0.05)
+    ]
+
+    solar_equival = [0.005,0.02,0.2,0.4,1.0,2.5]
+
+    POPS_TABLE['sun_met'] = np.select(metal_conversion, solar_equival, default=0.0)
+
+    POPS_TABLE['x_j'] = (POPS_TABLE['x_j'] / (POPS_TABLE['x_j'].sum())) * 100
+    POPS_TABLE['Mcor_j'] = (POPS_TABLE['Mcor_j'] / (POPS_TABLE['Mcor_j'].sum())) * 100
+
+    x_j_L_norm = POPS_TABLE['x_j'] / 100 #Norm is for already normalized
+    mu_j_M_norm = POPS_TABLE['Mcor_j'] / 100 #Norm is for already normalized
+
+    mean_logt_L = np.sum(x_j_L_norm * np.log10(POPS_TABLE['age_j']))
+    mean_logt_M = np.sum(mu_j_M_norm * np.log10(POPS_TABLE['age_j']))
+    mean_Z_L = np.sum(x_j_L_norm * POPS_TABLE['sun_met'])
+    mean_Z_M = np.sum(mu_j_M_norm * POPS_TABLE['sun_met'])
+
+    PV_1D.close()
+
+    return [spec_header['CHI2_RED'],Adev,PV_header['GEXTINCT'],PV_header['GNEBULAR'],PV_header['V0SYSGAL'],PV_header['VDSYSGAL'],mean_logt_L,mean_logt_M,mean_Z_L,mean_Z_M]
 
 
 
