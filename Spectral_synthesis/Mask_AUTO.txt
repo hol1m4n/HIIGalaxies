@@ -1,8 +1,0 @@
-7
-4226.9  4229.3  0.0  Unknown      emission line ; gaussian emission candidate @ 4228.146 A ; sigma=0.400 A
-4227.4  4228.8  0.0  Spike        narrow outlier ; peak residual=0.247
-4856.4  4866.1  0.0  Hbeta        emission line ; lambda_c=4861.286 A ; nearest=4861.325 A ; sigma=1.617 A
-4857.9  4865.1  0.0  BadNoise     hard residual region ; |residual| up to 14.21 sigma
-5000.6  5013.0  0.0  [OIII]       emission line ; lambda_c=5006.785 A ; nearest=5006.843 A ; sigma=2.068 A
-5001.1  5011.0  0.0  BadNoise     hard residual region ; |residual| up to 16.49 sigma
-5349.0  5356.3  0.0  Gap          NaN/Inf or missing spectral region

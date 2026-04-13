@@ -10,6 +10,7 @@ from astropy.io import fits
 from astropy.table import Table
 matplotlib.use("Agg")
 plt.ioff()
+from joblib import Parallel, delayed
 
 
 # ============================================================
@@ -482,7 +483,7 @@ def save_mask_crap_format(filename, records):
 # ============================================================
 
 def plot_mask_diagnostics(wave, flux_obs, flux_model, result,
-                          figsize=(14, 8), title=None,save_path=None):
+                          figsize=(17, 10), title=None,save_path=None):
     """
     Muestra:
     1) espectro observado y modelo
@@ -497,17 +498,36 @@ def plot_mask_diagnostics(wave, flux_obs, flux_model, result,
                              gridspec_kw={"height_ratios": [2, 1]})
     ax0, ax1 = axes
 
-    ax0.plot(wave, flux_obs, lw=1.0, label="Observed spectrum")
-    ax0.plot(wave, flux_model, lw=1.0, label="STARLIGHT model")
+    ax0.plot(wave, flux_obs, lw=1.0, label="Observed spectrum", color = 'black')
+    ax0.plot(wave, flux_model, lw=1.0, label="STARLIGHT model", color = 'red')
 
     for rec in records:
         color_alpha = 0.30 if rec["weight"] == 0.0 else 0.15
-        ax0.axvspan(rec["lambda_min"], rec["lambda_max"], alpha=color_alpha)
+        #color_mask = 'blue' if rec["weight"] == 0.0 else 'red'
+        #label_mask = '0.0' if rec["weight"] == 0.0 else '2.0'
+        if 'emission line' in rec["comment2"]:
+            color_mask = 'blue'
+            label_mask = 'Emission Line'
+        elif ('Spike' in rec["comment1"]) and ('narrow outlier' in rec["comment2"]):
+            color_mask = 'cyan'
+            label_mask = 'Spike'
+        elif ('BadNoise' in rec["comment1"]) and ('hard residual region' in rec["comment2"]) and rec["weight"] == 0.0:
+            color_mask = 'yellow'
+            label_mask = 'Bad Noise reject'
+        elif ('BadFIT' in rec["comment1"]) and ('Trying best fit' in rec["comment2"]) and rec["weight"] == 2.0:
+            color_mask = 'magenta'
+            label_mask = 'Bad Noise retry'
 
+        ax0.axvspan(rec["lambda_min"], rec["lambda_max"], alpha=color_alpha,color = color_mask,label=label_mask)#)
+
+
+    handles, labels = ax0.get_legend_handles_labels()
+    by_label = dict(zip(labels, handles))
+    
     ax0.set_ylabel("Flux")
     ax0.set_yscale("linear")
     ax0.set_ylim([0,max(flux_model)+0.1])
-    ax0.legend()
+    ax0.legend(by_label.values(), by_label.keys(), loc='upper right')
     if title is not None:
         ax0.set_title(title)
 
@@ -522,19 +542,37 @@ def plot_mask_diagnostics(wave, flux_obs, flux_model, result,
 
     for rec in records:
         color_alpha = 0.30 if rec["weight"] == 0.0 else 0.15
-        ax1.axvspan(rec["lambda_min"], rec["lambda_max"], alpha=color_alpha)
+        #color_mask = 'blue' if rec["weight"] == 0.0 else 'red'
+        #label_mask = '0.0' if rec["weight"] == 0.0 else '2.0'
+        if 'emission line' in rec["comment2"]:
+            color_mask = 'blue'
+            label_mask = 'Emission Line'
+        elif ('Spike' in rec["comment1"]) and ('narrow outlier' in rec["comment2"]):
+            color_mask = 'cyan'
+            label_mask = 'Spike'
+        elif ('BadNoise' in rec["comment1"]) and ('hard residual region' in rec["comment2"]) and rec["weight"] == 0.0:
+            color_mask = 'yellow'
+            label_mask = 'Bad Noise reject'
+        elif ('BadFIT' in rec["comment1"]) and ('Trying best fit' in rec["comment2"]) and rec["weight"] == 2.0:
+            color_mask = 'magenta'
+            label_mask = 'Bad Noise retry'
+
+        ax1.axvspan(rec["lambda_min"], rec["lambda_max"], alpha=color_alpha,color = color_mask,label=label_mask)
 
     for fit in fits:
         ax1.plot(fit["xfit"], fit["yfit"], lw=1.5)
 
+    handles, labels = ax1.get_legend_handles_labels()
+    by_label = dict(zip(labels, handles))
+
     ax1.set_xlabel("Wavelength")
     ax1.set_ylabel("Residual")
     ax1.set_ylim([-0.25,0.25])
-    ax1.legend()
+    ax1.legend(by_label.values(), by_label.keys(), loc='upper right')
 
     fig.tight_layout()
     if save_path:
-        fig.savefig(save_path, dpi=300, bbox_inches='tight')
+        fig.savefig(save_path, dpi=100, bbox_inches='tight')
     plt.close(fig) 
 
 def noise_threshold(SNR):
@@ -550,25 +588,18 @@ def noise_threshold(SNR):
 
 
 
-PATH_spec = '/home/holman/StarLightv05/outputs/prefit/'
+PATH_spec = '/home/holman/Documents/CIMAT/StarLightv05/outputs/prefit2/'
 spec_list = [f for f in os.listdir(PATH_spec) if f.endswith('.fits')]
 spec_list.sort()
 DF_snr = pd.read_csv('/home/holman/HIIGalaxies/Spectral_synthesis/HIIGsample_data.csv')
-mask_PATH = '/home/holman/StarLightv05/Starlight_masks/'
+mask_PATH = '/home/holman/Documents/CIMAT/StarLightv05/Starlight_masks/'
 
 
 
 
 
-
-
-
-
-
-for Id in range(len(spec_list)):
-
+def mask_saver(Id):
     name = f"{PATH_spec}{spec_list[Id]}"
-
     if os.path.exists(name) != True:
         raise FileNotFoundError('File is not in folder. Try relocating the file or changing the name')
     
@@ -590,19 +621,24 @@ for Id in range(len(spec_list)):
 
     result = build_starlight_mask_records(
         wave, flux_obs, flux_model,
-        emission_kwargs=dict(snr_peak=3.0, prominence_sigma=3.0, mask_nsigma=3.0),
-        spike_kwargs=dict(spike_sigma=snr_t[0], max_width_pix=2, grow_pix=1),
+        emission_kwargs=dict(snr_peak=3.0, prominence_sigma=3.0, mask_nsigma=4.0),
+        spike_kwargs=dict(spike_sigma=snr_t[0], max_width_pix=2, grow_pix=3),
         hard_bad_kwargs=dict(hard_sigma=snr_t[1], min_bad_run_pix=5, grow_pix=2),
-        soft_bad_kwargs=dict(soft_sigma_low=snr_t[2], soft_sigma_high=snr_t[1], min_run_pix=4, grow_pix=2),
+        soft_bad_kwargs=dict(soft_sigma_low=snr_t[2], soft_sigma_high=snr_t[1], min_run_pix=4, grow_pix=3),
         merge_padding_angstrom=3.0,
     )
 
-    save_mask_crap_format(f"{mask_PATH}Mask_{name[41:-5]}.txt", result["records"])
+    save_mask_crap_format(f"{mask_PATH}Mask_{name[58:-5]}.txt", result["records"])
     plot_mask_diagnostics(wave, flux_obs, flux_model, result, title="Mask diagnostic",
-                          save_path=f"{mask_PATH}Mask_{name[41:-5]}.png")
+                          save_path=f"{mask_PATH}Mask_{name[58:-5]}.png")
     FITS.close()
-
     print(f"Done for {spec_list[Id]}")
+    return f"Done for {spec_list[Id]}"   
 
 
 
+
+
+tmp = Parallel(n_jobs=-1)(delayed(mask_saver)(x) for x in range(len(spec_list)))
+
+print(tmp)
