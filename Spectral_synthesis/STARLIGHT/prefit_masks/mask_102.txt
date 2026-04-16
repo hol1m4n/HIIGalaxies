@@ -1,0 +1,68 @@
+67
+3400.0  3712.0  0.0  BadNoise     hard residual region ; |residual| up to 27.28 sigma | hard residual region ; |residual| up to 9.22 sigma
+3719.0  3725.0  0.0  Spike        narrow outlier ; peak residual=0.676
+3719.5  3735.3  0.0  [OII]        emission line ; lambda_c=3727.419 A ; nearest=3726.032 A ; sigma=1.981 A
+3722.0  3733.0  0.0  BadNoise     hard residual region ; |residual| up to 436.58 sigma
+3737.0  3746.0  2.0  BadFIT       Trying best fit ; moderate residual region, peak=5.65 sigma
+3747.0  3753.0  0.0  Spike        narrow outlier ; peak residual=0.632
+3784.0  3793.0  2.0  BadFIT       Trying best fit ; moderate residual region, peak=3.88 sigma
+3793.2  3802.2  0.0  Unknown      emission line ; gaussian emission candidate @ 3797.724 A ; sigma=1.120 A
+3794.0  3801.0  0.0  Spike        narrow outlier ; peak residual=0.86
+3831.0  3839.6  0.0  Unknown      emission line ; gaussian emission candidate @ 3835.324 A ; sigma=1.079 A
+3864.0  3873.0  0.0  BadNoise     hard residual region ; |residual| up to 114.49 sigma
+3864.1  3872.9  0.0  [NeIII]      emission line ; lambda_c=3868.519 A ; nearest=3868.760 A ; sigma=1.095 A
+3884.9  3892.4  0.0  HeI+H8       emission line ; lambda_c=3888.656 A ; nearest=3889.064 A ; sigma=0.929 A
+3960.9  3976.5  0.0  Hepsilon     emission line ; lambda_c=3968.706 A ; nearest=3970.072 A ; sigma=1.957 A
+3963.0  3974.0  0.0  BadNoise     hard residual region ; |residual| up to 52.43 sigma
+3977.0  3987.0  2.0  BadFIT       Trying best fit ; moderate residual region, peak=5.09 sigma
+4097.3  4105.8  0.0  Hdelta       emission line ; lambda_c=4101.522 A ; nearest=4101.734 A ; sigma=1.066 A
+4106.0  4117.0  2.0  BadFIT       Trying best fit ; moderate residual region, peak=4.23 sigma
+4124.0  4133.0  2.0  BadFIT       Trying best fit ; moderate residual region, peak=4.81 sigma
+4329.0  4335.0  2.0  BadFIT       Trying best fit ; moderate residual region, peak=3.60 sigma
+4335.7  4344.7  0.0  Hgamma       emission line ; lambda_c=4340.215 A ; nearest=4340.472 A ; sigma=1.126 A
+4336.0  4345.0  0.0  BadNoise     hard residual region ; |residual| up to 156.48 sigma
+4346.0  4354.0  2.0  BadFIT       Trying best fit ; moderate residual region, peak=3.33 sigma
+4360.0  4367.0  0.0  Spike        narrow outlier ; peak residual=0.757
+4361.8  4365.0  0.0  [OIII]       emission line ; lambda_c=4363.408 A ; nearest=4363.210 A ; sigma=0.400 A
+4368.0  4377.0  2.0  BadFIT       Trying best fit ; moderate residual region, peak=3.96 sigma
+4430.0  4440.0  2.0  BadFIT       Trying best fit ; moderate residual region, peak=2.85 sigma
+4461.0  4466.0  2.0  BadFIT       Trying best fit ; moderate residual region, peak=2.99 sigma
+4467.0  4475.6  0.0  HeI          emission line ; lambda_c=4471.305 A ; nearest=4471.480 A ; sigma=1.076 A
+4476.0  4484.0  2.0  BadFIT       Trying best fit ; moderate residual region, peak=4.85 sigma
+4498.0  4533.0  2.0  BadFIT       Trying best fit ; moderate residual region, peak=3.94 sigma | Trying best fit ; moderate residual region, peak=4.35 sigma
+4544.0  4562.0  2.0  BadFIT       Trying best fit ; moderate residual region, peak=3.78 sigma
+4592.0  4601.0  2.0  BadFIT       Trying best fit ; moderate residual region, peak=3.09 sigma
+4607.0  4630.0  2.0  BadFIT       Trying best fit ; moderate residual region, peak=5.12 sigma
+4664.0  4673.0  2.0  BadFIT       Trying best fit ; moderate residual region, peak=3.16 sigma
+4772.0  4783.0  2.0  BadFIT       Trying best fit ; moderate residual region, peak=3.35 sigma
+4791.0  4800.0  2.0  BadFIT       Trying best fit ; moderate residual region, peak=3.72 sigma
+4812.0  4822.0  2.0  BadFIT       Trying best fit ; moderate residual region, peak=3.39 sigma
+4856.0  4866.0  0.0  BadNoise     hard residual region ; |residual| up to 379.55 sigma
+4856.6  4865.7  0.0  Hbeta        emission line ; lambda_c=4861.164 A ; nearest=4861.325 A ; sigma=1.140 A
+4935.0  4944.0  2.0  BadFIT       Trying best fit ; moderate residual region, peak=2.49 sigma
+4954.0  4964.0  0.0  BadNoise     hard residual region ; |residual| up to 564.42 sigma
+4954.1  4963.4  0.0  [OIII]       emission line ; lambda_c=4958.760 A ; nearest=4958.911 A ; sigma=1.168 A
+5001.0  5012.0  0.0  BadNoise     hard residual region ; |residual| up to 1782.19 sigma
+5001.9  5011.7  0.0  [OIII]       emission line ; lambda_c=5006.820 A ; nearest=5006.843 A ; sigma=1.232 A
+5869.9  5881.6  0.0  HeI          emission line ; lambda_c=5875.718 A ; nearest=5875.624 A ; sigma=1.460 A
+5871.0  5880.0  0.0  BadNoise     hard residual region ; |residual| up to 33.54 sigma
+6293.8  6306.8  0.0  [OI]         emission line ; lambda_c=6300.305 A ; nearest=6300.304 A ; sigma=1.624 A
+6296.0  6304.0  0.0  BadNoise     hard residual region ; |residual| up to 15.97 sigma
+6308.2  6315.9  0.0  [SIII]       emission line ; lambda_c=6312.020 A ; nearest=6312.060 A ; sigma=0.963 A
+6357.0  6370.9  0.0  Unknown      emission line ; gaussian emission candidate @ 6363.927 A ; sigma=1.735 A
+6544.0  6552.0  0.0  BadNoise     hard residual region ; |residual| up to 12.07 sigma
+6545.0  6552.0  0.0  Spike        narrow outlier ; peak residual=0.714
+6556.0  6571.0  0.0  BadNoise     hard residual region ; |residual| up to 880.11 sigma
+6556.4  6569.0  0.0  Halpha       emission line ; lambda_c=6562.743 A ; nearest=6562.800 A ; sigma=1.576 A
+6565.0  6571.0  0.0  Spike        narrow outlier ; peak residual=0.626
+6578.0  6588.0  0.0  BadNoise     hard residual region ; |residual| up to 36.53 sigma
+6672.1  6684.2  0.0  HeI          emission line ; lambda_c=6678.186 A ; nearest=6678.150 A ; sigma=1.510 A
+6710.3  6722.5  0.0  [SII]        emission line ; lambda_c=6716.412 A ; nearest=6716.440 A ; sigma=1.524 A
+6711.0  6722.0  0.0  BadNoise     hard residual region ; |residual| up to 63.01 sigma
+6724.9  6736.7  0.0  [SII]        emission line ; lambda_c=6730.805 A ; nearest=6730.820 A ; sigma=1.482 A
+6726.0  6736.0  0.0  BadNoise     hard residual region ; |residual| up to 44.24 sigma
+7058.2  7072.2  0.0  HeI          emission line ; lambda_c=7065.190 A ; nearest=7065.190 A ; sigma=1.745 A
+7129.2  7142.4  0.0  [ArIII]      emission line ; lambda_c=7135.810 A ; nearest=7135.800 A ; sigma=1.657 A
+7131.0  7140.0  0.0  BadNoise     hard residual region ; |residual| up to 25.28 sigma
+7313.3  7336.4  0.0  [OII]        emission line ; lambda_c=7319.944 A ; nearest=7320.000 A ; sigma=1.653 A | emission line ; lambda_c=7330.200 A ; nearest=7330.000 A ; sigma=1.542 A
+7744.8  7758.0  0.0  Unknown      emission line ; gaussian emission candidate @ 7751.391 A ; sigma=1.650 A

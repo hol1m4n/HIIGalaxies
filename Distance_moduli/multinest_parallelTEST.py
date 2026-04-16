@@ -23,6 +23,10 @@ comm = MPI.COMM_WORLD
 rank = comm.Get_rank()
 
 
+for x in range(5):
+    print('SES')
+
+'''
 
 # Solo el proceso 0 imprime el estado inicial
 if rank == 0:
@@ -112,7 +116,7 @@ else:
     S.close()
 
 
-
+'''
 
 
 
