@@ -581,8 +581,8 @@ class Starlight(SpectralSynthesis):
     def Current_SFR(self):
         interpol_sfr = interp1d(self.distance_derived['dt'],self.distance_derived['sfr'])
         interpol_ssfr = interp1d(self.distance_derived['dt'],self.distance_derived['ssfr'])
-        self.distance_derived.update(sfr_0 = interpol_sfr(np.log10(2.45e7)),
-                                     ssfr_0= interpol_ssfr(np.log10(2.45e7))
+        self.distance_derived.update(sfr_0 = interpol_sfr(np.log10(2.45e7)).item(),
+                                     ssfr_0= interpol_ssfr(np.log10(2.45e7).item())
         )
 
 
@@ -713,8 +713,8 @@ class Fado(SpectralSynthesis):
     def Current_SFR(self):
         interpol_sfr = interp1d(self.distance_derived['dt'],self.distance_derived['sfr'])
         interpol_ssfr = interp1d(self.distance_derived['dt'],self.distance_derived['ssfr'])
-        self.distance_derived.update(sfr_0 = interpol_sfr(np.log10(2.45e7)),
-                                     ssfr_0= interpol_ssfr(np.log10(2.45e7))
+        self.distance_derived.update(sfr_0 = interpol_sfr(np.log10(2.45e7)).item(),
+                                     ssfr_0= interpol_ssfr(np.log10(2.45e7).item())
         )
 
 
