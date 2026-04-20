@@ -135,9 +135,15 @@ def header_firstTABLE(name):
                                 tmp = parse_before_brackets(line)
                                 HDR.insert(c,('idt_all', float(tmp[0]),'idt_all'))
                                 c += 1
-                                HDR.insert(c,('wdt_Tot', float(tmp[1]),'wdt_TotTime'))
+                                if '*' in tmp[1]:
+                                    HDR.insert(c,('wdt_Tot', tmp[1],'wdt_TotTime'))
+                                else:
+                                    HDR.insert(c,('wdt_Tot', float(tmp[1]),'wdt_TotTime'))
                                 c += 1
-                                HDR.insert(c,('wdt_Usr', float(tmp[2]),'wdt_UsrTime'))
+                                if '*' in tmp[2]:
+                                    HDR.insert(c,('wdt_Usr', tmp[2],'wdt_UsrTime'))
+                                else:
+                                    HDR.insert(c,('wdt_Usr', float(tmp[2]),'wdt_UsrTime'))
                                 c += 1
                                 HDR.insert(c,('wdt_Sys', float(tmp[3]),'wdt_SysTime (sec)'))
 
@@ -325,7 +331,7 @@ def read_starlight_best_model(path):
 
 ### Creation of STARLIGHT .fits file from .out file (original output)...
 
-def FITS_conversion(id,home):
+def FITS_conversion(id,home,flag = False):
     name = home + id
     warnings.filterwarnings('ignore')
 
@@ -335,7 +341,8 @@ def FITS_conversion(id,home):
     final_name = name.replace('.out',".fits")
 
     if os.path.exists(final_name) == True:
-        print(f'STARLIGHT .fits file transformed before. Location: {final_name}')
+        if flag:
+            print(f'STARLIGHT .fits file transformed before. Location: {final_name}')
         return 'OK'
     else:  
         rands_x1hdu = np.random.random((1,1))
@@ -356,7 +363,8 @@ def FITS_conversion(id,home):
         
 
         HDU.writeto(final_name, overwrite=True)
-        print(f'STARLIGHT .out file sucessfuly transformed to .fits format. Location: {final_name}')
+        if flag:
+            print(f'STARLIGHT .out file sucessfuly transformed to .fits format. Location: {final_name}')
 
         return 'OK'
 
