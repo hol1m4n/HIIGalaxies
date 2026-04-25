@@ -50,6 +50,8 @@ class SpectralSynthesis:
                     'd_cm': cosmology.luminosity_distance(self.distance).to(u.cm) 
                 }
 
+        self.mask_ranges = None
+
     def ObservedSpectrum(self, ax=None, **kwargs):
         if ax is None:
             fig, ax = plt.subplots(figsize=(8, 5))
@@ -70,6 +72,34 @@ class SpectralSynthesis:
         if self.spectrum_bestfit is not None:
             ax.plot(self.spectrum_bestfit['Lambda'], self.spectrum_bestfit['Flux_syn'],**kwargs)
         return ax
+
+    def MaskStarlight(self,ax=None):
+        if ax is None:
+            fig, ax = plt.subplots(figsize=(8, 5))
+        if self.spectrum_bestfit is not None and self.mask_ranges is not None:
+
+            mask_data=self.mask_ranges
+            c2 = 0
+            c0 = 0
+            for e in mask_data:
+                mask = (self.spectrum_bestfit['Lambda'] >= e[0]) & (self.spectrum_bestfit['Lambda'] <= e[1])
+                chunk_lambda = self.spectrum_bestfit['Lambda'][mask]
+                chunk_flux = self.spectrum_bestfit['Flux_obs'][mask]
+                if e[2] == 2.0:
+                    if c2 == 0:
+                        ax.plot(chunk_lambda, chunk_flux, color='red', alpha=0.4, label= r'$w^{masks}_{\lambda}$ = 2.0')
+                    else:
+                        ax.plot(chunk_lambda, chunk_flux, color='red', alpha=0.4)
+                    c2 += 1
+                if e[2] == 0.0:
+                    if c0 == 0:
+                        ax.plot(chunk_lambda, chunk_flux, color='green', alpha=0.4, label= r'$w^{masks}_{\lambda}$ = 0.0')
+                    else:
+                        ax.plot(chunk_lambda, chunk_flux, color='green', alpha=0.4)
+                    c0 += 1
+        return ax
+
+
 
     def Residuals(self, ax=None, **kwargs):
         if ax is None:
@@ -404,6 +434,7 @@ class SpectralSynthesis:
 
         return ax
 
+
     def CompositePlot(self,**kwargs):
         if self.spectrum_bestfit is not None and self.population_vector is not None:
             fig = plt.figure(figsize=(20, 10))
@@ -420,13 +451,20 @@ class SpectralSynthesis:
             ax1 = fig.add_subplot(gs[0:2, 0])
 
             self.ObservedSpectrum(ax=ax1)
-            self.BestFitSpectrum(ax=ax1)
             if self.spectrum_bestfit['Flux_neb'] is not None:
                 self.NebularSpectrum(ax=ax1)
                 self.StellarSpectrum(ax=ax1)
                 software_name = 'FADO'
             else:
                 software_name = 'STARLIGHT'
+                
+            if self.mask_ranges is not None and software_name == 'STARLIGHT':
+                self.MaskStarlight(ax=ax1)
+            self.BestFitSpectrum(ax=ax1)
+
+
+
+
             ax1.minorticks_on()
             ax1.tick_params(axis='x',which='major',labelbottom='off')
             ax1.set_ylim(0,np.max(self.spectrum_bestfit['Flux_syn'])+0.15)
@@ -483,8 +521,9 @@ class SpectralSynthesis:
             self.sSFR_vs_t(ax=ax8,single=False)
 
 class Starlight(SpectralSynthesis):
-    def __init__(self,home,file,distance=None):
+    def __init__(self,home,file,distance=None,mask_file=False):
         super().__init__(home,file,distance)
+        self.mask_file = mask_file
         o2f.FITS_conversion(file,home)
         self.load_spectra_results()
         self.load_populationvector_results()
@@ -492,6 +531,8 @@ class Starlight(SpectralSynthesis):
         if self.distance_derived:
             self.SFH_computer()
             self.Current_SFR()
+        if self.mask_file != False:
+            self.mask_ranges = self.load_mask_ranges()
 
     def load_spectra_results(self):
         name_tmp = self.path.replace('.out','.fits')
@@ -585,6 +626,30 @@ class Starlight(SpectralSynthesis):
                                      ssfr_0= interpol_ssfr(np.log10(2.45e7).item())
         )
 
+    def load_mask_ranges(self):
+        """
+        Lee un archivo de máscara con formato:
+        N
+        wl1  wl2  flag  Name  [comentarios...]
+        Devuelve una lista de tuplas (wl1, wl2, flag)
+        """
+        mask_ranges = []
+        with open(self.mask_file, 'r', encoding='utf-8') as f:
+            lines = f.readlines()
+
+        for line in lines[1:]:  # saltar la primera línea (número de regiones)
+            line = line.strip()
+            if not line or line.startswith('#'):
+                continue
+            parts = line.split()
+            if len(parts) < 3:
+                continue
+            wl1 = float(parts[0])
+            wl2 = float(parts[1])
+            flag = float(parts[2])
+            mask_ranges.append((wl1, wl2, flag))
+
+        return mask_ranges
 
 class Fado(SpectralSynthesis):
     def __init__(self,home,file,distance=None):
