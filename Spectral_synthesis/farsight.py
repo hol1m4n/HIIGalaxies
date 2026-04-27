@@ -784,7 +784,208 @@ class Fado(SpectralSynthesis):
 
 
 
+class Nebulix(Fado):
+    def __init__(self,home,file,distance=None):
+        super().__init__(home,file,distance)
+        self.fado_ensemble = None #Aqui voy a meter todas las propiedades de FADO con errores y demas. Ahora, como saber si quedaron bien restringidos o no?
+        self.load_nebular_ensemble()
 
+    def load_nebular_ensemble(self):
+
+        #First round
+
+        file_1D = self.path
+        FITS_file = fits.open(file_1D)
+        spec_hdu = FITS_file[0]
+        spec_header = spec_hdu.header
+
+        converge,time,l_0,f_0,f_u,chi2_val,chi2_dev,chi2_red,L_dst,I_l,F_l,S_l,Cb_L,Cf_l,z,z_err = spec_header['CONVERGE'],spec_header['ELAPSEDT'],spec_header['LAMBDA_0'],spec_header['GALSNORM'],spec_header['FLUXUNIT'],spec_header['CHI2_VAL'],spec_header['CHI2_DEV'],spec_header['CHI2_RED'],spec_header['L_DISMPC'],spec_header['OLSYNINI'],spec_header['OLSYNFIN'],spec_header['OLSYNDEL'],spec_header['LAMBDA_I'],spec_header['LAMBDA_F'],spec_header['REDSHIFT'],spec_header['REDERROR']
+
+        FITS_file.close()
+
+        #Second round
+
+        file_EL = self.path.replace('_1D','_EL')
+        FITS_file = fits.open(file_EL)
+        spec_hdu = FITS_file[0]
+        spec_header = spec_hdu.header
+
+
+        BPT_flag,lgNII_Ha,elgNII_Ha,lgOIII_Hb,elgNII_Hb,T_e,n_e,A_v,eA_v,A_neb,eA_neb = spec_header['FLAG_BPT'],spec_header['LOGBN2HA'],spec_header['ERRBN2HA'],spec_header['LOGBO3HB'],spec_header['ERRBO3HB'],spec_header['TELECTRO'],spec_header['DELECTRO'],spec_header['GEXTINCT'],spec_header['GEXTBDEV'],spec_header['GNEBULAR'],spec_header['GNEBBDEV']
+
+        bpt_mapping = {
+            0: 'Pure SF',
+            1: 'SF',
+            2: 'Composite',
+            3: 'LINER',
+            4: 'Seyfert'
+        }
+
+
+        BPT_Class = bpt_mapping.get(BPT_flag, 'Unknown')
+
+        FITS_file.close()
+
+
+        #Third round
+
+        file_ST = self.path.replace('_1D','_ST')
+        FITS_file = fits.open(file_ST)
+        spec_hdu = FITS_file[0]
+        spec_header = spec_hdu.header
+
+
+
+        def metal_conv(valor_buscado):
+            """
+            Convierte un valor relativo a su equivalente solar mediante interpolación.
+            """
+            rel_values = [0.0001, 0.0004, 0.004, 0.008, 0.02, 0.05]
+            solar_equival = [0.005, 0.02, 0.2, 0.4, 1.0, 2.5]
+            #return np.interp(valor_buscado, rel_values, solar_equival)
+            return valor_buscado * 50
+
+
+        v_0,ev_0,v_d,ev_d = spec_header['V0SYSGAL'],spec_header['V0SYSDEV'],spec_header['VDSYSGAL'],spec_header['VDSYSDEV']
+
+        t_av_L,et_av_L = spec_header['BST_LAGE'],spec_header['DEV_LAGE']
+        t_av_M,et_av_M = spec_header['BST_MAGE'],spec_header['DEV_MAGE']
+        lgt_av_L,elgt_av_L = spec_header['BSTLLAGE'],spec_header['DEVLLAGE']
+        lgt_av_M,elgt_av_M = spec_header['BSTLMAGE'],spec_header['DEVLMAGE']
+        Z_av_L,eZ_av_L = metal_conv(spec_header['BST_LMET']),metal_conv(spec_header['DEV_LMET'])
+        Z_av_M,etZ_av_M = metal_conv(spec_header['BST_MMET']),metal_conv(spec_header['DEV_MMET'])
+
+
+        lg_Me,elg_Me = spec_header['LOGMEBST'],spec_header['LOGMEDEV']
+        lg_Mp,elg_Mp = spec_header['LOGMCBST'],spec_header['LOGMCDEV']
+        lg_MepAGB,elg_MepAGB = spec_header['LOGPEBST'],spec_header['LOGPEDEV']
+        lg_MppAGB,elg_MppAGB = spec_header['LOGPCBST'],spec_header['LOGPCDEV']
+
+
+        tL_l0,etL_l0 = spec_header['LOG_LGAL'],spec_header['LOG_LDEV']
+        tL_l0oneGyr,etL_l0oneGyr = spec_header['LBST1GYR'],spec_header['LDEV1GYR']
+        tL_l0fivGyr,etL_l0fivGyr = spec_header['LBST5GYR'],spec_header['LDEV5GYR']
+        lg_QH,elg_QH = spec_header['BSTLOGQH']+40,spec_header['DEVLOGQH']
+        lg_QHeI,elg_QHeI = spec_header['BLG_QHEI']+40,spec_header['DLG_QHEI']
+        lg_QHeII,elg_QHeII = spec_header['BLGQHEII']+40,spec_header['DLGQHEII']         
+
+
+        k1,k2 = 0.768035538005923,0.8287042417199303 #Los flujos toca revisar por que no estan igual a lo que sale en el .eps final de FADO
+
+        pre_FHa, epre_FHa = spec_header['FBST__HA']*f_0,spec_header['FDEV__HA']*f_0
+        pre_EWHa, epre_EWHa = spec_header['EWBST_HA']*k1,spec_header['EWDEV_HA']
+        pre_FHb, epre_FHb = spec_header['FBST__HB']*f_0,spec_header['FDEV__HB']*f_0
+        pre_EWHb, epre_EWHb = spec_header['EWBST_HB']*k2,spec_header['EWDEV_HB']
+
+
+        obs_FHa, eobs_FHa = spec_header['FOBST_HA']*f_0,spec_header['FOBSTEHA']*f_0
+        obs_EWHa, eobs_EWHa = spec_header['EOBST_HA']*k1,spec_header['EOBSTEHA']
+        obs_FHb, eobs_FHb = spec_header['FOBST_HB']*f_0,spec_header['FOBSTEHB']*f_0
+        obs_EWHb, eobs_EWHb = spec_header['EOBST_HB']*k2,spec_header['EOBSTEHB']
+
+
+        tau_HaL,etau_HaL = spec_header['TAU__BST'],spec_header['TAU__DEV']
+        tau_HaLext,etau_HaLext = spec_header['TAURDBST'],spec_header['TAURDDEV']
+        tau_pAGBL,etau_pAGBL = spec_header['TAUP_BST'],spec_header['TAUP_DEV']
+        tau_pAGBLext,etau_pAGBLext = spec_header['TAUPEBST'],spec_header['TAUPEDEV']
+
+
+
+        FITS_file.close()
+
+        self.fado_ensemble = {
+            'converge': converge,
+            'time': time,
+            'l_0': l_0,
+            'f_0': f_0,
+            'f_u': f_u,
+            'chi2_val': chi2_val,
+            'chi2_dev': chi2_dev,
+            'chi2_red': chi2_red,
+            'L_dst': L_dst,
+            'I_l': I_l,
+            'F_l': F_l,
+            'S_l': S_l,
+            'Cb_L': Cb_L,
+            'Cf_l': Cf_l,
+            'z': z,
+            'z_err': z_err,
+            'BPT_flag': BPT_flag,
+            'BPT_Class': BPT_Class,
+            'lgNII_Ha': lgNII_Ha,
+            'elgNII_Ha': elgNII_Ha,
+            'lgOIII_Hb': lgOIII_Hb,
+            'elgNII_Hb': elgNII_Hb,
+            'T_e': T_e,
+            'n_e': n_e,
+            'A_v': A_v,
+            'eA_v': eA_v,
+            'A_neb': A_neb,
+            'eA_neb': eA_neb,
+            'v_0': v_0,
+            'ev_0': ev_0,
+            'v_d': v_d,
+            'ev_d': ev_d,
+            't_av_L': t_av_L,
+            'et_av_L': et_av_L,
+            't_av_M': t_av_M,
+            'et_av_M': et_av_M,
+            'lgt_av_L': lgt_av_L,
+            'elgt_av_L': elgt_av_L,
+            'lgt_av_M': lgt_av_M,
+            'elgt_av_M': elgt_av_M,
+            'Z_av_L': Z_av_L,
+            'eZ_av_L': eZ_av_L,
+            'Z_av_M': Z_av_M,
+            'etZ_av_M': etZ_av_M,
+            'lg_Me': lg_Me,
+            'elg_Me': elg_Me,
+            'lg_Mp': lg_Mp,
+            'elg_Mp': elg_Mp,
+            'lg_MepAGB': lg_MepAGB,
+            'elg_MepAGB': elg_MepAGB,
+            'lg_MppAGB': lg_MppAGB,
+            'elg_MppAGB': elg_MppAGB,
+            'tL_l0': tL_l0,
+            'etL_l0': etL_l0,
+            'tL_l0oneGyr': tL_l0oneGyr,
+            'etL_l0oneGyr': etL_l0oneGyr,
+            'tL_l0fivGyr': tL_l0fivGyr,
+            'etL_l0fivGyr': etL_l0fivGyr,
+            'lg_QH': lg_QH,
+            'elg_QH': elg_QH,
+            'lg_QHeI': lg_QHeI,
+            'elg_QHeI': elg_QHeI,
+            'lg_QHeII': lg_QHeII,
+            'elg_QHeII': elg_QHeII,
+            'pre_FHa': pre_FHa,
+            'epre_FHa': epre_FHa,
+            'pre_EWHa': pre_EWHa,
+            'epre_EWHa': epre_EWHa,
+            'pre_FHb': pre_FHb,
+            'epre_FHb': epre_FHb,
+            'pre_EWHb': pre_EWHb,
+            'epre_EWHb': epre_EWHb,
+            'obs_FHa': obs_FHa,
+            'eobs_FHa': eobs_FHa,
+            'obs_EWHa': obs_EWHa,
+            'eobs_EWHa': eobs_EWHa,
+            'obs_FHb': obs_FHb,
+            'eobs_FHb': eobs_FHb,
+            'obs_EWHb': obs_EWHb,
+            'eobs_EWHb': eobs_EWHb,
+            'tau_HaL': tau_HaL,
+            'etau_HaL': etau_HaL,
+            'tau_HaLext': tau_HaLext,
+            'etau_HaLext': etau_HaLext,
+            'tau_pAGBL': tau_pAGBL,
+            'etau_pAGBL': etau_pAGBL,
+            'tau_pAGBLext': tau_pAGBLext,
+            'etau_pAGBLext': etau_pAGBLext
+        }
+
+
+        
 
 
 

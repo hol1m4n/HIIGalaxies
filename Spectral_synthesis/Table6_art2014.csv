@@ -1,4 +1,4 @@
-TAB5_INDEX,Flag,z_c,z_cErr,A_v,A_vErr,Q,C_Hb,C_HbErr,log_sigma(Hb),log_sigma(Hb)Err,log_sigma([OIII]),log_sigma([OIII])Err,logL(Hb),logL(Hb)Err,12+logO/H,12+logO/HErr,logR_u,logR_uErr,logM_dyn,logM_dynErr,logM_cl,logM_clErr,logM_ion,logM_ionErr,logSFR,logSFRErr
+TAB5_INDEX,Flag,z_c,z_cErr,A_vS,A_vErr,Q,C_Hb,C_HbErr,log_sigma(Hb),log_sigma(Hb)Err,log_sigma([OIII]),log_sigma([OIII])Err,logL(Hb),logL(Hb)Err,12+logO/H,12+logO/HErr,logR_u,logR_uErr,logM_dyn,logM_dynErr,logM_cl,logM_clErr,logM_ion,logM_ionErr,logSFR,logSFRErr
 001,1,0.07252,0.78e-5,0.66,0.20,0.00,0.07,0.02,nan,nan,1.551,0.027,41.31,0.10,8.06,0.16,3.04,0.03,nan,nan,8.16,0.10,7.00,0.10,0.50,0.10
 002,4,0.02203,0.78e-5,1.41,0.28,0.88,0.14,0.03,1.377,0.039,1.324,0.026,40.88,0.15,8.06,0.19,3.00,0.03,8.06,0.08,7.74,0.15,6.72,0.15,0.07,0.15
 003,4,0.05191,0.56e-5,1.06,0.24,0.00,0.10,0.02,1.463,0.036,1.507,0.024,41.31,0.13,8.15,0.18,3.18,0.03,8.40,0.08,8.16,0.13,7.08,0.13,0.50,0.13
