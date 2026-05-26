@@ -2,26 +2,26 @@ RefCode,Citation,Band,mu_0,e_R,e_S,e_T,Category,Ncef,Zcorr,zeroP,Rank,Year,Date,
 2000ApJ...529..745F,Ferrarese et al.2000,BVRI,23.49,0.09,,,1,8,False,LMC,1,2000,2024,They calculate gamma.,Valencia et al.2024,2000-02-00,2451575.5
 2001ApJ...548..564W,Willick & Batra 2001,W(VI),23.27,0.18,,,1,6,False,LMC,1,2001,2024,They do not apply a metallicity correction.,Valencia et al.2024,2001-02-00,2451941.5
 2002A&A...389...19P,"Paturel, G. et al.2002",W(VI),23.22,0.52,,,1,4,False,GC,1,2002,2024,They use data from Paturel et al. 2002 but with HIPPARCOS calibration.,Valencia et al.2024,2002-07-00,2452456.5
-2004AJ....128.2815P,Pietrzynski et al.2004,W(VI),23.34,0.04,0.05,0.06403124237432849,2,116,False,LMC,2,2004,2024,sigma_sys does not consider the LMC error and they mention that they do not apply a metallicity correction because it is negligible.,Valencia et al.2024,2004-12-00,2453340.5
+2004AJ....128.2815P,Pietrzynski et al.2004,W(VI),23.34,0.04,0.05,0.0640312423743284,2,116,False,LMC,2,2004,2024,sigma_sys does not consider the LMC error and they mention that they do not apply a metallicity correction because it is negligible.,Valencia et al.2024,2004-12-00,2453340.5
 2004ApJ...608...42S,Sakai et al.2004,W(VI),23.3,0.07,,,1,-1,False,LMC,1,2004,2024,There are no specific comments on the publication.,Valencia et al.2024,2004-06-00,2453157.5
 2004ApJ...608...42S,Sakai et al.2004,BVRI,23.39,0.08,,,1,-1,False,LMC,1,2004,2024,There are no specific comments on the publication.,Valencia et al.2024,2004-06-00,2453157.5
-2006ApJ...647.1056G,Gieren et al.2006,JK,23.31,0.02,0.06,0.06324555320336758,2,56,True,LMC,2,2006,2024,mu_LMC = 18.5 but they do not mention its error.,Valencia et al.2024,2006-08-00,2453948.5
-2006ApJS..165..108S,Saha et al.2006,W(VI),23.31,0.03,0.08,0.08544003745317531,2,21,True,LMC,1,2006,2024,They delve into the HST CTE correction.,Valencia et al.2024,2006-07-00,2453917.5
+2006ApJ...647.1056G,Gieren et al.2006,JK,23.31,0.02,0.06,0.0632455532033675,2,56,True,LMC,2,2006,2024,mu_LMC = 18.5 but they do not mention its error.,Valencia et al.2024,2006-08-00,2453948.5
+2006ApJS..165..108S,Saha et al.2006,W(VI),23.31,0.03,0.08,0.0854400374531753,2,21,True,LMC,1,2006,2024,They delve into the HST CTE correction.,Valencia et al.2024,2006-07-00,2453917.5
 2009ApJ...693..936M,Madore et al.2009b,"BVRIJHK3.6,4.5,5.8,8.0",23.49,0.03,,,1,16,True,LMC,1,2009,2024,Adjustment of mu based on the extinction law curve.,Valencia et al.2024,2009-03-00,2454891.5
 2010ApJ...715..277B,Bono et al. 2010,JK(W),23.34,0.18,,,1,20,True,LMC,1,2010,2026,No comments by now.,Quintero-Salazar et al.2024,2010-05-00,2455317.5
 2010ApJ...715..277B,Bono et al. 2010,VI(W),23.38,0.22,,,1,20,True,LMC,1,2010,2026,No comments by now.,Quintero-Salazar et al.2024,2010-05-00,2455317.5
-2012MNRAS.421.2998F,Feast et al.2012,W(VI),23.34,,,,4,32,False,LMC,3,2012,2024,"They mention that the error already contains the LMC error, but the error used is not clearly stated.",Valencia et al.2024,2012-04-00,2456018.5
-2012MNRAS.421.2998F,Feast et al.2012,3.6micras,23.36,,,,4,14,True,LMC,3,2012,2024,There are no specific comments on the publication.,Valencia et al.2024,2012-04-00,2456018.5
-2012MNRAS.421.2998F,Feast et al.2012,5.8micras,23.37,,,,4,6,True,LMC,3,2012,2024,There are no specific comments on the publication.,Valencia et al.2024,2012-04-00,2456018.5
-2012MNRAS.421.2998F,Feast et al.2012,4.5micras,23.4,,,,4,12,True,LMC,3,2012,2024,There are no specific comments on the publication.,Valencia et al.2024,2012-04-00,2456018.5
-2012MNRAS.421.2998F,Feast et al.2012,8micras,23.4,,,,4,2,True,LMC,3,2012,2024,There are no specific comments on the publication.,Valencia et al.2024,2012-04-00,2456018.5
-2012MNRAS.421.2998F,Feast et al.2012,JKs,23.42,,,,4,32,True,LMC,3,2012,2024,"They mention that the error already contains the LMC error, but the error used is not clearly stated.",Valencia et al.2024,2012-04-00,2456018.5
-2012MNRAS.421.2998F,Feast et al.2012,VIHK,23.43,0.02,,,1,32,True,LMC,3,2012,2024,They mention that it is an internal value.,Valencia et al.2024,2012-04-00,2456018.5
-2014A&A...572A..64M,Majewski et al.2014,W(VI),23.23,0.04,0.13,0.13601470508735444,2,-1,False,LMC,1,2014,2024,"They mention possible photometric contamination in Spitzzer 2009ApJ...639..936M, internal region, and study the effect of metallicity.",Valencia et al.2024,2014-12-00,2456992.5
-2014A&A...572A..64M,Majewski et al.2014,3.6micras,23.27,0.07,0.15,0.16552945357246848,2,-1,True,LMC,1,2014,2024,Internal region.,Valencia et al.2024,2014-12-00,2456992.5
+2012MNRAS.421.2998F,Feast et al.2012,W(VI),23.34,,,0.04,4,32,False,LMC,3,2012,2024,"They mention that the error already contains the LMC error, but the error used is not clearly stated.",Valencia et al.2024,2012-04-00,2456018.5
+2012MNRAS.421.2998F,Feast et al.2012,3.6micras,23.36,,,0.06,4,14,True,LMC,3,2012,2024,There are no specific comments on the publication.,Valencia et al.2024,2012-04-00,2456018.5
+2012MNRAS.421.2998F,Feast et al.2012,5.8micras,23.37,,,0.14,4,6,True,LMC,3,2012,2024,There are no specific comments on the publication.,Valencia et al.2024,2012-04-00,2456018.5
+2012MNRAS.421.2998F,Feast et al.2012,4.5micras,23.4,,,0.08,4,12,True,LMC,3,2012,2024,There are no specific comments on the publication.,Valencia et al.2024,2012-04-00,2456018.5
+2012MNRAS.421.2998F,Feast et al.2012,8micras,23.4,,,0.14,4,2,True,LMC,3,2012,2024,There are no specific comments on the publication.,Valencia et al.2024,2012-04-00,2456018.5
+2012MNRAS.421.2998F,Feast et al.2012,JKs,23.42,,,0.03,4,32,True,LMC,3,2012,2024,"They mention that the error already contains the LMC error, but the error used is not clearly stated.",Valencia et al.2024,2012-04-00,2456018.5
+2012MNRAS.421.2998F,Feast et al.2012,VIJHK,23.43,0.02,,,1,32,True,LMC,3,2012,2024,They mention that it is an internal value.,Valencia et al.2024,2012-04-00,2456018.5
+2014A&A...572A..64M,Majewski et al.2014,W(VI),23.23,0.04,0.13,0.1360147050873544,2,-1,False,LMC,1,2014,2024,"They mention possible photometric contamination in Spitzzer 2009ApJ...639..936M, internal region, and study the effect of metallicity.",Valencia et al.2024,2014-12-00,2456992.5
+2014A&A...572A..64M,Majewski et al.2014,3.6micras,23.27,0.07,0.15,0.1655294535724684,2,-1,True,LMC,1,2014,2024,Internal region.,Valencia et al.2024,2014-12-00,2456992.5
 2014A&A...572A..64M,Majewski et al.2014,W(VI),23.3,0.03,0.17,0.1726267650163207,2,-1,False,LMC,1,2014,2024,External region.,Valencia et al.2024,2014-12-00,2456992.5
 2014A&A...572A..64M,Majewski et al.2014,3.6micras,23.32,0.05,0.16,0.1676305461424021,2,-1,True,LMC,1,2014,2024,External region.,Valencia et al.2024,2014-12-00,2456992.5
-2014ApJ...794..107R,Rich et al.2014,"BVRIJHK3.6,4.5micras",23.38,0.02,0.04,0.044721359549995794,2,34,True,LMC,1,2014,2024,"They adjust the extinction law for each Cepheid with multiband and obtain the median of the distribution, adopting mu_LMC =18.44+/-0.03.",Valencia et al.2024,2014-10-00,2456931.5
+2014ApJ...794..107R,Rich et al.2014,"BVRIJHK3.6,4.5micras",23.38,0.02,0.04,0.0447213595499957,2,34,True,LMC,1,2014,2024,"They adjust the extinction law for each Cepheid with multiband and obtain the median of the distribution, adopting mu_LMC =18.44+/-0.03.",Valencia et al.2024,2014-10-00,2456931.5
 2016AJ....151...88B,Bhardwaj et al.2016,JHK,23.39,0.08,,,1,20,True,GC,2,2016,2024,They calculate gamma.,Valencia et al.2024,2016-04-00,2457479.5
 2016AJ....151...88B,Bhardwaj et al.2016,JHK,23.41,0.06,,,1,20,True,LMC,2,2016,2024,They calculate gamma.,Valencia et al.2024,2016-04-00,2457479.5
 2016AJ....151...88B,Bhardwaj et al.2016,JHK,23.43,0.06,,,1,20,True,LMC+GC,2,2016,2024,They calculate gamma.,Valencia et al.2024,2016-04-00,2457479.5

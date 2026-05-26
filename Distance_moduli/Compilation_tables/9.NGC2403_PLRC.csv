@@ -1,4 +1,4 @@
 RefCode,Citation,Band,mu_0,e_R,e_S,e_T,Category,Ncef,Zcorr,zeroP,Rank,Year,Date,Comments,Author,ADS_date,JD
 2001ApJ...553...47F,Freedman et al.2001,W(VI),27.48,0.1,,,1,10,False,LMC,1,2001,2024,There are no specific comments on the publication.,Valencia et al.2024,2001-05-00,2452030.5
 2001ApJ...553...47F,Freedman et al.2001,W(VI),27.54,0.1,,,1,10,True,LMC,1,2001,2024,Metallicity correction applied but error is the same as without correction.,Valencia et al.2024,2001-05-00,2452030.5
-2006ApJS..165..108S,Saha et al.2006,W(VI),27.43,0.15,0.08,0.16999999999999998,2,9,True,LMC,1,2006,2024,They delve into the HST CTE correction.,Valencia et al.2024,2006-07-00,2453917.5
+2006ApJS..165..108S,Saha et al.2006,W(VI),27.43,0.15,0.08,0.1699999999999999,2,9,True,LMC,1,2006,2024,They delve into the HST CTE correction.,Valencia et al.2024,2006-07-00,2453917.5
