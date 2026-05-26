@@ -281,6 +281,14 @@ data['OHratio'] = data['12+logO/H']
 
 
 
+
+
+
+
+
+'''
+
+
 # Calculamos tus residuos observacionales reales usando tu alfa y beta óptimos:
 alpha_best, beta_best = 33.2169717140405, 5.046006556006849 
 log_L_obs = data['logL(Hb)']
@@ -333,6 +341,11 @@ model.equations_.to_csv("pysr_lsigma_residualsTestsoft.csv")
 # Para usar la mejor ecuación en tu código directamente:
 best_equation_prediction = model.predict(X)
 
+'''
+
+
+### Analisis con Hb
+
 
 
 # Calculamos tus residuos observacionales reales usando tu alfa y beta óptimos:
@@ -342,8 +355,57 @@ log_L_obs = data['logL(Hb)']
 # Tu variable objetivo (Target) es el residuo que quieres pulverizar:
 data['residual'] = log_L_obs - (beta_best * data['log_sigma(Hb)'] + alpha_best)
 
+
+'lgt_av_M',
+'Z_av_M',
+'lg_Mp',
+'Z', # Esto es redshift, no metalicidad
+'lg_QH',
+'log_EWHb',
+'burstAge_L',
+'burstAge_M',
+'fneb_4020',
+'fneb_opt',
+'Pop_5Myr',
+'Pop_10Myr',
+'Pop_30Myr',
+'Pop_100Myr',
+'logR_u',
+'OHratio',
+'logSFR',
+'lg_MppAGB',
+'A_neb',
+'T_e',
+'n_e',
+'A_v'
+
+
+
 # Definimos las matrices X (parámetros físicos) e y (residuos)
-features = ['lgt_av_M','burstAge_L','burstAge_M','logR_u','OHratio','A_neb','n_e','A_v','Pop_10Myr','fneb_4020','T_e']
+features = ['lgt_av_M',
+    'Z_av_M',
+    'lg_Mp',
+    'Z', # Esto es redshift, no metalicidad
+    'lg_QH',
+    'log_EWHb',
+    'burstAge_L',
+    'burstAge_M',
+    'fneb_4020',
+    'fneb_opt',
+    'Pop_5Myr',
+    'Pop_10Myr',
+    'Pop_30Myr',
+    'Pop_100Myr',
+    'logR_u',
+    'OHratio',
+    'logSFR',
+    'lg_MppAGB',
+    'A_neb',
+    'T_e',
+    'n_e',
+    'A_v'
+    ]
+
 X = data[features].values
 y = data['residual'].values
 
@@ -396,7 +458,30 @@ log_L_obs = data['logL(Hb)']
 data['residual'] = log_L_obs - (beta_best * data['log_sigma([OIII])'] + alpha_best)
 
 # Definimos las matrices X (parámetros físicos) e y (residuos)
-features = ['lgt_av_M','burstAge_L','burstAge_M','logR_u','OHratio','A_neb','n_e','A_v','Pop_10Myr','fneb_4020','T_e']
+features = ['lgt_av_M',
+    'Z_av_M',
+    'lg_Mp',
+    'Z', # Esto es redshift, no metalicidad
+    'lg_QH',
+    'log_EWHb',
+    'burstAge_L',
+    'burstAge_M',
+    'fneb_4020',
+    'fneb_opt',
+    'Pop_5Myr',
+    'Pop_10Myr',
+    'Pop_30Myr',
+    'Pop_100Myr',
+    'logR_u',
+    'OHratio',
+    'logSFR',
+    'lg_MppAGB',
+    'A_neb',
+    'T_e',
+    'n_e',
+    'A_v'
+    ]
+
 X = data[features].values
 y = data['residual'].values
 
