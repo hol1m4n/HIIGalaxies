@@ -42,7 +42,7 @@ from scipy import stats
 from scipy.stats import norm
 from astropy.time import Time
 import matplotlib.dates as mdates
-
+from joblib import Parallel, delayed
 
 ###### Funciones
 
@@ -64,12 +64,13 @@ def weighted_error(error):
 
 def bootstrap_error2(modulus,error,N=200000,group = '',Galaxy=''):
 
-    PATH = f'BR/{group}/{Galaxy}.txt'
+    PATH = f'Bootstrap_resampling/{group}/{Galaxy}.txt'
 
     if os.path.exists(PATH) == True:
         bootstrap_statistics = np.loadtxt(PATH)
         print(f'Reading bootstrap for {Galaxy}\n')
     if os.path.exists(PATH) == False:
+        os.makedirs(PATH.replace(f'{Galaxy}.txt',''), exist_ok=True)
         print(f'Running bootstrap for {Galaxy}\n')
         modulus,error = np.array(modulus),np.array(error)
         size = len(modulus)
@@ -138,7 +139,7 @@ def nestedsampling_error(modulus,error,steps=10000, Name='', group = ''):
     def loglike_for_mnest(theta):
         return lnlike(theta, modulus, error)
     
-    outdir = os.path.join('NS', group)
+    outdir = os.path.join('Nested_sampling', group)
     os.makedirs(outdir, exist_ok=True)
     prefix = os.path.join(outdir, Name)
 
@@ -175,6 +176,169 @@ def nestedsampling_error(modulus,error,steps=10000, Name='', group = ''):
     sigma2_corr = T_sample.std() * chi2_red
 
     return [T_sample.std(),sigma2_corr]
+
+
+
+# Bootstrap mayor a 3 DMs <-
+
+# Revisar si el archivo existe (o no) en carpeta. Es mejor si no existe y quitar el IF
+
+# Se abre el fits
+# Se crea el encabezado de la tabla
+
+# Se aplican las funciones a cada una de las galaxias (paralelizar)
+
+# Definir variables del Metodo (CEFEIDAS o TRGB)
+
+# Aplicar condicionales (Utilizar la estructura que use para lo de FADO)
+
+# Crear los arrays y variables necesarias
+
+
+
+class DM_set_select:
+    def __init__(self,data,selection):
+        self.data = data
+        self.select = selection #Debe ser una lista de Tuplas
+        self.set = None
+        self.set_selection()
+
+    def set_selection(self):
+        tmp_dataFrame = self.data
+        for s in range(len(self.select)):
+            if self.select[s][1] == '==':
+                tmp_dataFrame = tmp_dataFrame[tmp_dataFrame[self.select[s][0]]==self.select[s][2]]
+            elif self.select[s][1] == '!=':
+                tmp_dataFrame = tmp_dataFrame[tmp_dataFrame[self.select[s][0]]!=self.select[s][2]]
+            elif self.select[s][1] == '>=':
+                tmp_dataFrame = tmp_dataFrame[tmp_dataFrame[self.select[s][0]]>=self.select[s][2]]
+            elif self.select[s][1] == '<=':
+                tmp_dataFrame = tmp_dataFrame[tmp_dataFrame[self.select[s][0]]<=self.select[s][2]]
+            elif self.select[s][1] == '>':
+                tmp_dataFrame = tmp_dataFrame[tmp_dataFrame[self.select[s][0]]>self.select[s][2]]
+            elif self.select[s][1] == '<':
+                tmp_dataFrame = tmp_dataFrame[tmp_dataFrame[self.select[s][0]]<self.select[s][2]]
+        self.set = tmp_dataFrame
+
+
+
+def MASTER_STATS(csv_name,Metodo,condition_x_group):
+    csv_PATH = os.path.expanduser(f'~/HIIGalaxies/Distance_moduli/Results_tables/{csv_name}.csv')
+    if not os.path.exists(csv_PATH):
+        master_file = os.path.expanduser('~/HIIGalaxies/Distance_moduli/modulus_tracker_TABLES.fits')
+        stats_comp = [] # Encabezado, valido para cualquier grupo
+        stats_comp =['Galaxia','N_dat','mu_w','sigma_w','sigma_br','sigma_C','sigma_cl+','sigma_cl-','sigma_L','sigma_Lcorr']
+
+        def parallel_statistics(i,FITS_name):
+                FITS_file = fits.open(FITS_name)
+                gal_host = i
+                T = Table.read(FITS_file[gal_host])
+                if (FITS_file[gal_host].header['METHOD'] == Metodo) and (len(T)>0):
+
+                    SeT = DM_set_select(T,condition_x_group).set
+                    Group_modulus = np.array(SeT['mu_0'])
+                    if any('e_R' in tupla for tupla in condition_x_group):
+                        Group_error = np.array(SeT['e_R'])
+                    if any('e_T' in tupla for tupla in condition_x_group):
+                        Group_error = np.array(SeT['e_T'])                    
+                    Galaxia = FITS_file[gal_host].header['EXTNAME']
+                    N_dat = len(SeT)
+
+                    print(f"\n")
+                    print(f"Working for for {Galaxia} -> {FITS_file[gal_host].header['METHOD']} \n")
+                    print(f"Counter: {i}\n")
+                    print(f"\n")
+
+
+                    if N_dat == 0:
+                        print(f"No data for {Galaxia}\n")
+                    else:
+                        mu_w = weighted_average(Group_modulus,Group_error)
+                        sigma_w = weighted_error(Group_error)
+                        sigma_C = cochran_error(Group_modulus,Group_error)
+                        if N_dat > 1:
+                            sigma_br,sigma_cl,Br_stats = bootstrap_error2(modulus = Group_modulus
+                                                                        ,error = Group_error,N=200000,group=csv_name,Galaxy=Galaxia)
+                            
+                            sigma_br = sigma_br
+                            sigma_cl[0] = sigma_cl[0] # Ya no me acuerdo por que redefini estas variables
+                            sigma_cl[1] = sigma_cl[1]
+                            Br_stats = Br_stats
+
+
+                            sigma_L, sigma_Lcorr = nestedsampling_error(Group_modulus,
+                                                                        Group_error,Name=Galaxia,group = csv_name, steps=100)
+                            stats_comp.append([Galaxia,N_dat,mu_w,sigma_w,sigma_br,sigma_C,sigma_cl[0],sigma_cl[1],sigma_L,sigma_Lcorr])
+                        else:
+                            stats_comp.append([Galaxia,N_dat,mu_w,sigma_w,'--','--','--','--','--','--'])
+                    
+                FITS_file.close()
+
+                #return 0
+        # Aplicar el bucle paralelizado
+
+        #tmp = Parallel(n_jobs=1)(delayed(parallel_statistics)(parent_galaxy,master_file) for parent_galaxy in range(1,45))                   
+
+        for parent_galaxy in range(1,46):
+            parallel_statistics(parent_galaxy,master_file)
+
+
+        
+
+        # Salvando el DF final
+
+        DF = pd.DataFrame(data = stats_comp[10:],columns = stats_comp[0:10])
+        DF.to_csv(csv_PATH)#,index=False)
+
+
+
+MASTER_STATS('sm_r',
+             'CEPHEIDS',
+             [('Zcorr','==',False),
+                 ('e_R','>=',0),('Author','==','Valencia et al.2024')])
+
+
+MASTER_STATS('cm_r',
+             'CEPHEIDS',
+             [('Zcorr','==',True),
+                 ('e_R','>=',0),('Author','==','Valencia et al.2024')])
+
+
+MASTER_STATS('sm_t',
+             'CEPHEIDS',
+             [('Zcorr','==',False),
+                 ('e_T','>=',0),('Author','==','Valencia et al.2024')])
+
+
+MASTER_STATS('cm_t',
+             'CEPHEIDS',
+             [('Zcorr','==',True),
+                 ('e_T','>=',0),('Author','==','Valencia et al.2024')])
+
+
+MASTER_STATS('t_r',
+             'TRGB',
+             [('e_R','>=',0),('Author','==','Valencia et al.2024')])
+
+
+
+
+
+
+
+
+
+
+
+
+'''
+
+
+
+
+
+
+
 
 
 
@@ -412,3 +576,7 @@ else:
 
     DF = pd.DataFrame(data = t_r[10:],columns = t_r[0:10])
     DF.to_csv('t_r.csv')
+
+    
+
+    '''
