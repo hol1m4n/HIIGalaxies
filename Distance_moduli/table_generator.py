@@ -267,7 +267,7 @@ def MASTER_STATS(csv_name,Metodo,condition_x_group):
 
 
                             sigma_L, sigma_Lcorr = nestedsampling_error(Group_modulus,
-                                                                        Group_error,Name=Galaxia,group = csv_name, steps=100)
+                                                                        Group_error,Name=Galaxia,group = csv_name, steps=10000)
                             stats_comp.append([Galaxia,N_dat,mu_w,sigma_w,sigma_br,sigma_C,sigma_cl[0],sigma_cl[1],sigma_L,sigma_Lcorr])
                         else:
                             stats_comp.append([Galaxia,N_dat,mu_w,sigma_w,'--','--','--','--','--','--'])
@@ -294,31 +294,27 @@ def MASTER_STATS(csv_name,Metodo,condition_x_group):
 
 MASTER_STATS('sm_r',
              'CEPHEIDS',
-             [('Zcorr','==',False),
-                 ('e_R','>=',0),('Author','==','Valencia et al.2024')])
+             [('Zcorr','==',False),('e_R','>=',0)])
 
 
 MASTER_STATS('cm_r',
              'CEPHEIDS',
-             [('Zcorr','==',True),
-                 ('e_R','>=',0),('Author','==','Valencia et al.2024')])
+             [('Zcorr','==',True),('e_R','>=',0)])
 
 
 MASTER_STATS('sm_t',
              'CEPHEIDS',
-             [('Zcorr','==',False),
-                 ('e_T','>=',0),('Author','==','Valencia et al.2024')])
+             [('Zcorr','==',False),('e_T','>=',0)])
 
 
 MASTER_STATS('cm_t',
              'CEPHEIDS',
-             [('Zcorr','==',True),
-                 ('e_T','>=',0),('Author','==','Valencia et al.2024')])
+             [('Zcorr','==',True),('e_T','>=',0)])
 
 
 MASTER_STATS('t_r',
              'TRGB',
-             [('e_R','>=',0),('Author','==','Valencia et al.2024')])
+             [('e_R','>=',0)])
 
 
 

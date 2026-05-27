@@ -61,7 +61,7 @@ def weighted_error(error):
 
 def bootstrap_error2(modulus,error,N=200000,group = '',Galaxy=''):
 
-    PATH = f'BR/{group}/{Galaxy}.txt'
+    PATH = f'Bootstrap_resampling/{group}/{Galaxy}.txt'
 
     if os.path.exists(PATH) == True:
         bootstrap_statistics = np.loadtxt(PATH)
@@ -135,7 +135,7 @@ def nestedsampling_error(modulus,error,steps=10000, Name='', group = ''):
     def loglike_for_mnest(theta):
         return lnlike(theta, modulus, error)
     
-    outdir = os.path.join('NS', group)
+    outdir = os.path.join('Nested_sampling', group)
     os.makedirs(outdir, exist_ok=True)
     prefix = os.path.join(outdir, Name)
 
@@ -198,33 +198,33 @@ def plotter_statRESULTS(FILE='modulus_tracker_TABLES.fits',LIST='',data_split=''
                 T = Table.read(hdu)
                 if GRUPO == 'sm_r':
                     T = T[(T['Zcorr']==False) & (T['e_R']>= 0)]
-                    DF_t = pd.read_csv('sm_r.csv')
+                    DF_t = pd.read_csv('Results_tables/sm_r.csv')
                     DF_t = DF_t[DF_t['Galaxia'] == Galaxia]
                     title_label = r'$PLrC^{ \times Z}_{Random}$'
                 if GRUPO == 'cm_r':
                     T = T[(T['Zcorr']==True) & (T['e_R']>= 0)]
-                    DF_t = pd.read_csv('cm_r.csv')
+                    DF_t = pd.read_csv('Results_tables/cm_r.csv')
                     DF_t = DF_t[DF_t['Galaxia'] == Galaxia]
                     title_label = r'$PLrC^{Z}_{Random}$'
                 if GRUPO == 'sm_t':
                     T = T[(T['Zcorr']==False)  &  (T['e_T']>= 0)]
-                    DF_t = pd.read_csv('sm_t.csv')
+                    DF_t = pd.read_csv('Results_tables/sm_t.csv')
                     DF_t = DF_t[DF_t['Galaxia'] == Galaxia]
                     title_label = r'$PLrC^{ \times Z}_{Total}$'
                 if GRUPO == 'cm_t':
                     T = T[(T['Zcorr']==True)  &  (T['e_T']>= 0)]
-                    DF_t = pd.read_csv('cm_t.csv')
+                    DF_t = pd.read_csv('Results_tables/cm_t.csv')
                     DF_t = DF_t[DF_t['Galaxia'] == Galaxia]
                     title_label = r'$PLrC^{Z}_{Total}$'
                 if GRUPO == 't_r':
                     T = T
-                    DF_t = pd.read_csv('t_r.csv')
+                    DF_t = pd.read_csv('Results_tables/t_r.csv')
                     DF_t = DF_t[DF_t['Galaxia'] == Galaxia]
                     title_label = r'$TRGB_{Random}$'
                 break 
 
 
-        outdir = os.path.join('NS', GRUPO) 
+        outdir = os.path.join('Nested_sampling', GRUPO) 
         prefix = os.path.join(outdir, Galaxia)
         samples  = pymultinest.analyse.Analyzer(n_params = 1, outputfiles_basename=prefix)
         mu_pi_samples = samples.get_equal_weighted_posterior()[:,0]
@@ -480,35 +480,36 @@ def plotter_statRESULTS(FILE='modulus_tracker_TABLES.fits',LIST='',data_split=''
             alpha=0.2
         )
 
+        os.makedirs(f'Distr_plots/{GRUPO}',exist_ok = True)
         fig.suptitle(f'{Galaxia.split('.')[1]} - {title_label} ({len(T)})', fontsize=30)
-        fig.savefig(f'PLOTS/{GRUPO}/{Galaxia}.png', dpi=70, bbox_inches='tight', transparent=False)
+        fig.savefig(f'Distr_plots/{GRUPO}/{Galaxia}.png', dpi=70, bbox_inches='tight', transparent=False)
         plt.close(fig)
 
     S.close()
 
 
-sm_r_lista = os.listdir('BR/sm_r')
+sm_r_lista = os.listdir('Bootstrap_resampling/sm_r')
 sm_r_lista = [x.split('.txt')[0] for x in sm_r_lista if x.endswith('.txt')]
 
 plotter_statRESULTS(LIST=sm_r_lista,data_split='sm_r')
 
-cm_r_lista = os.listdir('BR/cm_r')
+cm_r_lista = os.listdir('Bootstrap_resampling/cm_r')
 cm_r_lista = [x.split('.txt')[0] for x in cm_r_lista if x.endswith('.txt')]
 
 plotter_statRESULTS(LIST=cm_r_lista,data_split='cm_r')
 
-sm_t_lista = os.listdir('BR/sm_t')
+sm_t_lista = os.listdir('Bootstrap_resampling/sm_t')
 sm_t_lista = [x.split('.txt')[0] for x in sm_t_lista if x.endswith('.txt')]
 
 plotter_statRESULTS(LIST=sm_t_lista,data_split='sm_t')
 
-cm_t_lista = os.listdir('BR/cm_t')
+cm_t_lista = os.listdir('Bootstrap_resampling/cm_t')
 cm_t_lista = [x.split('.txt')[0] for x in cm_t_lista if x.endswith('.txt')]
 
 plotter_statRESULTS(LIST=cm_t_lista,data_split='cm_t')
 
 
-t_r_lista = os.listdir('BR/t_r')
+t_r_lista = os.listdir('Bootstrap_resampling/t_r')
 t_r_lista = [x.split('.txt')[0] for x in t_r_lista if x.endswith('.txt')]
 
 plotter_statRESULTS(LIST=t_r_lista,data_split='t_r')
