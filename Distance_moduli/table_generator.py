@@ -279,7 +279,7 @@ def MASTER_STATS(csv_name,Metodo,condition_x_group):
 
         #tmp = Parallel(n_jobs=1)(delayed(parallel_statistics)(parent_galaxy,master_file) for parent_galaxy in range(1,45))                   
 
-        for parent_galaxy in range(1,46):
+        for parent_galaxy in range(1,47):
             parallel_statistics(parent_galaxy,master_file)
 
 
