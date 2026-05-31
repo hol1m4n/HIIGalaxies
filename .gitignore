@@ -6,5 +6,6 @@ FADO/
 *.dat
 *.json
 *.log
-_pycache__/
+__pycache__/
 .ipynb_checkpoints/
+*.pyc
