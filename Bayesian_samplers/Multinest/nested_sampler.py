@@ -83,11 +83,16 @@ class Lsig_Ho_sampler:
                 if universe_antiquity == 'Low':
                     return (5.0/np.log(10.0))*(1/z)
 
-                if universe_antiquity == 'Moderate':
-                    Om_z = cosmo.Om(z)
-                    Ode_z = cosmo.Ode(z)
-                    q = (Om_z / 2.0) - Ode_z
-                    return (10* ((q-1)*z-1) ) / (z * np.log(10) * ((q-1)*z-2))
+                if universe_antiquity == 'Moderate':  # Ojo aqui es q0 o q(z)?? revisar despues
+                    #Om_z = cosmo.Om(z)
+                    #Ode_z = cosmo.Ode(z)
+                    #q = (Om_z / 2.0) - Ode_z
+                    #return (10* ((q-1)*z-1) ) / (z * np.log(10) * ((q-1)*z-2))
+
+                    q0 = cosmo.Om0 / 2.0 - cosmo.Ode0
+                    return (10* ((q0-1)*z-1) ) / (z * np.log(10) * ((q0-1)*z-2))
+
+
                 
                 if universe_antiquity == 'High':
                     z = np.atleast_1d(np.asarray(z, dtype=float))
@@ -146,7 +151,7 @@ class Lsig_Ho_sampler:
             n_dims=n_dims,
             outputfiles_basename=self.prefix,
             evidence_tolerance=0.5,
-            n_live_points=100,
+            n_live_points=2000,
             multimodal=True,
             verbose=False
         )

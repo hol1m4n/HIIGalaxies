@@ -1,2 +1,10 @@
 STARLIGHT/
 FADO/
+*.iterinfo
+*.points
+*.ptprob
+*.dat
+*.json
+*.log
+_pycache__/
+.ipynb_checkpoints/

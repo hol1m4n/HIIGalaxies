@@ -16,7 +16,7 @@ ns.Lsig_Ho_sampler(
     folder_name = 'LU_smr_sigma_w',
     analysis_mode = 'Low',
     id_prefix = 'low_smr_sw'
-)#.main_sampler()
+)
 
 
 
@@ -37,7 +37,7 @@ ns.Lsig_Ho_sampler(
     folder_name = 'MU_smr_sigma_w',
     analysis_mode = 'Moderate',
     id_prefix = 'mod_smr_sw'
-)#.main_sampler()
+)
 
 
 
@@ -57,7 +57,7 @@ ns.Lsig_Ho_sampler(
     folder_name = 'HU_smr_sigma_w',
     analysis_mode = 'High',
     id_prefix = 'high_smr_sw'
-)#.main_sampler()
+)
 
 
 
@@ -77,7 +77,7 @@ ns.Lsig_Ho_sampler(
     folder_name = 'LU_tr_sigma_w',
     analysis_mode = 'Low',
     id_prefix = 'low_tr_sw'
-)#.main_sampler()
+)
 
 
 
@@ -98,7 +98,7 @@ ns.Lsig_Ho_sampler(
     folder_name = 'MU_tr_sigma_w',
     analysis_mode = 'Moderate',
     id_prefix = 'mod_tr_sw'
-)#.main_sampler()
+)
 
 
 
@@ -118,7 +118,7 @@ ns.Lsig_Ho_sampler(
     folder_name = 'HU_tr_sigma_w',
     analysis_mode = 'High',
     id_prefix = 'high_tr_sw'
-)#.main_sampler()
+)
 
 
 '''
