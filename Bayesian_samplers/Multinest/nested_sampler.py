@@ -312,16 +312,26 @@ class Lsig_Ho_sampler:
             outputfiles_basename=results_path
         )
 
+
+
         stats = analyzer.get_stats()
         alpha_mean,beta_mean,h_mean = stats['modes'][0]['mean']
         alpha_err,beta_err,h_err = stats['modes'][0]['sigma']
 
 
 
+        concat_filter_DF = self.group_reader(DF = self.data_frame,
+                            group = self.distance_estimator_set,
+                            error_kind = self.estimator_error_kind)
+
+        print(f"Numero de galaxias host de GEHR: {len(concat_filter_DF[concat_filter_DF['origin_id'] == 0.0])}")
+        print(f"Lista: {np.unique(concat_filter_DF[concat_filter_DF['origin_id'] == 0.0]['GEHR_id'])}")
+
+
         fig, ax = plt.subplots(figsize=(28, 22), dpi = 100)
 
         for obj in range(9):
-            self.L_sigma_plotter(DF=self.data_frame,
+            self.L_sigma_plotter(DF=concat_filter_DF,
                                  ax=ax,
                                  codeX=obj,
                                  h=h_mean,
@@ -331,7 +341,7 @@ class Lsig_Ho_sampler:
         xmin, xmax = ax.get_xlim()
         x_line = np.linspace(xmin-0.05, xmax+0.05, 100)
         y_line = beta_mean * x_line + alpha_mean
-        ax.plot(x_line, y_line, label=r"Ajuste", color = 'k', linestyle = '--')
+        ax.plot(x_line, y_line, label=r"Ajuste L(H$\beta$) - $\sigma$", color = 'k', linestyle = '--')
 
 
         img_path = self.prefix + "triangle_getdist.png"
@@ -348,16 +358,6 @@ class Lsig_Ho_sampler:
 
 
 
-
-
-
-
-
-
-
-
-
-
         ax.set_xlabel(r"$\log_{10}\, \sigma\ \mathrm{(km\ s^{-1})}$", fontsize = 50)
         ax.set_ylabel(r"$\log_{10}\, L\ \mathrm{(erg\ s^{-1})}$", fontsize = 50)
         ax.legend()
@@ -366,11 +366,12 @@ class Lsig_Ho_sampler:
         ax.tick_params(axis='y', labelsize=20) 
         ax.set_title(self.main_title,fontsize = 50,  fontweight='bold')
 
-        ax.legend(ncol= 3,
+        ax.legend(ncol= 2,
                 loc="upper left",
-                title=r"$\alpha$=" + f'{alpha_mean:.3f}' + r"$\pm$" + f"{alpha_err:.3f}" + "\n" +   
+                title=r"$\alpha$=" + f'{alpha_mean:.3f}' + r"$\pm$" + f"{alpha_err:.3f}" +   f"     "  +
                 r"$\beta$=" + f'{beta_mean:.3f}' + r"$\pm$" + f"{beta_err:.3f}" + "\n" +  
-                r"$h$=" + f'{h_mean:.3f}' + r"$\pm$" + f"{h_err:.3f}",
+                r"$h$=" + f'{h_mean:.3f}' + r"$\pm$" + f"{h_err:.3f}" + "\n" + 
+                f'GEHR:{len(concat_filter_DF[concat_filter_DF['origin_id'] == 0.0])} , GEHR hosts:{len(np.unique(concat_filter_DF[concat_filter_DF['origin_id'] == 0.0]['GEHR_id']))} , HIIG:{len(concat_filter_DF[concat_filter_DF['origin_id'] != 0.0])}',
                 title_fontsize=40,
                 fontsize = 30)
 

@@ -99,9 +99,6 @@ def main():
     )
 
 
-
-
-
     print("=" * 80)
     print(f"Finished job index: {job_index}")
     print("=" * 80)
