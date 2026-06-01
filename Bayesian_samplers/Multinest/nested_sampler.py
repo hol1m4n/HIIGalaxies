@@ -15,7 +15,8 @@ import astropy.units as u
 from scipy import stats
 import scipy.optimize as op
 from astropy import constants as const
-
+from matplotlib.offsetbox import OffsetImage, AnnotationBbox
+import matplotlib.image as mpimg
 
 class Lsig_Ho_sampler:
     def __init__(self,
@@ -39,6 +40,7 @@ class Lsig_Ho_sampler:
 
         self.dir_results_creation()
         self.main_sampler()
+        self.run_plotter()
 
     def dir_results_creation(self):
         self.outdir = os.path.join(os.path.expanduser('~/HIIGalaxies/Bayesian_samplers/Multinest'), f"{self.folder_name}")
@@ -189,19 +191,189 @@ class Lsig_Ho_sampler:
             labels=[r"\alpha", r"\beta", r"h"]  
         )
         g = plots.getSubplotPlotter()
-        g.settings.num_plot_contours = 2
+        g.settings.num_plot_contours = 4
         g.triangle_plot([gds], filled=True, title_limit=1)
 
-        titulo = g.fig.suptitle(f"{self.main_title}", fontsize=16, y=1.03)
+        #titulo = g.fig.suptitle(f"{self.main_title}", fontsize=16, y=1.03)
 
         plt.savefig(
             self.prefix + "triangle_getdist.png", 
             bbox_inches='tight', 
-            bbox_extra_artists=[titulo],
-            dpi=300
+            #bbox_extra_artists=[titulo],
+            dpi=300,
+            transparent=True
         )
         plt.close(g.fig)
 
         print("GetDist triangle en:", self.prefix + "triangle_getdist.png")
 
-        print("\nListo. Archivos en:", self.outdir)        
+        print("\nListo. Archivos en:", self.outdir)
+
+
+    def L_sigma_plotter(self,DF=None,ax=None,codeX=None,h=None,e_h=None):
+        if DF is not None and ax is not None and h is not None and e_h is not None and codeX is not None:
+            cosmo = FlatwCDM(H0=h*100.0, Om0=0.3, w0=-1.0)
+            set_ = DF[(DF['origin_id'] == codeX)]
+            markers = {
+                0: "s",   # square
+                1: "o",   # circle
+                2: "D",   # diamond
+                3: "^",   # triangle up
+                4: "v",   # triangle down
+                5: "x",   # x
+                6: "*",   # star
+                7: "P",   # filled plus
+                8: "h",   # hexagon
+            }
+
+            colors = {
+                0: "brown",
+                1: "blue",
+                2: "green",
+                3: "red",
+                4: "orange",
+                5: "gray",
+                6: "purple",
+                7: "teal",
+                8: "black",
+            }
+            samples = {
+                0: "GEHR",
+                1: "Local HIIG",
+                2: "Liter.Mid-z",
+                3: "VLT/X-shooter",
+                4: "Keck/MOSFIRE",
+                5: "VLT/KMOS",
+                6: "JWST/NIRSpec",
+                7: "VUDS/VANDELS",
+                8: "ALMA+JWST/MIRI"
+            }
+
+            if len(set_) != 0 and codeX == 0.0:
+                pc_to_cm = 3.08567758e18
+                zeta = pc_to_cm 
+                logL = np.log10(4*np.pi*(zeta)**2) + ((2*set_['z_or_mu'] +10)/5) + set_['log_f_Hbeta']
+                e_logL = np.sqrt(((2/5)*set_['e_z_or_e_mu'])**2 + (set_['e_log_f_Hbeta'])**2)
+                logSigma = set_['log_sigma']
+                e_logSigma = set_['e_log_sigma']
+                ax.errorbar(
+                    logSigma,
+                    logL,
+                    color = colors[codeX],
+                    xerr=e_logSigma,
+                    yerr=e_logL,
+                    fmt=markers[codeX],
+                    linestyle="none",
+                    label=samples[codeX],
+                    alpha=0.8,
+                    capsize=5,
+                    markersize=10
+                )
+                return ax            
+
+            if len(set_) != 0 and codeX != 0.0:
+                #if mode == 'Local':
+                Mpc_to_cm = 3.08567758e24
+                #km_to_cm = 100000
+                eta = Mpc_to_cm #* km_to_cm
+                c = 299792.458 #km/s
+                Ez = cosmo.efunc(set_['z_or_mu'])  # E(z) = H(z)/H0
+                # I(z) = integral_0^z dz'/E(z') = (H0/c) * D_C(z)
+                Iz = (cosmo.comoving_distance(set_['z_or_mu']) * cosmo.H0 / const.c).to_value(u.dimensionless_unscaled)
+                logL = np.log10(4*np.pi*(eta)**2*c**2) - (2*np.log10(h*100)) + set_['log_f_Hbeta'] + (2*np.log10(1 + set_['z_or_mu']))  + (2*np.log10(Iz)) 
+                e_logL = np.sqrt(((2.0/np.log(10.0)) * (1.0/(1.0+set_['z_or_mu']) + 1.0/(Ez*Iz)) * set_['e_z_or_e_mu'])**2 + (e_h * (-2/(h*np.log(10))))**2   + (set_['e_log_f_Hbeta'])**2)
+                logSigma = set_['log_sigma']
+                e_logSigma = set_['e_log_sigma']
+                ax.errorbar(
+                    logSigma,
+                    logL,
+                    color = colors[codeX],
+                    xerr=e_logSigma,
+                    yerr=e_logL,
+                    fmt=markers[codeX],
+                    linestyle="none",
+                    label=samples[codeX],
+                    alpha=0.8,
+                    capsize=5,
+                    markersize=10
+                )
+                #ax.scatter(logSigma, logL, s=set_['z_or_mu'], alpha=0.2, c=set_['z_or_mu'], cmap='viridis', edgecolors='black')
+                return ax
+            
+            else:
+                return 0
+
+    def run_plotter(self):
+        
+        results_path = self.prefix
+
+        analyzer = pymultinest.analyse.Analyzer(
+            n_params=3,
+            outputfiles_basename=results_path
+        )
+
+        stats = analyzer.get_stats()
+        alpha_mean,beta_mean,h_mean = stats['modes'][0]['mean']
+        alpha_err,beta_err,h_err = stats['modes'][0]['sigma']
+
+
+
+        fig, ax = plt.subplots(figsize=(28, 22), dpi = 100)
+
+        for obj in range(9):
+            self.L_sigma_plotter(DF=self.data_frame,
+                                 ax=ax,
+                                 codeX=obj,
+                                 h=h_mean,
+                                 e_h=h_err)
+
+        # recta ajustada
+        xmin, xmax = ax.get_xlim()
+        x_line = np.linspace(xmin-0.05, xmax+0.05, 100)
+        y_line = beta_mean * x_line + alpha_mean
+        ax.plot(x_line, y_line, label=r"Ajuste", color = 'k', linestyle = '--')
+
+
+        img_path = self.prefix + "triangle_getdist.png"
+        img = mpimg.imread(img_path)
+        imagebox = OffsetImage(img, zoom=0.35)  # ajusta zoom según tamaño deseado
+        ab = AnnotationBbox(
+            imagebox,
+            (0.97, 0.03),              # posición en coordenadas relativas del eje
+            xycoords="axes fraction",  # 0-1 respecto al área del plot
+            box_alignment=(1, 0),      # ancla: derecha-abajo
+            frameon=False
+        )
+        ax.add_artist(ab)
+
+
+
+
+
+
+
+
+
+
+
+
+
+        ax.set_xlabel(r"$\log_{10}\, \sigma\ \mathrm{(km\ s^{-1})}$", fontsize = 50)
+        ax.set_ylabel(r"$\log_{10}\, L\ \mathrm{(erg\ s^{-1})}$", fontsize = 50)
+        ax.legend()
+        ax.grid(True, alpha=0.3)
+        ax.tick_params(axis='x', labelsize=20) # Changes x-axis tick label font size
+        ax.tick_params(axis='y', labelsize=20) 
+        ax.set_title(self.main_title,fontsize = 50,  fontweight='bold')
+
+        ax.legend(ncol= 3,
+                loc="upper left",
+                title=r"$\alpha$=" + f'{alpha_mean:.3f}' + r"$\pm$" + f"{alpha_err:.3f}" + "\n" +   
+                r"$\beta$=" + f'{beta_mean:.3f}' + r"$\pm$" + f"{beta_err:.3f}" + "\n" +  
+                r"$h$=" + f'{h_mean:.3f}' + r"$\pm$" + f"{h_err:.3f}",
+                title_fontsize=40,
+                fontsize = 30)
+
+        #plt.tight_layout()
+        fig.savefig(self.prefix + "L-sigmaPlot.png", dpi=150, bbox_inches="tight")
+        plt.close()
