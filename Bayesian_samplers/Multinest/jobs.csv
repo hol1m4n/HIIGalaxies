@@ -1,16 +1,16 @@
 calibrator_name,distance_estimator_set,estimator_error_kind,regime_name,analysis_mode,zmax,main_title,folder_name,id_prefix
-Cep-nZeR,sm_r.csv,sigma_w,Local,Low,0.1,"L-sigma test: Local Universe (z <= 0.10), Set: Cep-nZeR, error: sigma_w",Local_CepnZeR_sigma_w,low_cepnzer_sigma_w_zle0p1
-Cep-nZeR,sm_r.csv,sigma_w,Intermediate,Moderate,0.5,"L-sigma test: Intermediate Universe (z <= 0.5), Set: Cep-nZeR, error: sigma_w",Intermediate_CepnZeR_sigma_w,moderate_cepnzer_sigma_w_zle0p5
-Cep-nZeR,sm_r.csv,sigma_w,Full,High,None,"L-sigma test: Full Universe (all z), Set: Cep-nZeR, error: sigma_w",Full_CepnZeR_sigma_w,high_cepnzer_sigma_w_allz
-Cep-cZeR,cm_r.csv,sigma_w,Local,Low,0.1,"L-sigma test: Local Universe (z <= 0.10), Set: Cep-cZeR, error: sigma_w",Local_CepcZeR_sigma_w,low_cepczer_sigma_w_zle0p1
-Cep-cZeR,cm_r.csv,sigma_w,Intermediate,Moderate,0.5,"L-sigma test: Intermediate Universe (z <= 0.5), Set: Cep-cZeR, error: sigma_w",Intermediate_CepcZeR_sigma_w,moderate_cepczer_sigma_w_zle0p5
-Cep-cZeR,cm_r.csv,sigma_w,Full,High,None,"L-sigma test: Full Universe (all z), Set: Cep-cZeR, error: sigma_w",Full_CepcZeR_sigma_w,high_cepczer_sigma_w_allz
-Cep-nZeT,sm_t.csv,sigma_w,Local,Low,0.1,"L-sigma test: Local Universe (z <= 0.10), Set: Cep-nZeT, error: sigma_w",Local_CepnZeT_sigma_w,low_cepnzet_sigma_w_zle0p1
-Cep-nZeT,sm_t.csv,sigma_w,Intermediate,Moderate,0.5,"L-sigma test: Intermediate Universe (z <= 0.5), Set: Cep-nZeT, error: sigma_w",Intermediate_CepnZeT_sigma_w,moderate_cepnzet_sigma_w_zle0p5
-Cep-nZeT,sm_t.csv,sigma_w,Full,High,None,"L-sigma test: Full Universe (all z), Set: Cep-nZeT, error: sigma_w",Full_CepnZeT_sigma_w,high_cepnzet_sigma_w_allz
-Cep-cZeT,cm_t.csv,sigma_w,Local,Low,0.1,"L-sigma test: Local Universe (z <= 0.10), Set: Cep-cZeT, error: sigma_w",Local_CepcZeT_sigma_w,low_cepczet_sigma_w_zle0p1
-Cep-cZeT,cm_t.csv,sigma_w,Intermediate,Moderate,0.5,"L-sigma test: Intermediate Universe (z <= 0.5), Set: Cep-cZeT, error: sigma_w",Intermediate_CepcZeT_sigma_w,moderate_cepczet_sigma_w_zle0p5
-Cep-cZeT,cm_t.csv,sigma_w,Full,High,None,"L-sigma test: Full Universe (all z), Set: Cep-cZeT, error: sigma_w",Full_CepcZeT_sigma_w,high_cepczet_sigma_w_allz
-TRGB,t_r.csv,sigma_w,Local,Low,0.1,"L-sigma test: Local Universe (z <= 0.10), Set: TRGB, error: sigma_w",Local_TRGB_sigma_w,low_trgb_sigma_w_zle0p1
-TRGB,t_r.csv,sigma_w,Intermediate,Moderate,0.5,"L-sigma test: Intermediate Universe (z <= 0.5), Set: TRGB, error: sigma_w",Intermediate_TRGB_sigma_w,moderate_trgb_sigma_w_zle0p5
-TRGB,t_r.csv,sigma_w,Full,High,None,"L-sigma test: Full Universe (all z), Set: TRGB, error: sigma_w",Full_TRGB_sigma_w,high_trgb_sigma_w_allz
+Cep-nZeR,sm_r.csv,sigma_w,HM_Local,High,0.2,"L-sigma test: HM_Local Universe (z <= 0.20), Set: Cep-nZeR, error: sigma_w",HM_Local_CepnZeR_sigma_w,high_cepnzer_sigma_w_zle0p2
+Cep-nZeR,sm_r.csv,sigma_w,HM_Intermediate,High,1.5,"L-sigma test: HM_Intermediate Universe (z <= 1.5), Set: Cep-nZeR, error: sigma_w",HM_Intermediate_CepnZeR_sigma_w,high_cepnzer_sigma_w_zle1p5
+Cep-nZeR,sm_r.csv,sigma_w,HM_Full,High,None,"L-sigma test: HM_Full Universe (all z), Set: Cep-nZeR, error: sigma_w",HM_Full_CepnZeR_sigma_w,high_cepnzer_sigma_w_allz
+Cep-cZeR,cm_r.csv,sigma_w,HM_Local,High,0.2,"L-sigma test: HM_Local Universe (z <= 0.20), Set: Cep-cZeR, error: sigma_w",HM_Local_CepcZeR_sigma_w,high_cepczer_sigma_w_zle0p2
+Cep-cZeR,cm_r.csv,sigma_w,HM_Intermediate,High,1.5,"L-sigma test: HM_Intermediate Universe (z <= 1.5), Set: Cep-cZeR, error: sigma_w",HM_Intermediate_CepcZeR_sigma_w,high_cepczer_sigma_w_zle1p5
+Cep-cZeR,cm_r.csv,sigma_w,HM_Full,High,None,"L-sigma test: HM_Full Universe (all z), Set: Cep-cZeR, error: sigma_w",HM_Full_CepcZeR_sigma_w,high_cepczer_sigma_w_allz
+Cep-nZeT,sm_t.csv,sigma_w,HM_Local,High,0.2,"L-sigma test: HM_Local Universe (z <= 0.20), Set: Cep-nZeT, error: sigma_w",HM_Local_CepnZeT_sigma_w,high_cepnzet_sigma_w_zle0p2
+Cep-nZeT,sm_t.csv,sigma_w,HM_Intermediate,High,1.5,"L-sigma test: HM_Intermediate Universe (z <= 1.5), Set: Cep-nZeT, error: sigma_w",HM_Intermediate_CepnZeT_sigma_w,high_cepnzet_sigma_w_zle1p5
+Cep-nZeT,sm_t.csv,sigma_w,HM_Full,High,None,"L-sigma test: HM_Full Universe (all z), Set: Cep-nZeT, error: sigma_w",HM_Full_CepnZeT_sigma_w,high_cepnzet_sigma_w_allz
+Cep-cZeT,cm_t.csv,sigma_w,HM_Local,High,0.2,"L-sigma test: HM_Local Universe (z <= 0.20), Set: Cep-cZeT, error: sigma_w",HM_Local_CepcZeT_sigma_w,high_cepczet_sigma_w_zle0p2
+Cep-cZeT,cm_t.csv,sigma_w,HM_Intermediate,High,1.5,"L-sigma test: HM_Intermediate Universe (z <= 1.5), Set: Cep-cZeT, error: sigma_w",HM_Intermediate_CepcZeT_sigma_w,high_cepczet_sigma_w_zle1p5
+Cep-cZeT,cm_t.csv,sigma_w,HM_Full,High,None,"L-sigma test: HM_Full Universe (all z), Set: Cep-cZeT, error: sigma_w",HM_Full_CepcZeT_sigma_w,high_cepczet_sigma_w_allz
+TRGB,t_r.csv,sigma_w,HM_Local,High,0.2,"L-sigma test: HM_Local Universe (z <= 0.20), Set: TRGB, error: sigma_w",HM_Local_TRGB_sigma_w,high_trgb_sigma_w_zle0p2
+TRGB,t_r.csv,sigma_w,HM_Intermediate,High,1.5,"L-sigma test: HM_Intermediate Universe (z <= 1.5), Set: TRGB, error: sigma_w",HM_Intermediate_TRGB_sigma_w,high_trgb_sigma_w_zle1p5
+TRGB,t_r.csv,sigma_w,HM_Full,High,None,"L-sigma test: HM_Full Universe (all z), Set: TRGB, error: sigma_w",HM_Full_TRGB_sigma_w,high_trgb_sigma_w_allz

@@ -8,7 +8,7 @@ import pandas as pd
 
 import pymultinest
 import matplotlib.pyplot as plt
-import corner
+#import corner
 from getdist import plots, MCSamples
 import scipy.optimize as op
 import astropy.units as u
@@ -153,7 +153,7 @@ class Lsig_Ho_sampler:
             n_dims=n_dims,
             outputfiles_basename=self.prefix,
             evidence_tolerance=0.5,
-            n_live_points=2000,
+            n_live_points=2500,
             multimodal=True,
             verbose=False
         )
@@ -172,16 +172,16 @@ class Lsig_Ho_sampler:
         with open(self.prefix + "params.json", "w") as f:
             json.dump(parameters, f, indent=2)
 
-        fig = corner.corner(
-            samples,
-            labels=[r"$\alpha$", r"$\beta$", r"$h$"],
-            show_titles=True,
-            title_fmt=".3f",
-            quantiles=[0.16, 0.5, 0.84]
-        )
-        fig.savefig(self.prefix + "corner.png", dpi=150, bbox_inches="tight")
-        plt.close(fig)
-        print("Corner guardado en:", self.prefix + "corner.png")
+        #fig = corner.corner(
+        #    samples,
+        #    labels=[r"$\alpha$", r"$\beta$", r"$h$"],
+        #    show_titles=True,
+        #    title_fmt=".3f",
+        #    quantiles=[0.16, 0.5, 0.84]
+        #)
+        #fig.savefig(self.prefix + "corner.png", dpi=150, bbox_inches="tight")
+        #plt.close(fig)
+        #print("Corner guardado en:", self.prefix + "corner.png")
 
 
 

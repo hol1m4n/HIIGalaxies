@@ -1,0 +1,65 @@
+SLURM_JOB_ID: 197797
+SLURM_ARRAY_JOB_ID: 197784
+SLURM_ARRAY_TASK_ID: 12
+Running on node: n-49
+Starting at: Tue Jun  2 12:50:52 CST 2026
+Python/conda activo:
+/home/holman/.conda/envs/nest/bin/python
+# conda environments:
+#
+cigale                   /home/holman/.conda/envs/cigale
+cosmos                   /home/holman/.conda/envs/cosmos
+fado-abi3                /home/holman/.conda/envs/fado-abi3
+fastspec                 /home/holman/.conda/envs/fastspec
+nest                  *  /home/holman/.conda/envs/nest
+starlight                /home/holman/.conda/envs/starlight
+base                     /opt/anaconda3
+
+Corriendo el codigo(array):
+================================================================================
+Running job index: 12
+calibrator_name                                                        TRGB
+distance_estimator_set                                              t_r.csv
+estimator_error_kind                                                sigma_w
+regime_name                                                           Local
+analysis_mode                                                           Low
+zmax                                                                    0.2
+main_title                L-sigma test: Local Universe (z <= 0.20), Set:...
+folder_name                                              Local_TRGB_sigma_w
+id_prefix                                           low_trgb_sigma_w_zle0p2
+Name: 12, dtype: object
+================================================================================
+Total input objects: 243
+Objects after cut:   143
+zmax:                0.2
+  analysing data from /home/holman/HIIGalaxies/Bayesian_samplers/Multinest/Local_TRGB_sigma_w/low_trgb_sigma_w_zle0p2_.txt
+
+Evidence lnZ = -277.080 ± 0.065
+Posterior means/stdev:
+\alpha: 33.340 ± 0.143
+ \beta: 4.988 ± 0.118
+     h: 0.690 ± 0.041
+Removed no burn in
+GetDist triangle en: /home/holman/HIIGalaxies/Bayesian_samplers/Multinest/Local_TRGB_sigma_w/low_trgb_sigma_w_zle0p2_triangle_getdist.png
+
+Listo. Archivos en: /home/holman/HIIGalaxies/Bayesian_samplers/Multinest/Local_TRGB_sigma_w
+  analysing data from /home/holman/HIIGalaxies/Bayesian_samplers/Multinest/Local_TRGB_sigma_w/low_trgb_sigma_w_zle0p2_.txt
+Numero de galaxias host de GEHR: 26
+Lista: ['1.IC0010' '15.NGC4258' '16.NGC4395' '3.M33' '4.M81' '5.M101' '6.MRK116'
+ '8.NGC2366' '9.NGC2403']
+================================================================================
+Finished job index: 12
+================================================================================
+ MultiNest Warning: no resume file found, starting from scratch
+ *****************************************************
+ MultiNest v3.10
+ Copyright Farhan Feroz & Mike Hobson
+ Release Jul 2015
+
+ no. of live points = 2500
+ dimensionality =    3
+ *****************************************************
+ ln(ev)=  -277.07971906617576      +/-   6.5127352207838163E-002
+ Total Likelihood Evaluations:        55497
+ Sampling finished. Exiting MultiNest
+Finished at: Tue Jun  2 13:07:41 CST 2026

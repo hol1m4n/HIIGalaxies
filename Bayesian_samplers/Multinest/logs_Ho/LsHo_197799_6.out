@@ -1,0 +1,64 @@
+SLURM_JOB_ID: 197806
+SLURM_ARRAY_JOB_ID: 197799
+SLURM_ARRAY_TASK_ID: 6
+Running on node: n-49
+Starting at: Tue Jun  2 14:13:14 CST 2026
+Python/conda activo:
+/home/holman/.conda/envs/nest/bin/python
+# conda environments:
+#
+cigale                   /home/holman/.conda/envs/cigale
+cosmos                   /home/holman/.conda/envs/cosmos
+fado-abi3                /home/holman/.conda/envs/fado-abi3
+fastspec                 /home/holman/.conda/envs/fastspec
+nest                  *  /home/holman/.conda/envs/nest
+starlight                /home/holman/.conda/envs/starlight
+base                     /opt/anaconda3
+
+Corriendo el codigo(array):
+================================================================================
+Running job index: 6
+calibrator_name                                                    Cep-nZeT
+distance_estimator_set                                             sm_t.csv
+estimator_error_kind                                                sigma_w
+regime_name                                                        HM_Local
+analysis_mode                                                          High
+zmax                                                                    0.2
+main_title                L-sigma test: HM_Local Universe (z <= 0.20), S...
+folder_name                                        HM_Local_CepnZeT_sigma_w
+id_prefix                                       high_cepnzet_sigma_w_zle0p2
+Name: 6, dtype: object
+================================================================================
+Total input objects: 243
+Objects after cut:   143
+zmax:                0.2
+  analysing data from /home/holman/HIIGalaxies/Bayesian_samplers/Multinest/HM_Local_CepnZeT_sigma_w/high_cepnzet_sigma_w_zle0p2_.txt
+
+Evidence lnZ = -235.843 ± 0.063
+Posterior means/stdev:
+\alpha: 33.184 ± 0.174
+ \beta: 5.050 ± 0.137
+     h: 0.739 ± 0.052
+Removed no burn in
+GetDist triangle en: /home/holman/HIIGalaxies/Bayesian_samplers/Multinest/HM_Local_CepnZeT_sigma_w/high_cepnzet_sigma_w_zle0p2_triangle_getdist.png
+
+Listo. Archivos en: /home/holman/HIIGalaxies/Bayesian_samplers/Multinest/HM_Local_CepnZeT_sigma_w
+  analysing data from /home/holman/HIIGalaxies/Bayesian_samplers/Multinest/HM_Local_CepnZeT_sigma_w/high_cepnzet_sigma_w_zle0p2_.txt
+Numero de galaxias host de GEHR: 13
+Lista: ['15.NGC4258' '3.M33' '4.M81' '5.M101']
+================================================================================
+Finished job index: 6
+================================================================================
+ MultiNest Warning: no resume file found, starting from scratch
+ *****************************************************
+ MultiNest v3.10
+ Copyright Farhan Feroz & Mike Hobson
+ Release Jul 2015
+
+ no. of live points = 2500
+ dimensionality =    3
+ *****************************************************
+ ln(ev)=  -235.84323364914516      +/-   6.2639117495250793E-002
+ Total Likelihood Evaluations:        52457
+ Sampling finished. Exiting MultiNest
+Finished at: Tue Jun  2 14:29:36 CST 2026

@@ -33,16 +33,38 @@ error_kinds = [
 
 redshift_regimes = [
     {
+        "name": "HM_Local",
+        "analysis_mode": "High",
+        "zmax": 0.20,
+        "label": "z <= 0.20",
+    },
+    {
+        "name": "HM_Intermediate",
+        "analysis_mode": "High",
+        "zmax": 1.5,
+        "label": "z <= 1.5",
+    },
+    {
+        "name": "HM_Full",
+        "analysis_mode": "High",
+        "zmax": None,
+        "label": "all z",
+    },
+]
+
+'''
+redshift_regimes = [
+    {
         "name": "Local",
         "analysis_mode": "Low",
-        "zmax": 0.10,
-        "label": "z <= 0.10",
+        "zmax": 0.20,
+        "label": "z <= 0.20",
     },
     {
         "name": "Intermediate",
         "analysis_mode": "Moderate",
-        "zmax": 0.5,
-        "label": "z <= 0.5",
+        "zmax": 1.5,
+        "label": "z <= 1.5",
     },
     {
         "name": "Full",
@@ -51,6 +73,13 @@ redshift_regimes = [
         "label": "all z",
     },
 ]
+'''
+
+
+
+
+
+
 
 
 jobs = []
