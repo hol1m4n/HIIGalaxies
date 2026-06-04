@@ -1,0 +1,187 @@
+setwd("~/HIIGalaxies/Distance_moduli")
+
+library(readr)
+library(dplyr)
+#library(tidyverse)
+library(ggplot2)
+library(tidyr)
+
+sm_r <- read_csv("Results_tables/sm_r.csv") # Cefeidas sin correccion por metalicidad solo errores aleatorios
+cm_r <- read_csv("Results_tables/cm_r.csv") # Cefeidas con correccion por metalicidad solo errores aleatorios
+
+datos_pareados <- inner_join(sm_r, cm_r, by = "Galaxia")
+
+
+
+diferencias <- datos_pareados$mu_w.x - datos_pareados$mu_w.y
+shapiro.test(diferencias) # Si p > 0.05, es normal
+
+
+
+resultado_ttest <- t.test(datos_pareados$mu_w.x, 
+                          datos_pareados$mu_w.y, 
+                          paired = TRUE, 
+                          alternative = "two.sided")
+print(resultado_ttest)
+
+resultado_wilcoxon <- wilcox.test(datos_pareados$mu_w.x, 
+                                  datos_pareados$mu_w.y, 
+                                  paired = TRUE, 
+                                  alternative = "two.sided")
+print(resultado_wilcoxon)
+
+
+df_dif <- data.frame(diferencias = diferencias)
+
+ggplot(df_dif, aes(x = diferencias)) +
+  geom_histogram(aes(y = ..density..), bins = 10, fill = "royalblue", alpha = 0.5, color = "white") +
+  geom_density(color = "blue", size = 1.2) +
+  stat_function(fun = dnorm, 
+                args = list(mean = mean(df_dif$diferencias), sd = sd(df_dif$diferencias)), 
+                color = "red", linetype = "dashed", size = 1) +
+  labs(title = "Distribución de Diferencias (Cefeidas nZeR - Cefeidas cZeR)",
+       subtitle = "distribución normal teórica",
+       x = "Delta mu (mag)",
+       y = "Densidad") +
+  theme_minimal()
+
+
+
+ggplot(datos_pareados, aes(x = mu_w.y, y = mu_w.x)) +
+  geom_abline(intercept = 0, slope = 1, linetype = "dashed", color = "gray50", size = 1) +
+  geom_point(color = "darkorange", size = 3, alpha = 0.8) +
+  geom_text(aes(label = Galaxia), hjust = -0.2, vjust = -0.2, size = 3, check_overlap = TRUE) +
+  labs(title = "Módulo de Distancia: Cefeidas nZeR - Cefeidas cZeR",
+       x = "Módulo de Distancia Cefeidas cZeR (mu_w.y)",
+       y = "Módulo de Distancia Cefeidas nZeR (mu_w.x)") +
+  theme_minimal()
+
+
+
+
+
+
+
+sm_r <- read_csv("Results_tables/sm_r.csv") # Cefeidas sin correccion por metalicidad solo errores aleatorios
+t_r <- read_csv("Results_tables/t_r.csv") # TRGB solo errores aleatorios
+
+datos_pareados <- inner_join(sm_r, t_r, by = "Galaxia")
+
+
+
+diferencias <- datos_pareados$mu_w.x - datos_pareados$mu_w.y
+shapiro.test(diferencias) # Si p > 0.05, es normal
+
+
+
+resultado_ttest <- t.test(datos_pareados$mu_w.x, 
+                          datos_pareados$mu_w.y, 
+                          paired = TRUE, 
+                          alternative = "two.sided")
+print(resultado_ttest)
+
+resultado_wilcoxon <- wilcox.test(datos_pareados$mu_w.x, 
+                                  datos_pareados$mu_w.y, 
+                                  paired = TRUE, 
+                                  alternative = "two.sided")
+print(resultado_wilcoxon)
+
+
+df_dif <- data.frame(diferencias = diferencias)
+
+ggplot(df_dif, aes(x = diferencias)) +
+  geom_histogram(aes(y = ..density..), bins = 10, fill = "royalblue", alpha = 0.5, color = "white") +
+  geom_density(color = "blue", size = 1.2) +
+  stat_function(fun = dnorm, 
+                args = list(mean = mean(df_dif$diferencias), sd = sd(df_dif$diferencias)), 
+                color = "red", linetype = "dashed", size = 1) +
+  labs(title = "Distribución de Diferencias (Cefeidas nZeR - TRGB)",
+       subtitle = "distribución normal teórica",
+       x = "Delta mu (mag)",
+       y = "Densidad") +
+  theme_minimal()
+
+
+
+ggplot(datos_pareados, aes(x = mu_w.y, y = mu_w.x)) +
+  geom_abline(intercept = 0, slope = 1, linetype = "dashed", color = "gray50", size = 1) +
+  geom_point(color = "darkorange", size = 3, alpha = 0.8) +
+  geom_text(aes(label = Galaxia), hjust = -0.2, vjust = -0.2, size = 3, check_overlap = TRUE) +
+  labs(title = "Módulo de Distancia: Cefeidas nZeR - TRGB",
+       x = "Módulo de Distancia TRGB (mu_w.y)",
+       y = "Módulo de Distancia Cefeidas nZeR (mu_w.x)") +
+  theme_minimal()
+
+
+
+
+
+
+
+
+
+
+
+
+
+cm_r <- read_csv("Results_tables/cm_r.csv") # Cefeidas conn correccion por metalicidad solo errores aleatorios
+t_r <- read_csv("Results_tables/t_r.csv") # TRGB solo errores aleatorios
+
+datos_pareados <- inner_join(cm_r, t_r, by = "Galaxia")
+
+
+
+diferencias <- datos_pareados$mu_w.x - datos_pareados$mu_w.y
+shapiro.test(diferencias) # Si p > 0.05, es normal
+
+
+
+resultado_ttest <- t.test(datos_pareados$mu_w.x, 
+                          datos_pareados$mu_w.y, 
+                          paired = TRUE, 
+                          alternative = "two.sided")
+print(resultado_ttest)
+
+resultado_wilcoxon <- wilcox.test(datos_pareados$mu_w.x, 
+                                  datos_pareados$mu_w.y, 
+                                  paired = TRUE, 
+                                  alternative = "two.sided")
+print(resultado_wilcoxon)
+
+
+df_dif <- data.frame(diferencias = diferencias)
+
+ggplot(df_dif, aes(x = diferencias)) +
+  geom_histogram(aes(y = ..density..), bins = 10, fill = "royalblue", alpha = 0.5, color = "white") +
+  geom_density(color = "blue", size = 1.2) +
+  stat_function(fun = dnorm, 
+                args = list(mean = mean(df_dif$diferencias), sd = sd(df_dif$diferencias)), 
+                color = "red", linetype = "dashed", size = 1) +
+  labs(title = "Distribución de Diferencias (Cefeidas cZeR - TRGB)",
+       subtitle = "distribución normal teórica",
+       x = "Delta mu (mag)",
+       y = "Densidad") +
+  theme_minimal()
+
+
+
+ggplot(datos_pareados, aes(x = mu_w.y, y = mu_w.x)) +
+  geom_abline(intercept = 0, slope = 1, linetype = "dashed", color = "gray50", size = 1) +
+  geom_point(color = "darkorange", size = 3, alpha = 0.8) +
+  geom_text(aes(label = Galaxia), hjust = -0.2, vjust = -0.2, size = 3, check_overlap = TRUE) +
+  labs(title = "Módulo de Distancia: Cefeidas nZeR - TRGB",
+       x = "Módulo de Distancia TRGB (mu_w.y)",
+       y = "Módulo de Distancia Cefeidas cZeR (mu_w.x)") +
+  theme_minimal()
+
+
+
+
+
+
+
+
+
+
+
+
