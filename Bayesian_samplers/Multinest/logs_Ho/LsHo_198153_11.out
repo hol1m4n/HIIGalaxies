@@ -1,0 +1,65 @@
+SLURM_JOB_ID: 198166
+SLURM_ARRAY_JOB_ID: 198153
+SLURM_ARRAY_TASK_ID: 11
+Running on node: n-80
+Starting at: Sun Jun 21 22:14:23 UTC 2026
+Python/conda activo:
+/home/holman/.conda/envs/nest/bin/python
+# conda environments:
+#
+cigale                   /home/holman/.conda/envs/cigale
+cosmos                   /home/holman/.conda/envs/cosmos
+fado-abi3                /home/holman/.conda/envs/fado-abi3
+fastspec                 /home/holman/.conda/envs/fastspec
+nest                  *  /home/holman/.conda/envs/nest
+starlight                /home/holman/.conda/envs/starlight
+base                     /opt/anaconda3
+
+Corriendo el codigo(array):
+================================================================================
+Running job index: 11
+calibrator_name                                                    Cep-cZeT
+distance_estimator_set                                             cm_t.csv
+estimator_error_kind                                                sigma_w
+regime_name                                                         HM_Full
+analysis_mode                                                          High
+zmax                                                                    NaN
+main_title                L-sigma test: HM_Full Universe (all z), Set: C...
+folder_name                                         HM_Full_CepcZeT_sigma_w
+id_prefix                                         high_cepczet_sigma_w_allz
+Name: 11, dtype: object
+================================================================================
+Total input objects: 243
+Objects after cut:   243
+zmax:                None
+  analysing data from /home/holman/HIIGalaxies/Bayesian_samplers/Multinest/HM_Full_CepcZeT_sigma_w/high_cepczet_sigma_w_allz_.txt
+
+Evidence lnZ = -417.789 ± 0.067
+Posterior means/stdev:
+\alpha: 33.081 ± 0.114
+ \beta: 5.118 ± 0.091
+     h: 0.730 ± 0.039
+Removed no burn in
+GetDist triangle en: /home/holman/HIIGalaxies/Bayesian_samplers/Multinest/HM_Full_CepcZeT_sigma_w/high_cepczet_sigma_w_allz_triangle_getdist.png
+
+Listo. Archivos en: /home/holman/HIIGalaxies/Bayesian_samplers/Multinest/HM_Full_CepcZeT_sigma_w
+  analysing data from /home/holman/HIIGalaxies/Bayesian_samplers/Multinest/HM_Full_CepcZeT_sigma_w/high_cepczet_sigma_w_allz_.txt
+Numero de galaxias host de GEHR: 26
+Lista: ['10.NGC2541' '11.NGC3198' '12.NGC3319' '15.NGC4258' '3.M33' '4.M81'
+ '5.M101' '7.NGC0925' '9.NGC2403']
+================================================================================
+Finished job index: 11
+================================================================================
+ MultiNest Warning: no resume file found, starting from scratch
+ *****************************************************
+ MultiNest v3.10
+ Copyright Farhan Feroz & Mike Hobson
+ Release Jul 2015
+
+ no. of live points = 2500
+ dimensionality =    3
+ *****************************************************
+ ln(ev)=  -417.78937119622094      +/-   6.6657541138448295E-002
+ Total Likelihood Evaluations:        56141
+ Sampling finished. Exiting MultiNest
+Finished at: Sun Jun 21 22:33:13 UTC 2026

@@ -1,0 +1,66 @@
+SLURM_JOB_ID: 198155
+SLURM_ARRAY_JOB_ID: 198153
+SLURM_ARRAY_TASK_ID: 1
+Running on node: n-79
+Starting at: Sun Jun 21 15:17:01 CST 2026
+Python/conda activo:
+/home/holman/.conda/envs/nest/bin/python
+# conda environments:
+#
+cigale                   /home/holman/.conda/envs/cigale
+cosmos                   /home/holman/.conda/envs/cosmos
+fado-abi3                /home/holman/.conda/envs/fado-abi3
+fastspec                 /home/holman/.conda/envs/fastspec
+nest                  *  /home/holman/.conda/envs/nest
+starlight                /home/holman/.conda/envs/starlight
+base                     /opt/anaconda3
+
+Corriendo el codigo(array):
+================================================================================
+Running job index: 1
+calibrator_name                                                    Cep-nZeR
+distance_estimator_set                                             sm_r.csv
+estimator_error_kind                                                sigma_w
+regime_name                                                 HM_Intermediate
+analysis_mode                                                          High
+zmax                                                                    1.5
+main_title                L-sigma test: HM_Intermediate Universe (z <= 1...
+folder_name                                 HM_Intermediate_CepnZeR_sigma_w
+id_prefix                                       high_cepnzer_sigma_w_zle1p5
+Name: 1, dtype: object
+================================================================================
+Total input objects: 243
+Objects after cut:   156
+zmax:                1.5
+  analysing data from /home/holman/HIIGalaxies/Bayesian_samplers/Multinest/HM_Intermediate_CepnZeR_sigma_w/high_cepnzer_sigma_w_zle1p5_.txt
+
+Evidence lnZ = -308.760 ± 0.066
+Posterior means/stdev:
+\alpha: 33.087 ± 0.138
+ \beta: 5.121 ± 0.113
+     h: 0.735 ± 0.041
+Removed no burn in
+GetDist triangle en: /home/holman/HIIGalaxies/Bayesian_samplers/Multinest/HM_Intermediate_CepnZeR_sigma_w/high_cepnzer_sigma_w_zle1p5_triangle_getdist.png
+
+Listo. Archivos en: /home/holman/HIIGalaxies/Bayesian_samplers/Multinest/HM_Intermediate_CepnZeR_sigma_w
+  analysing data from /home/holman/HIIGalaxies/Bayesian_samplers/Multinest/HM_Intermediate_CepnZeR_sigma_w/high_cepnzer_sigma_w_zle1p5_.txt
+Numero de galaxias host de GEHR: 36
+Lista: ['1.IC0010' '10.NGC2541' '11.NGC3198' '12.NGC3319' '15.NGC4258'
+ '16.NGC4395' '3.M33' '4.M81' '5.M101' '6.MRK116' '7.NGC0925' '8.NGC2366'
+ '9.NGC2403']
+================================================================================
+Finished job index: 1
+================================================================================
+ MultiNest Warning: no resume file found, starting from scratch
+ *****************************************************
+ MultiNest v3.10
+ Copyright Farhan Feroz & Mike Hobson
+ Release Jul 2015
+
+ no. of live points = 2500
+ dimensionality =    3
+ *****************************************************
+ ln(ev)=  -308.75982614364938      +/-   6.5859577405326705E-002
+ Total Likelihood Evaluations:        53720
+ Sampling finished. Exiting MultiNest
+Finished at: Sun Jun 21 15:33:05 CST 2026

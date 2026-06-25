@@ -31,6 +31,8 @@ error_kinds = [
     "sigma_w"
 ]
 
+
+
 redshift_regimes = [
     {
         "name": "HM_Local",
@@ -52,7 +54,10 @@ redshift_regimes = [
     },
 ]
 
+
+
 '''
+
 redshift_regimes = [
     {
         "name": "Local",
@@ -73,8 +78,8 @@ redshift_regimes = [
         "label": "all z",
     },
 ]
-'''
 
+'''
 
 
 

@@ -79,13 +79,28 @@ class Lsig_Ho_sampler:
             alpha, beta, h0 = theta
             cosmo = FlatwCDM(H0=h0*100.0, Om0=0.3, w0=-1.0)
 
-            
+
+            def D_L(cosmo,z,universe_antiquity):
+                if universe_antiquity == 'Low':
+                    d_l = (const.c.to(u.km/u.s) / cosmo.H0) * z
+                    return d_l.value
+
+                if universe_antiquity == 'Moderate':
+                    q0 = cosmo.Om0 / 2.0 - cosmo.Ode0
+                    d_l = (const.c.to(u.km/u.s) / cosmo.H0) * (z + ((1/2)*(1-q0)*(z**2)) )    
+                    return d_l.value
+                
+                if universe_antiquity == 'High':
+                    z = np.atleast_1d(np.asarray(z, dtype=float))
+                    d_l = cosmo.luminosity_distance(z).value
+                    return d_l
+
             def dmu_dz(cosmo,z,universe_antiquity):
 
                 if universe_antiquity == 'Low':
                     return (5.0/np.log(10.0))*(1/z)
 
-                if universe_antiquity == 'Moderate':  # Ojo aqui es q0 o q(z)?? revisar despues
+                if universe_antiquity == 'Moderate':
                     #Om_z = cosmo.Om(z)
                     #Ode_z = cosmo.Ode(z)
                     #q = (Om_z / 2.0) - Ode_z
@@ -100,8 +115,9 @@ class Lsig_Ho_sampler:
                     z = np.atleast_1d(np.asarray(z, dtype=float))
                     Ez = cosmo.efunc(z)  # E(z) = H(z)/H0
                     # I(z) = integral_0^z dz'/E(z') = (H0/c) * D_C(z)
-                    Iz = (cosmo.comoving_distance(z) * cosmo.H0 / const.c).to_value(u.dimensionless_unscaled)
+                    Iz = (cosmo.comoving_distance(z) * cosmo.H0 / const.c.to(u.km/u.s)).to_value(u.dimensionless_unscaled)
                     return np.abs((5.0/np.log(10.0)) * (1.0/(1.0+z) + 1.0/(Ez*Iz)))
+
 
             G = DF['origin_id'] == 0.0
             H = DF['origin_id'] != 0.0
@@ -111,7 +127,8 @@ class Lsig_Ho_sampler:
 
             Mum[G] = DF[G]['z_or_mu']
             MumErr[G] = DF[G]['e_z_or_e_mu']
-            Mum[H] = 5.0*np.log10(cosmo.luminosity_distance(DF[H]['z_or_mu']).value) + 25.0
+            
+            Mum[H] = 5.0*np.log10(D_L(cosmo, DF[H]['z_or_mu'],z_range)) + 25.0
             MumErr[H] =  dmu_dz(cosmo, DF[H]['z_or_mu'],z_range) * DF[H]['e_z_or_e_mu']
 
             Mu = 2.5*(beta*DF['log_sigma'] + alpha) - 2.5*DF['log_f_Hbeta'] - 100.19477738511641 
@@ -279,7 +296,7 @@ class Lsig_Ho_sampler:
                 c = 299792.458 #km/s
                 Ez = cosmo.efunc(set_['z_or_mu'])  # E(z) = H(z)/H0
                 # I(z) = integral_0^z dz'/E(z') = (H0/c) * D_C(z)
-                Iz = (cosmo.comoving_distance(set_['z_or_mu']) * cosmo.H0 / const.c).to_value(u.dimensionless_unscaled)
+                Iz = (cosmo.comoving_distance(set_['z_or_mu']) * cosmo.H0 / const.c.to(u.km/u.s)).to_value(u.dimensionless_unscaled)
                 logL = np.log10(4*np.pi*(eta)**2*c**2) - (2*np.log10(h*100)) + set_['log_f_Hbeta'] + (2*np.log10(1 + set_['z_or_mu']))  + (2*np.log10(Iz)) 
                 e_logL = np.sqrt(((2.0/np.log(10.0)) * (1.0/(1.0+set_['z_or_mu']) + 1.0/(Ez*Iz)) * set_['e_z_or_e_mu'])**2 + (e_h * (-2/(h*np.log(10))))**2   + (set_['e_log_f_Hbeta'])**2)
                 logSigma = set_['log_sigma']
