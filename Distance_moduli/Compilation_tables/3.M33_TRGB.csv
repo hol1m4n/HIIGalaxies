@@ -11,7 +11,7 @@ RefCode,Citation,Band,mu_0,e_R,Rank,Year,Date,Comments,Author,ADS_date,JD
 2007ApJ...661..815R,Rizzi et al.2007,I(BVI),24.71,0.04,1,2007,2024,"Internal region of the galaxy, blue edge.",Valencia et al.2024,2007-06-00,2454252.5
 2008AJ....135.1482S,Stonkute et al.2008,I(BVI),24.75,0.15,2,2008,2024,Study focused on analysis and comparison of ages in clusters.,Valencia et al.2024,2008-04-00,2454557.5
 2009AJ....138..332J,Jacobs et al.2009,I(BVI),24.82,0.1,1,2009,2024,"They mention that they use the calibrator from 2007ApJ...661..815R, but there are two in that article and it is not clear which one they are referring to.",Valencia et al.2024,2009-08-00,2455044.5
-2009ApJ...704.1120U,Vivian et al. 2009,F814W(F606W F814W),24.84,0.1,1,2009,2026,There are no specific comments on the publication.,Quintero-Salazar et al.2024,2009-10-00,2455105.5
+2009ApJ...704.1120U,U et al. 2009,F814W(F606W F814W),24.84,0.10,1,2009,2026,"Final average adopted from the halo and outer-disk TRGB measurements. The Rizzi et al. calibration includes a color/metallicity term; foreground reddening E(B-V)=0.04 was assumed.",Quintero-Salazar et al.2026,2009-10-00,2455105.5
 2010ApJ...724..799Y,Yang et al.2010,F814W(F606W F814W),24.77,0.13,1,2010,2024,They focus on RR Lyrae but also calculate TRGB.,Valencia et al.2024,2010-11-00,2455501.5
 2011A&A...533A..91G,"Grossi, M. et al.2011",I(VI),24.75,0.11,2,2011,2024,There are no specific comments on the publication.,Valencia et al.2024,2011-09-00,2455805.5
 2012ApJ...758...11C,Conn et al.2012,I(gi),24.57,0.05,2,2012,2024,Obtaining the TRGB from MCMC.,Valencia et al.2024,2012-10-00,2456201.5

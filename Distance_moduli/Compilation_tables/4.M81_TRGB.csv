@@ -8,7 +8,5 @@ RefCode,Citation,Band,mu_0,e_R,Rank,Year,Date,Comments,Author,ADS_date,JD
 2009ApJS..183...67D,Dalcanton et al.2009,F814W(F606W F814W),27.77,0.02,1,2009,2024,"NED value, deep field with 198 stars.",Valencia et al.2024,2009-07-00,2455013.5
 2009ApJS..183...67D,Dalcanton et al.2009,F814W(F435W F814W),27.78,0.04,1,2009,2024,"NED value, field 29 with 551 stars.",Valencia et al.2024,2009-07-00,2455013.5
 2010ApJ...718.1118D,Dalcanton et al.2010,F814W(F606W F814W),27.86,0.06,1,2010,2024,There are no specific comments on the publication.,Valencia et al.2024,2010-08-00,2455409.5
-2012ApJ...751L..19J,Jang et al. 2012,F814W(F606W F814W),27.8,0.03,1,2012,2026,"As in NED: GClstr MESSIER 081 GROUP BCG 1 of 1, GC-1",Quintero-Salazar et al.2024,2012-05-00,2456048.5
-2012ApJ...751L..19J,Jang et al. 2012,F814W(F606W F814W),27.81,0.03,1,2012,2026,"As in NED: GClstr MESSIER 081 GROUP BCG 1 of 1, Field 1",Quintero-Salazar et al.2024,2012-05-00,2456048.5
-2012ApJ...751L..19J,Jang et al. 2012,F814W(F606W F814W),27.81,0.03,1,2012,2026,"As in NED: GClstr MESSIER 081 GROUP BCG 1 of 1, Field 2",Quintero-Salazar et al.2024,2012-05-00,2456048.5
-2012ApJ...751L..19J,Jang et al. 2012,F814W(F606W F814W),28.04,0.08,1,2012,2026,"As in NED: GClstr MESSIER 081 GROUP BCG 1 of 1, GC-2",Quintero-Salazar et al.2024,2012-05-00,2456048.5
+2012ApJ...751L..19J,Jang et al. 2012,F814W(F606W F814W),27.80,0.03,1,2012,2026,"TRGB distance of remote cluster GC-1, found to be consistent with M81. It is not a measurement of the main galaxy body; the quoted error does not include a separate calibration systematic.",Quintero-Salazar et al.2026,2012-05-00,2456048.5
+2012ApJ...751L..19J,Jang et al. 2012,F814W(F606W F814W),27.81,0.03,1,2012,2026,"Independent ACS/WFC Field-1 and WFC3/UVIS Field-2 measurements both yield 27.81+/-0.03. TRGB errors were estimated with one million bootstrap realizations.",Quintero-Salazar et al.2026,2012-05-00,2456048.5

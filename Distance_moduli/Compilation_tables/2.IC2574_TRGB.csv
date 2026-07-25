@@ -1,5 +1,5 @@
 RefCode,Citation,Band,mu_0,e_R,Rank,Year,Date,Comments,Author,ADS_date,JD
-2003A&A...398..479K,Karachentsev et al. 2003,W(VI),28.02,0.22,1,2003,2026,There are no specific comments on the publication.,Quintero-Salazar et al.2024,2003-02-00,2452671.5
+2003A&A...398..479K,Karachentsev et al. 2003,F814W(F606W F814W),28.02,0.22,1,2003,2026,"Compiled from Karachentsev et al. (2002). I_TRGB=24.04+/-0.22 and A_I=0.07 mag. No separate mu_0 error is reported; 0.22 mag represents the quoted TRGB detection uncertainty.",Quintero-Salazar et al.2026,2003-02-00,2452671.5
 2009AJ....138..332J,Jacobs et al.2009,F814W(F606W F814W),27.96,0.03,1,2009,2024,"mu_0 does not appear in the publication table because it is truncated, but it is online.",Valencia et al.2024,2009-08-00,2455044.5
 2009ApJS..183...67D,Dalcanton et al.2009,F814W(F606W F814W),27.89,0.03,1,2009,2024,There are no specific comments on the publication.,Valencia et al.2024,2009-07-00,2455013.5
 2009ApJS..183...67D,Dalcanton et al.2009,F814W(F606W F814W),27.89,0.03,1,2009,2024,There are no specific comments on the publication.,Valencia et al.2024,2009-07-00,2455013.5
