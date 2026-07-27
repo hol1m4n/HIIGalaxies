@@ -13,5 +13,4 @@ RefCode,Citation,Band,mu_0,e_R,Rank,Year,Date,Comments,Author,ADS_date,JD
 2009ApJ...703..816K,Kim et al.2009,H(JHK),24.35,0.05,2,2009,2024,Region 3.,Valencia et al.2024,2009-09-00,2455075.5
 2009ApJ...703..816K,Kim et al.2009,H(JHK),24.38,0.04,2,2009,2024,Region 1.,Valencia et al.2024,2009-09-00,2455075.5
 2009AstL...35..748T,Tikhonov & Galazutdinova 2009,F814W(F555W F606W F814W),24.47,0.11,1,2009,2026,"Median of six HST TRGB determinations, adopted over a simple mean. The modulus error is propagated from the reported D=780+/-40 kpc.",Quintero-Salazar et al.2026,2009-11-00,2455136.5
-2017ApJ...834...78M,Gerbrandt et al.2017,UKIRT/WFCAM,24.03,0.5,1,2015,2026,"No specific publication on distance, they use TRGB for CM diagram analysis.",Quintero-Salazar et al.2026,2015-11-00,2457327.5
 2017ApJ...834...78M,McQuinn et al.2017,F814W(F555W F814W),24.43,0.03,1,2017,2024,"No specific publication on distance, they use TRGB for CM diagram analysis.",Valencia et al.2024,2017-01-00,2457754.5

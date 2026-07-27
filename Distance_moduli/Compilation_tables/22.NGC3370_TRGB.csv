@@ -1,2 +1,3 @@
 RefCode,Citation,Band,mu_0,e_R,Rank,Year,Date,Comments,Author,ADS_date,JD
-2017ApJ...836...74J,Jang & Lee 2017,F814W(F555W F814W),31.751,0.049,1,2017,2026,Calibrator with LMC+N4258.,Quintero-Salazar et al.2026,2017-02-00,2457785.5
+2017ApJ...836...74J,Jang & Lee 2017,F814W(F555W F814W),32.243,0.035,1,2017,2026,"Combined-anchor blue-I result from deep archival ACS halo photometry (SMA>=2.0 arcmin). Sobel edge detection and bootstrap were used. Error is random; systematic=0.057 mag.",Quintero-Salazar et al.2026,2017-02-00,2457785.5
+2017ApJ...836...74J,Jang & Lee 2017,QT(F555W F814W),32.253,0.041,1,2017,2026,"Preferred combined-anchor QT result. QT corrects F814W for RGB color and uses a wider color interval. The artificial-star offset is 0.030 mag. Systematic=0.057 mag.",Quintero-Salazar et al.2026,2017-02-00,2457785.5
