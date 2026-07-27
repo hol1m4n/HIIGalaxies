@@ -1,6 +1,6 @@
 RefCode,Citation,Band,mu_0,e_R,Rank,Year,Date,Comments,Author,ADS_date,JD
 2000ApJ...529..745F,Ferrarese et al.2000,I (BVI),24.17,0.39,1,2000,2024,There are no specific comments on the publication.,Valencia et al.2024,2000-02-00,2451575.5
-2001ApJ...559..225H,Hunter 2001,F814W(F555W F814W),24.95,0.2,1,2001,2026,"HST/WFPC2 TRGB measurement adopting E(B-V)=0.77. The luminosity function shows only a weak break at I_0~20.8; the 0.20 mag error is the bin width. Extinction is the main systematic uncertainty.",Quintero-Salazar et al.2026,2001-09-00,2452153.5
+2001ApJ...559..225H,Hunter 2001,F814W(F555W F814W),24.95,0.2,1,2001,2026,HST/WFPC2 TRGB measurement adopting E(B-V)=0.77. The luminosity function shows only a weak break at I_0~20.8; the 0.20 mag error is the bin width. Extinction is the main systematic uncertainty.,Quintero-Salazar et al.2026,2001-09-00,2452153.5
 2007ApJ...662..272V,Vacca et al.2007,F814W(HK),24.48,0.08,2,2007,2024,E(B-V)=0.95+/-0.15.,Valencia et al.2024,2007-06-00,2454252.5
 2008ApJ...688L..69S,Sanna et al.2008,F814W(F555W F606W),24.51,0.8,1,2008,2024,There are no specific comments on the publication.,Valencia et al.2024,2008-12-00,2454801.5
 2009ApJ...703..816K,Kim et al.2009,J(JHK),24.15,0.06,2,2009,2024,Region 2.,Valencia et al.2024,2009-09-00,2455075.5

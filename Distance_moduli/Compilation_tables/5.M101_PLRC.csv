@@ -5,6 +5,7 @@ RefCode,Citation,Band,mu_0,e_R,e_S,e_T,Category,Ncef,Zcorr,zeroP,Rank,Year,Date,
 2001ApJ...549..721M,Macri et al.2001,J,29.53,0.1,,,1,8,True,LMC,1,2001,2024,External region of the galaxy.,Valencia et al.2024,2001-03-00,2451969.5
 2001ApJ...553...47F,Freedman et al.2001,W(VI),29.13,0.11,,,1,25,False,LMC,1,2001,2024,There are no specific comments on the publication.,Valencia et al.2024,2001-05-00,2452030.5
 2001ApJ...553...47F,Freedman et al.2001,W(VI),29.13,0.11,,,1,25,True,LMC,1,2001,2024,"Metallicity correction applied, systematic errors only analyzed in H0.",Valencia et al.2024,2001-05-00,2452030.5
+2002A&A...383..398P,Paturel et al. 2002,W(VI),29.3,0.07,,,3,-1,False,GC,1,2002,2026,"Preferred near-solar-metallicity solution, with modest Vlim sensitivity (+0.10/-0.01 mag). Table 6 lists 102 sosie matches rather than a verified number of distinct Cepheids.",Quintero-Salazar et al.2026,2002-02-00,2452306.5
 2002A&A...389...19P,"Paturel, G. et al.2002",W(VI),29.23,0.07,,,1,102,False,GC,1,2002,2024,Use data from Paturel et al. 2002 but with HIPPARCOS calibration.,Valencia et al.2024,2002-07-00,2452456.5
 2004ApJ...608...42S,Sakai et al.2004,BVRI,29.14,0.09,,,1,-1,False,LMC,1,2004,2024,"They calculate gamma from TRGB, outer and inner regions of the galaxy, respectively.",Valencia et al.2024,2004-06-00,2453157.5
 2004ApJ...608...42S,Sakai et al.2004,BVRI,29.24,0.08,,,1,-1,False,LMC,1,2004,2024,"They calculate gamma from TRGB, outer and inner regions of the galaxy, respectively.",Valencia et al.2024,2004-06-00,2453157.5

@@ -4,6 +4,7 @@ RefCode,Citation,Band,mu_0,e_R,e_S,e_T,Category,Ncef,Zcorr,zeroP,Rank,Year,Date,
 2001ApJ...549..721M,Macri et al.2001,H,30.25,0.12,,,1,3,True,LMC,1,2001,2026,There are no specific comments on the publication.,Quintero-Salazar et al.2024,2001-03-00,2451969.5
 2001ApJ...553...47F,Freedman et al.2001,W(VI),30.68,0.08,,,1,36,False,LMC,1,2001,2024,There are no specific comments on the publication.,Valencia et al.2024,2001-05-00,2452030.5
 2001ApJ...553...47F,Freedman et al.2001,W(VI),30.7,0.08,,,1,36,True,LMC,1,2001,2024,There are no specific comments on the publication.,Valencia et al.2024,2001-05-00,2452030.5
+2002A&A...383..398P,Paturel et al. 2002,W(VI),31.23,0.07,,,3,-1,False,GC,1,2002,2026,"Not a preferred near-solar solution. Lowering Vlim by 0.5 mag shifts mu by +0.70 mag, revealing severe incompleteness sensitivity. The 187 listed sosie matches are not a unique-star count.",Quintero-Salazar et al.2026,2002-02-00,2452306.5
 2002A&A...389...19P,"Paturel, G. et al.2002",W(VI),30.86,0.1,,,1,187,False,GC,1,2002,2024,They use data from Paturel et al. 2002 but with HIPPARCOS calibration.,Valencia et al.2024,2002-07-00,2452456.5
 2003A&A...411..361K,"Kanbur, S. M. et al.2003",W(VI),30.72,0.06,,,1,36,False,LMC,1,2003,2024,There are no specific comments on the publication.,Valencia et al.2024,2003-12-00,2452974.5
 2003A&A...411..361K,"Kanbur, S. M. et al.2003",W(VI),30.81,0.06,,,1,36,False,GC,1,2003,2024,There are no specific comments on the publication.,Valencia et al.2024,2003-12-00,2452974.5

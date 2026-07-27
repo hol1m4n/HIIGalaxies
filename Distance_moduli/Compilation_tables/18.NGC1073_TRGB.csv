@@ -1,2 +1,2 @@
 RefCode,Citation,Band,mu_0,e_R,Rank,Year,Date,Comments,Author,ADS_date,JD
-2021AstBu..76..255T,Tikhonov & Galazutdinova 2021,I(V[F606W]),30.26,0.13,1,2021,2026,"Direct HST/ACS TRGB result. No F814W image was available: V_TRGB=27.84+/-0.05 from F606W was converted using an adopted (V-I)_TRGB=1.60+/-0.05. e_R was propagated from D=11.28+/-0.70 Mpc.",Quintero-Salazar et al.2026,2021-07-00,2459396.5
+2021AstBu..76..255T,Tikhonov & Galazutdinova 2021,I(V[F606W]),30.26,0.13,1,2021,2026,Direct HST/ACS TRGB result. No F814W image was available: V_TRGB=27.84+/-0.05 from F606W was converted using an adopted (V-I)_TRGB=1.60+/-0.05. e_R was propagated from D=11.28+/-0.70 Mpc.,Quintero-Salazar et al.2026,2021-07-00,2459396.5

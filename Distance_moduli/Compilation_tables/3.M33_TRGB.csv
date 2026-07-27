@@ -1,17 +1,17 @@
 RefCode,Citation,Band,mu_0,e_R,Rank,Year,Date,Comments,Author,ADS_date,JD
 2000ApJ...529..745F,Ferrarese et al.2000,I(BVI),24.93,0.18,1,2000,2024,There are no specific comments on the publication.,Valencia et al.2024,2000-02-00,2451575.5
 2002AJ....123..244K,Kim et al.2002,I(BVI),24.81,0.04,1,2002,2024,They use bolometric correction equations and M-TRGB_bol to calculate mu_0.,Valencia et al.2024,2002-01-00,2452275.5
-2004A&A...423..925G,"Galleti, S. et al.2004",I(BVI),24.64,0.15,2,2004,2024,Seeing between 0.8'' and 1.1''. ,Valencia et al.2024,2004-09-00,2453249.5
+2004MNRAS.350..243M,McConnachie et al.2004,I(VI),24.5,0.06,2,2004,2024,They mention that it is the same calibrator as 2004AJ....128..224T but it is a different value.,Valencia et al.2024,2004-05-00,2453126.5
+2004ApJ...608...42S,Sakai et al.2004,I(VIR),24.81,0.04,1,2004,2024,There are no specific comments on the publication.,Valencia et al.2024,2004-06-00,2453157.5
 2004AJ....128..224T,Tiede et al.2004,I(VI),24.69,0.07,3,2004,2024,Description of reddening correction.,Valencia et al.2024,2004-07-00,2453187.5
 2004AJ....128..237B,Brooks et al.2004,I(BVI),24.72,0.14,2,2004,2024,There are no specific comments on the publication.,Valencia et al.2024,2004-07-00,2453187.5
-2004ApJ...608...42S,Sakai et al.2004,I(VIR),24.81,0.04,1,2004,2024,There are no specific comments on the publication.,Valencia et al.2024,2004-06-00,2453157.5
-2004MNRAS.350..243M,McConnachie et al.2004,I(VI),24.5,0.06,2,2004,2024,They mention that it is the same calibrator as 2004AJ....128..224T but it is a different value.,Valencia et al.2024,2004-05-00,2453126.5
+2004A&A...423..925G,"Galleti, S. et al.2004",I(BVI),24.64,0.15,2,2004,2024,Seeing between 0.8'' and 1.1''. ,Valencia et al.2024,2004-09-00,2453249.5
 2005MNRAS.356..979M,Rizzi et al.2005,I(VI),24.54,0.06,2,2005,2024,They mention that it is the same calibrator as 2004AJ....128..224T but it is a different value.,Valencia et al.2024,2005-01-00,2453371.5
 2007ApJ...661..815R,Rizzi et al.2007,I(BVI),24.71,0.03,1,2007,2024,"External region of the galaxy, red edge.",Valencia et al.2024,2007-06-00,2454252.5
 2007ApJ...661..815R,Rizzi et al.2007,I(BVI),24.71,0.04,1,2007,2024,"Internal region of the galaxy, blue edge.",Valencia et al.2024,2007-06-00,2454252.5
 2008AJ....135.1482S,Stonkute et al.2008,I(BVI),24.75,0.15,2,2008,2024,Study focused on analysis and comparison of ages in clusters.,Valencia et al.2024,2008-04-00,2454557.5
 2009AJ....138..332J,Jacobs et al.2009,I(BVI),24.82,0.1,1,2009,2024,"They mention that they use the calibrator from 2007ApJ...661..815R, but there are two in that article and it is not clear which one they are referring to.",Valencia et al.2024,2009-08-00,2455044.5
-2009ApJ...704.1120U,U et al. 2009,F814W(F606W F814W),24.84,0.10,1,2009,2026,"Final average adopted from the halo and outer-disk TRGB measurements. The Rizzi et al. calibration includes a color/metallicity term; foreground reddening E(B-V)=0.04 was assumed.",Quintero-Salazar et al.2026,2009-10-00,2455105.5
+2009ApJ...704.1120U,U et al. 2009,F814W(F606W F814W),24.84,0.1,1,2009,2026,Final average adopted from the halo and outer-disk TRGB measurements. The Rizzi et al. calibration includes a color/metallicity term; foreground reddening E(B-V)=0.04 was assumed.,Quintero-Salazar et al.2026,2009-10-00,2455105.5
 2010ApJ...724..799Y,Yang et al.2010,F814W(F606W F814W),24.77,0.13,1,2010,2024,They focus on RR Lyrae but also calculate TRGB.,Valencia et al.2024,2010-11-00,2455501.5
 2011A&A...533A..91G,"Grossi, M. et al.2011",I(VI),24.75,0.11,2,2011,2024,There are no specific comments on the publication.,Valencia et al.2024,2011-09-00,2455805.5
 2012ApJ...758...11C,Conn et al.2012,I(gi),24.57,0.05,2,2012,2024,Obtaining the TRGB from MCMC.,Valencia et al.2024,2012-10-00,2456201.5
