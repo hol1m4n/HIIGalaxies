@@ -6,11 +6,11 @@ RefCode,Citation,Band,mu_0,e_R,e_S,e_T,Category,Ncef,Zcorr,zeroP,Rank,Year,Date,
 2004ApJ...608...42S,Sakai et al.2004,W(VI),23.3,0.07,,,1,-1,False,LMC,1,2004,2024,There are no specific comments on the publication.,Valencia et al.2024,2004-06-00,2453157.5
 2004ApJ...608...42S,Sakai et al.2004,BVRI,23.39,0.08,,,1,-1,False,LMC,1,2004,2024,There are no specific comments on the publication.,Valencia et al.2024,2004-06-00,2453157.5
 2004AJ....128.2815P,Pietrzynski et al.2004,W(VI),23.34,0.04,0.05,0.0640312423743284,2,116,False,LMC,2,2004,2024,sigma_sys does not consider the LMC error and they mention that they do not apply a metallicity correction because it is negligible.,Valencia et al.2024,2004-12-00,2453340.5
-2006ApJS..165..108S,Saha et al.2006,W(VI),23.31,0.03,0.08,0.0854400374531753,2,21,True,LMC,1,2006,2024,They delve into the HST CTE correction.,Valencia et al.2024,2006-07-00,2453917.5
+2006ApJS..165..108S,Saha et al.2006,W(VI),23.31,0.03,0.08,0.0854400374531753,2,21,True,GC+LMC,1,2006,2024,They delve into the HST CTE correction.,Valencia et al.2024,2006-07-00,2453917.5
 2006ApJ...647.1056G,Gieren et al.2006,JK,23.31,0.02,0.06,0.0632455532033675,2,56,True,LMC,2,2006,2024,mu_LMC = 18.5 but they do not mention its error.,Valencia et al.2024,2006-08-00,2453948.5
 2009ApJ...693..936M,Madore et al.2009b,"BVRIJHK3.6,4.5,5.8,8.0",23.49,0.03,,,1,16,True,LMC,1,2009,2024,Adjustment of mu based on the extinction law curve.,Valencia et al.2024,2009-03-00,2454891.5
-2010ApJ...715..277B,Bono et al. 2010,JK(W),23.34,0.18,,,1,20,True,LMC,1,2010,2026,No comments by now.,Quintero-Salazar et al.2024,2010-05-00,2455317.5
-2010ApJ...715..277B,Bono et al. 2010,VI(W),23.38,0.22,,,1,20,True,LMC,1,2010,2026,No comments by now.,Quintero-Salazar et al.2024,2010-05-00,2455317.5
+2010ApJ...715..277B,Bono et al. 2010,JK(W),23.34,0.18,,,1,20,True,LMC,1,2010,2026,No comments by now.,Quintero-Salazar et al.2026,2010-05-00,2455317.5
+2010ApJ...715..277B,Bono et al. 2010,VI(W),23.38,0.22,,,1,20,True,LMC,1,2010,2026,No comments by now.,Quintero-Salazar et al.2026,2010-05-00,2455317.5
 2012MNRAS.421.2998F,Feast et al.2012,W(VI),23.34,,,0.04,4,32,False,LMC,3,2012,2024,"They mention that the error already contains the LMC error, but the error used is not clearly stated.",Valencia et al.2024,2012-04-00,2456018.5
 2012MNRAS.421.2998F,Feast et al.2012,3.6micras,23.36,,,0.06,4,14,True,LMC,3,2012,2024,There are no specific comments on the publication.,Valencia et al.2024,2012-04-00,2456018.5
 2012MNRAS.421.2998F,Feast et al.2012,5.8micras,23.37,,,0.14,4,6,True,LMC,3,2012,2024,There are no specific comments on the publication.,Valencia et al.2024,2012-04-00,2456018.5

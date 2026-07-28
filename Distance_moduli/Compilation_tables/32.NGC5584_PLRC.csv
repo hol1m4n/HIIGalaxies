@@ -1,4 +1,4 @@
 RefCode,Citation,Band,mu_0,e_R,e_S,e_T,Category,Ncef,Zcorr,zeroP,Rank,Year,Date,Comments,Author,ADS_date,JD
-2011ApJ...730..119R,Riess et al. 2011,BVRI,31.72,0.07,,,1,94,True,N4258+LMC+GC,1,2011,2026,Check out about the calibration.,Quintero-Salazar et al.2026,2011-04-00,2455652.5
-2013MNRAS.434.2866F,Fiorentino et al.2013,F160W,31.71,0.04,,,1,-1,True,LMC,1,2013,2026,,Quintero-Salazar et al.2026,2013-10-00,2456566.5
-2016ApJ...826...56R,Riess et al.2016,VIHK,31.79,0.05,,,1,-1,True,N4258,1,2016,2026,"The values do not appear in the article,they are online.",Quintero-Salazar et al.2026,2016-07-00,2457570.5
+2011ApJ...730..119R,Riess et al. 2011,W(H VI),31.72,0.07,,,3,-1,True,N4258+LMC+GC,1,2011,2026,"NGC5584 is a newly added SN Ia host. Figure 7 lists 94 measured Cepheids, but the post-rejection count is not reported. Its metallicity gradient is included in the simultaneous Wesenheit fit.",Quintero-Salazar et al.2026,2011-04-00,2455652.5
+2013MNRAS.434.2866F,Fiorentino et al.2013,F160W,31.71,0.04,,,1,78,True,LMC,1,2013,2026,"Pure theoretical F160W PL fit for Z=0.02, Y=0.28 and P>10 d. The 78 good Cepheids define the fit; sigma=0.32 mag. The quoted error is only the standard error of the mean.",Quintero-Salazar et al.2026,2013-10-00,2456566.5
+2016ApJ...826...56R,Riess et al.2016,VIHK,31.786,0.046,,,1,83,True,N4258,1,2016,2026,NGC 5584 result from Table 5. Approximate SN-independent distance using the metallicity-dependent NIR Wesenheit global solution.,Quintero-Salazar et al.2026,2016-07-00,2457570.5

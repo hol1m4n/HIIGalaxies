@@ -15,3 +15,4 @@ RefCode,Citation,Band,mu_0,e_R,Rank,Year,Date,Comments,Author,ADS_date,JD
 2010ApJ...724..799Y,Yang et al.2010,F814W(F606W F814W),24.77,0.13,1,2010,2024,They focus on RR Lyrae but also calculate TRGB.,Valencia et al.2024,2010-11-00,2455501.5
 2011A&A...533A..91G,"Grossi, M. et al.2011",I(VI),24.75,0.11,2,2011,2024,There are no specific comments on the publication.,Valencia et al.2024,2011-09-00,2455805.5
 2012ApJ...758...11C,Conn et al.2012,I(gi),24.57,0.05,2,2012,2024,Obtaining the TRGB from MCMC.,Valencia et al.2024,2012-10-00,2456201.5
+2025A&A...697L...6V,Vansevicius 2025,I(V I),24.626,0.008,2,2025,2026,"Subaru/Suprime-Cam V,I photometry; based on five outer-disc annuli. e_R is statistical only. TRGB zero-point, extinction, metallicity and contamination systematics were not fully quantified. No F160W data were used.",Quintero-Salazar et al.2026,2025-05-00,2460796.5
