@@ -1,1 +1,6 @@
 NGC4414 Bad data ->  Rerun.v.26/05/26
+2001ApJ...549..721M -> NGC3198 check. Creo que a Macri habra que sacarlo por que solo usan una banda y eso esta generando errores.
+2006ApJS..165..108S -> M96 check
+2006ApJS..165..108S -> NGC4414 check Habra que revisar 2006ApJS..165..108S al completo al parecer y 2001ApJ...549..721M
+NGC3198 -> Paturel 2002 dato atipico en sm_r (mia)
+2002A&A...383..398P -> Este articulo podria estar mal igual
