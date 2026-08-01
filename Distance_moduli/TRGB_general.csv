@@ -1,0 +1,90 @@
+galaxy,bibcode,citation,band,modulus,random_error,rank,year,date_rev,comments,author_rev,ads_date,julian_date
+IC0010,2000ApJ...529..745F,Ferrarese et al.2000,I (BVI),24.17,0.39,1,2000,2024,There are no specific comments on the publication.,Valencia et al.2024,2000-02-00,2451575.5
+IC0010,2001ApJ...559..225H,Hunter 2001,F814W(F555W F814W),24.95,0.2,1,2001,2026,HST/WFPC2 TRGB measurement adopting E(B-V)=0.77. The luminosity function shows only a weak break at I_0~20.8; the 0.20 mag error is the bin width. Extinction is the main systematic uncertainty.,Quintero-Salazar et al.2026,2001-09-00,2452153.5
+IC0010,2007ApJ...662..272V,Vacca et al.2007,F814W(HK),24.48,0.08,2,2007,2024,E(B-V)=0.95+/-0.15.,Valencia et al.2024,2007-06-00,2454252.5
+IC0010,2008ApJ...688L..69S,Sanna et al.2008,F814W(F555W F606W),24.51,0.8,1,2008,2024,There are no specific comments on the publication.,Valencia et al.2024,2008-12-00,2454801.5
+IC0010,2009ApJ...703..816K,Kim et al.2009,J(JHK),24.15,0.06,2,2009,2024,Region 2.,Valencia et al.2024,2009-09-00,2455075.5
+IC0010,2009ApJ...703..816K,Kim et al.2009,J(JHK),24.17,0.06,2,2009,2024,Region 1.,Valencia et al.2024,2009-09-00,2455075.5
+IC0010,2009ApJ...703..816K,Kim et al.2009,J(JHK),24.22,0.06,2,2009,2024,Region 3.,Valencia et al.2024,2009-09-00,2455075.5
+IC0010,2009ApJ...703..816K,Kim et al.2009,K(JHK),24.25,0.03,2,2009,2024,Region 3.,Valencia et al.2024,2009-09-00,2455075.5
+IC0010,2009ApJ...703..816K,Kim et al.2009,H(JHK),24.28,0.04,2,2009,2024,Region 2.,Valencia et al.2024,2009-09-00,2455075.5
+IC0010,2009ApJ...703..816K,Kim et al.2009,K(JHK),24.29,0.03,2,2009,2024,Region 1.,Valencia et al.2024,2009-09-00,2455075.5
+IC0010,2009ApJ...703..816K,Kim et al.2009,K(JHK),24.3,0.03,2,2009,2024,Region 2.,Valencia et al.2024,2009-09-00,2455075.5
+IC0010,2009ApJ...703..816K,Kim et al.2009,H(JHK),24.35,0.05,2,2009,2024,Region 3.,Valencia et al.2024,2009-09-00,2455075.5
+IC0010,2009ApJ...703..816K,Kim et al.2009,H(JHK),24.38,0.04,2,2009,2024,Region 1.,Valencia et al.2024,2009-09-00,2455075.5
+IC0010,2009AstL...35..748T,Tikhonov & Galazutdinova 2009,F814W(F555W F606W F814W),24.47,0.11,1,2009,2026,"Median of six HST TRGB determinations, adopted over a simple mean. The modulus error is propagated from the reported D=780+/-40 kpc.",Quintero-Salazar et al.2026,2009-11-00,2455136.5
+IC0010,2017ApJ...834...78M,McQuinn et al.2017,F814W(F555W F814W),24.43,0.03,1,2017,2024,"No specific publication on distance, they use TRGB for CM diagram analysis.",Valencia et al.2024,2017-01-00,2457754.5
+IC2574,2003A&A...398..479K,Karachentsev et al. 2003,F814W(F606W F814W),28.02,0.22,1,2003,2026,Compiled from Karachentsev et al. (2002). I_TRGB=24.04+/-0.22 and A_I=0.07 mag. No separate mu_0 error is reported; 0.22 mag represents the quoted TRGB detection uncertainty.,Quintero-Salazar et al.2026,2003-02-00,2452671.5
+IC2574,2009ApJS..183...67D,Dalcanton et al.2009,F814W(F606W F814W),27.89,0.03,1,2009,2024,There are no specific comments on the publication.,Valencia et al.2024,2009-07-00,2455013.5
+IC2574,2009ApJS..183...67D,Dalcanton et al.2009,F814W(F606W F814W),27.89,0.03,1,2009,2024,There are no specific comments on the publication.,Valencia et al.2024,2009-07-00,2455013.5
+IC2574,2009ApJS..183...67D,Dalcanton et al.2009,F814W(F606W F814W),27.93,0.03,1,2009,2024,There are no specific comments on the publication.,Valencia et al.2024,2009-07-00,2455013.5
+IC2574,2009AJ....138..332J,Jacobs et al.2009,F814W(F606W F814W),27.96,0.03,1,2009,2024,"mu_0 does not appear in the publication table because it is truncated, but it is online.",Valencia et al.2024,2009-08-00,2455044.5
+IC2574,2013AJ....146...86T,Tully et al.2013,F814W(F606W F814W),27.95,0.08,1,2013,2024,"Survey of 8,000 galaxies.",Valencia et al.2024,2013-10-00,2456566.5
+M33,2000ApJ...529..745F,Ferrarese et al.2000,I(BVI),24.93,0.18,1,2000,2024,There are no specific comments on the publication.,Valencia et al.2024,2000-02-00,2451575.5
+M33,2002AJ....123..244K,Kim et al.2002,I(BVI),24.81,0.04,1,2002,2024,They use bolometric correction equations and M-TRGB_bol to calculate mu_0.,Valencia et al.2024,2002-01-00,2452275.5
+M33,2004MNRAS.350..243M,McConnachie et al.2004,I(VI),24.5,0.06,2,2004,2024,They mention that it is the same calibrator as 2004AJ....128..224T but it is a different value.,Valencia et al.2024,2004-05-00,2453126.5
+M33,2004ApJ...608...42S,Sakai et al.2004,I(VIR),24.81,0.04,1,2004,2024,There are no specific comments on the publication.,Valencia et al.2024,2004-06-00,2453157.5
+M33,2004AJ....128..224T,Tiede et al.2004,I(VI),24.69,0.07,3,2004,2024,Description of reddening correction.,Valencia et al.2024,2004-07-00,2453187.5
+M33,2004AJ....128..237B,Brooks et al.2004,I(BVI),24.72,0.14,2,2004,2024,There are no specific comments on the publication.,Valencia et al.2024,2004-07-00,2453187.5
+M33,2004A&A...423..925G,"Galleti, S. et al.2004",I(BVI),24.64,0.15,2,2004,2024,Seeing between 0.8'' and 1.1''. ,Valencia et al.2024,2004-09-00,2453249.5
+M33,2005MNRAS.356..979M,Rizzi et al.2005,I(VI),24.54,0.06,2,2005,2024,They mention that it is the same calibrator as 2004AJ....128..224T but it is a different value.,Valencia et al.2024,2005-01-00,2453371.5
+M33,2007ApJ...661..815R,Rizzi et al.2007,I(BVI),24.71,0.03,1,2007,2024,"External region of the galaxy, red edge.",Valencia et al.2024,2007-06-00,2454252.5
+M33,2007ApJ...661..815R,Rizzi et al.2007,I(BVI),24.71,0.04,1,2007,2024,"Internal region of the galaxy, blue edge.",Valencia et al.2024,2007-06-00,2454252.5
+M33,2008AJ....135.1482S,Stonkute et al.2008,I(BVI),24.75,0.15,2,2008,2024,Study focused on analysis and comparison of ages in clusters.,Valencia et al.2024,2008-04-00,2454557.5
+M33,2009AJ....138..332J,Jacobs et al.2009,I(BVI),24.82,0.1,1,2009,2024,"They mention that they use the calibrator from 2007ApJ...661..815R, but there are two in that article and it is not clear which one they are referring to.",Valencia et al.2024,2009-08-00,2455044.5
+M33,2009ApJ...704.1120U,U et al. 2009,F814W(F606W F814W),24.84,0.1,1,2009,2026,Final average adopted from the halo and outer-disk TRGB measurements. The Rizzi et al. calibration includes a color/metallicity term; foreground reddening E(B-V)=0.04 was assumed.,Quintero-Salazar et al.2026,2009-10-00,2455105.5
+M33,2010ApJ...724..799Y,Yang et al.2010,F814W(F606W F814W),24.77,0.13,1,2010,2024,They focus on RR Lyrae but also calculate TRGB.,Valencia et al.2024,2010-11-00,2455501.5
+M33,2011A&A...533A..91G,"Grossi, M. et al.2011",I(VI),24.75,0.11,2,2011,2024,There are no specific comments on the publication.,Valencia et al.2024,2011-09-00,2455805.5
+M33,2012ApJ...758...11C,Conn et al.2012,I(gi),24.57,0.05,2,2012,2024,Obtaining the TRGB from MCMC.,Valencia et al.2024,2012-10-00,2456201.5
+M33,2025A&A...697L...6V,Vansevicius 2025,I(V I),24.626,0.008,2,2025,2026,"Subaru/Suprime-Cam V,I photometry; based on five outer-disc annuli. e_R is statistical only. TRGB zero-point, extinction, metallicity and contamination systematics were not fully quantified. No F160W data were used.",Quintero-Salazar et al.2026,2025-05-00,2460796.5
+M81,2004ApJ...608...42S,Sakai et al.2004,I(VIR),28.03,0.12,1,2004,2024,There are no specific comments on the publication.,Valencia et al.2024,2004-06-00,2453157.5
+M81,2005A&A...431..127T,"Tikhonov, N. A. et al.2005",I(VI),27.93,0.04,1,2005,2024,There are no specific comments on the publication.,Valencia et al.2024,2005-02-00,2453402.5
+M81,2007ApJ...661..815R,Rizzi et al.2007,I(BVI),27.69,0.04,1,2007,2024,M-TRGB_I is presented for each galaxy appearing in the publication.,Valencia et al.2024,2007-06-00,2454252.5
+M81,2009ApJS..183...67D,Dalcanton et al.2009,F814W(F606W F814W),27.72,0.06,1,2009,2024,"NED value, Halo-I with 227 stars.",Valencia et al.2024,2009-07-00,2455013.5
+M81,2009ApJS..183...67D,Dalcanton et al.2009,F814W(F606W F814W),27.77,0.04,1,2009,2024,"NED value, field 29 with 330 stars.",Valencia et al.2024,2009-07-00,2455013.5
+M81,2009ApJS..183...67D,Dalcanton et al.2009,F814W(F606W F814W),27.77,0.02,1,2009,2024,"NED value, deep field with 198 stars.",Valencia et al.2024,2009-07-00,2455013.5
+M81,2009ApJS..183...67D,Dalcanton et al.2009,F814W(F435W F814W),27.78,0.04,1,2009,2024,"NED value, field 29 with 551 stars.",Valencia et al.2024,2009-07-00,2455013.5
+M81,2009AJ....138..332J,Jacobs et al.2009,F814W(F606W F814W),27.68,0.09,1,2009,2024,"mu_0 value does not appear in the publication, only online.",Valencia et al.2024,2009-08-00,2455044.5
+M81,2010ApJ...718.1118D,Dalcanton et al.2010,F814W(F606W F814W),27.86,0.06,1,2010,2024,There are no specific comments on the publication.,Valencia et al.2024,2010-08-00,2455409.5
+M81,2012ApJ...751L..19J,Jang et al. 2012,F814W(F606W F814W),27.8,0.03,1,2012,2026,"TRGB distance of remote cluster GC-1, found to be consistent with M81. It is not a measurement of the main galaxy body; the quoted error does not include a separate calibration systematic.",Quintero-Salazar et al.2026,2012-05-00,2456048.5
+M81,2012ApJ...751L..19J,Jang et al. 2012,F814W(F606W F814W),27.81,0.03,1,2012,2026,Independent ACS/WFC Field-1 and WFC3/UVIS Field-2 measurements both yield 27.81+/-0.03. TRGB errors were estimated with one million bootstrap realizations.,Quintero-Salazar et al.2026,2012-05-00,2456048.5
+M81,2024ApJ...966..175N,Newman et al. 2024,F814W(F606W F814W),27.79,0.06,1,2024,2026,Direct F814W measurement for M81-1. e_R is the reported ML statistical error; the adopted Freedman (2021) zero point introduces shared calibration uncertainty. The error range is used considering they report asymmetric errors.,Quintero-Salazar et al.2026,2024-05-00,2460431.5
+M81,2024ApJ...966..175N,Newman et al. 2024,F814W(F606W F814W),27.8,0.1,1,2024,2026,"Direct F814W measurement for M81-2. The result agrees with M81-1 within errors; spatial selection reduces young-star, AGB and RHeB contamination. The error range is used considering they report asymmetric errors.",Quintero-Salazar et al.2026,2024-05-00,2460431.5
+M81,2024ApJ...966..175N,Newman et al. 2024,F110W(F110W F160W),27.81,0.28,1,2024,2026,M81-2 NIR remeasurement. Its uncertainty is considerably larger than for M81-1. The value is tied to the common F814W anchor and is not geometrically independent. The error range is used considering they report asymmetric errors.,Quintero-Salazar et al.2026,2024-05-00,2460431.5
+M81,2024ApJ...966..175N,Newman et al. 2024,F160W(F110W F160W),27.82,0.1,1,2024,2026,M81-2 F160W result. It agrees with both F814W fields within errors and provides an internal test rather than an independent distance anchor. The error range is used considering they report asymmetric errors.,Quintero-Salazar et al.2026,2024-05-00,2460431.5
+M81,2024ApJ...966..175N,Newman et al. 2024,F110W(F110W F160W),27.85,0.11,1,2024,2026,"M81-1 NIR remeasurement using the new color calibration. It is tied to F814W and is an internal validation, with shared calibration covariance across fields. The error range is used considering they report asymmetric errors.",Quintero-Salazar et al.2026,2024-05-00,2460431.5
+M81,2024ApJ...966..175N,Newman et al. 2024,F160W(F110W F160W),27.85,0.14,1,2024,2026,"M81-1 F160W result. Agreement with the optical modulus supports the NIR calibration, but this measurement inherits the common F814W distance scale. The error range is used considering they report asymmetric errors.",Quintero-Salazar et al.2026,2024-05-00,2460431.5
+M101,2004ApJ...608...42S,Sakai et al.2004,I(VIR),29.42,0.11,1,2004,2024,There are no specific comments on the publication.,Valencia et al.2024,2004-06-00,2453157.5
+M101,2007ApJ...661..815R,Rizzi et al.2007,I(BVI),29.34,0.09,1,2007,2024,M-TRGB_I is presented for each galaxy appearing in the publication.,Valencia et al.2024,2007-06-00,2454252.5
+M101,2011ApJ...733..124S,Shappee & Stanek 2011,I(VI),29.05,0.06,1,2011,2024,sigma_sys =0.12.,Valencia et al.2024,2011-06-00,2455713.5
+M101,2012ApJ...760L..14L,Lee & Jang 2012,I(VI),29.2,0.03,1,2011,2024,"Field 2, method 2.",Valencia et al.2024,2012-11-00,2456232.5
+M101,2012ApJ...760L..14L,Lee & Jang 2012,I(VI),29.2,0.04,1,2011,2024,"Field 3, method 2.",Valencia et al.2024,2012-11-00,2456232.5
+M101,2012ApJ...760L..14L,Lee & Jang 2012,I(VI),29.22,0.02,1,2011,2024,"Field 5, method 2.",Valencia et al.2024,2012-11-00,2456232.5
+M101,2012ApJ...760L..14L,Lee & Jang 2012,I(VI),29.24,0.02,1,2011,2024,"Field 1, method 2.",Valencia et al.2024,2012-11-00,2456232.5
+M101,2012ApJ...760L..14L,Lee & Jang 2012,I(VI),29.26,0.03,1,2011,2024,"Field 4, method 1.",Valencia et al.2024,2012-11-00,2456232.5
+M101,2012ApJ...760L..14L,Lee & Jang 2012,I(VI),29.27,0.04,1,2011,2024,"Field S2, method 1.",Valencia et al.2024,2012-11-00,2456232.5
+M101,2012ApJ...760L..14L,Lee & Jang 2012,I(VI),29.28,0.04,1,2011,2024,"Field 2, method 1.",Valencia et al.2024,2012-11-00,2456232.5
+M101,2012ApJ...760L..14L,Lee & Jang 2012,I(VI),29.28,0.03,1,2011,2024,"Field 6, method 1.",Valencia et al.2024,2012-11-00,2456232.5
+M101,2012ApJ...760L..14L,Lee & Jang 2012,I(VI),29.29,0.04,1,2011,2024,"Field S1, method 1.",Valencia et al.2024,2012-11-00,2456232.5
+M101,2012ApJ...760L..14L,Lee & Jang 2012,I(VI),29.29,0.03,1,2011,2024,"Field S04, method 1.",Valencia et al.2024,2012-11-00,2456232.5
+M101,2012ApJ...760L..14L,Lee & Jang 2012,I(VI),29.29,0.03,1,2011,2024,"Field 4, method 2.",Valencia et al.2024,2012-11-00,2456232.5
+M101,2012ApJ...760L..14L,Lee & Jang 2012,I(VI),29.29,0.03,1,2011,2024,"Field S04, method 2.",Valencia et al.2024,2012-11-00,2456232.5
+M101,2012ApJ...760L..14L,Lee & Jang 2012,I(VI),29.3,0.03,1,2011,2024,"Field 3, method 1.",Valencia et al.2024,2012-11-00,2456232.5
+M101,2012ApJ...760L..14L,Lee & Jang 2012,I(VI),29.31,0.04,1,2011,2024,"Field 6, method 2.",Valencia et al.2024,2012-11-00,2456232.5
+M101,2012ApJ...760L..14L,Lee & Jang 2012,I(VI),29.32,0.03,1,2011,2024,"Field 1, method 1.",Valencia et al.2024,2012-11-00,2456232.5
+M101,2012ApJ...760L..14L,Lee & Jang 2012,I(VI),29.33,0.02,1,2011,2024,"Field 5, method 1.",Valencia et al.2024,2012-11-00,2456232.5
+M101,2012ApJ...760L..14L,Lee & Jang 2012,I(VI),29.34,0.03,1,2011,2024,"Field S1, method 2.",Valencia et al.2024,2012-11-00,2456232.5
+M101,2012ApJ...760L..14L,Lee & Jang 2012,I(VI),29.38,0.03,1,2011,2024,"Field S2, method 2.",Valencia et al.2024,2012-11-00,2456232.5
+M101,2015AstL...41..239T,Tikhonov et al.2015,F814W(F606W F814W),29.12,0.14,1,2015,2024,Field 1.,Valencia et al.2024,2015-06-00,2457174.5
+M101,2015AstL...41..239T,Tikhonov et al.2015,F814W(F606W F814W),29.17,0.13,1,2015,2024,Field 2.,Valencia et al.2024,2015-06-00,2457174.5
+M101,2015AstL...41..239T,Tikhonov et al.2015,F814W(F606W F814W),29.19,0.14,1,2015,2024,Field 3.,Valencia et al.2024,2015-06-00,2457174.5
+M101,2017ApJ...836...74J,Jang & Lee 2017,F814W(F555W F814W),29.16,0.022,1,2017,2024,Calibrator with LMC+N4258.,Valencia et al.2024,2017-02-00,2457785.5
+M101,2018ApJS..235...23S,Sabbi et al.2018,I(VI),28.94,0.34,1,2018,2024,They mention that their calculations are conservative.,Valencia et al.2024,2018-03-00,2458178.5
+MRK116,2007AstL...33..137T,Tikhonov 2007,F814W(F555W F814W),30.72,0.19,1,2007,2026,Final modulus converted from D=13.9+/-1.2 Mpc after star-by-star internal-extinction corrections. Both components yield I_TRGB=26.8+/-0.2. Small RGB counts and the approximate extinction treatment are the main caveats.,Quintero-Salazar et al.2026,2007-03-00,2454160.5
+MRK116,2007ApJ...667L.151A,Aloisi et al.2007,I(VI),31.3,0.17,1,2007,2024,There are no specific comments on the publication.,Valencia et al.2024,2007-10-00,2454374.5
+NGC2366,2002A&A...383..125K,"Karachentsev, I. D. et al.2002",I(VI),27.52,0.28,1,2002,2024,There are no specific comments on the publication.,Valencia et al.2024,2002-01-00,2452275.5
+NGC2366,2005ApJ...627..739T,Thuan & Izotov 2005,I(VI),27.67,0.1,1,2005,2024,There are no specific comments on the publication.,Valencia et al.2024,2005-07-00,2453552.5
+NGC2366,2008ARep...52...19T,Tikhonov & Galazutdinova 2008,I(VI),27.48,0.17,1,2008,2024,There are no specific comments on the publication.,Valencia et al.2024,2008-01-00,2454466.5
+NGC2366,2009ApJS..183...67D,Dalcanton et al.2009,F814W(F606W F814W),27.54,0.03,1,2009,2024,There are no specific comments on the publication.,Valencia et al.2024,2009-07-00,2455013.5
+NGC2366,2009AJ....138..332J,Jacobs et al.2009,F814W(F606W F814W),27.57,0.03,1,2009,2024,"Valor de mu_0, sigma_ran no aparecen en la publiacion por tabla truncada.",Valencia et al.2024,2009-08-00,2455044.5
+NGC2366,2018AstBu..73...22T,Tikhonov 2018,F814W(F606W F814W),27.6,0.15,1,2018,2026,No object-specific uncertainty is tabulated; e_R is the paper's global external accuracy. Peripheral RGB stars were preferred to reduce AGB contamination and metallicity spread.,Quintero-Salazar et al.2026,2018-01-00,2458119.5
