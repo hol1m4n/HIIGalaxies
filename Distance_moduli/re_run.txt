@@ -4,3 +4,7 @@ NGC4414 Bad data ->  Rerun.v.26/05/26
 2006ApJS..165..108S -> NGC4414 check Habra que revisar 2006ApJS..165..108S al completo al parecer y 2001ApJ...549..721M
 NGC3198 -> Paturel 2002 dato atipico en sm_r (mia)
 2002A&A...383..398P -> Este articulo podria estar mal igual
+
+Bono 2010 creo revisar
+Macall 2012 revisar
+Ferrarese 2000 revisar

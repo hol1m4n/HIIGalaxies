@@ -6,17 +6,17 @@ import streamlit as st
 import re
 import pandas as pd
 
-df = pd.read_csv('TRGB_general_v1.csv')
+df = pd.read_csv('PLRC_general_v1.csv')
 df.index.name = 'id'
-df.to_sql('TRGB_data', sqlite3.connect('TRGB_database.db'), index=True, if_exists='replace')
+df.to_sql('PLRC_data', sqlite3.connect('PLRC_database.db'), index=True, if_exists='replace')
 
 # Inicializar la base de datos
 def init_db():
-    conn = sqlite3.connect("TRGB_database.db")
+    conn = sqlite3.connect("PLRC_database.db")
     c = conn.cursor()
 
     c.execute("""
-    CREATE TABLE IF NOT EXISTS TRGB_data (
+    CREATE TABLE IF NOT EXISTS PLRC_data (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         galaxy TEXT,
         bibcode TEXT,
@@ -24,6 +24,12 @@ def init_db():
         band TEXT,
         modulus REAL,
         random_error REAL,
+        systematic_error REAL,
+        total_error REAL,
+        category_error INTEGER,
+        cepheids_number INTEGER,
+        metal_correction INTEGER,
+        zero_point TEXT,
         probe_quality INTEGER,
         publication_year INTEGER,
         review_year INTEGER,
@@ -31,7 +37,7 @@ def init_db():
         review_author TEXT,
         ads_date TEXT,
         ads_jd REAL,
-        UNIQUE(galaxy, bibcode, modulus, random_error) -- Evita que se repita la combinación de estos 3 campos
+        UNIQUE(galaxy, bibcode, modulus, random_error,total_error ) -- Evita que se repita la combinación de estos 3 campos
     )
     """)
 
@@ -42,14 +48,14 @@ def init_db():
 
 
 
-# Agregar medicion de TRGB a la base de datos
+# Agregar medicion de PLRC a la base de datos
 def agregar_medicion(datos):
-    conn = sqlite3.connect("TRGB_database.db")
+    conn = sqlite3.connect("PLRC_database.db")
     c = conn.cursor()
     try:
         c.execute("""
-            INSERT INTO TRGB_data (galaxy,bibcode,citation,band,modulus,random_error,probe_quality,publication_year,review_year,comments,review_author,ads_date,ads_jd)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            INSERT INTO PLRC_data (galaxy,bibcode,citation,band,modulus,random_error,systematic_error,total_error,category_error,cepheids_number,metal_correction,zero_point,probe_quality,publication_year,review_year,comments,review_author,ads_date,ads_jd)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ,? ,? ,? ,?)
         """, datos)
         conn.commit()
         return True
@@ -61,18 +67,18 @@ def agregar_medicion(datos):
 
 
 
-# Obtener todos las mediciones de TRGB de la base de datos
+# Obtener todos las mediciones de PLRC de la base de datos
 def obtener_todas_las_mediciones():
-    conn = sqlite3.connect("TRGB_database.db")
-    df = pd.read_sql_query("SELECT id, galaxy,bibcode,citation,band,modulus,random_error,probe_quality,publication_year,review_year,comments,review_author,ads_date,ads_jd FROM TRGB_data", conn)
+    conn = sqlite3.connect("PLRC_database.db")
+    df = pd.read_sql_query("SELECT id, galaxy,bibcode,citation,band,modulus,random_error,systematic_error,total_error,category_error,cepheids_number,metal_correction,zero_point,probe_quality,publication_year,review_year,comments,review_author,ads_date,ads_jd FROM PLRC_data", conn)
     conn.close()
     return df
 
 # Eliminar medicion por ID
 def eliminar_medicion(medicion_id):
-    conn = sqlite3.connect("TRGB_database.db")
+    conn = sqlite3.connect("PLRC_database.db")
     c = conn.cursor()
-    c.execute("DELETE FROM TRGB_data WHERE id = ?", (medicion_id,))
+    c.execute("DELETE FROM PLRC_data WHERE id = ?", (medicion_id,))
     conn.commit()
     conn.close()
 
@@ -83,7 +89,7 @@ def eliminar_medicion(medicion_id):
 
 
 # Streamlit UI
-st.title("🎇 Compilation of distance measurements using the Tip of the Red Giant Branch (TRGB) method")
+st.title("🎇 Compilation of distance measurements using the Period-Luminosity Relation of Cepheids (PLRC) method")
 
 init_db()
 
@@ -108,6 +114,12 @@ if menu == "Add record":
         band = st.text_input("Photometric band")
         modulus = st.number_input("mu_0", min_value=0.0, max_value=50.0, step=0.001)
         random_error = st.number_input("Random error", min_value=0.0, max_value=50.0, step=0.001)
+        system_error = st.number_input("Systematic error", min_value=0.0, max_value=50.0, step=0.001)
+        total_error = st.number_input("Total error", min_value=0.0, max_value=50.0, step=0.001)
+        Cate = st.number_input("Category error", min_value=1, max_value=6, step=1)
+        N_Ceph = st.number_input("Number of Cepheids", min_value=-1, max_value=1000, step=1)
+        metal_cor = st.toggle("Metal correction")
+        ZP = st.text_input("Zero Point")
         rank = st.number_input("Observations origin", min_value=1, max_value=3, step=1)
         year = st.number_input("Publication year", min_value=1950, max_value=2030, step=1)
         date_rev = st.number_input("Date of review", min_value=2022, max_value=2030, step=1)
@@ -125,6 +137,13 @@ if menu == "Add record":
                     band,           # band
                     modulus,        # modulus
                     random_error,   # random_error
+                    random_error,
+                    system_error,
+                    total_error,
+                    Cate,
+                    N_Ceph,
+                    int(metal_cor),
+                    ZP,
                     rank,           # probe_quality
                     year,           # publication_year
                     date_rev,       # review_year
@@ -137,7 +156,7 @@ if menu == "Add record":
             if agregar_medicion(datos):
                 st.success("✅ Record added successfully")
             else:
-                st.error("⚠️ This record already exists (Same Galaxy, Bibcode, Modulus, Random Error).")
+                st.error("⚠️ This record already exists (Same Galaxy, Bibcode, Modulus, Random Error, Total Error).")
 
 
 
@@ -145,10 +164,10 @@ if menu == "Add record":
 elif menu == "Query by galaxy":
     nombre_galaxia = st.text_input("Introduce the name of the galaxy:")
     if nombre_galaxia:
-        conn = sqlite3.connect("TRGB_database.db")
+        conn = sqlite3.connect("PLRC_database.db")
         query = f"""
-            SELECT id, galaxy,bibcode,citation,band,modulus,random_error,probe_quality,publication_year,review_year,comments,review_author,ads_date,ads_jd
-            FROM TRGB_data
+            SELECT id, galaxy,bibcode,citation,band,modulus,random_error,systematic_error,total_error,category_error,cepheids_number,metal_correction,zero_point,probe_quality,publication_year,review_year,comments,review_author,ads_date,ads_jd
+            FROM PLRC_data
             WHERE galaxy LIKE ?
         """
         df = pd.read_sql_query(query, conn, params=[f"%{nombre_galaxia}%"])
@@ -164,10 +183,10 @@ elif menu == "Query by galaxy":
 elif menu == "Query by bibcode":
     bibcode = st.text_input("Introduce the bibcode:")
     if bibcode:
-        conn = sqlite3.connect("TRGB_database.db")
+        conn = sqlite3.connect("PLRC_database.db")
         query = f"""
-            SELECT id, galaxy,bibcode,citation,band,modulus,random_error,probe_quality,publication_year,review_year,comments,review_author,ads_date,ads_jd
-            FROM TRGB_data
+            SELECT id, galaxy,bibcode,citation,band,modulus,random_error,systematic_error,total_error,category_error,cepheids_number,metal_correction,zero_point,probe_quality,publication_year,review_year,comments,review_author,ads_date,ads_jd
+            FROM PLRC_data
             WHERE bibcode LIKE ?
         """
         df = pd.read_sql_query(query, conn, params=[f"%{bibcode}%"])
