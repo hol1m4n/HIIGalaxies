@@ -44,6 +44,9 @@ from astropy.time import Time
 import matplotlib.dates as mdates
 from joblib import Parallel, delayed
 
+import time
+
+
 ###### Funciones
 
 
@@ -124,6 +127,11 @@ def cochran_error(modulus,error):
 
 def nestedsampling_error(modulus,error,steps=10000, Name='', group = ''):
 
+    inicio = time.time()
+
+    modulus = np.array(modulus)
+    error = np.array(error)
+
     def prior_transform(x):
         mu = 20 * x + 20
         return mu
@@ -174,6 +182,14 @@ def nestedsampling_error(modulus,error,steps=10000, Name='', group = ''):
     chi2_red = chi2_map / nu
 
     sigma2_corr = T_sample.std() * chi2_red
+
+
+
+    fin = time.time()
+    # Calcular la duración
+    duracion = fin - inicio
+    print(f"Tiempo transcurrido: {duracion:.5f} segundos")
+
 
     return [T_sample.std(),sigma2_corr]
 

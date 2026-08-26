@@ -1,0 +1,22 @@
+theory:
+  classy: null
+likelihood:
+  sn.pantheonplus: null
+  bao.desi_2024_bao_all: null
+params:
+  H0:
+    prior:
+      min: 50
+      max: 100
+    ref: 70
+    proposal: 1
+  omega_b: 0.02237
+  Omega_m:
+    prior:
+      min: 0.1
+      max: 0.9
+    ref: 0.3
+    proposal: 0.02
+sampler:
+  mcmc: null
+output: test
