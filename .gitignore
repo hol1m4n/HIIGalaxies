@@ -9,3 +9,4 @@ FADO/
 __pycache__/
 .ipynb_checkpoints/
 *.pyc
+Bayesian_samplers/Multinest/logs_Ho/

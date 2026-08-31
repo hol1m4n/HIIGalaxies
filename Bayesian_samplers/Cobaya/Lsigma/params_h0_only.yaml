@@ -1,0 +1,26 @@
+# -----------------------------------------------------------------
+# Parametrización 1: SOLO H0 libre.
+# Om_m, n_s, As, tau y omega_b se fijan al fiducial de Planck 2018;
+# omega_cdm queda fijo también (no se re-deriva), por lo que Om_m
+# varía ligeramente con H0 -- es el análogo directo del modo "High"
+# de tu script original con FlatLambdaCDM (w0=-1 implícito en CLASS).
+# -----------------------------------------------------------------
+theory:
+  classy:
+    extra_args:
+      non_linear: none
+
+params:
+  H0:
+    prior: {min: 50, max: 90}
+    ref: {dist: norm, loc: 70, scale: 3}
+    proposal: 2
+    latex: H_0
+  omega_b: 0.02237
+  omega_cdm: 0.1200
+  n_s: 0.9649
+  ln10^{10}A_s: 3.044
+  tau_reio: 0.0544
+  Omega_m:
+    derived: 'lambda omega_b, omega_cdm, H0: (omega_b+omega_cdm)/((H0/100)**2)'
+    latex: \Omega_m

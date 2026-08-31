@@ -1,6 +1,38 @@
 import pandas as pd
 from itertools import product
 
+HIIG_dataset_file = [
+    "Compilation2026_mockE.csv"
+]
+
+
+'''
+HIIG_dataset_file = [
+    "Compilation2026_mockD.csv"
+]
+
+HIIG_dataset_file = [
+    "Compilation2026_mockC.csv"
+]
+
+
+HIIG_dataset_file = [
+    "Compilation2026_mockB.csv"
+]
+
+HIIG_dataset_file = [
+    "Compilation2026_mockA.csv"
+]
+
+HIIG_dataset_file = [
+    "Compilation2026_Ch12data.csv"
+]
+
+HIIG_dataset_file = [
+    "Compilation2026_main.csv"
+]
+'''
+
 
 calibrator_sets = [
     {
@@ -35,19 +67,19 @@ error_kinds = [
 
 redshift_regimes = [
     {
-        "name": "HM_Local",
+        "name": "MockE_Local",
         "analysis_mode": "High",
         "zmax": 0.20,
         "label": "z <= 0.20",
     },
     {
-        "name": "HM_Intermediate",
+        "name": "MockE_Intermediate",
         "analysis_mode": "High",
         "zmax": 1.5,
         "label": "z <= 1.5",
     },
     {
-        "name": "HM_Full",
+        "name": "MockE_Full",
         "analysis_mode": "High",
         "zmax": None,
         "label": "all z",
@@ -57,6 +89,148 @@ redshift_regimes = [
 
 
 '''
+
+redshift_regimes = [
+    {
+        "name": "MockD_Local",
+        "analysis_mode": "High",
+        "zmax": 0.20,
+        "label": "z <= 0.20",
+    },
+    {
+        "name": "MockD_Intermediate",
+        "analysis_mode": "High",
+        "zmax": 1.5,
+        "label": "z <= 1.5",
+    },
+    {
+        "name": "MockD_Full",
+        "analysis_mode": "High",
+        "zmax": None,
+        "label": "all z",
+    },
+]
+
+******************************************
+
+redshift_regimes = [
+    {
+        "name": "MockC_Local",
+        "analysis_mode": "High",
+        "zmax": 0.20,
+        "label": "z <= 0.20",
+    },
+    {
+        "name": "MockC_Intermediate",
+        "analysis_mode": "High",
+        "zmax": 1.5,
+        "label": "z <= 1.5",
+    },
+    {
+        "name": "MockC_Full",
+        "analysis_mode": "High",
+        "zmax": None,
+        "label": "all z",
+    },
+]
+
+******************************************
+
+redshift_regimes = [
+    {
+        "name": "MockB_Local",
+        "analysis_mode": "High",
+        "zmax": 0.20,
+        "label": "z <= 0.20",
+    },
+    {
+        "name": "MockB_Intermediate",
+        "analysis_mode": "High",
+        "zmax": 1.5,
+        "label": "z <= 1.5",
+    },
+    {
+        "name": "MockB_Full",
+        "analysis_mode": "High",
+        "zmax": None,
+        "label": "all z",
+    },
+]
+
+
+******************************************
+
+redshift_regimes = [
+    {
+        "name": "MockA_Local",
+        "analysis_mode": "High",
+        "zmax": 0.20,
+        "label": "z <= 0.20",
+    },
+    {
+        "name": "MockA_Intermediate",
+        "analysis_mode": "High",
+        "zmax": 1.5,
+        "label": "z <= 1.5",
+    },
+    {
+        "name": "MockA_Full",
+        "analysis_mode": "High",
+        "zmax": None,
+        "label": "all z",
+    },
+]
+
+******************************************
+
+redshift_regimes = [
+    {
+        "name": "Liter_Local",
+        "analysis_mode": "High",
+        "zmax": 0.20,
+        "label": "z <= 0.20",
+    },
+    {
+        "name": "Liter_Intermediate",
+        "analysis_mode": "High",
+        "zmax": 1.5,
+        "label": "z <= 1.5",
+    },
+    {
+        "name": "Liter_Full",
+        "analysis_mode": "High",
+        "zmax": None,
+        "label": "all z",
+    },
+]
+
+******************************************
+
+redshift_regimes = [
+    {
+        "name": "Main_Local",
+        "analysis_mode": "High",
+        "zmax": 0.20,
+        "label": "z <= 0.20",
+    },
+    {
+        "name": "Main_Intermediate",
+        "analysis_mode": "High",
+        "zmax": 1.5,
+        "label": "z <= 1.5",
+    },
+    {
+        "name": "Main_Full",
+        "analysis_mode": "High",
+        "zmax": None,
+        "label": "all z",
+    },
+]
+
+
+******************************************
+
+
 
 redshift_regimes = [
     {
@@ -129,6 +303,7 @@ for calibrator, err, regime in product(calibrator_sets, error_kinds, redshift_re
             "main_title": main_title,
             "folder_name": folder_name,
             "id_prefix": id_prefix,
+            "dataset": HIIG_dataset_file[0],
         }
     )
 

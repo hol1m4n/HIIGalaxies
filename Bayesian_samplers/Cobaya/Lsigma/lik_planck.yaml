@@ -1,0 +1,8 @@
+# Likelihoods Planck 2018 (temperatura, polarización y lensing).
+# Requiere haberlos instalado con: cobaya-install planck_2018_highl_plik.TTTEEE_lite_native
+# (o el conjunto plik "full" con nuisance params, si prefieres esa versión).
+likelihood:
+  planck_2018_lowl.TT: null
+  planck_2018_lowl.EE: null
+  planck_2018_highl_plik.TTTEEE_lite_native: null
+  planck_2018_lensing.clik: null

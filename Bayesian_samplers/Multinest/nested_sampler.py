@@ -18,6 +18,9 @@ from astropy import constants as const
 from matplotlib.offsetbox import OffsetImage, AnnotationBbox
 import matplotlib.image as mpimg
 
+import ast
+from pprint import pprint
+
 class Lsig_Ho_sampler:
     def __init__(self,
                  data_frame = None,
@@ -170,7 +173,7 @@ class Lsig_Ho_sampler:
             n_dims=n_dims,
             outputfiles_basename=self.prefix,
             evidence_tolerance=0.5,
-            n_live_points=2500,
+            n_live_points=3000, # 2500 valor real, 100 para debugging
             multimodal=True,
             verbose=False
         )
@@ -320,6 +323,50 @@ class Lsig_Ho_sampler:
             else:
                 return 0
 
+
+
+    def leer_o_crear_logfile(self,ruta=None):
+        if ruta is not None:
+            dict_nulo = {
+                'alpha': [0.0],
+                'alpha_e':  [0.0],
+                'beta':  [0.0],
+                'beta_e':  [0.0],
+                'h':  [0.0],
+                'h_e':  [0.0],
+                'GEHR':  [0.0],
+                'GEHR_hosts':  [0.0],
+                'HIIG':  [0.0],
+            }
+
+            if not os.path.exists(ruta):
+                print(f"Archivo no encontrado. Creando {ruta} con valores iniciales...")
+                with open(ruta, 'w') as f:
+                    import pprint
+                    f.write(pprint.pformat(dict_nulo, sort_dicts=False))
+                return dict_nulo
+
+            try:
+                with open(ruta, 'r') as f:
+                    contenido = f.read().strip()
+                    
+                    if not contenido: 
+                        return dict_nulo
+                    return ast.literal_eval(contenido)
+
+            except (SyntaxError, ValueError):
+                print(f"Error de formato en {ruta}. Cargando valores por defecto.")
+                return dict_nulo
+
+
+    def guardar_logfile(self,ruta=None, diccionario=None):
+        if ruta is not None and diccionario is not None:
+            with open(ruta, 'w') as f:
+                from pprint import pformat
+                f.write(pformat(diccionario, sort_dicts=False))
+
+
+
     def run_plotter(self):
         
         results_path = self.prefix
@@ -345,7 +392,7 @@ class Lsig_Ho_sampler:
         print(f"Lista: {np.unique(concat_filter_DF[concat_filter_DF['origin_id'] == 0.0]['GEHR_id'])}")
 
 
-        fig, ax = plt.subplots(figsize=(28, 22), dpi = 100)
+        fig, ax = plt.subplots(figsize=(35, 22), dpi = 100)
 
         for obj in range(9):
             self.L_sigma_plotter(DF=concat_filter_DF,
@@ -374,6 +421,34 @@ class Lsig_Ho_sampler:
         ax.add_artist(ab)
 
 
+        concat_filter_DF = self.group_reader(DF = self.data_frame,
+                            group = self.distance_estimator_set,
+                            error_kind = self.estimator_error_kind).to_pandas()
+
+        # 1. Filtrar el DataFrame original
+        GEHR_selected = concat_filter_DF[concat_filter_DF['origin_id'] == 0.0].copy() # .copy() evita el SettingWithCopyWarning
+        # 2. Renombrar las columnas
+        GEHR_selected.rename(columns={'GEHR_id': 'Id', 'z_or_mu': 'mu', 'e_z_or_e_mu': 'e_mu'}, inplace=True)
+        # 3. Seleccionar solo las 3 columnas que quieres mostrar
+        columns_to_show = GEHR_selected[["Id", "mu", "e_mu"]]
+        # 4. Eliminar filas duplicadas manteniendo la relación correcta entre Id, mu y e_mu
+        df_unicos = columns_to_show.drop_duplicates()
+        # 5. Crear la tabla usando .values (pasa los datos en formato de filas y columnas correcto)
+        table = ax.table(
+            cellText=df_unicos.values,  # Estructura limpia de filas x columnas
+            colLabels=["Id", "mu", "e_mu"],  
+            loc="lower center",  
+            cellLoc="center",
+            colWidths=[0.15, 0.15, 0.15]
+        )
+
+        for position, cell in table.get_celld().items():
+            cell.set_height(0.02)
+
+        table.auto_set_font_size(False)
+        table.set_fontsize(17)
+        table.scale(0.8, 1.0) # Scale the table size
+
 
         ax.set_xlabel(r"$\log_{10}\, \sigma\ \mathrm{(km\ s^{-1})}$", fontsize = 50)
         ax.set_ylabel(r"$\log_{10}\, L\ \mathrm{(erg\ s^{-1})}$", fontsize = 50)
@@ -391,6 +466,24 @@ class Lsig_Ho_sampler:
                 f'GEHR:{len(concat_filter_DF[concat_filter_DF['origin_id'] == 0.0])} , GEHR hosts:{len(np.unique(concat_filter_DF[concat_filter_DF['origin_id'] == 0.0]['GEHR_id']))} , HIIG:{len(concat_filter_DF[concat_filter_DF['origin_id'] != 0.0])}',
                 title_fontsize=40,
                 fontsize = 30)
+
+
+        self.leer_o_crear_logfile(ruta=f"{self.prefix}Results.txt")
+
+        dict_resultado = {
+            'alpha': alpha_mean,
+            'alpha_e':  alpha_err,
+            'beta':  beta_mean,
+            'beta_e':  beta_err,
+            'h':  h_mean,
+            'h_e':  h_err,
+            'GEHR':  len(concat_filter_DF[concat_filter_DF['origin_id'] == 0.0]),
+            'GEHR_hosts':  len(np.unique(concat_filter_DF[concat_filter_DF['origin_id'] == 0.0]['GEHR_id'])),
+            'HIIG':  len(concat_filter_DF[concat_filter_DF['origin_id'] != 0.0]),
+        }
+
+        self.guardar_logfile(ruta=f"{self.prefix}Results.txt",
+                             diccionario= dict_resultado)
 
         #plt.tight_layout()
         fig.savefig(self.prefix + "L-sigmaPlot.png", dpi=150, bbox_inches="tight")

@@ -1,0 +1,8 @@
+# Configuración de muestreador, común a todas las combinaciones.
+# El prefijo de salida se define en la línea de comandos con -o.
+sampler:
+  mcmc:
+    Rminus1_stop: 0.01
+    max_tries: 1000
+    drag: false
+    oversample_power: 0.4

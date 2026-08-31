@@ -73,7 +73,7 @@ def main():
 
     # Lee datos L-sigma
     LSdata_df = pd.read_csv(
-        "Compilation2026.csv",
+        job["dataset"],
         comment="#",
         index_col=False,
         dtype={"GEHR_id": str},
@@ -87,6 +87,7 @@ def main():
     print(f"Total input objects: {len(LS_tab)}")
     print(f"Objects after cut:   {len(data_cut)}")
     print(f"zmax:                {zmax}")
+    print(data_cut)
 
     ns.Lsig_Ho_sampler(
         data_frame=data_cut,

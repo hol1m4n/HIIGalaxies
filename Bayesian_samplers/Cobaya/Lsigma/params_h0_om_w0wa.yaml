@@ -1,0 +1,40 @@
+# -----------------------------------------------------------------
+# Parametrización 3: H0, Omega_m, w0, wa -- CPL (Chevallier-Polarski-
+# Linder), w(a) = w0 + wa*(1-a). Igual que el archivo anterior pero
+# con wa_fld libre en vez de fijo a 0.
+# -----------------------------------------------------------------
+theory:
+  classy:
+    extra_args:
+      non_linear: none
+      Omega_Lambda: 0.0
+      use_ppf: 'yes'
+
+params:
+  H0:
+    prior: {min: 50, max: 90}
+    ref: {dist: norm, loc: 70, scale: 3}
+    proposal: 2
+    latex: H_0
+  omega_b: 0.02237
+  n_s: 0.9649
+  ln10^{10}A_s: 3.044
+  tau_reio: 0.0544
+  Omega_m:
+    prior: {min: 0.05, max: 0.6}
+    ref: {dist: norm, loc: 0.3, scale: 0.02}
+    proposal: 0.01
+    latex: \Omega_m
+  omega_cdm:
+    value: 'lambda Omega_m, omega_b, H0: Omega_m*(H0/100)**2 - omega_b'
+    derived: false
+  w0_fld:
+    prior: {min: -2.0, max: -0.3}
+    ref: {dist: norm, loc: -1.0, scale: 0.05}
+    proposal: 0.02
+    latex: w_0
+  wa_fld:
+    prior: {min: -3.0, max: 2.0}
+    ref: {dist: norm, loc: 0.0, scale: 0.1}
+    proposal: 0.05
+    latex: w_a

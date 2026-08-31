@@ -1,0 +1,63 @@
+packages_path: /home/holman/cobaya_packages
+
+theory:
+  classy:
+    extra_args:
+      non_linear: none
+      Omega_Lambda: 0.0     # fuerza el fluido oscuro en vez de Lambda
+      use_ppf: 'yes'        # necesario si w cruza -1
+
+likelihood:
+  lsigma_hiig_likelihood.LSigmaHIIG:
+    python_path: /home/holman/HIIGalaxies/Bayesian_samplers/Cobaya/Lsigma/
+    data_file: Compilation2026.csv
+    group_file: GEHR_Cepheids.csv     # tabla de anclas con mu_w vía Cefeidas
+    error_kind: sigma_w
+    zmax: 7.0
+
+params:
+  alpha_ls:
+    prior: {min: 20.0, max: 40.0}
+    ref: {dist: norm, loc: 30.0, scale: 0.5}
+    proposal: 0.2
+    latex: \alpha
+  beta_ls:
+    prior: {min: 0.0, max: 10.0}
+    ref: {dist: norm, loc: 5.0, scale: 0.3}
+    proposal: 0.1
+    latex: \beta
+
+  H0:
+    prior: {min: 50, max: 90}
+    ref: {dist: norm, loc: 70, scale: 3}
+    proposal: 2
+    latex: H_0
+  omega_b: 0.02237
+  n_s: 0.9649
+  ln10^{10}A_s: 3.044
+  tau_reio: 0.0544
+  Omega_m:
+    prior: {min: 0.05, max: 0.6}
+    ref: {dist: norm, loc: 0.3, scale: 0.02}
+    proposal: 0.01
+    latex: \Omega_m
+  omega_cdm:
+    value: 'lambda Omega_m, omega_b, H0: Omega_m*(H0/100)**2 - omega_b'
+    derived: false
+  w0_fld:
+    prior: {min: -2.0, max: -0.3}
+    ref: {dist: norm, loc: -1.0, scale: 0.05}
+    proposal: 0.02
+    latex: w_{DE}
+  wa_fld: 0.0
+
+sampler:
+  mcmc:
+    Rminus1_stop: 0.01
+    max_tries: 1000
+    drag: false
+    oversample_power: 0.4
+
+debug: false
+
+output: chains/three/cepheids_h0

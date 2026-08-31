@@ -1,0 +1,16 @@
+calibrator_name,distance_estimator_set,estimator_error_kind,regime_name,analysis_mode,zmax,main_title,folder_name,id_prefix,dataset
+Cep-nZeR,sm_r.csv,sigma_w,MockC_Local,High,0.2,"L-sigma test: MockC_Local Universe (z <= 0.20), Set: Cep-nZeR, error: sigma_w",MockC_Local_CepnZeR_sigma_w,high_cepnzer_sigma_w_zle0p2,Compilation2026_mockC.csv
+Cep-nZeR,sm_r.csv,sigma_w,MockC_Intermediate,High,1.5,"L-sigma test: MockC_Intermediate Universe (z <= 1.5), Set: Cep-nZeR, error: sigma_w",MockC_Intermediate_CepnZeR_sigma_w,high_cepnzer_sigma_w_zle1p5,Compilation2026_mockC.csv
+Cep-nZeR,sm_r.csv,sigma_w,MockC_Full,High,None,"L-sigma test: MockC_Full Universe (all z), Set: Cep-nZeR, error: sigma_w",MockC_Full_CepnZeR_sigma_w,high_cepnzer_sigma_w_allz,Compilation2026_mockC.csv
+Cep-cZeR,cm_r.csv,sigma_w,MockC_Local,High,0.2,"L-sigma test: MockC_Local Universe (z <= 0.20), Set: Cep-cZeR, error: sigma_w",MockC_Local_CepcZeR_sigma_w,high_cepczer_sigma_w_zle0p2,Compilation2026_mockC.csv
+Cep-cZeR,cm_r.csv,sigma_w,MockC_Intermediate,High,1.5,"L-sigma test: MockC_Intermediate Universe (z <= 1.5), Set: Cep-cZeR, error: sigma_w",MockC_Intermediate_CepcZeR_sigma_w,high_cepczer_sigma_w_zle1p5,Compilation2026_mockC.csv
+Cep-cZeR,cm_r.csv,sigma_w,MockC_Full,High,None,"L-sigma test: MockC_Full Universe (all z), Set: Cep-cZeR, error: sigma_w",MockC_Full_CepcZeR_sigma_w,high_cepczer_sigma_w_allz,Compilation2026_mockC.csv
+Cep-nZeT,sm_t.csv,sigma_w,MockC_Local,High,0.2,"L-sigma test: MockC_Local Universe (z <= 0.20), Set: Cep-nZeT, error: sigma_w",MockC_Local_CepnZeT_sigma_w,high_cepnzet_sigma_w_zle0p2,Compilation2026_mockC.csv
+Cep-nZeT,sm_t.csv,sigma_w,MockC_Intermediate,High,1.5,"L-sigma test: MockC_Intermediate Universe (z <= 1.5), Set: Cep-nZeT, error: sigma_w",MockC_Intermediate_CepnZeT_sigma_w,high_cepnzet_sigma_w_zle1p5,Compilation2026_mockC.csv
+Cep-nZeT,sm_t.csv,sigma_w,MockC_Full,High,None,"L-sigma test: MockC_Full Universe (all z), Set: Cep-nZeT, error: sigma_w",MockC_Full_CepnZeT_sigma_w,high_cepnzet_sigma_w_allz,Compilation2026_mockC.csv
+Cep-cZeT,cm_t.csv,sigma_w,MockC_Local,High,0.2,"L-sigma test: MockC_Local Universe (z <= 0.20), Set: Cep-cZeT, error: sigma_w",MockC_Local_CepcZeT_sigma_w,high_cepczet_sigma_w_zle0p2,Compilation2026_mockC.csv
+Cep-cZeT,cm_t.csv,sigma_w,MockC_Intermediate,High,1.5,"L-sigma test: MockC_Intermediate Universe (z <= 1.5), Set: Cep-cZeT, error: sigma_w",MockC_Intermediate_CepcZeT_sigma_w,high_cepczet_sigma_w_zle1p5,Compilation2026_mockC.csv
+Cep-cZeT,cm_t.csv,sigma_w,MockC_Full,High,None,"L-sigma test: MockC_Full Universe (all z), Set: Cep-cZeT, error: sigma_w",MockC_Full_CepcZeT_sigma_w,high_cepczet_sigma_w_allz,Compilation2026_mockC.csv
+TRGB,t_r.csv,sigma_w,MockC_Local,High,0.2,"L-sigma test: MockC_Local Universe (z <= 0.20), Set: TRGB, error: sigma_w",MockC_Local_TRGB_sigma_w,high_trgb_sigma_w_zle0p2,Compilation2026_mockC.csv
+TRGB,t_r.csv,sigma_w,MockC_Intermediate,High,1.5,"L-sigma test: MockC_Intermediate Universe (z <= 1.5), Set: TRGB, error: sigma_w",MockC_Intermediate_TRGB_sigma_w,high_trgb_sigma_w_zle1p5,Compilation2026_mockC.csv
+TRGB,t_r.csv,sigma_w,MockC_Full,High,None,"L-sigma test: MockC_Full Universe (all z), Set: TRGB, error: sigma_w",MockC_Full_TRGB_sigma_w,high_trgb_sigma_w_allz,Compilation2026_mockC.csv

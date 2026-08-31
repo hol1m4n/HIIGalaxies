@@ -1,0 +1,23 @@
+# Likelihood HIIG_Cepheids: relación L-sigma con GEHR calibrados via Cefeidas.
+# Ajusta data_file/group_file/error_kind a tus rutas reales.
+# `lsigma_hiig_likelihood.py` debe estar en el mismo directorio que este
+# .yaml o en tu PYTHONPATH, para que Cobaya pueda importarlo por su ruta
+# de clase completa.
+likelihood:
+  lsigma_hiig_likelihood.LSigmaHIIG:
+    data_file: Compilation2026.csv
+    group_file: GEHR_Cepheids.csv     # tabla de anclas con mu_w vía Cefeidas
+    error_kind: sigma_w
+    zmax: 7.0
+
+params:
+  alpha_ls:
+    prior: {min: 20.0, max: 40.0}
+    ref: {dist: norm, loc: 30.0, scale: 0.5}
+    proposal: 0.2
+    latex: \alpha
+  beta_ls:
+    prior: {min: 0.0, max: 10.0}
+    ref: {dist: norm, loc: 5.0, scale: 0.3}
+    proposal: 0.1
+    latex: \beta
