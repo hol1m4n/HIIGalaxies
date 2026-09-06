@@ -1,0 +1,72 @@
+# Cobaya + CLASS configuration for the L-sigma / Planck analysis.
+# Run from the package root, e.g.
+#   cobaya-run yaml/H0/hiig_cepheids.yaml --test
+# then
+#   mpirun -np 4 cobaya-run yaml/H0/hiig_cepheids.yaml
+# If your Cobaya packages are not in the default location, add e.g.
+# packages_path: /path/to/cobaya_packages
+
+theory:
+  classy:
+    extra_args:
+      non linear: none
+      Omega_k: 0.0
+      N_ncdm: 0
+      N_ur: 3.044
+likelihood:
+  lsigma_hiig_likelihood.LSigmaHIIG:
+    python_path: .
+    data_file: Compilation2026.csv
+    anchor_file: GEHR_Cepheids.csv
+    anchor_mu_column: mu_w
+    anchor_error_column: sigma_w
+    zmax: 7.0
+    include_logdet: true
+    correlate_host_mu: true
+    sigma_v_pec_kms: 0.0
+    anchor_cov_file: null
+params:
+  alpha_ls:
+    prior:
+      min: 20.0
+      max: 40.0
+    ref:
+      dist: norm
+      loc: 33.0
+      scale: 0.5
+    proposal: 0.1
+    latex: \alpha_{L\sigma}
+  beta_ls:
+    prior:
+      min: 0.0
+      max: 10.0
+    ref:
+      dist: norm
+      loc: 5.0
+      scale: 0.2
+    proposal: 0.05
+    latex: \beta_{L\sigma}
+  sigma_int: 0.0
+  H0:
+    prior:
+      min: 50.0
+      max: 100.0
+    ref:
+      dist: norm
+      loc: 70.0
+      scale: 2.0
+    proposal: 0.5
+    latex: H_0
+  Omega_m:
+    value: 0.3
+    latex: \Omega_m
+sampler:
+  mcmc:
+    drag: true
+    oversample_power: 0.4
+    proposal_scale: 1.9
+    covmat: auto
+    Rminus1_stop: 0.01
+    Rminus1_cl_stop: 0.2
+output: chains/H0/hiig_cepheids
+resume: true

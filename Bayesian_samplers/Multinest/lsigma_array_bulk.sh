@@ -2,7 +2,7 @@
 #SBATCH --job-name=LsHo
 #SBATCH --output=/home/holman/HIIGalaxies/Bayesian_samplers/Multinest/logs_Ho/LsHo_%A_%a.out
 #SBATCH --error=/home/holman/HIIGalaxies/Bayesian_samplers/Multinest/logs_Ho/LsHo_%A_%a.err
-#SBATCH --array=0-14%10
+#SBATCH --array=0-104%10
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=1
 #SBATCH --mem=4G

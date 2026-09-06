@@ -1,0 +1,312 @@
+theory:
+  classy:
+    path: null
+    speed: 0.2
+    stop_at_error: false
+    extra_args:
+      non linear: hmcode
+      Omega_k: 0.0
+      N_ncdm: 1
+      N_ur: 2.0328
+      Omega_Lambda: 0.0
+      fluid_equation_of_state: CLP
+      use_ppf: 'yes'
+      wa_fld: 0.0
+    ignore_obsolete: false
+    renames:
+      As: A_s
+      ns: n_s
+      nrun: alpha_s
+      nrunrun: beta_s
+      nt: n_t
+      ntrun: alpha_t
+      rdrag: rs_drag
+      omegak: Omega_k
+      omegal: Omega_Lambda
+      w: w0_fld
+      wa: wa_fld
+      omegabh2: omega_b
+      omegab: Omega_b
+      omegach2: omega_cdm
+      omegac: Omega_cdm
+      omegam: Omega_m
+      omegan: Omega_nu
+      tau: tau_reio
+      zrei: z_reio
+      deltazrei: reionization_width
+      helium_redshift: helium_fullreio_redshift
+      helium_delta_redshift: helium_fullreio_width
+      yhe: YHe
+      yheused: YHe
+    version: v3.3.4
+    input_params:
+    - A_s
+    - n_s
+    - omega_b
+    - tau_reio
+    - m_ncdm
+    - H0
+    - Omega_m
+    - w0_fld
+    output_params: []
+likelihood:
+  planck_2018_lowl.TT:
+    lmin: 2
+    lmax: 29
+    type: CMB
+    aliases:
+    - lowT
+    speed: -1
+    stop_at_error: false
+    version: null
+    input_params:
+    - A_planck
+    output_params: []
+  planck_2018_lowl.EE:
+    type: CMB
+    aliases:
+    - lowE
+    speed: -1
+    stop_at_error: false
+    version: null
+    input_params:
+    - A_planck
+    output_params: []
+  planck_2018_highl_plik.TTTEEE_lite_native:
+    path: null
+    dataset_file: plik_lite_v22.dataset
+    dataset_params:
+      use_cl: tt te ee
+    aliases:
+    - plikHM_TTTEEE
+    speed: 200
+    type: CMB
+    stop_at_error: false
+    version: null
+    input_params:
+    - A_planck
+    output_params: []
+  planck_2018_lensing.native:
+    path: null
+    dataset_file: lensing/2018/smicadx12_Dec5_ftl_mv2_ndclpp_p_teb_consext8.dataset
+    dataset_params: null
+    l_max: null
+    aliases:
+    - lensing
+    speed: 50
+    type: CMB
+    map_separator: x
+    stop_at_error: false
+    version: null
+    input_params:
+    - A_planck
+    output_params: []
+  lsigma_hiig_likelihood.LSigmaHIIG:
+    data_file: Compilation2026.csv
+    anchor_file: GEHR_TRGB.csv
+    anchor_cov_file: null
+    data_host_column: GEHR_id
+    origin_column: origin_id
+    z_or_mu_column: z_or_mu
+    z_or_mu_error_column: e_z_or_e_mu
+    log_sigma_column: log_sigma
+    e_log_sigma_column: e_log_sigma
+    log_flux_column: log_f_Hbeta
+    e_log_flux_column: e_log_f_Hbeta
+    anchor_host_column: Galaxia
+    anchor_mu_column: mu_w
+    anchor_error_column: sigma_w
+    mu_constant: 100.19477738511641
+    zmax: 7.0
+    include_logdet: true
+    correlate_host_mu: true
+    sigma_v_pec_kms: 0.0
+    type: []
+    speed: -1
+    stop_at_error: false
+    version: null
+    python_path: .
+    input_params:
+    - alpha_ls
+    - beta_ls
+    - sigma_int
+    output_params: []
+params:
+  logA:
+    prior:
+      min: 1.61
+      max: 3.91
+    ref:
+      dist: norm
+      loc: 3.045
+      scale: 0.01
+    proposal: 0.001
+    latex: \log(10^{10}A_s)
+    drop: true
+  A_s:
+    value: 'lambda logA: 1e-10*np.exp(logA)'
+    latex: A_s
+    derived: true
+    renames:
+    - As
+  n_s:
+    prior:
+      min: 0.8
+      max: 1.2
+    ref:
+      dist: norm
+      loc: 0.965
+      scale: 0.004
+    proposal: 0.002
+    latex: n_s
+    renames:
+    - ns
+  omega_b:
+    prior:
+      min: 0.005
+      max: 0.1
+    ref:
+      dist: norm
+      loc: 0.0224
+      scale: 0.0001
+    proposal: 0.0001
+    latex: \Omega_b h^2
+    renames:
+    - omegabh2
+  tau_reio:
+    prior:
+      min: 0.01
+      max: 0.8
+    ref:
+      dist: norm
+      loc: 0.055
+      scale: 0.006
+    proposal: 0.003
+    latex: \tau_{\rm reio}
+    renames:
+    - tau
+  m_ncdm:
+    value: 0.06
+    renames: mnu
+  alpha_ls:
+    prior:
+      min: 20.0
+      max: 40.0
+    ref:
+      dist: norm
+      loc: 33.0
+      scale: 0.5
+    proposal: 0.1
+    latex: \alpha_{L\sigma}
+  beta_ls:
+    prior:
+      min: 0.0
+      max: 10.0
+    ref:
+      dist: norm
+      loc: 5.0
+      scale: 0.2
+    proposal: 0.05
+    latex: \beta_{L\sigma}
+  sigma_int:
+    derived: false
+    value: 0.0
+  H0:
+    prior:
+      min: 50.0
+      max: 100.0
+    ref:
+      dist: norm
+      loc: 70.0
+      scale: 2.0
+    proposal: 0.5
+    latex: H_0
+  Omega_m:
+    prior:
+      min: 0.05
+      max: 0.6
+    ref:
+      dist: norm
+      loc: 0.3
+      scale: 0.03
+    proposal: 0.01
+    latex: \Omega_m
+    renames:
+    - omegam
+  w0_fld:
+    prior:
+      min: -2.5
+      max: -0.3
+    ref:
+      dist: norm
+      loc: -0.95
+      scale: 0.05
+    proposal: 0.03
+    latex: w_{\rm DE}
+    renames:
+    - w
+  A_planck:
+    prior:
+      dist: norm
+      loc: 1
+      scale: 0.0025
+    ref:
+      dist: norm
+      loc: 1
+      scale: 0.002
+    proposal: 0.0005
+    latex: y_\mathrm{cal}
+    renames: calPlanck
+  chi2__CMB:
+    latex: \chi^2_\mathrm{CMB}
+    derived: true
+sampler:
+  mcmc:
+    sampler_type: mcmc
+    supports_periodic_params: true
+    burn_in: 0
+    max_tries: 40d
+    covmat: auto
+    covmat_params: null
+    proposal_scale: 1.9
+    output_every: 60s
+    learn_every: 40d
+    temperature: 1
+    learn_proposal: true
+    learn_proposal_Rminus1_max: 2.0
+    learn_proposal_Rminus1_max_early: 30.0
+    learn_proposal_Rminus1_min: 0.0
+    max_samples: .inf
+    Rminus1_stop: 0.01
+    Rminus1_cl_stop: 0.2
+    Rminus1_cl_level: 0.95
+    Rminus1_single_split: 4
+    measure_speeds: true
+    oversample_power: 0.5
+    oversample_thin: true
+    drag: true
+    blocking:
+    - - 1
+      - - logA
+        - n_s
+        - omega_b
+        - tau_reio
+        - H0
+        - Omega_m
+        - w0_fld
+    - - 18
+      - - A_planck
+    - - 18
+      - - alpha_ls
+        - beta_ls
+    callback_function: null
+    callback_every: null
+    seed: null
+    check_every: null
+    oversample: null
+    drag_limits: null
+    fallback_covmat_scale: 4
+    version: 3.6.2
+packages_path: /home/holman/cobaya_packages
+output: planck_hiig_trgb
+version: 3.6.2

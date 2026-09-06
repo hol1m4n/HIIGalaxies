@@ -1,0 +1,84 @@
+theory:
+  classy:
+    extra_args:
+      non linear: none
+      Omega_k: 0.0
+      N_ncdm: 0
+      N_ur: 3.044
+      Omega_Lambda: 0.0
+      fluid_equation_of_state: CLP
+      use_ppf: 'yes'
+      wa_fld: 0.0
+likelihood:
+  lsigma_hiig_likelihood.LSigmaHIIG:
+    python_path: .
+    data_file: Compilation2026.csv
+    anchor_file: GEHR_Cepheids.csv
+    anchor_mu_column: mu_w
+    anchor_error_column: sigma_w
+    zmax: 7.0
+    include_logdet: true
+    correlate_host_mu: true
+    sigma_v_pec_kms: 0.0
+    anchor_cov_file: null
+params:
+  alpha_ls:
+    prior:
+      min: 20.0
+      max: 40.0
+    ref:
+      dist: norm
+      loc: 33.0
+      scale: 0.5
+    proposal: 0.1
+    latex: \alpha_{L\sigma}
+  beta_ls:
+    prior:
+      min: 0.0
+      max: 10.0
+    ref:
+      dist: norm
+      loc: 5.0
+      scale: 0.2
+    proposal: 0.05
+    latex: \beta_{L\sigma}
+  sigma_int: 0.0
+  H0:
+    prior:
+      min: 50.0
+      max: 100.0
+    ref:
+      dist: norm
+      loc: 70.0
+      scale: 2.0
+    proposal: 0.5
+    latex: H_0
+  Omega_m:
+    prior:
+      min: 0.05
+      max: 0.6
+    ref:
+      dist: norm
+      loc: 0.3
+      scale: 0.03
+    proposal: 0.01
+    latex: \Omega_m
+  w0_fld:
+    prior:
+      min: -2.5
+      max: -0.3
+    ref:
+      dist: norm
+      loc: -0.95
+      scale: 0.05
+    proposal: 0.03
+    latex: w_{\rm DE}
+sampler:
+  mcmc:
+    drag: true
+    oversample_power: 0.4
+    proposal_scale: 1.9
+    covmat: auto
+    Rminus1_stop: 0.01
+    Rminus1_cl_stop: 0.2
+output: hiig_cepheids

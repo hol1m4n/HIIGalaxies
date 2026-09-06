@@ -212,7 +212,7 @@ class Lsig_Ho_sampler:
         )
         g = plots.getSubplotPlotter()
         g.settings.num_plot_contours = 4
-        g.triangle_plot([gds], filled=True, title_limit=1)
+        g.triangle_plot([gds], filled=True, title_limit=1, colors=['red'])
 
         #titulo = g.fig.suptitle(f"{self.main_title}", fontsize=16, y=1.03)
 
@@ -257,7 +257,7 @@ def select_redshift_cut(tab, zmax):
 
 # Lee datos L-sigma
 LSdata_df = pd.read_csv(
-    "Compilation2026.csv",
+    "Compilation2026_Ch12data.csv",
     comment="#",
     index_col=False,
     dtype={"GEHR_id": str},
@@ -268,15 +268,23 @@ LS_tab = Table.from_pandas(LSdata_df)
 data_cut = select_redshift_cut(LS_tab, 7)
 
 
+#Lsig_Ho_sampler(
+#    data_frame=data_cut,
+#    distance_estimator_set='GEHR_base.csv',
+#    estimator_error_kind='sigma_w',
+#    main_title="L-sigma test: HM 5 parameters",
+#    folder_name="Five_par_Full_cosmo_Fullsample",
+#    analysis_mode='High',
+#    id_prefix='Five_Fc_Fs',
+#)
+
 Lsig_Ho_sampler(
     data_frame=data_cut,
-    distance_estimator_set='GEHR_base.csv',
+    distance_estimator_set='t_r.csv',
     estimator_error_kind='sigma_w',
     main_title="L-sigma test: HM 5 parameters",
-    folder_name="Five_par_Full_cosmo_Fullsample",
+    folder_name="Five_par_Full_TR",
     analysis_mode='High',
     id_prefix='Five_Fc_Fs',
 )
-
-
 

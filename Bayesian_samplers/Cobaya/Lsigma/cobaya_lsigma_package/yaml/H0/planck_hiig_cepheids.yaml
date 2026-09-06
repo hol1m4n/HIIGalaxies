@@ -1,0 +1,123 @@
+# Cobaya + CLASS configuration for the L-sigma / Planck analysis.
+# Run from the package root, e.g.
+#   cobaya-run yaml/H0/planck_hiig_cepheids.yaml --test
+# then
+#   mpirun -np 4 cobaya-run yaml/H0/planck_hiig_cepheids.yaml
+# If your Cobaya packages are not in the default location, add e.g.
+# packages_path: /path/to/cobaya_packages
+
+theory:
+  classy:
+    extra_args:
+      non linear: hmcode
+      Omega_k: 0.0
+      N_ncdm: 1
+      N_ur: 2.0328
+likelihood:
+  planck_2018_lowl.TT: null
+  planck_2018_lowl.EE: null
+  planck_2018_highl_plik.TTTEEE_lite_native: null
+  planck_2018_lensing.native: null
+  lsigma_hiig_likelihood.LSigmaHIIG:
+    python_path: .
+    data_file: Compilation2026.csv
+    anchor_file: GEHR_Cepheids.csv
+    anchor_mu_column: mu_w
+    anchor_error_column: sigma_w
+    zmax: 7.0
+    include_logdet: true
+    correlate_host_mu: true
+    sigma_v_pec_kms: 0.0
+    anchor_cov_file: null
+params:
+  logA:
+    prior:
+      min: 1.61
+      max: 3.91
+    ref:
+      dist: norm
+      loc: 3.045
+      scale: 0.01
+    proposal: 0.001
+    latex: \log(10^{10}A_s)
+    drop: true
+  A_s:
+    value: 'lambda logA: 1e-10*np.exp(logA)'
+    latex: A_s
+  n_s:
+    prior:
+      min: 0.8
+      max: 1.2
+    ref:
+      dist: norm
+      loc: 0.965
+      scale: 0.004
+    proposal: 0.002
+    latex: n_s
+  omega_b:
+    prior:
+      min: 0.005
+      max: 0.1
+    ref:
+      dist: norm
+      loc: 0.0224
+      scale: 0.0001
+    proposal: 0.0001
+    latex: \Omega_b h^2
+  tau_reio:
+    prior:
+      min: 0.01
+      max: 0.8
+    ref:
+      dist: norm
+      loc: 0.055
+      scale: 0.006
+    proposal: 0.003
+    latex: \tau_{\rm reio}
+  m_ncdm:
+    value: 0.06
+    renames: mnu
+  alpha_ls:
+    prior:
+      min: 20.0
+      max: 40.0
+    ref:
+      dist: norm
+      loc: 33.0
+      scale: 0.5
+    proposal: 0.1
+    latex: \alpha_{L\sigma}
+  beta_ls:
+    prior:
+      min: 0.0
+      max: 10.0
+    ref:
+      dist: norm
+      loc: 5.0
+      scale: 0.2
+    proposal: 0.05
+    latex: \beta_{L\sigma}
+  sigma_int: 0.0
+  H0:
+    prior:
+      min: 50.0
+      max: 100.0
+    ref:
+      dist: norm
+      loc: 70.0
+      scale: 2.0
+    proposal: 0.5
+    latex: H_0
+  Omega_m:
+    value: 0.3
+    latex: \Omega_m
+sampler:
+  mcmc:
+    drag: true
+    oversample_power: 0.4
+    proposal_scale: 1.9
+    covmat: auto
+    Rminus1_stop: 0.01
+    Rminus1_cl_stop: 0.2
+output: chains/H0/planck_hiig_cepheids
+resume: true
