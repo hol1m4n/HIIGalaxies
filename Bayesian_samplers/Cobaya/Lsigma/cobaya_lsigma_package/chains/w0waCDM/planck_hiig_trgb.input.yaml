@@ -1,13 +1,3 @@
-# Cobaya + CLASS configuration for the L-sigma / Planck analysis.
-# Run from the package root, e.g.
-#   cobaya-run yaml/w0waCDM/planck_hiig_trgb.yaml --test
-# then
-#   mpirun -np 4 cobaya-run yaml/w0waCDM/planck_hiig_trgb.yaml
-# If your Cobaya packages are not in the default location, add e.g.
-# packages_path: /path/to/cobaya_packages
-
-packages_path: /home/holman/cobaya_packages
-
 theory:
   classy:
     extra_args:
@@ -151,5 +141,5 @@ sampler:
     covmat: auto
     Rminus1_stop: 0.01
     Rminus1_cl_stop: 0.2
-output: chains/w0waCDM/planck_hiig_trgb
-resume: true
+packages_path: /home/holman/cobaya_packages
+output: planck_hiig_trgb

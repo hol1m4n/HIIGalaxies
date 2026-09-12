@@ -6,6 +6,8 @@
 # If your Cobaya packages are not in the default location, add e.g.
 # packages_path: /path/to/cobaya_packages
 
+packages_path: /home/holman/cobaya_packages
+
 theory:
   classy:
     extra_args:
@@ -144,7 +146,7 @@ params:
 sampler:
   mcmc:
     drag: true
-    oversample_power: 0.4
+    oversample_power: 0.5
     proposal_scale: 1.9
     covmat: auto
     Rminus1_stop: 0.01
