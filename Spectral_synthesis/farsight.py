@@ -176,6 +176,10 @@ class SpectralSynthesis:
         else:
             return None
 
+
+    # Cambio temporal, esto tiene que arreglarse de manera dinamica para agregar otros valores de metalicidad
+    # Por ahora solo voy a agregar Bruzual 2019
+
     def metallicity_conversion_to_solar(self,standard = True,data_frame=None):
         if standard:
             metal_conversion = [
@@ -190,7 +194,30 @@ class SpectralSynthesis:
             data_frame['sun_met'] = np.select(metal_conversion, solar_equival, default=0.0)
             return data_frame
         else:
-            print('Determine metallicity conversion')
+            metal_conversion = [
+                (data_frame['Z_j']==0.0000),
+                (data_frame['Z_j']==0.0001),
+                (data_frame['Z_j']==0.0002),
+                (data_frame['Z_j']==0.0005),
+                (data_frame['Z_j']==0.001),
+                (data_frame['Z_j']==0.002),
+                (data_frame['Z_j']==0.004),
+                (data_frame['Z_j']==0.006),
+                (data_frame['Z_j']==0.008),
+                (data_frame['Z_j']==0.010),
+                (data_frame['Z_j']==0.014),
+                (data_frame['Z_j']==0.017),
+                (data_frame['Z_j']==0.020),
+                (data_frame['Z_j']==0.030),
+                (data_frame['Z_j']==0.040),
+                (data_frame['Z_j']==0.060),
+            ]
+            solar_equival = [0.000,0.0066,0.0132,0.0329,
+                            0.0658,0.1316,0.2632,0.3947,
+                            0.5263,0.6579,0.9211,1.1184,
+                            1.3158,1.9737,2.6316,3.9474,]
+            data_frame['sun_met'] = np.select(metal_conversion, solar_equival, default=0.0)
+            return data_frame
 
     def SFH_smooth_FADO(self,h_dex=0.08, ngrid=1000, renorm=True):
         if self.SSP_utils is not None:
@@ -553,7 +580,7 @@ class Starlight(SpectralSynthesis):
         name_tmp = self.path.replace('.out','.fits')
         FITS_file = fits.open(name_tmp)
         PV = Table.read(FITS_file[1])
-        POPS_TABLE = self.metallicity_conversion_to_solar(standard = True,data_frame=PV)
+        POPS_TABLE = self.metallicity_conversion_to_solar(standard = False,data_frame=PV)
         self.population_vector = POPS_TABLE
         FITS_file.close()
 
@@ -689,7 +716,14 @@ class Fado(SpectralSynthesis):
         light_frac,mass_corr,mass_ini,age,log_age,Zs_metal = PV_data[0][0:N_base] * 100,PV_data[4][0:N_base] / 100,PV_data[8][0:N_base] / 100,PV_data[37][0:N_base],PV_data[38][0:N_base],PV_data[39][0:N_base]
         PV = Table([light_frac,mass_corr,mass_ini,age,log_age,Zs_metal],
                 names = ('x_j','Mcor_j','Mini_j','age_j','logage_j','Z_j'))
-        POPS_TABLE = self.metallicity_conversion_to_solar(standard = True,data_frame=PV)
+        POPS_TABLE = self.metallicity_conversion_to_solar(standard = False,data_frame=PV) # Arreglar luego
+        
+
+        # Salvar para que no explote cuando haya una edad de cero
+
+        eps = np.finfo(POPS_TABLE['age_j'].dtype).eps
+        POPS_TABLE['age_j'][POPS_TABLE['age_j'] == 0.0] = eps
+
         self.population_vector = POPS_TABLE
         FITS_file.close()
 
