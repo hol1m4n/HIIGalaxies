@@ -9,8 +9,8 @@ RefCode,Citation,Band,mu_0,e_R,e_S,e_T,Category,Ncef,Zcorr,zeroP,Rank,Year,Date,
 2006ApJS..165..108S,Saha et al.2006,W(VI),23.31,0.03,0.08,0.0854400374531753,2,21,True,GC+LMC,1,2006,2024,They delve into the HST CTE correction.,Valencia et al.2024,2006-07-00,2453917.5
 2006ApJ...647.1056G,Gieren et al.2006,JK,23.31,0.02,0.06,0.0632455532033675,2,56,True,LMC,2,2006,2024,mu_LMC = 18.5 but they do not mention its error.,Valencia et al.2024,2006-08-00,2453948.5
 2009ApJ...693..936M,Madore et al.2009b,"BVRIJHK3.6,4.5,5.8,8.0",23.49,0.03,,,1,16,True,LMC,1,2009,2024,Adjustment of mu based on the extinction law curve.,Valencia et al.2024,2009-03-00,2454891.5
-2010ApJ...715..277B,Bono et al. 2010,JK(W),23.34,0.18,,,1,20,True,LMC,1,2010,2026,No comments by now.,Quintero-Salazar et al.2026,2010-05-00,2455317.5
-2010ApJ...715..277B,Bono et al. 2010,VI(W),23.38,0.22,,,1,20,True,LMC,1,2010,2026,No comments by now.,Quintero-Salazar et al.2026,2010-05-00,2455317.5
+2010ApJ...715..277B,Bono et al. 2010,W(JK),23.34,0.18,,,3,20,True,LMC,2,2010,2026,"LMC-relative near-infrared Wesenheit result. It implies 23.34 mag after adding 18.50, but that absolute value is not separately tabulated.",Quintero-Salazar et al.2026,2010-05-00,2455317.5
+2010ApJ...715..277B,Bono et al. 2010,W(VI),23.38,0.22,,,3,20,True,LMC,2,2010,2026,"Absolute homogeneous W(VI) modulus from Table 15. The paper finds negligible average metallicity dependence for W(VI), but reports no separate systematic error.",Quintero-Salazar et al.2026,2010-05-00,2455317.5
 2012MNRAS.421.2998F,Feast et al.2012,W(VI),23.34,,,0.04,4,32,False,LMC,3,2012,2024,"They mention that the error already contains the LMC error, but the error used is not clearly stated.",Valencia et al.2024,2012-04-00,2456018.5
 2012MNRAS.421.2998F,Feast et al.2012,3.6micras,23.36,,,0.06,4,14,True,LMC,3,2012,2024,There are no specific comments on the publication.,Valencia et al.2024,2012-04-00,2456018.5
 2012MNRAS.421.2998F,Feast et al.2012,5.8micras,23.37,,,0.14,4,6,True,LMC,3,2012,2024,There are no specific comments on the publication.,Valencia et al.2024,2012-04-00,2456018.5

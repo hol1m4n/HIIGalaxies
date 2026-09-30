@@ -6,7 +6,7 @@ import streamlit as st
 import re
 import pandas as pd
 
-df = pd.read_csv('PLRC_general_v1.csv')
+df = pd.read_csv('PLRC_general_v1.1.csv')
 df.index.name = 'id'
 df.to_sql('PLRC_data', sqlite3.connect('PLRC_database.db'), index=True, if_exists='replace')
 
@@ -97,7 +97,7 @@ menu = st.sidebar.selectbox("Menu", [
     "Add record", 
     "Query by galaxy", 
     "Query by bibcode", 
-    #"Query by citation",
+    "Query by citation",
     #"Query by year",
     #"Query by band", 
     "Show all records",
@@ -198,7 +198,22 @@ elif menu == "Query by bibcode":
             st.warning("No measurements found for that bibcode.")
 
 
+elif menu == "Query by citation":
+    citation = st.text_input("Introduce citation:")
+    if citation:
+        conn = sqlite3.connect("PLRC_database.db")
+        query = f"""
+            SELECT id, galaxy,bibcode,citation,band,modulus,random_error,systematic_error,total_error,category_error,cepheids_number,metal_correction,zero_point,probe_quality,publication_year,review_year,comments,review_author,ads_date,ads_jd
+            FROM PLRC_data
+            WHERE citation LIKE ?
+        """
+        df = pd.read_sql_query(query, conn, params=[f"%{citation}%"])
+        conn.close()
 
+        if not df.empty:
+            st.dataframe(df)
+        else:
+            st.warning("No measurements found for that citation.")
 
 
 
