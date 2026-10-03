@@ -1,0 +1,2 @@
+galaxy,bibcode,citation,band,modulus,random_error,systematic_error,total_error,category_error,cepheids_number,metal_correction,zero_point,probe_quality,publication_year,review_year,comments,review_author,ads_date,ads_jd
+NGC4414,2006ApJS..165..108S,Saha et al.2006,W(VI),31.65,0.17,0.08,0.1878829422805593,2,10,True,GC+LMC,1,2006,2026,Final metallicity-corrected modulus from only 10 retained Cepheids. The uncorrected GC/LMC values are 31.55/31.29 mag; the comparatively large random error reflects the small and scattered sample.,Quintero-Salazar et al.2026,2006-07-00,2453917.5

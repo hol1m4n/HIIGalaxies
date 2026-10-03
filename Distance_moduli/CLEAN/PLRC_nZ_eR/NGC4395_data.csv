@@ -1,0 +1,2 @@
+galaxy,bibcode,citation,band,modulus,random_error,systematic_error,total_error,category_error,cepheids_number,metal_correction,zero_point,probe_quality,publication_year,review_year,comments,review_author,ads_date,ads_jd
+NGC4395,2004AJ....127.2322T,Tammann et al.2004,W(ri),28.02,0.18,,,1,11,False,LMC,3,2004,2024,They use synthetic transformations to apply LMC RPL to the gri bands.,Valencia et al.2024,2004-04-00,2453096.5

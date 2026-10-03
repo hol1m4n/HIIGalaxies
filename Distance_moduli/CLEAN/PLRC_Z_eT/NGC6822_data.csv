@@ -1,0 +1,11 @@
+galaxy,bibcode,citation,band,modulus,random_error,systematic_error,total_error,category_error,cepheids_number,metal_correction,zero_point,probe_quality,publication_year,review_year,comments,review_author,ads_date,ads_jd
+NGC6822,2006ApJS..165..108S,Saha et al.2006,W(VI),23.31,0.03,0.08,0.0854400374531753,2,21,True,GC+LMC,1,2006,2024,They delve into the HST CTE correction.,Valencia et al.2024,2006-07-00,2453917.5
+NGC6822,2006ApJ...647.1056G,Gieren et al.2006,JK,23.31,0.02,0.06,0.0632455532033675,2,56,True,LMC,2,2006,2024,mu_LMC = 18.5 but they do not mention its error.,Valencia et al.2024,2006-08-00,2453948.5
+NGC6822,2012MNRAS.421.2998F,Feast et al.2012,3.6micras,23.36,,,0.06,4,14,True,LMC,3,2012,2024,There are no specific comments on the publication.,Valencia et al.2024,2012-04-00,2456018.5
+NGC6822,2012MNRAS.421.2998F,Feast et al.2012,5.8micras,23.37,,,0.14,4,6,True,LMC,3,2012,2024,There are no specific comments on the publication.,Valencia et al.2024,2012-04-00,2456018.5
+NGC6822,2012MNRAS.421.2998F,Feast et al.2012,4.5micras,23.4,,,0.08,4,12,True,LMC,3,2012,2024,There are no specific comments on the publication.,Valencia et al.2024,2012-04-00,2456018.5
+NGC6822,2012MNRAS.421.2998F,Feast et al.2012,8micras,23.4,,,0.14,4,2,True,LMC,3,2012,2024,There are no specific comments on the publication.,Valencia et al.2024,2012-04-00,2456018.5
+NGC6822,2012MNRAS.421.2998F,Feast et al.2012,JKs,23.42,,,0.03,4,32,True,LMC,3,2012,2024,"They mention that the error already contains the LMC error, but the error used is not clearly stated.",Valencia et al.2024,2012-04-00,2456018.5
+NGC6822,2014ApJ...794..107R,Rich et al.2014,"BVRIJHK3.6,4.5micras",23.38,0.02,0.04,0.0447213595499957,2,34,True,LMC,1,2014,2024,"They adjust the extinction law for each Cepheid with multiband and obtain the median of the distribution, adopting mu_LMC =18.44+/-0.03.",Valencia et al.2024,2014-10-00,2456931.5
+NGC6822,2014A&A...572A..64M,Majewski et al.2014,3.6micras,23.27,0.07,0.15,0.1655294535724684,2,-1,True,LMC,1,2014,2024,Internal region.,Valencia et al.2024,2014-12-00,2456992.5
+NGC6822,2014A&A...572A..64M,Majewski et al.2014,3.6micras,23.32,0.05,0.16,0.1676305461424021,2,-1,True,LMC,1,2014,2024,External region.,Valencia et al.2024,2014-12-00,2456992.5

@@ -1,0 +1,2 @@
+galaxy,bibcode,citation,band,modulus,random_error,systematic_error,total_error,category_error,cepheids_number,metal_correction,zero_point,probe_quality,publication_year,review_year,comments,review_author,ads_date,ads_jd
+NGC4414,2000ApJ...529..723G,Gibson et al. 2000,W(VI),31.41,0.1,0.16,0.188679622641132,2,-1,False,LMC,1,2000,2026,"Values based on Turner et al. (1998).They apply metallicity correction but just for Ho, not modulus",Quintero-Salazar et al.2026,2000-02-00,2451575.5
