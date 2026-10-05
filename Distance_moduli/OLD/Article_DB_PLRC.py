@@ -29,7 +29,7 @@ def init_db():
         category_error INTEGER,
         cepheids_number INTEGER,
         metal_correction INTEGER,
-        zero_point TEXT,
+        anchor TEXT,
         probe_quality INTEGER,
         publication_year INTEGER,
         review_year INTEGER,
@@ -54,7 +54,7 @@ def agregar_medicion(datos):
     c = conn.cursor()
     try:
         c.execute("""
-            INSERT INTO PLRC_data (galaxy,bibcode,citation,band,modulus,random_error,systematic_error,total_error,category_error,cepheids_number,metal_correction,zero_point,probe_quality,publication_year,review_year,comments,review_author,ads_date,ads_jd)
+            INSERT INTO PLRC_data (galaxy,bibcode,citation,band,modulus,random_error,systematic_error,total_error,category_error,cepheids_number,metal_correction,anchor,probe_quality,publication_year,review_year,comments,review_author,ads_date,ads_jd)
             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ,? ,? ,? ,?)
         """, datos)
         conn.commit()
@@ -70,7 +70,7 @@ def agregar_medicion(datos):
 # Obtener todos las mediciones de PLRC de la base de datos
 def obtener_todas_las_mediciones():
     conn = sqlite3.connect("PLRC_database.db")
-    df = pd.read_sql_query("SELECT id, galaxy,bibcode,citation,band,modulus,random_error,systematic_error,total_error,category_error,cepheids_number,metal_correction,zero_point,probe_quality,publication_year,review_year,comments,review_author,ads_date,ads_jd FROM PLRC_data", conn)
+    df = pd.read_sql_query("SELECT id, galaxy,bibcode,citation,band,modulus,random_error,systematic_error,total_error,category_error,cepheids_number,metal_correction,anchor,probe_quality,publication_year,review_year,comments,review_author,ads_date,ads_jd FROM PLRC_data", conn)
     conn.close()
     return df
 
@@ -166,7 +166,7 @@ elif menu == "Query by galaxy":
     if nombre_galaxia:
         conn = sqlite3.connect("PLRC_database.db")
         query = f"""
-            SELECT id, galaxy,bibcode,citation,band,modulus,random_error,systematic_error,total_error,category_error,cepheids_number,metal_correction,zero_point,probe_quality,publication_year,review_year,comments,review_author,ads_date,ads_jd
+            SELECT id, galaxy,bibcode,citation,band,modulus,random_error,systematic_error,total_error,category_error,cepheids_number,metal_correction,anchor,probe_quality,publication_year,review_year,comments,review_author,ads_date,ads_jd
             FROM PLRC_data
             WHERE galaxy LIKE ?
         """
@@ -185,7 +185,7 @@ elif menu == "Query by bibcode":
     if bibcode:
         conn = sqlite3.connect("PLRC_database.db")
         query = f"""
-            SELECT id, galaxy,bibcode,citation,band,modulus,random_error,systematic_error,total_error,category_error,cepheids_number,metal_correction,zero_point,probe_quality,publication_year,review_year,comments,review_author,ads_date,ads_jd
+            SELECT id, galaxy,bibcode,citation,band,modulus,random_error,systematic_error,total_error,category_error,cepheids_number,metal_correction,anchor,probe_quality,publication_year,review_year,comments,review_author,ads_date,ads_jd
             FROM PLRC_data
             WHERE bibcode LIKE ?
         """
@@ -203,7 +203,7 @@ elif menu == "Query by citation":
     if citation:
         conn = sqlite3.connect("PLRC_database.db")
         query = f"""
-            SELECT id, galaxy,bibcode,citation,band,modulus,random_error,systematic_error,total_error,category_error,cepheids_number,metal_correction,zero_point,probe_quality,publication_year,review_year,comments,review_author,ads_date,ads_jd
+            SELECT id, galaxy,bibcode,citation,band,modulus,random_error,systematic_error,total_error,category_error,cepheids_number,metal_correction,anchor,probe_quality,publication_year,review_year,comments,review_author,ads_date,ads_jd
             FROM PLRC_data
             WHERE citation LIKE ?
         """

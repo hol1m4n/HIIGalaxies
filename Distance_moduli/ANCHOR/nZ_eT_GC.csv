@@ -1,0 +1,2 @@
+galaxy,bibcode,citation,band,modulus,random_error,systematic_error,total_error,category_error,cepheids_number,metal_correction,anchor,probe_quality,publication_year,review_year,comments,review_author,ads_date,ads_jd
+NGC4258,2008MNRAS.390.1762D,Di Benedetto 2008,W(VI),29.28,0.03,0.03,0.0424264068711928,2,-1,False,GC,1,2008,2024,Detailed article from 2008MNRAS.390.1762D but the errors are different from the previous one.,Valencia et al.2024,2008-11-00,2454771.5
