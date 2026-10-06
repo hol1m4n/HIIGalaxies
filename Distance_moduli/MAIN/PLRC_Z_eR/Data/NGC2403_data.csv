@@ -1,0 +1,3 @@
+galaxy,bibcode,citation,band,modulus,random_error,systematic_error,total_error,category_error,cepheids_number,metal_correction,anchor,probe_quality,publication_year,review_year,comments,review_author,ads_date,ads_jd
+NGC2403,2001ApJ...553...47F,Freedman et al.2001,W(VI),27.54,0.1,,,1,10,True,LMC,1,2001,2024,Metallicity correction applied but error is the same as without correction.,Valencia et al.2024,2001-05-00,2452030.5
+NGC2403,2006ApJS..165..108S,Saha et al.2006,W(VI),27.43,0.15,0.08,0.1699999999999999,2,9,True,LMC+GC,1,2006,2024,They delve into the HST CTE correction.,Valencia et al.2024,2006-07-00,2453917.5

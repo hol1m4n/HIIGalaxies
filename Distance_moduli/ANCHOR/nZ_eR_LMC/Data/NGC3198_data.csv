@@ -1,0 +1,6 @@
+galaxy,bibcode,citation,band,modulus,random_error,systematic_error,total_error,category_error,cepheids_number,metal_correction,anchor,probe_quality,publication_year,review_year,comments,review_author,ads_date,ads_jd
+NGC3198,2000ApJ...529..745F,Ferrarese et al.2000,W(VI),30.8,0.06,,,1,58,False,LMC,1,2000,2024,They calculate gamma.,Valencia et al.2024,2000-02-00,2451575.5
+NGC3198,2001ApJ...548..564W,Willick & Batra 2001,W(VI),30.71,0.06,,,1,52,False,LMC,1,2001,2024,They do not apply metallicity correction.,Valencia et al.2024,2001-02-00,2451941.5
+NGC3198,2001ApJ...553...47F,Freedman et al.2001,W(VI),30.68,0.08,,,1,36,False,LMC,1,2001,2024,There are no specific comments on the publication.,Valencia et al.2024,2001-05-00,2452030.5
+NGC3198,2003A&A...411..361K,"Kanbur, S. M. et al.2003",W(VI),30.712,0.062,,,1,36,False,LMC,1,2003,2026,Maximum-light LMC PL solution used as a consistency check. CTE corrected; no metallicity correction.,Quintero-Salazar et al.2026,2003-12-00,2452974.5
+NGC3198,2003A&A...411..361K,"Kanbur, S. M. et al.2003",W(VI),30.721,0.06,,,1,36,False,LMC,1,2003,2026,Representative mean-light result using the authors' OGLE LMC PL fit. CTE corrected but not metallicity corrected.,Quintero-Salazar et al.2026,2003-12-00,2452974.5

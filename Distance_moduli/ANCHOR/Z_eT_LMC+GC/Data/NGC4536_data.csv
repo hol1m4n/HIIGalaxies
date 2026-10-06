@@ -1,0 +1,2 @@
+galaxy,bibcode,citation,band,modulus,random_error,systematic_error,total_error,category_error,cepheids_number,metal_correction,anchor,probe_quality,publication_year,review_year,comments,review_author,ads_date,ads_jd
+NGC4536,2006ApJS..165..108S,Saha et al.2006,W(VI),31.24,0.09,0.08,0.1204159457879229,2,27,True,LMC+GC,1,2006,2026,Revised SN Ia-host distance. The uncorrected GC/LMC values are 31.26/30.98 mag. The two metallicity-corrected routes agree within 0.01 mag; formal negative absorption is retained.,Quintero-Salazar et al.2026,2006-07-00,2453917.5

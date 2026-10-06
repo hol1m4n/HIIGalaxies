@@ -1,0 +1,2 @@
+galaxy,bibcode,citation,band,modulus,random_error,systematic_error,total_error,category_error,cepheids_number,metal_correction,anchor,probe_quality,publication_year,review_year,comments,review_author,ads_date,ads_jd
+NGC3198,2003A&A...411..361K,"Kanbur, S. M. et al.2003",W(VI),30.751,0.06,,,1,36,True,GC,1,2003,2026,FSG03 Galactic solution with a -0.054 mag metallicity correction. Metallicity uncertainty is systematic.,Quintero-Salazar et al.2026,2003-12-00,2452974.5

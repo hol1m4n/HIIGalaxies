@@ -1,0 +1,5 @@
+galaxy,bibcode,citation,band,modulus,random_error,systematic_error,total_error,category_error,cepheids_number,metal_correction,anchor,probe_quality,publication_year,review_year,comments,review_author,ads_date,ads_jd
+NGC3319,2001ApJ...553...47F,Freedman et al.2001,W(VI),30.62,0.09,,,1,33,True,LMC,1,2001,2024,There are no specific comments on the publication.,Valencia et al.2024,2001-05-00,2452030.5
+NGC3319,2003A&A...411..361K,"Kanbur, S. M. et al.2003",W(VI),30.462,0.094,,,1,33,True,GC,1,2003,2026,FSG03 Galactic solution with a -0.098 mag metallicity correction relative to the Galactic reference.,Quintero-Salazar et al.2026,2003-12-00,2452974.5
+NGC3319,2003A&A...411..361K,"Kanbur, S. M. et al.2003",W(VI),30.477,0.092,,,1,33,True,LMC,1,2003,2026,LMC mean-light solution with a -0.024 mag metallicity correction. The additive correction leaves e_R unchanged.,Quintero-Salazar et al.2026,2003-12-00,2452974.5
+NGC3319,2006ApJS..165..108S,Saha et al.2006,W(VI),30.74,0.08,0.08,0.1131370849898476,2,26,True,LMC+GC,1,2006,2024,They delve into the HST CTE correction.,Valencia et al.2024,2006-07-00,2453917.5

@@ -1,0 +1,2 @@
+galaxy,bibcode,citation,band,modulus,random_error,systematic_error,total_error,category_error,cepheids_number,metal_correction,anchor,probe_quality,publication_year,review_year,comments,review_author,ads_date,ads_jd
+NGC2403,2001ApJ...553...47F,Freedman et al.2001,W(VI),27.54,0.1,,,1,10,True,LMC,1,2001,2024,Metallicity correction applied but error is the same as without correction.,Valencia et al.2024,2001-05-00,2452030.5

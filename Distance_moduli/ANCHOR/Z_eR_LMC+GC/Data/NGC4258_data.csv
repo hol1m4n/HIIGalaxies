@@ -1,0 +1,2 @@
+galaxy,bibcode,citation,band,modulus,random_error,systematic_error,total_error,category_error,cepheids_number,metal_correction,anchor,probe_quality,publication_year,review_year,comments,review_author,ads_date,ads_jd
+NGC4258,2006ApJS..165..108S,Saha et al.2006,W(VI),29.63,0.05,0.08,0.094339811320566,2,14,True,LMC+GC,1,2006,2024,"Data from Macri et al. 2006, apply metallicity correction but it is not clear how they do it.",Valencia et al.2024,2006-07-00,2453917.5

@@ -1,0 +1,2 @@
+galaxy,bibcode,citation,band,modulus,random_error,systematic_error,total_error,category_error,cepheids_number,metal_correction,anchor,probe_quality,publication_year,review_year,comments,review_author,ads_date,ads_jd
+M96,2006ApJS..165..108S,Saha et al.2006,W(VI),30.34,0.11,0.08,0.1360147050873544,2,7,True,LMC+GC,1,2006,2026,Final period-dependent metallicity-corrected modulus. The uncorrected GC/LMC routes give 30.25/30.02 mag. Strong residual period dependence suggests that the formal error may understate the true uncertainty.,Quintero-Salazar et al.2026,2006-07-00,2453917.5
