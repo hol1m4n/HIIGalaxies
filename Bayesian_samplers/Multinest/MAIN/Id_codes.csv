@@ -1,0 +1,3 @@
+Code,Nickname,Redshift_range,GEHR_anchor,Cosmology,Cosmo_nickname,Lensing_correction,Params,Sample,Comments
+A.1,"Local Universe",0.01-0.16,True,FlatLambdaCDM,"Concordance Model",True,"a b h","Main",""
+A.2,"Full Cosmology",14.18,True,FlatLambdaCDM,"Concordance Model",True,"a b h","Main",""

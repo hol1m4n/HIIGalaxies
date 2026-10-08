@@ -1,12 +1,19 @@
 STARLIGHT/
 FADO/
+Bayesian_samplers/Multinest/logs_Ho/
+
+# Archivos temporales y pesados de MultiNest (NO subir)
 *.iterinfo
 *.points
 *.ptprob
-*.dat
-*.json
-*.log
+*.live.points
+*.phys_live.points
+*.resume.dat
+
+
+# Entornos y cachés de Python
 __pycache__/
 .ipynb_checkpoints/
 *.pyc
-Bayesian_samplers/Multinest/logs_Ho/
+# *.json
+*.log
