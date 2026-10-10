@@ -1,0 +1,27 @@
+RefCode,Citation,Band,mu_0,e_R,Rank,Year,Date,Comments,Author,ADS_date,JD
+2004ApJ...608...42S,Sakai et al.2004,I(VIR),29.42,0.11,1,2004,2024,There are no specific comments on the publication.,Valencia et al.2024,2004-06-00,2453157.5
+2007ApJ...661..815R,Rizzi et al.2007,I(BVI),29.34,0.09,1,2007,2024,M-TRGB_I is presented for each galaxy appearing in the publication.,Valencia et al.2024,2007-06-00,2454252.5
+2011ApJ...733..124S,Shappee & Stanek 2011,I(VI),29.05,0.06,1,2011,2024,sigma_sys =0.12.,Valencia et al.2024,2011-06-00,2455713.5
+2012ApJ...760L..14L,Lee & Jang 2012,I(VI),29.2,0.03,1,2011,2024,"Field 2, method 2.",Valencia et al.2024,2012-11-00,2456232.5
+2012ApJ...760L..14L,Lee & Jang 2012,I(VI),29.2,0.04,1,2011,2024,"Field 3, method 2.",Valencia et al.2024,2012-11-00,2456232.5
+2012ApJ...760L..14L,Lee & Jang 2012,I(VI),29.22,0.02,1,2011,2024,"Field 5, method 2.",Valencia et al.2024,2012-11-00,2456232.5
+2012ApJ...760L..14L,Lee & Jang 2012,I(VI),29.24,0.02,1,2011,2024,"Field 1, method 2.",Valencia et al.2024,2012-11-00,2456232.5
+2012ApJ...760L..14L,Lee & Jang 2012,I(VI),29.26,0.03,1,2011,2024,"Field 4, method 1.",Valencia et al.2024,2012-11-00,2456232.5
+2012ApJ...760L..14L,Lee & Jang 2012,I(VI),29.27,0.04,1,2011,2024,"Field S2, method 1.",Valencia et al.2024,2012-11-00,2456232.5
+2012ApJ...760L..14L,Lee & Jang 2012,I(VI),29.28,0.04,1,2011,2024,"Field 2, method 1.",Valencia et al.2024,2012-11-00,2456232.5
+2012ApJ...760L..14L,Lee & Jang 2012,I(VI),29.28,0.03,1,2011,2024,"Field 6, method 1.",Valencia et al.2024,2012-11-00,2456232.5
+2012ApJ...760L..14L,Lee & Jang 2012,I(VI),29.29,0.04,1,2011,2024,"Field S1, method 1.",Valencia et al.2024,2012-11-00,2456232.5
+2012ApJ...760L..14L,Lee & Jang 2012,I(VI),29.29,0.03,1,2011,2024,"Field S04, method 1.",Valencia et al.2024,2012-11-00,2456232.5
+2012ApJ...760L..14L,Lee & Jang 2012,I(VI),29.29,0.03,1,2011,2024,"Field 4, method 2.",Valencia et al.2024,2012-11-00,2456232.5
+2012ApJ...760L..14L,Lee & Jang 2012,I(VI),29.29,0.03,1,2011,2024,"Field S04, method 2.",Valencia et al.2024,2012-11-00,2456232.5
+2012ApJ...760L..14L,Lee & Jang 2012,I(VI),29.3,0.03,1,2011,2024,"Field 3, method 1.",Valencia et al.2024,2012-11-00,2456232.5
+2012ApJ...760L..14L,Lee & Jang 2012,I(VI),29.31,0.04,1,2011,2024,"Field 6, method 2.",Valencia et al.2024,2012-11-00,2456232.5
+2012ApJ...760L..14L,Lee & Jang 2012,I(VI),29.32,0.03,1,2011,2024,"Field 1, method 1.",Valencia et al.2024,2012-11-00,2456232.5
+2012ApJ...760L..14L,Lee & Jang 2012,I(VI),29.33,0.02,1,2011,2024,"Field 5, method 1.",Valencia et al.2024,2012-11-00,2456232.5
+2012ApJ...760L..14L,Lee & Jang 2012,I(VI),29.34,0.03,1,2011,2024,"Field S1, method 2.",Valencia et al.2024,2012-11-00,2456232.5
+2012ApJ...760L..14L,Lee & Jang 2012,I(VI),29.38,0.03,1,2011,2024,"Field S2, method 2.",Valencia et al.2024,2012-11-00,2456232.5
+2015AstL...41..239T,Tikhonov et al.2015,F814W(F606W F814W),29.12,0.14,1,2015,2024,Field 1.,Valencia et al.2024,2015-06-00,2457174.5
+2015AstL...41..239T,Tikhonov et al.2015,F814W(F606W F814W),29.17,0.13,1,2015,2024,Field 2.,Valencia et al.2024,2015-06-00,2457174.5
+2015AstL...41..239T,Tikhonov et al.2015,F814W(F606W F814W),29.19,0.14,1,2015,2024,Field 3.,Valencia et al.2024,2015-06-00,2457174.5
+2017ApJ...836...74J,Jang & Lee 2017,F814W(F555W F814W),29.16,0.022,1,2017,2024,Calibrator with LMC+N4258.,Valencia et al.2024,2017-02-00,2457785.5
+2018ApJS..235...23S,Sabbi et al.2018,I(VI),28.94,0.34,1,2018,2024,They mention that their calculations are conservative.,Valencia et al.2024,2018-03-00,2458178.5

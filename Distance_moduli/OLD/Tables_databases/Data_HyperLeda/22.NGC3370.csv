@@ -1,0 +1,42 @@
+# Query Description
+# Type of request:                 Extract data from a table
+# Name of the selected table:      a007
+# Description of the table:        Distances
+# Object:                          NGC3370
+# Display the fields:              $objname,$L,$j2000,$field[modulus],$field[distance],modc,$link[method,method],$link[iref,iref],$link[bibref,bibcode],$link[calib,calib_bibcode],pgc,dataset,bibcode,"calib_bibcode",calibsys
+# Description of each column
+# $objname: ------------ Name of object
+# $j2000: -------------- J2000 coordinates
+# $field[modulus]: ----- Distance modulus
+# $field[distance]: ---- Linear distance (Mpc)
+# modc: ---------------- Distance modulus corrected to standard system
+# $link[method,method]:  Distance determination method
+# $link[iref,iref]: ---- Code of Bib.Ref.
+# $link[bibref,bibcode]:  Bibliographic Reference
+# $link[calib,calib_bibcode]:  Calibration relation
+# pgc: ----------------- PGC number
+# dataset: ------------- <NA>
+# bibcode: ------------- <NA>
+# calib_bibcode: ------- <NA>
+# calibsys: ------------ Calibration system
+#--------,------,-------,---------,------,--------,--------,----------,------,--------,----,--------------------,----------------,---------------------,--------------------------,---,-------,-------,---------------,--------
+$objname,$j2000,modulus,e_modulus,flimit,fquality,distance,e_distance,flimit,fquality,modc,$link[method_method],$link[iref_iref],$link[bibref_bibcode],$link[calib_calib_bibcode],pgc,dataset,bibcode,"calib_bibcode",calibsys
+#--------,------,-------,---------,------,--------,--------,----------,------,--------,----,--------------------,----------------,---------------------,--------------------------,---,-------,-------,---------------,--------
+NGC3370,J104704.0+171625,32.37,0.03,,,29.7851496434128,0.414335729130887,,,32.268907059788,Cepheids  ,    51333,Saha+2006              ,Cepheids:Saha+2006             ,32207,51333,2006ApJS..165..108S,2006ApJS..165..108S,
+NGC3370,J104704.0+171625,32.42,,,,30.4789241954695,,,,32.2866806273765,Cepheids  ,    51333,Saha+2006              ,Cepheids:Sandage+2004:Galaxy   ,32207,51333,2006ApJS..165..108S,2004A&A...424...43S,
+NGC3370,J104704.0+171625,32.14,,,,26.7916757176579,,,,32.1742183021877,Cepheids  ,    51333,Saha+2006              ,Cepheids:Sandage+2004:LMC      ,32207,51333,2006ApJS..165..108S,2004A&A...424...43S,
+NGC3370,J104704.0+171625,31.39,0.53,,,18.9670538809028,5.24323743707937,,,31.3899993896484,SNIa      ,    51920,Amanullah+2010         ,SNIa:Guy+2007                  ,32207,51920,2010ApJ...716..712A,2007A&A...466...11G,
+NGC3370,J104704.0+171625,32.563,0.065,,,32.5536691296198,0.989158497697119,,,32.3852941448111,SNIa      ,    51916,Jha+2007               ,SNIa:Jha+2007                  ,32207,51916,2007ApJ...659..122J,2007ApJ...659..122J,
+NGC3370,J104704.0+171625,32.442,0.031,,,30.7893321366102,0.442676389855723,,,32.1572799070007,SNIa      ,    51915,Silverman+2012         ,SNIa:Jha+2007:RV=1.7           ,32207,51915,2012MNRAS.425.1789S,2007ApJ...659..122J,
+NGC3370,J104704.0+171625,32.51,0.04,,,31.7687161504612,0.590638173150463,,,32.6075586467734,SNIa      ,    51915,Silverman+2012         ,SNIa:Jha+2007:RV=3.1           ,32207,51915,2012MNRAS.425.1789S,2007ApJ...659..122J,
+NGC3370,J104704.0+171625,32.61,0.14,,,33.2659646797061,2.21537424365148,,,32.2808556144206,SNIa      ,    51914,Reindl+2005            ,SNIa:Reindl+2005               ,32207,51914,2005ApJ...624..532R,2005ApJ...624..532R,
+NGC3370,J104704.0+171625,32.08,0.45,,,26.0615574759149,6.00117407056497,,,32.0296044514754,TF        ,    51984,Sorce+2014             ,TF:Sorce+2014:MC[3.6]          ,32207,51984,2014MNRAS.444..527S,2014MNRAS.444..527S,
+NGC3370,J104704.0+171625,31.97,0.54,,,24.7742127424297,6.99450340803148,,,31.9237650999631,TF        ,    51984,Sorce+2014             ,TF:Sorce+2014:M[3.6]           ,32207,51984,2014MNRAS.444..527S,2014MNRAS.444..527S,
+NGC3370,J104704.0+171625,31.86,0.36,,,23.5504994584696,4.24664884541271,,,31.882179135499,TF        ,    51600,Tully+2008             ,TF:Tully+2008                  ,32207,51600,2008ApJ...676..184T,2008ApJ...676..184T,Freedman+2001
+NGC3370,J104704.0+171625,32.37,,,c,29.7851496434128,,,c,32.3699989318848,Cepheids  ,    52014,Tammann+2008           ,                               ,32207,52014,2008A&ARv..15..289T,,
+NGC3370,J104704.0+171625,32.47,,,c,31.1889133739245,,,c,32.4700012207031,SNIa      ,    52014,Tammann+2008           ,                               ,32207,52014,2008A&ARv..15..289T,,
+#-- end of data table ----------------------------------------------------------
+# 13 lines were successfully retrieved
+#-------------------------------------------------------------------------------
+# Pleinpot version: 8.18.10
+# Date: 2026-02-04T01:19:16
