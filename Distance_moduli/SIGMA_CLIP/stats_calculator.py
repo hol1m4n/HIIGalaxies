@@ -13,6 +13,7 @@ import matplotlib.dates as mdates
 import time
 import argparse
 from astropy.stats import sigma_clip
+from matplotlib.colors import ListedColormap
 
 plt.rcParams.update({
     "text.usetex": True,
@@ -101,14 +102,17 @@ class moduli_stats_calculator:
 
         self.input_data_frame = self.check_data()
 
-        self.sigma_clipping()
+        if self.input_data_frame is not None:
+            if len(self.input_data_frame) > 1 and self.input_data_frame is not None:
+                self.input_data_frame,self.no_selected_arts,self.cut_lower,self.cut_upper = self.sigma_clipping(no_clean_df=self.input_data_frame)
+
 
         if self.input_data_frame is not None:
             self.moduli = np.array(self.input_data_frame['modulus'])
             self.moduli_error = np.array(self.input_data_frame[error_selection])
             self.N_records = len(self.input_data_frame)
 
-            if self.N_records >= 2:
+            if self.N_records > 1:
                 BOOTSTRAP = self.bootstrap_error()
                 NESTED_SAMPLING = self.nestedsampling_error() 
 
@@ -172,35 +176,49 @@ class moduli_stats_calculator:
 
 
 
-    def sigma_clipping(self):
+    def sigma_clipping(self, no_clean_df = None):
 
-        if self.input_data_frame is not None and len(self.input_data_frame) > 3:
+        if no_clean_df is not None and len(no_clean_df) > 1:
             print(f"Running Sigma Clipping for {self.galaxy_name}")
 
-            df = self.input_data_frame.copy()
-            # Convertir explícitamente a un arreglo numérico.
-            distance_moduli = df["modulus"].to_numpy(dtype=float)
+            N_before = len(no_clean_df)
 
-            filtered_data = sigma_clip(
-                distance_moduli,
-                sigma=3,
-                maxiters=5,
-                cenfunc="median",
-                stdfunc="mad_std",
-            )
+            def sigma_x_weighted_average(modulus,error):
+                modulus,error = np.array(modulus),np.array(error)
+                err_sq_inv = 1 / ((error)**2)
+                num = np.sum(err_sq_inv * modulus)
+                dem = np.sum(err_sq_inv)
+                mu_w = num/dem
+                num_sigma = np.sum(err_sq_inv * (modulus-mu_w)**2)
+                dem_sigma = np.sum(err_sq_inv)
+                sigma = np.sqrt(num_sigma/dem_sigma)
+                low_b = mu_w - 3 * sigma
+                upp_b = mu_w + 3 * sigma
 
-            # Garantiza una máscara booleana con la forma del arreglo.
-            mask_valid = ~np.ma.getmaskarray(filtered_data)
-            # Conservar las filas descartadas para revisarlas posteriormente.
-            self.sigma_clipping_rejected = df.loc[~mask_valid].copy()
-            # Filtrar TODAS las columnas simultáneamente.
-            self.input_data_frame = df.loc[mask_valid].copy()
-            print(
-                f"Originales: {len(df)} | "
-                f"Conservados: {mask_valid.sum()} | "
-                f"Descartados: {(~mask_valid).sum()}"
-            )
+                if 'joint' in self.dataset.lower():
+                    low_b = mu_w -  0.3
+                    upp_b = mu_w +  0.3
+                else:
+                    low_b = mu_w -  0.3
+                    upp_b = mu_w +  0.3
 
+                return [low_b,upp_b]
+
+            mu, mu_e = no_clean_df['modulus'], no_clean_df[self.error_selection]
+            L,U = sigma_x_weighted_average(mu, mu_e)
+            print(L,U)
+            selection = no_clean_df[(no_clean_df['modulus']>=L) & (no_clean_df['modulus']<=U)]
+            no_selected = no_clean_df[(no_clean_df['modulus']<=L) | (no_clean_df['modulus']>=U)]
+            N_after = len(selection)
+
+            print(f"Before:{N_before}")
+            print(f"After:{N_after}")
+            print(f"Rejected")
+            print(no_selected['citation'])
+            print("\n")
+            return [selection,no_selected,L,U]
+        else:
+            return None
 
     def weighted_average(self):
         """
@@ -398,6 +416,19 @@ class moduli_stats_calculator:
                            alpha=0.7,
                            label=e+f"{a:.4f}"+r' $\pm$ '+f"{b:.4f}")
 
+            for a,b,c,d in zip([self.cut_lower,self.cut_upper], 
+                    ['red', 'red'], 
+                    ['--','--'],
+                    ['Lower cut: ', 'Upper cut: ']):
+                ax.axvline(x=a, 
+                           color=b, 
+                           linestyle=c, 
+                           linewidth=0.8, 
+                           alpha=0.7,
+                           label=d+f"{a:.4f}")
+
+
+
 
             def jitter_same_time(t, base_buffer=25):
                 """
@@ -465,10 +496,48 @@ class moduli_stats_calculator:
                 )
                 plotted_authors.add(author)
 
+            t_n = np.array(self.no_selected_arts['ads_jd'])  # JD
+            x_n = np.array(self.no_selected_arts['modulus'])  # modulus
+            s_n = np.array(self.no_selected_arts[self.error_selection])
+
+    
+            ordr_n = np.argsort(t_n)
+            t_sorted_n = np.asarray(t_n)[ordr_n]
+            x_sorted_n = np.asarray(x_n)[ordr_n]
+            s_sorted_n = np.asarray(s_n)[ordr_n]
+    
+            t_jit_n = jitter_same_time(t_sorted_n)
+            t_datetime_n = Time(t_jit_n, format='jd').to_datetime()
+    
+
+            plotted_authors = set()
+
+            for u in range(len(self.no_selected_arts)):
+                author = self.no_selected_arts['citation'].iloc[u].replace('&', r'$\&$')
+                
+                # Muestra la etiqueta solo la primera vez que aparece el autor para evitar duplicados en la leyenda
+                label = author if author not in plotted_authors else None
+                if label:
+                    plotted_authors.add(author) # Asegúrate de agregar el autor al conjunto para que funcione el filtro
+
+                ax.errorbar(
+                    x = x_sorted_n[u], 
+                    y = t_datetime_n[u], 
+                    xerr = s_sorted_n[u], 
+                    fmt='o', 
+                    markerfacecolor='white', 
+                    markeredgecolor='black', # Color del borde del marcador
+                    ecolor='black',          # Mismo color para las líneas de error
+                    elinewidth=1.0, 
+                    capsize=2, 
+                    markersize=5, 
+                    label=label
+                )
+
 
             ax.set_xlabel(r'Distance Modulus, $\mu$', fontsize=16)
             ax.set_ylabel(r'Publication Year', fontsize=16)
-            ax.legend(loc='best', ncol=1)
+            ax.legend(title = f"N publications used: {self.N_records}",loc='best', ncol=1)
             #ax.legend(loc='upper center', bbox_to_anchor=(0.5, -0.15), ncol=3)
 
 

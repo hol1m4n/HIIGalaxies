@@ -1,3 +1,46 @@
 Code,Nickname,Redshift_range,GEHR_anchor,Cosmology,Cosmo_nickname,Lensing_correction,Params,Sample,Comments
 A.1,"Local Universe",0.01-0.16,True,FlatLambdaCDM,"Concordance Model",True,"a b h","Main",""
 A.2,"Full Cosmology",14.18,True,FlatLambdaCDM,"Concordance Model",True,"a b h","Main",""
+B.1,"Local Universe",0.01-0.16,True,FlatLambdaCDM,"Concordance Model",True,"a b h epsilon","Main","Normalized lnlike = True"
+B.2,"Full Cosmology",14.18,True,FlatLambdaCDM,"Concordance Model",True,"a b h epsilon","Main","Normalized lnlike = True"
+C.1,"Local Universe",0.01-0.16,True,Cosmography,"Concordance Model",True,"a b h q_0","Main","Normalized lnlike = True"
+D.1,"Local Universe",0.01-0.16,True,FlatwCDM,"Quintessence",True,"a b h Om wDE","Main",""
+D.2,"Full Cosmology",14.18,True,FlatwCDM,"Quintessence",True,"a b h Om wDE","Main",""
+E.1,"Local Universe",0.01-0.16,True,FlatwCDM,"Quintessence",True,"a b h Om wDE","Main","Normalized lnlike = True"
+E.2,"Full Cosmology",14.18,True,FlatwCDM,"Quintessence",True,"a b h Om wDE","Main","Normalized lnlike = True"
+F.1,"Local Universe",0.01-0.16,True,Cosmography,"Concordance Model",False,"a b h q_0","Main","Implementation before lensing correction application"
+G.1,"Local Universe",0.01-0.16,True,FlatLambdaCDM,"Concordance Model",False,"a b h epsilon","Main","Implementation before lensing correction application"
+G.2,"Full Cosmology",14.18,True,FlatLambdaCDM,"Concordance Model",False,"a b h epsilon","Main","Implementation before lensing correction application"
+
+python3 D.py --dataset Compilation2026_main.csv --z_cut 0.16 --anchor_data Standard.csv --sub_id 1
+python3 D.py --dataset Compilation2026_main.csv --z_cut 0.16 --anchor_data Joint_eR_recal.csv --sub_id 1
+python3 D.py --dataset Compilation2026_main.csv --z_cut 0.16 --anchor_data PLRC_all_eR_recal.csv --sub_id 1
+python3 D.py --dataset Compilation2026_main.csv --z_cut 0.16 --anchor_data PLRC_nZ_eR_recal.csv --sub_id 1
+python3 D.py --dataset Compilation2026_main.csv --z_cut 0.16 --anchor_data PLRC_nZ_eT_recal.csv --sub_id 1
+python3 D.py --dataset Compilation2026_main.csv --z_cut 0.16 --anchor_data PLRC_Z_eR_recal.csv --sub_id 1
+python3 D.py --dataset Compilation2026_main.csv --z_cut 0.16 --anchor_data PLRC_Z_eT_recal.csv --sub_id 1
+python3 D.py --dataset Compilation2026_main.csv --z_cut 0.16 --anchor_data TRGB_eR_recal.csv --sub_id 1
+python3 D.py --dataset Compilation2026_main.csv --z_cut 16 --anchor_data Standard.csv --sub_id 2
+python3 D.py --dataset Compilation2026_main.csv --z_cut 16 --anchor_data Joint_eR_recal.csv --sub_id 2
+python3 D.py --dataset Compilation2026_main.csv --z_cut 16 --anchor_data PLRC_all_eR_recal.csv --sub_id 2
+python3 D.py --dataset Compilation2026_main.csv --z_cut 16 --anchor_data PLRC_nZ_eR_recal.csv --sub_id 2
+python3 D.py --dataset Compilation2026_main.csv --z_cut 16 --anchor_data PLRC_nZ_eT_recal.csv --sub_id 2
+python3 D.py --dataset Compilation2026_main.csv --z_cut 16 --anchor_data PLRC_Z_eR_recal.csv --sub_id 2
+python3 D.py --dataset Compilation2026_main.csv --z_cut 16 --anchor_data PLRC_Z_eT_recal.csv --sub_id 2
+python3 D.py --dataset Compilation2026_main.csv --z_cut 16 --anchor_data TRGB_eR_recal.csv --sub_id 2
+python3 E.py --dataset Compilation2026_main.csv --z_cut 0.16 --anchor_data Standard.csv --sub_id 1
+python3 E.py --dataset Compilation2026_main.csv --z_cut 0.16 --anchor_data Joint_eR_recal.csv --sub_id 1
+python3 E.py --dataset Compilation2026_main.csv --z_cut 0.16 --anchor_data PLRC_all_eR_recal.csv --sub_id 1
+python3 E.py --dataset Compilation2026_main.csv --z_cut 0.16 --anchor_data PLRC_nZ_eR_recal.csv --sub_id 1
+python3 E.py --dataset Compilation2026_main.csv --z_cut 0.16 --anchor_data PLRC_nZ_eT_recal.csv --sub_id 1
+python3 E.py --dataset Compilation2026_main.csv --z_cut 0.16 --anchor_data PLRC_Z_eR_recal.csv --sub_id 1
+python3 E.py --dataset Compilation2026_main.csv --z_cut 0.16 --anchor_data PLRC_Z_eT_recal.csv --sub_id 1
+python3 E.py --dataset Compilation2026_main.csv --z_cut 0.16 --anchor_data TRGB_eR_recal.csv --sub_id 1E
+python3 E.py --dataset Compilation2026_main.csv --z_cut 16 --anchor_data Standard.csv --sub_id 2
+python3 E.py --dataset Compilation2026_main.csv --z_cut 16 --anchor_data Joint_eR_recal.csv --sub_id 2
+python3 E.py --dataset Compilation2026_main.csv --z_cut 16 --anchor_data PLRC_all_eR_recal.csv --sub_id 2
+python3 E.py --dataset Compilation2026_main.csv --z_cut 16 --anchor_data PLRC_nZ_eR_recal.csv --sub_id 2
+python3 E.py --dataset Compilation2026_main.csv --z_cut 16 --anchor_data PLRC_nZ_eT_recal.csv --sub_id 2
+python3 E.py --dataset Compilation2026_main.csv --z_cut 16 --anchor_data PLRC_Z_eR_recal.csv --sub_id 2
+python3 E.py --dataset Compilation2026_main.csv --z_cut 16 --anchor_data PLRC_Z_eT_recal.csv --sub_id 2
+python3 E.py --dataset Compilation2026_main.csv --z_cut 16 --anchor_data TRGB_eR_recal.csv --sub_id 2

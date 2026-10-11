@@ -1,0 +1,6 @@
+galaxy,bibcode,citation,band,modulus,random_error,systematic_error,total_error,category_error,cepheids_number,metal_correction,anchor,probe_quality,publication_year,review_year,comments,review_author,ads_date,ads_jd
+M81,2001ApJ...553...47F,Freedman et al.2001,W(VI),27.8,0.08,,,1,17,True,LMC,1,2001,2024,They apply metallicity correction.,Valencia et al.2024,2001-05-00,2452030.5
+M81,2003A&A...411..361K,"Kanbur, S. M. et al.2003",W(VI),27.83,0.095,,,1,17,True,GC,1,2003,2026,FSG03 Galactic solution with a -0.024 mag metallicity correction relative to Galactic abundance.,Quintero-Salazar et al.2026,2003-12-00,2452974.5
+M81,2003A&A...411..361K,"Kanbur, S. M. et al.2003",W(VI),27.841,0.093,,,1,17,True,LMC,1,2003,2026,LMC mean-light solution with a +0.050 mag metallicity correction. The additive correction leaves the random error unchanged.,Quintero-Salazar et al.2026,2003-12-00,2452974.5
+M81,2006ApJS..165..108S,Saha et al.2006,VI,27.8,0.09,0.08,0.1204159457879229,2,24,True,LMC+GC,1,2006,2024,They delve into the HST CTE correction.,Valencia et al.2024,2006-07-00,2453917.5
+M81,2011ApJ...743..176G,Gerke et al.2011,W(VI),27.8,0.14,,,3,81,True,LMC,1,2011,2024,OGLE-II LMC RPL with fixed metallicity gradient value.,Valencia et al.2024,2011-12-00,2455896.5
