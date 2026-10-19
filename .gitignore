@@ -3,12 +3,12 @@ FADO/
 Bayesian_samplers/Multinest/logs_Ho/
 
 # Archivos temporales y pesados de MultiNest (NO subir)
-*.iterinfo
-*.points
-*.ptprob
-*.live.points
-*.phys_live.points
-*.resume.dat
+#*.iterinfo
+#*.points
+#*.ptprob
+#*.live.points
+#*.phys_live.points
+#*.resume.dat
 
 
 # Entornos y cachés de Python

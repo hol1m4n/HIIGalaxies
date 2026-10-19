@@ -5,7 +5,7 @@
 
 anchors_sets=( "Standard.csv" "Joint_eR_recal.csv" "PLRC_all_eR_recal.csv" "PLRC_nZ_eR_recal.csv" "PLRC_nZ_eT_recal.csv" "PLRC_Z_eR_recal.csv" "PLRC_Z_eT_recal.csv" "TRGB_eR_recal.csv" )
 
-cd /home/hollman/HIIGalaxies/Bayesian_samplers/Multinest/MAIN|| exit 1
+cd "$HOME/HIIGalaxies/Bayesian_samplers/Multinest/MAIN"|| exit 1
 
 # Limita los hilos internos de las bibliotecas numéricas.
 export OMP_NUM_THREADS=1
