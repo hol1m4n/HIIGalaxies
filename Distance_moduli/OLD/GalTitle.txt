@@ -4,3 +4,6 @@
  11 88   88 ... NN  NNN GG   GG CC    C  11 00   00   777       333 
 111  88888  ... NN   NN  GGGGGG  CCCCC  111  00000   777    333333  
                                                                     
+v.1 Primeras pruebas
+v.1.1 Lista con la informacion revisada para posibles outliers
+v.1.2 Inclusion de los articulos que estaban presentes en Fernandez 2018 (excepto por los dos de 1988 y 1991)

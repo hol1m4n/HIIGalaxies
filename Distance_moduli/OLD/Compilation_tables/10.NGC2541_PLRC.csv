@@ -10,4 +10,4 @@ RefCode,Citation,Band,mu_0,e_R,e_S,e_T,Category,Ncef,Zcorr,zeroP,Rank,Year,Date,
 2003A&A...411..361K,"Kanbur, S. M. et al.2003",W(VI),30.348,0.071,,,1,29,True,LMC,1,2003,2026,Metallicity-corrected LMC solution. The correction is exactly 0.000 mag because the adopted abundance equals the LMC reference.,Quintero-Salazar et al.2026,2003-12-00,2452974.5
 2003A&A...411..361K,"Kanbur, S. M. et al.2003",W(VI),30.356,0.072,,,1,29,True,GC,1,2003,2026,FSG03 Galactic solution with a -0.074 mag metallicity correction relative to Galactic abundance.,Quintero-Salazar et al.2026,2003-12-00,2452974.5
 2003A&A...411..361K,"Kanbur, S. M. et al.2003",W(VI),30.43,0.072,,,1,29,False,GC,1,2003,2026,Representative FSG03 Galactic mean-light solution. CTE corrected but not metallicity corrected.,Quintero-Salazar et al.2026,2003-12-00,2452974.5
-2006ApJS..165..108S,Saha et al.2006,W(VI),30.5,0.06,0.08,0.1,2,26,True,GC+LMC,1,2006,2024,They delve into the HST CTE correction.,Valencia et al.2024,2006-07-00,2453917.5
+2006ApJS..165..108S,Saha et al.2006,W(VI),30.5,0.06,0.08,0.1,2,26,True,LMC+GC,1,2006,2024,They delve into the HST CTE correction.,Valencia et al.2024,2006-07-00,2453917.5

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+python3 set_creator.py
+
 galaxias=(
     "IC0010" "IC2574" "M33" "M81" "M101" "MRK116"
     "NGC0925" "NGC2366" "NGC2403" "NGC2541" "NGC3198"
