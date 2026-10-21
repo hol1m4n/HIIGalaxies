@@ -10,4 +10,3 @@ E.1,"Local Universe",0.01-0.16,True,FlatwCDM,"Quintessence",True,"a b h Om wDE",
 E.2,"Full Cosmology",14.18,True,FlatwCDM,"Quintessence",True,"a b h Om wDE","Main","Normalized lnlike = True"
 F.1,"Local Universe",0.01-0.16,True,Cosmography,"Concordance Model",False,"a b h q_0","Main","Implementation w/o lensing correction application. Own code"
 G.1,"Local Universe",0.01-0.16,True,FlatLambdaCDM,"Concordance Model",False,"a b h epsilon","Main","Implementation w/o lensing correction application. Own code"
-G.2,"Full Cosmology",14.18,True,FlatLambdaCDM,"Concordance Model",False,"a b h epsilon","Main","Implementation w/o lensing correction application. Own code"

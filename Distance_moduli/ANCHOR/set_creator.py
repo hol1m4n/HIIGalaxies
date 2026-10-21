@@ -108,19 +108,6 @@ ANCHORS = ['LMC', 'GC', 'LMC+GC', 'N4258', 'LMC+GC+N4258', 'TM']
 
 for Anchor in ANCHORS:
     subset_creation(input_df = 'PLRC_general_v1.2.csv',
-                condition = [('metal_correction','==',False),('random_error','>=',0),('citation','!=','Macri et al.2001')
-                             ,('anchor','==',Anchor)],
-                subset_name = f'nZ_eR_{Anchor}.csv')
-    subset_creation(input_df = 'PLRC_general_v1.2.csv',
-                    condition = [('metal_correction','==',False),('total_error','>=',0),('citation','!=','Macri et al.2001')
-                                ,('anchor','==',Anchor)],
-                    subset_name = f'nZ_eT_{Anchor}.csv')
-    subset_creation(input_df = 'PLRC_general_v1.2.csv',
-                    condition = [('metal_correction','==',True),('random_error','>=',0),('citation','!=','Macri et al.2001')
-                                ,('anchor','==',Anchor)],
-                    subset_name = f'Z_eR_{Anchor}.csv')
-    subset_creation(input_df = 'PLRC_general_v1.2.csv',
-                    condition = [('metal_correction','==',True),('total_error','>=',0),('citation','!=','Macri et al.2001')
-                                ,('anchor','==',Anchor)],
-                    subset_name = f'Z_eT_{Anchor}.csv')
+                    condition = [('random_error','>=',0),('anchor','==',Anchor)],
+                    subset_name = f'{Anchor}_eR.csv')
 

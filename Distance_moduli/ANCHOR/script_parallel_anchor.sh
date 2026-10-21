@@ -25,40 +25,29 @@ export OPENBLAS_NUM_THREADS=1
 export MKL_NUM_THREADS=1
 export NUMEXPR_NUM_THREADS=1
 
-for Subgrupo in \
-    nZ_eR_ \
-    nZ_eT_ \
-    Z_eR_ \
-    Z_eT_
-do
 
-    tipo_de_error="random_error"
+tipo_de_error="random_error"
 
-    if [[ "$Subgrupo" == "nZ_eT_" ||
-          "$Subgrupo" == "Z_eT_" ]]; then
-        tipo_de_error="total_error"
+
+for ANCHOR in "${anchors[@]}"; do
+
+    file_name="${ANCHOR}_eR.csv"
+
+    if [ -f "$file_name" ]; then
+        echo "=================================="
+        echo "Procesando subgrupo: PLRC_all_eR con $ANCHOR"
+
+        parallel --jobs 12 --tag --halt soon,fail=1 \
+            python3 stats_calculator.py \
+            --DATASET "$file_name" \
+            --TIPO_E "$tipo_de_error" \
+            --GALAXIA {} \
+            ::: "${galaxias[@]}" || exit 1
+
+        echo "PLRC_all_eR con $ANCHOR terminado"
+        echo "=================================="
+        echo -e "\n"
+    else
+        echo "Omitido: no existe $file_name" >&2
     fi
-
-    for ANCHOR in "${anchors[@]}"; do
-
-        file_name="${Subgrupo}${ANCHOR}.csv"
-
-        if [ -f "$file_name" ]; then
-            echo "=================================="
-            echo "Procesando subgrupo: $Subgrupo con $ANCHOR"
-
-            parallel --jobs 12 --tag --halt soon,fail=1 \
-                python3 stats_calculator.py \
-                --DATASET "$file_name" \
-                --TIPO_E "$tipo_de_error" \
-                --GALAXIA {} \
-                ::: "${galaxias[@]}" || exit 1
-
-            echo "$Subgrupo con $ANCHOR terminado"
-            echo "=================================="
-            echo -e "\n"
-        else
-            echo "Omitido: no existe $file_name" >&2
-        fi
-    done
 done

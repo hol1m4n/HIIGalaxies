@@ -1,9 +1,0 @@
-carpeta,code_id,subgrupo,variable,valor,error,modo,n_modos,estado,H0,e_H0
-C.1_Standard,C.1,Standard,h,,,0,1,ValueError: El numero de parametros no coincide con PARAMETROS.,,
-C.1_Joint_eR,C.1,Joint_eR,h,,,0,1,ValueError: El numero de parametros no coincide con PARAMETROS.,,
-C.1_PLRC_all_eR,C.1,PLRC_all_eR,h,,,0,1,ValueError: El numero de parametros no coincide con PARAMETROS.,,
-C.1_PLRC_nZ_eR,C.1,PLRC_nZ_eR,h,,,0,1,ValueError: El numero de parametros no coincide con PARAMETROS.,,
-C.1_PLRC_nZ_eT,C.1,PLRC_nZ_eT,h,,,0,1,ValueError: El numero de parametros no coincide con PARAMETROS.,,
-C.1_PLRC_Z_eR,C.1,PLRC_Z_eR,h,,,0,1,ValueError: El numero de parametros no coincide con PARAMETROS.,,
-C.1_PLRC_Z_eT,C.1,PLRC_Z_eT,h,,,0,1,ValueError: El numero de parametros no coincide con PARAMETROS.,,
-C.1_TRGB_eR,C.1,TRGB_eR,h,,,0,1,ValueError: El numero de parametros no coincide con PARAMETROS.,,

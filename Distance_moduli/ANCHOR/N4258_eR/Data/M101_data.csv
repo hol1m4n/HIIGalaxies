@@ -1,0 +1,2 @@
+galaxy,bibcode,citation,band,modulus,random_error,systematic_error,total_error,category_error,cepheids_number,metal_correction,anchor,probe_quality,publication_year,review_year,comments,review_author,ads_date,ads_jd
+M101,2016ApJ...826...56R,Riess et al.2016,VIHK,29.135,0.045,,,1,251,True,N4258,1,2016,2024,"The values do not appear in the article, they are online.",Valencia et al.2024,2016-07-00,2457570.5

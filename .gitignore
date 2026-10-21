@@ -8,7 +8,10 @@ Bayesian_samplers/Multinest/logs_Ho/
 *.ptprob
 *.live.points
 *.phys_live.points
-*.resume.dat
+*ev.dat
+*post_equal_weights.dat
+*resume.dat
+*stats.dat
 *.dat
 
 
