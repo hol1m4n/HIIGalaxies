@@ -1,0 +1,9 @@
+csv,subfolder,galaxies_listed,galaxies_with_records,total_records
+Joint_eR/Joint_eR_recal.csv,Joint_eR,32,32,550
+PLRC_Z_eR/PLRC_Z_eR_recal.csv,PLRC_Z_eR,20,20,164
+PLRC_Z_eT/PLRC_Z_eT_recal.csv,PLRC_Z_eT,19,19,44
+PLRC_all_eR/PLRC_all_eR_recal.csv,PLRC_all_eR,24,24,368
+PLRC_nZ_eR/PLRC_nZ_eR_recal.csv,PLRC_nZ_eR,24,24,204
+PLRC_nZ_eT/PLRC_nZ_eT_recal.csv,PLRC_nZ_eT,10,10,21
+Standard/Standard_recal.csv,Standard,13,13,72
+TRGB_eR/TRGB_eR_recal.csv,TRGB_eR,22,22,182
