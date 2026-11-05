@@ -21,3 +21,8 @@ __pycache__/
 *.pyc
 *.json
 *.log
+
+# No hacer commit de las graficas de los mocks
+
+
+Bayesian_samplers/Multinest/MOCKS/Results/**/**/Plots

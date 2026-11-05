@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=D.2
-#SBATCH --output=/home/holman/bash_outs/ABCDEFG/D.2_%A_%a.out
-#SBATCH --error=/home/holman/bash_outs/ABCDEFG/D.2_%A_%a.err
+#SBATCH --output=/home/holman/bash_outs/MAIN/D.2_%A_%a.out
+#SBATCH --error=/home/holman/bash_outs/MAIN/D.2_%A_%a.err
 #SBATCH --array=0-7%9
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=1
@@ -28,7 +28,7 @@ current_anchor="${anchors_sets[$SLURM_ARRAY_TASK_ID]}"
 echo "Ejecutando para el anchor: $current_anchor (Índice: $SLURM_ARRAY_TASK_ID)"
 
 python3 D.py \
-    --dataset Compilation2026_main.csv \
+    --dataset Compilation2026_whole.csv \
     --z_cut 16 \
     --sub_id 2 \
     --anchor_data "$current_anchor" || exit 1

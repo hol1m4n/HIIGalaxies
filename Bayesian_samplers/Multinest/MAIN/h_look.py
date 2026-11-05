@@ -29,7 +29,7 @@ plt.rcParams.update({
 def hyper(main_set_code,sub_id):
 
     # ----------------------------- CONFIGURACION -----------------------------
-    DIRECTORIO = Path(f"/home/hollman/HIIGalaxies/Bayesian_samplers/Multinest/MAIN/{main_set_code}")
+    DIRECTORIO = Path(f"~/HIIGalaxies/Bayesian_samplers/Multinest/MAIN/{main_set_code}")
     CODE_IDS = [f"{main_set_code}.{sub_id}"]                  # Ejemplo: ["A.1", "A.2", "B.1"]
     SUBGRUPOS = None                   # None: todos los encontrados para cada ID.
     # SUBGRUPOS = ["TRGB_eR", "PLRC_Z_eR", "Joint_eR"]  # Sin el code ID.

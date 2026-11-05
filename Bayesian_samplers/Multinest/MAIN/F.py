@@ -37,6 +37,9 @@ plt.rcParams.update({
     "axes.facecolor": "white",
 })
 
+
+
+
 class Lsig_Ho_sampler:
     def __init__(self,
                  data_frame = None,
@@ -60,14 +63,14 @@ class Lsig_Ho_sampler:
 
 
         self.sub_id_code = sub_id_code
-        self.code_id = f'E.{self.sub_id_code}'
+        self.code_id = f'F.{self.sub_id_code}'
 
         self.dir_results_creation()
         self.main_sampler()
         self.plots_maker()
 
     def dir_results_creation(self):
-        tmp_set_code_ids = 'E'
+        tmp_set_code_ids = 'F'
         os.makedirs(tmp_set_code_ids, exist_ok=True)
         self.outdir = os.path.join(os.path.expanduser(f'~/HIIGalaxies/Bayesian_samplers/Multinest/MAIN/{tmp_set_code_ids}'), f"{self.folder_name}")
         os.makedirs(self.outdir, exist_ok=True)
@@ -98,138 +101,15 @@ class Lsig_Ho_sampler:
             return None
 
 
-    # Reconfiguracion del lnlike
+
+
     def lnlike(
         self,
         theta = None,
-        DF = None,
-        lens_cache =None,):
+        DF = None,):
         if theta is None or DF is None:
             return None
-        alpha, beta, h, Om, wDE = theta
-        # Incluir radiacion como se menciona en el paper
-        try:
-            cosmo = FlatwCDM(
-                H0=h * 100.0,
-                Om0=Om,
-                w0=wDE,
-                Tcmb0=2.7255 * u.K,
-            )
-        except Exception:
-            return -np.inf
-        origin = np.asarray(DF["origin_id"], dtype=float)
-        z_or_mu = np.asarray(
-            DF["z_or_mu"],
-            dtype=float,
-        )
-        e_z_or_mu = np.asarray(
-            DF["e_z_or_e_mu"],
-            dtype=float,
-        )
-        log_sigma = np.asarray(
-            DF["log_sigma"],
-            dtype=float,
-        )
-        e_log_sigma = np.asarray(
-            DF["e_log_sigma"],
-            dtype=float,
-        )
-        log_f = np.asarray(
-            DF["log_f_Hbeta"],
-            dtype=float,
-        )
-        e_log_f = np.asarray(
-            DF["e_log_f_Hbeta"],
-            dtype=float,
-        )   
-        anchors = origin == 0.0
-        hiig = ~anchors
-        n = len(DF)
-        mu_model = np.empty(n, dtype=float)
-        mu_model_err = np.empty(n, dtype=float)
-        # Primary-distance anchors
-        mu_model[anchors] = z_or_mu[anchors]
-        mu_model_err[anchors] = e_z_or_mu[anchors]
-        # HII galaxies: exact luminosity distance at every z
-        z = z_or_mu[hiig]
-        ez = e_z_or_mu[hiig]
-        if np.any(
-            (~np.isfinite(z))
-            | (z <= 0.0)
-        ):
-            return -np.inf
-        try:
-            d_l = cosmo.luminosity_distance(z).value
-        except Exception:
-            return -np.inf            
-        if np.any(
-            (~np.isfinite(d_l))
-            | (d_l <= 0.0)
-        ):
-            return -np.inf
-        mu_model[hiig] = (
-            5.0 * np.log10(d_l)
-            + 25.0
-        )
-        # d(mu)/dz exacto para una cosmologia plana FLRW
-        # Revisar esto despues, derivar para posibles nuevas cosmologias o la integracion de epsilon (dispersion)
-        Ez = cosmo.efunc(z)
-        Iz = (
-            cosmo.comoving_distance(z)
-            * cosmo.H0
-            / const.c.to(u.km/u.s)
-        ).to_value(u.dimensionless_unscaled)
-        dmu_dz = (
-            5.0 / np.log(10.0)
-        ) * (
-            1.0 / (1.0 + z)
-            + 1.0 / (Ez * Iz)
-        )
-        mu_model_err[hiig] = (
-            np.abs(dmu_dz) * ez
-        )
-        # L-sigma distance estimator.
-        mu_obs = (
-            2.5
-            * (
-                beta * log_sigma
-                + alpha
-                - log_f
-            )
-            - 100.19477738511641
-        )
-        mu_obs_err = (
-            2.5
-            * np.sqrt(
-                e_log_f**2
-                + beta**2 * e_log_sigma**2
-            )
-        )
-        # Aqui se podria agregar el valor para los errores sistematicos por objeto, pero por ahora lo voy a dejar en cero por que no estoy seguro de si esto se usa antes o despues.
-        sigma_sys = np.zeros(n, dtype=float)
-        sigma_dm = np.sqrt(
-            mu_obs_err**2
-            + mu_model_err**2
-            + sigma_sys**2
-        )
-        residual = mu_obs - mu_model
-        if np.any(~np.isfinite(residual)):
-            return -np.inf
-        if np.any(~np.isfinite(sigma_dm)):
-            return -np.inf
-        return self.lensing_loglike_gh(
-            residual=residual,
-            sigma_dm=sigma_dm,
-            lens_cache=lens_cache,
-            normalized=True,
-        )
-
-
-    def lnlike(self,theta=None,DF=None,z_range = None):
-
-        if theta is None or DF is None:
-            return None
-        alpha, beta, h, q_0 = theta
+        alpha, beta, h, q0 = theta
         # Incluir radiacion como se menciona en el paper
         try:
             cosmo = FlatLambdaCDM(
@@ -240,6 +120,8 @@ class Lsig_Ho_sampler:
         except Exception:
             return -np.inf
 
+
+
         origin = np.asarray(DF["origin_id"], dtype=float)
         z_or_mu = np.asarray(
             DF["z_or_mu"],
@@ -282,7 +164,7 @@ class Lsig_Ho_sampler:
         ):
             return -np.inf
         try:
-            d_l = cosmo.luminosity_distance(z).value
+            d_l = (const.c.to(u.km/u.s) / cosmo.H0) * (z + ((1/2)*(1-q0)*(z**2)) )
         except Exception:
             return -np.inf            
         if np.any(
@@ -291,23 +173,11 @@ class Lsig_Ho_sampler:
         ):
             return -np.inf
         mu_model[hiig] = (
-            5.0 * np.log10(d_l)
+            5.0 * np.log10(d_l.to_value(u.Mpc))
             + 25.0
         )
         # d(mu)/dz exacto para una cosmologia plana FLRW
-        # Revisar esto despues, derivar para posibles nuevas cosmologias o la integracion de epsilon (dispersion)
-        Ez = cosmo.efunc(z)
-        Iz = (
-            cosmo.comoving_distance(z)
-            * cosmo.H0
-            / const.c.to(u.km/u.s)
-        ).to_value(u.dimensionless_unscaled)
-        dmu_dz = (
-            5.0 / np.log(10.0)
-        ) * (
-            1.0 / (1.0 + z)
-            + 1.0 / (Ez * Iz)
-        )
+        dmu_dz = (10* ((q0-1)*z-1) ) / (z * np.log(10) * ((q0-1)*z-2)) 
         mu_model_err[hiig] = (
             np.abs(dmu_dz) * ez
         )
@@ -340,88 +210,15 @@ class Lsig_Ho_sampler:
             return -np.inf
         if np.any(~np.isfinite(sigma_dm)):
             return -np.inf
-        return self.lensing_loglike_gh(
-            residual=residual,
-            sigma_dm=sigma_dm,
-            lens_cache=lens_cache,
-            normalized=True,
+
+        variance = sigma_dm**2
+
+        llq = -0.5 * np.sum(
+            residual**2 / variance
+            #+ np.log(2.0 * np.pi * variance)
         )
 
-
-
-
-
-
-
-        if theta is not None and DF is not None and z_range is not None:
-            alpha, beta, h0 = theta
-            cosmo = FlatwCDM(H0=h0*100.0, Om0=0.3, w0=-1.0)
-
-
-            def D_L(cosmo,z,universe_antiquity):
-                if universe_antiquity == 'Low':
-                    d_l = (const.c.to(u.km/u.s) / cosmo.H0) * z
-                    return d_l.value
-
-                if universe_antiquity == 'Moderate':
-                    q0 = cosmo.Om0 / 2.0 - cosmo.Ode0
-                    d_l = (const.c.to(u.km/u.s) / cosmo.H0) * (z + ((1/2)*(1-q0)*(z**2)) )    
-                    return d_l.value
-                
-                if universe_antiquity == 'High':
-                    z = np.atleast_1d(np.asarray(z, dtype=float))
-                    d_l = cosmo.luminosity_distance(z).value
-                    return d_l
-
-            def dmu_dz(cosmo,z,universe_antiquity):
-
-                if universe_antiquity == 'Low':
-                    return (5.0/np.log(10.0))*(1/z)
-
-                if universe_antiquity == 'Moderate':
-                    #Om_z = cosmo.Om(z)
-                    #Ode_z = cosmo.Ode(z)
-                    #q = (Om_z / 2.0) - Ode_z
-                    #return (10* ((q-1)*z-1) ) / (z * np.log(10) * ((q-1)*z-2))
-
-                    q0 = cosmo.Om0 / 2.0 - cosmo.Ode0
-                    return (10* ((q0-1)*z-1) ) / (z * np.log(10) * ((q0-1)*z-2))
-
-
-                
-                if universe_antiquity == 'High':
-                    z = np.atleast_1d(np.asarray(z, dtype=float))
-                    Ez = cosmo.efunc(z)  # E(z) = H(z)/H0
-                    # I(z) = integral_0^z dz'/E(z') = (H0/c) * D_C(z)
-                    Iz = (cosmo.comoving_distance(z) * cosmo.H0 / const.c.to(u.km/u.s)).to_value(u.dimensionless_unscaled)
-                    return np.abs((5.0/np.log(10.0)) * (1.0/(1.0+z) + 1.0/(Ez*Iz)))
-
-
-            G = DF['origin_id'] == 0.0
-            H = DF['origin_id'] != 0.0
-
-            Mum = DF['z_or_mu'] * 0.0
-            MumErr = DF['e_z_or_e_mu'] * 0.0
-
-            Mum[G] = DF[G]['z_or_mu']
-            MumErr[G] = DF[G]['e_z_or_e_mu']
-            
-            Mum[H] = 5.0*np.log10(D_L(cosmo, DF[H]['z_or_mu'],z_range)) + 25.0
-            MumErr[H] =  dmu_dz(cosmo, DF[H]['z_or_mu'],z_range) * DF[H]['e_z_or_e_mu']
-
-            Mu = 2.5*(beta*DF['log_sigma'] + alpha) - 2.5*DF['log_f_Hbeta'] - 100.19477738511641 
-            MuErr = 2.5*np.sqrt((DF['e_log_f_Hbeta'])**2 + beta**2*(DF['e_log_sigma'])**2)
-
-            R = (Mu - Mum)
-            W = 1.0/(MuErr**2 + MumErr**2)
-
-            xsq = np.sum(R**2 * W)
-            llq = -0.5*xsq
-            return llq
-        else:
-            return None
-
-
+        return llq
 
 
     def main_sampler(self):
@@ -433,11 +230,6 @@ class Lsig_Ho_sampler:
         )
 
         concat_filter_DF.write(f'{self.outdir}/dataset_run.csv', format='ascii.csv', overwrite=True)
-
-        lens_cache = self.prepare_lensing_cache(
-            concat_filter_DF,
-            zmax = 20.0,
-        )
 
         # Test de reproduccion de datos
 
@@ -456,26 +248,26 @@ class Lsig_Ho_sampler:
 
 
         def prior_transform(u):
-            alpha = 32.5 + 2.0 * u[0]     # 32.5 -> 34.5
-            beta  =  4.5 + 1.0 * u[1]     # 4.5 -> 5.5
+            alpha = 20 + 20 * u[0]     # 20 -> 40
+            beta  =  10 * u[1]     # 0 -> 10
             h    =  0.5 +  0.5 * u[2]     # 0.5 -> 1.0
-            return np.array([alpha, beta, h])
+            q0   =  -0.65 + 0.3 * u[3]     # -0.65 -> -0.35
+            return np.array([alpha, beta, h, q0])
 
         def loglike(theta):
             return self.lnlike(
                 theta = theta,
-                DF = concat_filter_DF,
-                lens_cache = lens_cache,
+                DF = concat_filter_DF
                 )
 
-        n_dims = 3
+        n_dims = 4
         result = pymultinest.solve(
             LogLikelihood=loglike,
             Prior=prior_transform,
             n_dims=n_dims,
             outputfiles_basename=self.prefix,
             evidence_tolerance=0.5,
-            n_live_points=2500,
+            n_live_points=1000, # n_live_points=2500
             multimodal=True,
             verbose=False
         )
@@ -486,8 +278,8 @@ class Lsig_Ho_sampler:
 
         # Creacion del Triangle Plot
 
-        samples = result["samples"]   # shape = (Nsamples, 3)
-        parameters = [r"\alpha", r"\beta", r"h"]
+        samples = result["samples"]   # shape = (Nsamples, 4)
+        parameters = [r"\alpha", r"\beta", r"h", r"q_0"]
         print("Posterior means/stdev:")
         for name, col in zip(parameters, samples.T):
             print(f"{name:>6s}: {col.mean():.3f} ± {col.std():.3f}")
@@ -497,8 +289,8 @@ class Lsig_Ho_sampler:
 
         gds = MCSamples(
             samples=samples,
-            names=["alpha", "beta", "h"],
-            labels=[r"\alpha", r"\beta", r"h"] 
+            names=["alpha", "beta", "h", "q_0"],
+            labels=[r"\alpha", r"\beta", r"h", r"q_0"]
         )
         g = plots.getSubplotPlotter()
         g.settings.num_plot_contours = 4
@@ -532,12 +324,12 @@ class Lsig_Ho_sampler:
             # Reading results from Multinest
             results_path = self.prefix
             analyzer = pymultinest.analyse.Analyzer(
-                n_params=3,
+                n_params=4,
                 outputfiles_basename=results_path
             )
             stats = analyzer.get_stats()
-            alpha_mean,beta_mean,h_mean = stats['modes'][0]['mean']
-            alpha_err,beta_err,h_err = stats['modes'][0]['sigma']
+            alpha_mean,beta_mean,h_mean,q0 = stats['modes'][0]['mean']
+            alpha_err,beta_err,h_err,q0_err = stats['modes'][0]['sigma']
 
 
 
@@ -894,6 +686,3 @@ if __name__ == '__main__':
     )
 
 
-
-
-    
