@@ -1,0 +1,130 @@
+theory:
+  classy:
+    extra_args:
+      T_cmb: 2.7255
+      non linear: none
+      Omega_k: 0.0
+      N_ncdm: 0
+      N_ur: 3.044
+likelihood:
+  lsigma_hiig_lensing_likelihood.LSigmaHIIGLensing:
+    python_path: /home/holman/HIIGalaxies/Bayesian_samplers/Cobaya/MAIN/hiig_lensing_cobaya
+    data_file: Compilation2026_main.csv
+    anchor_file: GEHR_base.csv
+    anchor_cov_file: null
+    zmax: 20.0
+    include_logdet: false
+    correlate_host_mu: false
+    sigma_v_pec_kms: 0.0
+    sigma_sys_mag: 0.0
+    sigma_sys_column: null
+    apply_lensing: true
+    lensing_sigma_coeff: 0.088
+    lensing_zmin: 0.0
+    lensing_zmax: 20.0
+    lensing_method: gh
+    gh_order: 20
+params:
+  logA:
+    prior:
+      min: 1.61
+      max: 3.91
+    ref:
+      dist: norm
+      loc: 3.05
+      scale: 0.01
+    proposal: 0.005
+    latex: \log(10^{10} A_s)
+    drop: true
+  A_s:
+    value: 'lambda logA: 1e-10*np.exp(logA)'
+    latex: A_s
+  n_s:
+    prior:
+      min: 0.8
+      max: 1.2
+    ref:
+      dist: norm
+      loc: 0.965
+      scale: 0.004
+    proposal: 0.002
+    latex: n_s
+  omega_b:
+    prior:
+      min: 0.005
+      max: 0.1
+    ref:
+      dist: norm
+      loc: 0.0224
+      scale: 0.0002
+    proposal: 0.0001
+    latex: \Omega_b h^2
+  omega_cdm:
+    prior:
+      min: 0.001
+      max: 0.99
+    ref:
+      dist: norm
+      loc: 0.12
+      scale: 0.002
+    proposal: 0.001
+    latex: \Omega_c h^2
+  theta_s_100:
+    prior:
+      min: 0.5
+      max: 10.0
+    ref:
+      dist: norm
+      loc: 1.0416
+      scale: 0.0004
+    proposal: 0.0002
+    latex: 100\theta_s
+  H0:
+    latex: H_0
+  tau_reio:
+    prior:
+      min: 0.01
+      max: 0.8
+    ref:
+      dist: norm
+      loc: 0.055
+      scale: 0.01
+    proposal: 0.005
+    latex: \tau_{\rm reio}
+  Omega_m:
+    latex: \Omega_m
+  sigma8:
+    latex: \sigma_8
+  alpha_ls:
+    prior:
+      min: 32.5
+      max: 34.5
+    ref:
+      dist: norm
+      loc: 33.2
+      scale: 0.15
+    proposal: 0.03
+    latex: \alpha
+  beta_ls:
+    prior:
+      min: 4.5
+      max: 5.5
+    ref:
+      dist: norm
+      loc: 5.0
+      scale: 0.1
+    proposal: 0.02
+    latex: \beta
+  sigma_int:
+    value: 0.0
+    latex: \sigma_{\rm int}
+sampler:
+  mcmc:
+    drag: true
+    oversample_power: 0.4
+    proposal_scale: 1.9
+    covmat: auto
+    Rminus1_stop: 0.01
+    Rminus1_cl_stop: 0.2
+packages_path: /home/holman/cobaya_packages
+output: hiig_test

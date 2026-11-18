@@ -1,0 +1,123 @@
+# LCDM: cmb_hiig_bao
+
+likelihood:
+  lsigma_hiig_lensing_likelihood.LSigmaHIIGLensing:
+    python_path: /home/holman/HIIGalaxies/Bayesian_samplers/Cobaya/MAIN/hiig_lensing_cobaya
+    # These files are the names used by the successful lensing MultiNest run.
+    # Replace with absolute paths if they are stored elsewhere.
+    data_file: Compilation2026_main.csv
+    anchor_file: GEHR_base.csv
+    anchor_cov_file: null
+
+    zmax: 20.0
+    include_logdet: false
+    correlate_host_mu: false
+
+    # Optional non-lensing additions to the Gaussian core.
+    sigma_v_pec_kms: 0.0
+    sigma_sys_mag: 0.0
+    sigma_sys_column: null
+
+    # Chavez et al. (2026) weak-lensing prescription.
+    apply_lensing: true
+    lensing_sigma_coeff: 0.088
+    lensing_zmin: 0.0
+    lensing_zmax: 20.0
+
+    # Production: exact analytic Gaussian convolution.
+    # For a direct check against five_par_lensing_test.py use:
+    #   lensing_method: gh
+    #   gh_order: 20
+    lensing_method: gh
+    gh_order: 20
+
+theory:
+
+  classy:
+
+    extra_args:
+
+      T_cmb: 2.7255
+
+      N_ncdm: 0
+      N_ur: 3.04
+
+
+params:
+
+  Omega_m:
+    value: 0.30
+    latex: \Omega_m
+
+  Omega_k:
+    value: 0.0
+    latex: \Omega_k
+
+
+  alpha_ls:
+
+    prior:
+      min: 32.5
+      max: 34.5
+
+    ref:
+      dist: norm
+      loc: 33.27
+      scale: 0.03
+
+    proposal: 0.003
+
+    latex: \alpha
+
+
+  beta_ls:
+
+    prior:
+      min: 4.5
+      max: 5.5
+
+    ref:
+      dist: norm
+      loc: 5.00
+      scale: 0.03
+
+    proposal: 0.003
+
+    latex: \beta
+
+
+  H0:
+
+    prior:
+      min: 50       # TEMPORAL DIAGNOSTIC
+      max: 100
+
+    ref:
+      dist: norm
+      loc: 70.0
+      scale: 2.0
+
+    proposal: 0.1
+
+    latex: H_0
+
+
+  sigma_int:
+    value: 0.0
+
+
+sampler:
+
+  mcmc:
+
+    drag: false
+
+    proposal_scale: 0.8
+
+    learn_proposal: true
+
+    Rminus1_stop: 0.01
+
+    Rminus1_cl_stop: 0.2
+
+output: chains/hiig/hiig_case1

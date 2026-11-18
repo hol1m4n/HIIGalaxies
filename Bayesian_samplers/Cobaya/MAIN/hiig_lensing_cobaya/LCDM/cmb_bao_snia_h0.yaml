@@ -18,7 +18,7 @@ theory:
       N_ncdm: 1
       N_ur: 2.0328
       m_ncdm: 0.06
-      non linear: hmcode
+      non linear: halofit
 
 params:
   logA:
@@ -81,4 +81,4 @@ sampler:
     Rminus1_stop: 0.01
     Rminus1_cl_stop: 0.2
 
-output: chains/lcdm/cmb_snia_bao_h0
+output: chains/lcdm/cmb_bao_snia_h0

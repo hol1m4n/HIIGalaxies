@@ -6,16 +6,16 @@ likelihood:
   planck_2018_highl_plik.TTTEEE: null
   planck_2018_lensing.clik: null
   lsigma_hiig_lensing_likelihood.LSigmaHIIGLensing:
-    python_path: /home/holman/HIIGalaxies/Bayesian_samplers/Cobaya/MAIN
+    python_path: /home/holman/HIIGalaxies/Bayesian_samplers/Cobaya/MAIN/hiig_lensing_cobaya
     # These files are the names used by the successful lensing MultiNest run.
     # Replace with absolute paths if they are stored elsewhere.
     data_file: Compilation2026_main.csv
     anchor_file: GEHR_base.csv
     anchor_cov_file: null
 
-    zmax: 14.0
-    include_logdet: true
-    correlate_host_mu: true
+    zmax: 15.0
+    include_logdet: false
+    correlate_host_mu: false
 
     # Optional non-lensing additions to the Gaussian core.
     sigma_v_pec_kms: 0.0
@@ -26,13 +26,13 @@ likelihood:
     apply_lensing: true
     lensing_sigma_coeff: 0.088
     lensing_zmin: 0.0
-    lensing_zmax: 14.0
+    lensing_zmax: 15.0
 
     # Production: exact analytic Gaussian convolution.
     # For a direct check against five_par_lensing_test.py use:
     #   lensing_method: gh
     #   gh_order: 20
-    lensing_method: analytic
+    lensing_method: gh
     gh_order: 20
   sn.pantheonplus: null
   bao.desi_dr2: null
@@ -47,7 +47,7 @@ theory:
       N_ncdm: 1
       N_ur: 2.0328
       m_ncdm: 0.06
-      non linear: hmcode
+      non linear: halofit
 
 params:
   logA:
@@ -127,4 +127,4 @@ sampler:
     Rminus1_stop: 0.01
     Rminus1_cl_stop: 0.2
 
-output: chains/lcdm/cmb_hiig_snia_bao_h0
+output: chains/lcdm/full_five

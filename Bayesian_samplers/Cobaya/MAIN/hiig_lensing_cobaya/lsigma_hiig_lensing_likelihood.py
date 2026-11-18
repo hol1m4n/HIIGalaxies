@@ -67,9 +67,9 @@ class LSigmaHIIGLensing(Likelihood):
     log_flux_column: str = "log_f_Hbeta"
     e_log_flux_column: str = "e_log_f_Hbeta"
 
-    anchor_host_column: str = "Galaxia"
-    anchor_mu_column: str = "mu_w"
-    anchor_error_column: str = "sigma_w"
+    anchor_host_column: str = "galaxy"
+    anchor_mu_column: str = "mu_W"
+    anchor_error_column: str = "sigma_W"
 
     mu_constant: float = 100.19477738511641
     zmax: Optional[float] = 14.0
@@ -482,7 +482,8 @@ class LSigmaHIIGLensing(Likelihood):
         if np.any(V <= 0) or np.any(~np.isfinite(V)):
             return -np.inf
         if bool(self.include_logdet):
-            return float(-0.5 * np.sum(R ** 2 / V + np.log(2.0 * np.pi * V)))
+            #return float(-0.5 * np.sum(R ** 2 / V + np.log(2.0 * np.pi * V)))
+            return float(-0.5 * np.sum(R ** 2 / V))
         return float(-0.5 * np.sum(R ** 2 / V))
 
     # ======================================================================
