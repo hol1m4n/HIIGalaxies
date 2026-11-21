@@ -1,0 +1,102 @@
+# Run from the folder containing the bundled modules and CSVs.
+# Legacy mode reproduces the old curvature-error approximation deliberately.
+likelihood:
+  lsigma_hiig_lensing_audited.LSigmaHIIGLensing:
+    python_path: .
+    data_file: Compilation2026_main.csv
+    anchor_file: GEHR_base.csv
+    anchor_host_column: galaxy
+    anchor_mu_column: mu_W
+    anchor_error_column: sigma_W
+    anchor_cov_file: null
+    zmax: null
+    include_logdet: false
+    correlate_host_mu: false
+    sigma_v_pec_kms: 0.0
+    sigma_sys_mag: 0.0
+    sigma_sys_column: null
+    apply_lensing: true
+    lensing_sigma_coeff: 0.088
+    lensing_zmin: 0.0
+    lensing_zmax: 20.0
+    lensing_method: gh
+    gh_order: 20
+    redshift_error_method: legacy_multinest
+theory:
+  astropy_background.AstropyBackground:
+    python_path: .
+    model_index: 5
+params:
+  alpha_ls:
+    prior:
+      min: 32.5
+      max: 34.5
+    ref:
+      dist: norm
+      loc: 33.2
+      scale: 0.15
+    proposal: 0.005
+    latex: \alpha
+  beta_ls:
+    prior:
+      min: 4.5
+      max: 5.5
+    ref:
+      dist: norm
+      loc: 5.0
+      scale: 0.1
+    proposal: 0.005
+    latex: \beta
+  H0:
+    prior:
+      min: 50.0
+      max: 100.0
+    ref:
+      dist: norm
+      loc: 70.0
+      scale: 2.0
+    proposal: 0.1
+    latex: H_0
+  sigma_int: 0.0
+  Om0:
+    prior:
+      min: 0.0
+      max: 1.0
+    ref:
+      dist: norm
+      loc: 0.3
+      scale: 0.03
+    proposal: 0.003
+    latex: \Omega_m
+  Ode0:
+    prior:
+      min: 0.0
+      max: 1.0
+    ref:
+      dist: norm
+      loc: 0.7
+      scale: 0.03
+    proposal: 0.003
+    latex: \Omega_\Lambda
+  w0:
+    prior:
+      min: -2.0
+      max: 0.0
+    ref:
+      dist: norm
+      loc: -1.0
+      scale: 0.1
+    proposal: 0.01
+    latex: w_0
+sampler:
+  mcmc:
+    covmat: null
+    learn_proposal: true
+    drag: false
+    oversample_power: 0.4
+    proposal_scale: 1.0
+    max_tries: 1000
+    Rminus1_stop: 0.005
+    Rminus1_cl_stop: 0.1
+output: chains/replica_astropy/model5
+resume: false

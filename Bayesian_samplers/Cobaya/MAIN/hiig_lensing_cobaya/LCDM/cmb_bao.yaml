@@ -1,5 +1,5 @@
-# LCDM: cmb_hiig_bao
-
+# LCDM: cmb_bao
+packages_path: /home/hollman/cosmo_data
 likelihood:
   planck_2018_lowl.TT: null
   planck_2018_lowl.EE: null
@@ -78,3 +78,4 @@ sampler:
     Rminus1_cl_stop: 0.2
 
 output: chains/lcdm/cmb_bao
+resume: true

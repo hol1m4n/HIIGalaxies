@@ -1,0 +1,128 @@
+theory:
+  astropy_background.AstropyBackground:
+    model_index: 1
+    speed: -1
+    stop_at_error: false
+    version: null
+    python_path: .
+    input_params:
+    - H0
+    - Om0
+    output_params: []
+likelihood:
+  lsigma_hiig_lensing_audited.LSigmaHIIGLensing:
+    data_file: Compilation2026_main.csv
+    anchor_file: GEHR_base.csv
+    anchor_cov_file: null
+    data_host_column: GEHR_id
+    origin_column: origin_id
+    z_or_mu_column: z_or_mu
+    z_or_mu_error_column: e_z_or_e_mu
+    log_sigma_column: log_sigma
+    e_log_sigma_column: e_log_sigma
+    log_flux_column: log_f_Hbeta
+    e_log_flux_column: e_log_f_Hbeta
+    anchor_host_column: galaxy
+    anchor_mu_column: mu_W
+    anchor_error_column: sigma_W
+    mu_constant: 100.19477738511641
+    zmax: null
+    include_logdet: false
+    correlate_host_mu: false
+    sigma_v_pec_kms: 0.0
+    sigma_sys_mag: 0.0
+    sigma_sys_column: null
+    redshift_error_method: legacy_multinest
+    apply_lensing: true
+    lensing_sigma_coeff: 0.088
+    lensing_zmin: 0.0
+    lensing_zmax: 20.0
+    lensing_method: gh
+    gh_order: 20
+    type: []
+    speed: -1
+    stop_at_error: false
+    version: null
+    python_path: .
+    input_params:
+    - alpha_ls
+    - beta_ls
+    - sigma_int
+    output_params: []
+params:
+  alpha_ls:
+    prior:
+      min: 32.5
+      max: 34.5
+    ref:
+      dist: norm
+      loc: 33.2
+      scale: 0.15
+    proposal: 0.005
+    latex: \alpha
+  beta_ls:
+    prior:
+      min: 4.5
+      max: 5.5
+    ref:
+      dist: norm
+      loc: 5.0
+      scale: 0.1
+    proposal: 0.005
+    latex: \beta
+  H0:
+    prior:
+      min: 50.0
+      max: 100.0
+    ref:
+      dist: norm
+      loc: 70.0
+      scale: 2.0
+    proposal: 0.1
+    latex: H_0
+  sigma_int:
+    derived: false
+    value: 0.0
+  Om0:
+    value: 0.3
+sampler:
+  mcmc:
+    sampler_type: mcmc
+    supports_periodic_params: true
+    burn_in: 0
+    max_tries: 1000
+    covmat: null
+    covmat_params: null
+    proposal_scale: 1.0
+    output_every: 60s
+    learn_every: 40d
+    temperature: 1
+    learn_proposal: true
+    learn_proposal_Rminus1_max: 2.0
+    learn_proposal_Rminus1_max_early: 30.0
+    learn_proposal_Rminus1_min: 0.0
+    max_samples: .inf
+    Rminus1_stop: 0.005
+    Rminus1_cl_stop: 0.1
+    Rminus1_cl_level: 0.95
+    Rminus1_single_split: 4
+    measure_speeds: true
+    oversample_power: 0.4
+    oversample_thin: true
+    drag: false
+    blocking:
+    - - 1
+      - - H0
+    - - 3
+      - - alpha_ls
+        - beta_ls
+    callback_function: null
+    callback_every: null
+    seed: null
+    check_every: null
+    oversample: null
+    drag_limits: null
+    fallback_covmat_scale: 4
+    version: 3.6.2
+output: model1
+version: 3.6.2

@@ -35,7 +35,7 @@ theory:
       helium_delta_redshift: helium_fullreio_width
       yhe: YHe
       yheused: YHe
-    version: v3.3.4
+    version: v3.4.0
     input_params:
     - A_s
     - n_s
@@ -611,9 +611,9 @@ sampler:
         - omega_cdm
         - theta_s_100
         - tau_reio
-    - - 7
+    - - 1
       - - A_planck
-    - - 7
+    - - 1
       - - calib_100T
         - calib_217T
         - A_cib_217
@@ -642,5 +642,6 @@ sampler:
     drag_limits: null
     fallback_covmat_scale: 4
     version: 3.6.2
+packages_path: /home/hollman/cosmo_data
 output: cmb_bao
 version: 3.6.2

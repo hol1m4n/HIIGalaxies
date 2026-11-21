@@ -91,4 +91,5 @@ sampler:
     proposal_scale: 1.9
     Rminus1_stop: 0.01
     Rminus1_cl_stop: 0.2
+packages_path: /home/hollman/cosmo_data
 output: cmb_bao

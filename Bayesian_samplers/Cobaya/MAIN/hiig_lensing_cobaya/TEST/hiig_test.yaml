@@ -1,21 +1,9 @@
 # LCDM: cmb_hiig_bao
-packages_path: /home/holman/cobaya_packages
+packages_path: /home/hollman/cosmo_data
 
-#likelihood:
-#  lsigma_hiig_likelihood.LSigmaHIIG:
-#    python_path: /home/holman/HIIGalaxies/Bayesian_samplers/Cobaya/MAIN/hiig_lensing_cobaya
-#    data_file: Compilation2026_main.csv
-#    anchor_file: GEHR_base.csv
-#    anchor_mu_column: mu_W
-#    anchor_error_column: sigma_W
-#    zmax: 7
-#    include_logdet: true
-#    correlate_host_mu: true
-#    sigma_v_pec_kms: 0.0
-#    anchor_cov_file: null
 likelihood:
   lsigma_hiig_lensing_likelihood.LSigmaHIIGLensing:
-    python_path: /home/holman/HIIGalaxies/Bayesian_samplers/Cobaya/MAIN/hiig_lensing_cobaya
+    python_path: /home/hollman/HIIGalaxies/Bayesian_samplers/Cobaya/MAIN/hiig_lensing_cobaya
     data_file: Compilation2026_main.csv
     anchor_file: GEHR_base.csv
     anchor_cov_file: null
@@ -39,73 +27,37 @@ likelihood:
 theory:
   classy:
     extra_args:
+      omega_b: 0.02237
+      omega_cdm: 0.1200
+      tau_reio: 0.0544
+      N_ncdm: 1
+      m_ncdm: 0.06
+      N_ur: 2.0328
       T_cmb: 2.7255
       non linear: none
       Omega_k: 0.0
-      N_ncdm: 0
-      N_ur: 3.044
+      ln10^{10}A_s: 3.044
+      n_s: 0.9649
 
 params:
-  logA:
-    prior: {min: 1.61, max: 3.91}
-    ref: {dist: norm, loc: 3.05, scale: 0.01}
-    proposal: 0.005
-    latex: \log(10^{10} A_s)
-    drop: true
-  A_s:
-    value: 'lambda logA: 1e-10*np.exp(logA)'
-    latex: A_s
-
-  n_s:
-    prior: {min: 0.8, max: 1.2}
-    ref: {dist: norm, loc: 0.965, scale: 0.004}
-    proposal: 0.002
-    latex: n_s
-
-  omega_b:
-    prior: {min: 0.005, max: 0.1}
-    ref: {dist: norm, loc: 0.0224, scale: 0.0002}
-    proposal: 0.0001
-    latex: \Omega_b h^2
-
-  omega_cdm:
-    prior: {min: 0.001, max: 0.99}
-    ref: {dist: norm, loc: 0.120, scale: 0.002}
-    proposal: 0.001
-    latex: \Omega_c h^2
-
-  # Planck-friendly acoustic-scale parameterization (as in the 2021 analysis).
-  # CLASS derives H0 from theta_s_100; H0 is still saved and can be used by
-  # the external local-H0 likelihood.
-  theta_s_100:
-    prior: {min: 0.5, max: 10.0}
-    ref: {dist: norm, loc: 1.0416, scale: 0.0004}
-    proposal: 0.0002
-    latex: 100\theta_s
 
   H0:
+    prior: {min: 50, max: 100}
+    ref: {dist: norm, loc: 72.5, scale: 2.0}
+    proposal: 0.1
     latex: H_0
 
-  tau_reio:
-    prior: {min: 0.01, max: 0.8}
-    ref: {dist: norm, loc: 0.055, scale: 0.01}
-    proposal: 0.005
-    latex: \tau_{\rm reio}
 
-  Omega_m:
-    latex: \Omega_m
-  sigma8:
-    latex: \sigma_8
   alpha_ls:
     prior: {min: 32.5, max: 34.5}
     ref: {dist: norm, loc: 33.2, scale: 0.15}
-    proposal: 0.03
+    proposal: 0.005
     latex: \alpha
 
   beta_ls:
     prior: {min: 4.5, max: 5.5}
     ref: {dist: norm, loc: 5.0, scale: 0.10}
-    proposal: 0.02
+    proposal: 0.005
     latex: \beta
 
   # Fixed at zero to match the no-extra-intrinsic-scatter setup.
@@ -115,10 +67,12 @@ params:
     latex: \sigma_{\rm int}
 sampler:
   mcmc:
-    drag: true
+    covmat: null
+    learn_proposal: true
+    drag: false
     oversample_power: 0.4
-    proposal_scale: 1.9
-    covmat: auto
+    proposal_scale: 1.0
+    max_tries: 1000
     Rminus1_stop: 0.01
     Rminus1_cl_stop: 0.2
 

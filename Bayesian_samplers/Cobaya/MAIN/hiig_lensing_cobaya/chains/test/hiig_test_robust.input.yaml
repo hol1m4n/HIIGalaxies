@@ -1,0 +1,78 @@
+theory:
+  classy:
+    extra_args:
+      omega_b: 0.02237
+      omega_cdm: 0.12
+      tau_reio: 0.0544
+      N_ncdm: 1
+      m_ncdm: 0.06
+      N_ur: 2.0328
+      T_cmb: 2.7255
+      non linear: none
+      Omega_k: 0.0
+      ln10^{10}A_s: 3.044
+      n_s: 0.9649
+likelihood:
+  lsigma_hiig_lensing_likelihood.LSigmaHIIGLensing:
+    python_path: /home/hollman/HIIGalaxies/Bayesian_samplers/Cobaya/MAIN/hiig_lensing_cobaya
+    data_file: Compilation2026_main.csv
+    anchor_file: GEHR_base.csv
+    anchor_cov_file: null
+    zmax: 20.0
+    include_logdet: false
+    correlate_host_mu: false
+    sigma_v_pec_kms: 0.0
+    sigma_sys_mag: 0.0
+    sigma_sys_column: null
+    apply_lensing: true
+    lensing_sigma_coeff: 0.088
+    lensing_zmin: 0.0
+    lensing_zmax: 20.0
+    lensing_method: gh
+    gh_order: 20
+params:
+  H0:
+    prior:
+      min: 50
+      max: 100
+    ref:
+      dist: norm
+      loc: 72.5
+      scale: 2.0
+    proposal: 0.1
+    latex: H_0
+  alpha_ls:
+    prior:
+      min: 32.5
+      max: 34.5
+    ref:
+      dist: norm
+      loc: 33.2
+      scale: 0.15
+    proposal: 0.005
+    latex: \alpha
+  beta_ls:
+    prior:
+      min: 4.5
+      max: 5.5
+    ref:
+      dist: norm
+      loc: 5.0
+      scale: 0.1
+    proposal: 0.005
+    latex: \beta
+  sigma_int:
+    value: 0.0
+    latex: \sigma_{\rm int}
+sampler:
+  mcmc:
+    covmat: chains/test/hiig_test.covmat
+    learn_proposal: true
+    drag: true
+    oversample_power: 0.4
+    proposal_scale: 1.9
+    max_tries: 1000
+    Rminus1_stop: 0.005
+    Rminus1_cl_stop: 0.1
+packages_path: /home/hollman/cosmo_data
+output: hiig_test_robust
