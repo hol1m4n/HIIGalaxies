@@ -33,7 +33,7 @@ cd "$workplace" || { echo "ERROR: no pude entrar a $workplace"; exit 1; }
 
 echo "Corriendo el codigo:"
 
-mpirun -np 4 cobaya-run cmb_hiig_bao_H0.yaml
+mpirun -np 4 cobaya-run cmb_hiig_bao_h0.yaml
 
 echo "Finished at: $(date)"
 

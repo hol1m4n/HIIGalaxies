@@ -1,0 +1,139 @@
+theory:
+  classy:
+    extra_args:
+      non linear: halofit
+      N_ncdm: 1
+      m_ncdm: 0.06
+      N_ur: 2.0328
+      T_cmb: 2.7255
+likelihood:
+  planck_2018_lowl.TT: null
+  planck_2018_lowl.EE: null
+  planck_2018_highl_plik.TTTEEE: null
+  planck_2018_lensing.clik: null
+  lsigma_hiig_lensing_audited.LSigmaHIIGLensing:
+    python_path: .
+    data_file: Compilation2026_main.csv
+    anchor_file: GEHR_base.csv
+    anchor_host_column: galaxy
+    anchor_mu_column: mu_W
+    anchor_error_column: sigma_W
+    anchor_cov_file: null
+    zmax: null
+    include_logdet: false
+    correlate_host_mu: false
+    sigma_v_pec_kms: 0.0
+    sigma_sys_mag: 0.0
+    sigma_sys_column: null
+    apply_lensing: true
+    lensing_sigma_coeff: 0.088
+    lensing_zmin: 0.0
+    lensing_zmax: 20.0
+    lensing_method: gh
+    gh_order: 20
+    redshift_error_method: curved
+params:
+  logA:
+    prior:
+      min: 1.61
+      max: 3.91
+    ref:
+      dist: norm
+      loc: 3.044
+      scale: 0.02
+    proposal: 0.005
+    latex: \ln(10^{10}A_s)
+    drop: true
+  A_s:
+    value: 'lambda logA: 1e-10*np.exp(logA)'
+    latex: A_s
+  n_s:
+    prior:
+      min: 0.8
+      max: 1.2
+    ref:
+      dist: norm
+      loc: 0.965
+      scale: 0.004
+    proposal: 0.001
+    latex: n_s
+  H0:
+    prior:
+      min: 40.0
+      max: 100.0
+    ref:
+      dist: norm
+      loc: 67.4
+      scale: 0.5
+    proposal: 0.1
+    latex: H_0
+  omega_b:
+    prior:
+      min: 0.005
+      max: 0.1
+    ref:
+      dist: norm
+      loc: 0.02237
+      scale: 0.0001
+    proposal: 5.0e-05
+    latex: \Omega_b h^2
+  omega_cdm:
+    prior:
+      min: 0.001
+      max: 0.99
+    ref:
+      dist: norm
+      loc: 0.12
+      scale: 0.001
+    proposal: 0.00025
+    latex: \Omega_c h^2
+  tau_reio:
+    prior:
+      min: 0.01
+      max: 0.8
+    ref:
+      dist: norm
+      loc: 0.0544
+      scale: 0.006
+    proposal: 0.003
+    latex: \tau
+  omegak: 0.0
+  alpha_ls:
+    prior:
+      min: 32.5
+      max: 34.5
+    ref:
+      dist: norm
+      loc: 33.2
+      scale: 0.08
+    proposal: 0.005
+    latex: \alpha
+  beta_ls:
+    prior:
+      min: 4.5
+      max: 5.5
+    ref:
+      dist: norm
+      loc: 5.0
+      scale: 0.05
+    proposal: 0.005
+    latex: \beta
+  sigma_int:
+    value: 0.0
+    latex: \sigma_{\rm int}
+  Omega_m:
+    latex: \Omega_m
+  sigma8:
+    latex: \sigma_8
+  rdrag:
+    latex: r_{\rm drag}
+sampler:
+  mcmc:
+    covmat: auto
+    drag: true
+    oversample_power: 0.4
+    proposal_scale: 1.9
+    Rminus1_stop: 0.01
+    Rminus1_cl_stop: 0.2
+packages_path: /home/hollman/cosmo_data
+output: cmb_hiig
